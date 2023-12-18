@@ -20,7 +20,7 @@
                       <li
                          class="menu-item  menu-item-has-children dropdown active dropdown_full position-static mega_menu nav-item">
                          <a href="index.html" class="dropdown-toggle nav-link">
-                            <span class="text-info">Home</span>
+                            <span class="text-info">Travel Esim</span>
                          </a>
                          <ul class="dropdown-menu width_65_percentage">
                             <li>
