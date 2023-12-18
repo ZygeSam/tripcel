@@ -228,7 +228,7 @@
                           </div>
                        </div>
                        <div class="bottom">
-                          <a href="{{route('regions', ['region' => 'europe'])}}" target="_blank" rel="nofollow" class="theme-btn two">
+                          <a href="{{route('regions', ['region' => 'EUR'])}}" target="_blank" rel="nofollow" class="theme-btn two">
                              See pricing plans
                           </a>
                        </div>
@@ -275,7 +275,7 @@
                           </div>
                        </div>
                        <div class="bottom">
-                          <a href="regions()" target="_blank" rel="nofollow" class="theme-btn two">
+                          <a href="{{route('regions', ['region' => 'USA'])}}" target="_blank" rel="nofollow" class="theme-btn two">
                              See pricing plans
                              </a>
                        </div>
@@ -322,7 +322,7 @@
                           </div>
                        </div>
                        <div class="bottom">
-                          <a href="regions()" target="_blank" rel="nofollow" class="theme-btn two">
+                          <a href="{{route('regions', ['region' => 'APC'])}}" target="_blank" rel="nofollow" class="theme-btn two">
                              See pricing plans
                              </a>
                        </div>
