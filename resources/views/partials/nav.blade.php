@@ -150,11 +150,6 @@
                          </a>
                          <ul class="dropdown-menu">
                             <li class="menu-item  nav-item">
-                               <a href="{{route('checkout')}}" class="dropdown-item nav-link">
-                                  <span>Checkout</span>
-                               </a>
-                            </li>
-                            <li class="menu-item  nav-item">
                                <a href="cart.html" class="dropdown-item nav-link">
                                   <span>My Cart</span>
                                </a>
@@ -167,10 +162,10 @@
              <div class="header_right_content">
                 <ul>
                    <li class="header-button">
-                      <a href="./login.html" target="_blank" rel="" class="theme-btn one color_white_1"> Login </a>
+                      <a href="#" target="_blank" rel="" class="theme-btn one color_white_1"> Login </a>
                    </li>
                    <li class="header-button">
-                      <a href="./signup.html" target="_blank" rel="" class="theme-btn one color_white_1"> Sign up </a>
+                      <a href="#" target="_blank" rel="" class="theme-btn one color_white_1"> Sign up </a>
                    </li>
                 </ul>
              </div>
