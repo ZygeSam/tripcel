@@ -129,16 +129,16 @@
                      </li>
                       <li class="menu-item menu-item-has-children nav-item">
                          <a href="#" class="dropdown-toggle nav-link">
-                            <span>How it works</span>
+                            <span>About US</span>
                          </a>
                       </li>
                       <li class="menu-item menu-item-has-children dropdown dropdown_full position-static mega_menu nav-item">
                          <a href="#"
-                            class="dropdown-toggle nav-link"><span>Coverage</span></a>
+                            class="dropdown-toggle nav-link"><span>FAQ</span></a>
                       </li>
                       <li class="menu-item menu-item-has-children dropdown dropdown_full position-static mega_menu nav-item">
                          <a href="#"
-                            class="dropdown-toggle nav-link"><span>Help</span></a>
+                            class="dropdown-toggle nav-link"><span>Contact Us</span></a>
                       </li>
                       <li class="menu-item  menu-item-has-children dropdown nav-item">
                          <a href="shop.html" class="dropdown-toggle nav-link">
