@@ -330,6 +330,7 @@
                  </div>
               </div>
            </div>
+           <h3 class="text-center my-5"><a href="{{route('countries')}}">See all 194 countries</a></h3 class="text-center my-5">
         </section>
         <!--===============spacing==============-->
         <div class="pd_bottom_65"></div>
