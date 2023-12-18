@@ -123,18 +123,13 @@
                          </ul>
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
-                        <a href="#" class="dropdown-toggle nav-link">
-                           <span>Affiliate</span>
-                        </a>
-                     </li>
-                      <li class="menu-item menu-item-has-children nav-item">
                          <a href="#" class="dropdown-toggle nav-link">
-                            <span>About US</span>
+                            <span>About</span>
                          </a>
                       </li>
                       <li class="menu-item menu-item-has-children dropdown dropdown_full position-static mega_menu nav-item">
                          <a href="#"
-                            class="dropdown-toggle nav-link"><span>FAQ</span></a>
+                            class="dropdown-toggle nav-link"><span>Services</span></a>
                       </li>
                       <li class="menu-item menu-item-has-children dropdown dropdown_full position-static mega_menu nav-item">
                          <a href="#"
