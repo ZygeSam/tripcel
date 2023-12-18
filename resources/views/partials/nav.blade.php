@@ -128,8 +128,12 @@
                          </a>
                       </li>
                       <li class="menu-item menu-item-has-children dropdown dropdown_full position-static mega_menu nav-item">
+                        <a href="#"
+                           class="dropdown-toggle nav-link"><span>FAQ</span></a>
+                     </li>
+                      <li class="menu-item menu-item-has-children dropdown dropdown_full position-static mega_menu nav-item">
                          <a href="#"
-                            class="dropdown-toggle nav-link"><span>Services</span></a>
+                            class="dropdown-toggle nav-link"><span>How it Works</span></a>
                       </li>
                       <li class="menu-item menu-item-has-children dropdown dropdown_full position-static mega_menu nav-item">
                          <a href="#"
