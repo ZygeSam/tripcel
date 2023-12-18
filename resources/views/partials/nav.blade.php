@@ -3,7 +3,7 @@
        <div class="col-lg-2 col-md-9 col-sm-9 col-xs-9 logo_column">
           <div class="header_logo_box">
              <a href="index.html" class="logo navbar-brand">
-                <img style="background-color: white; width: 6em; padding: 5px;" src={{asset("assets/images/FII.png")}} alt="Tripcel" class="logo_default">
+                <img style="background-color: white; width: 6em; padding: 5px;" src={{asset("assets/images/FI.png")}} alt="Tripcel" class="logo_default">
              </a>
           </div>
        </div>
