@@ -201,12 +201,12 @@
     <div class="row">
        <div class="col-xl-6 col-lg-6 col-md-12">
           <div class="image_boxes style_two">
-             <img src="assets/images/shape-1.png" class="background_image" alt="image">
+             <img src={{asset("assets/images/shape-1.png")}} class="background_image" alt="image">
              <div class="image one">
-                <img src="assets/images/about/about-6.png" class="img-fluid" alt="image">
+                <img src={{asset("assets/images/about/about-6.png")}} class="img-fluid" alt="image">
              </div>
              <div class="image two">
-                <img src="assets/images/about/about-7.png" class="img-fluid" alt="image">
+                <img src={{asset("assets/images/about/about-7.png")}} class="img-fluid" alt="image">
                 <div class="video_box">
                    <a href="#" class="lightbox-image"><i class="icon-play"></i></a>
                 </div>
@@ -397,7 +397,7 @@
             <div class="simple_image_boxes style_two bg_op_1"
                style="background-image: url(assets/images/banner-bgs-10-1.html);">
                <div class="parallax_cover">
-                  <img src="assets/images/about/about-12.jpg" class="img-fluid" alt="about">
+                  <img src={{asset("assets/images/about/about-12.jpg")}} class="img-fluid" alt="about">
                </div>
             </div>
          </div>
@@ -483,22 +483,22 @@
                         <div class="swiper-wrapper">
                            <div class="swiper-slide">
                               <div class="image text-start">
-                                 <img src="assets/images/CLIENT-logo-w.png" alt="clients-logo" class="img-fluid">
+                                 <img src={{asset("assets/images/CLIENT-logo-w.png")}} alt="clients-logo" class="img-fluid">
                               </div>
                            </div>
                            <div class="swiper-slide">
                               <div class="image text-start">
-                                 <img src="assets/images/CLIENT-logo-3-w.png" alt="clients-logo" class="img-fluid">
+                                 <img src={{asset("assets/images/CLIENT-logo-3-w.png")}} alt="clients-logo" class="img-fluid">
                               </div>
                            </div>
                            <div class="swiper-slide">
                               <div class="image text-start">
-                                 <img src="assets/images/CLIENT-logo-2-w.png" alt="clients-logo" class="img-fluid">
+                                 <img src={{asset("assets/images/CLIENT-logo-2-w.png")}} alt="clients-logo" class="img-fluid">
                               </div>
                            </div>
                            <div class="swiper-slide">
                               <div class="image text-start">
-                                 <img src="assets/images/CLIENT-logo-1-w.png" alt="clients-logo" class="img-fluid">
+                                 <img src={{asset("assets/images/CLIENT-logo-1-w.png")}} alt="clients-logo" class="img-fluid">
                               </div>
                            </div>
                         </div>
@@ -577,18 +577,18 @@
                      <div class="news_box style_ten">
                         <div class="image_box">
                            <img loading="lazy" width="750" height="420"
-                              src="assets/images/blog/blog-image-12.jpg" class="img-fluid" alt="img">
+                              src={{asset("assets/images/blog/blog-image-12.jpg")}} class="img-fluid" alt="img">
                         </div>
-                        <h2 class="title"><a href="blog-single.html" rel="bookmark">Travelling a san Adventure</a></h2>
+                        <h2 class="title"><a href="#" rel="bookmark">Travelling a san Adventure</a></h2>
                      </div>
                   </div>
                   <div class="grid_box _card">
                      <div class="news_box style_ten">
                         <div class="image_box">
-                           <img width="750" height="420" src="assets/images/blog/blog-image-13.jpg"
+                           <img width="750" height="420" src={{asset("assets/images/blog/blog-image-13.jpg")}}
                               class="img-fluid" alt="img" loading="lazy">
                         </div>
-                        <h2 class="title"><a href="blog-single.html" rel="bookmark">Shining a New Light on
+                        <h2 class="title"><a href="#" rel="bookmark">Shining a New Light on
                               E Services</a></h2>
                      </div>
                   </div>
@@ -598,7 +598,7 @@
                            <img width="750" height="420" src="assets/images/blog/blog-image-14.jpg"
                               class="img-fluid" alt="img" loading="lazy">
                         </div>
-                        <h2 class="title"><a href="blog-single.html" rel="bookmark">Places to visit this summer</a></h2>
+                        <h2 class="title"><a href="#" rel="bookmark">Places to visit this summer</a></h2>
                      </div>
                   </div>
                </div>
@@ -840,31 +840,31 @@
                      <h2> Latest News</h2>
                      <div class="post_enable">
                         <div class="modal_post_grid">
-                           <a href="blog-single.html">
+                           <a href="#">
                               <img width="852" height="812" src="{{asset('assets/images/blog/blog-image-9.jpg')}}"
                                  class="main_img wp-post-image" alt="img" />
                            </a>
                         </div>
                         <div class="modal_post_grid">
-                           <a href="blog-single.html">
+                           <a href="#">
                               <img width="852" height="812" src="{{asset('assets/images/blog/blog-image-8.jpg')}}"
                                  class="main_img wp-post-image" alt="img" />
                            </a>
                         </div>
                         <div class="modal_post_grid">
-                           <a href="blog-single.html">
+                           <a href="#">
                               <img width="852" height="812" src="{{asset('assets/images/blog/blog-image-7.jpg')}}"
                                  class="main_img wp-post-image" alt="img" />
                            </a>
                         </div>
                         <div class="modal_post_grid">
-                           <a href="blog-single.html">
+                           <a href="#">
                               <img width="852" height="812" src="{{('assets/images/blog/blog-image-6.jpg')}}"
                                  class="main_img wp-post-image" alt="img" />
                            </a>
                         </div>
                         <div class="modal_post_grid">
-                           <a href="blog-single.html">
+                           <a href="#">
                               <img width="852" height="812" src="{{('assets/images/blog/blog-image-5.jpg')}}"
                                  class="main_img wp-post-image" alt="img" />
                            </a>

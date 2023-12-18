@@ -275,132 +275,138 @@
 @endsection
 
 @section('unlimitedplans')
-<section class="price-section">
-   <div class="row">
-       <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <div class="price_plan_box style_two  tag_enables border border-success">
-             <div class="tag">LITE <i class="bx bx-signal-5"></i></div>
-             <div class="inner_box">
-                <div class="top">
-                   <h2>Unlimited</h2>
-                   
-                   <p> Best for Solo Travel</p>
-                </div>
-                <div class="mid">
-                   <h4>${{$unlimitedLiteDaysProduct[0]['price_usd']}}</h4>
-                </div>
-                <p  class=" px-5"><em>{{$unlimitedLiteDaysProduct[0]['speed_policy']}}</em>
-               </p>
-               <p></p>
-                <div class="bottom">
-                   <ul>
-                      <li>
-                         <span> Coverage in {{count($unlimitedLiteDaysProduct[0]['countries_supported'])}} Country(ies)</span>
-                         <i class="fi fi-{{$country['country_iso2']}} "></i>
-                      </li>
-                      <li>
-                         <span> Wi-Fi Hotspot Not Included</span>
-                         <i class='bx bx-wifi-off' style="color: #078586; font-size: 22px;"></i>
-                      </li>
-                      <li>
-                         <span> {{$product['duration_days']}} Days Validity </span>
-                         <i class="fa fa-check" style="color: #078586;""></i>
-                      </li>
-                      <li>
-                       <span> 100% Money Back Guarantee</span>
-                       <i class="fa fa-check" style="color: #078586;""></i>
-                     </li>
-                    <a href="#">View eSim Tech Specks</a>
-                   </ul>
-                   <a href="./cart.html" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
-                   Activate 
-                   </a>
-                </div>
-             </div>
-          </div>
-       </div>
-       <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <div class="price_plan_box style_two  tag_enables  border border-success">
-             <div class="tag">STANDARD <i class="bx bx-wifi"></i></div>
-             <div class="inner_box">
-                <div class="top">
-                   <h2>Unlimited</h2>
-                   <p>Best for Wi-Fi Sharing</p>
-                </div>
-                <div class="mid">
-                   <h4>${{$unlimitedStandardDaysProduct[0]['price_usd']}}</h4>
-                </div>
-                <p  class=" px-5"><em>{{$unlimitedStandardDaysProduct[0]['speed_policy']}}</em>
-               </p>
-               <p></p>
-                <div class="bottom">
-                   <ul>
-                      <li>
-                         <span> Coverage in {{count($unlimitedStandardDaysProduct[0]['countries_supported'])}}  Country(ies)</span>
-                         <i class="fi fi-{{$country['country_iso2']}} "></i>
-                      </li>
-                      <li>
-                         <span> Wifi Hotspot included</span>
-                         <i class='bx bx-wifi' style="color: #078586; font-size: 22px;"></i>
-                      </li>
-                      <li>
-                         <span> {{$product['duration_days']}} Days Validity</span>
-                         <i class="fa fa-check" style="color: #078586;""></i>
-                      </li>
-                      <li>
-                       <span> 100% Money Back Guarantee</span>
-                       <i class="fa fa-check" style="color: #078586;""></i>
-                    </li>
-                    <a href="#">View eSim Tech Specks</a>
-                   </ul>
-                   <a href="./cart.html" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
-                   Activate 
-                   </a>
-                </div>
-             </div>
-          </div>
-       </div>
-       <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <div class="price_plan_box style_two  tag_enables  border border-success">
-             <div class="tag">MAX <i class="bx bx-sort-up"></i></div>
-             <div class="inner_box">
-                <div class="top">
-                   <h2>Unlimited</h2>
-                   <p>Best for Groups</p>
-                </div>
-                <div class="mid">
-                   <h4>${{$unlimitedLiteDaysProduct[0]['price_usd']}}</h4>
-                </div>
-                <p  class=" px-5"><em>{{$unlimitedStandardDaysProduct[0]['speed_policy']}}</em>
-               </p>
-               <p></p>
-                <div class="bottom">
-                   <ul>
-                      <li>
-                         <span> Coverage in {{count($unlimitedMaxDaysProduct[0]['countries_supported'])}}  Country(ies)</span>
-                         <i class="fi fi-{{$country['country_iso2']}} "></i>
-                      </li>
-                      <li>
-                         <span> Wifi Hotspot included</span>
-                         <i class='bx bx-wifi' style="color: #078586; font-size: 22px;"></i>
-                      </li>
-                      <li>
-                         <span> {{$product['duration_days']}} Days Validity</span>
-                         <i class="fa fa-check" style="color: #078586;""></i>
-                      </li>
-                      <li>
-                       <span> 100% Money Back Guarantee</span>
-                       <i class="fa fa-check" style="color: #078586;""></i>
-                    </li>
-                    <a href="#">View eSim Tech Specks</a>
-                   </ul>
-                   <a href="./cart.html" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
-                   Activate 
-                   </a>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-  </section>
+   <section class="price-section">
+      <div class="row">
+         @if(isset($unlimitedLiteDaysProduct) && count($unlimitedLiteDaysProduct) > 0)
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <div class="price_plan_box style_two  tag_enables border border-success">
+                  <div class="tag">LITE <i class="bx bx-signal-5"></i></div>
+                  <div class="inner_box">
+                     <div class="top">
+                        <h2>Unlimited</h2>
+                        
+                        <p> Best for Solo Travel</p>
+                     </div>
+                     <div class="mid">
+                        <h4>${{$unlimitedLiteDaysProduct[0]['price_usd']}}</h4>
+                     </div>
+                     <p  class=" px-5"><em>{{$unlimitedLiteDaysProduct[0]['speed_policy']}}</em>
+                  </p>
+                  <p></p>
+                     <div class="bottom">
+                        <ul>
+                           <li>
+                              <span> Coverage in {{count($unlimitedLiteDaysProduct[0]['countries_supported'])}} Country(ies)</span>
+                              <i class="fi fi-{{$country['country_iso2']}} "></i>
+                           </li>
+                           <li>
+                              <span> Wi-Fi Hotspot Not Included</span>
+                              <i class='bx bx-wifi-off' style="color: #078586; font-size: 22px;"></i>
+                           </li>
+                           <li>
+                              <span> {{$product['duration_days']}} Days Validity </span>
+                              <i class="fa fa-check" style="color: #078586;""></i>
+                           </li>
+                           <li>
+                           <span> 100% Money Back Guarantee</span>
+                           <i class="fa fa-check" style="color: #078586;""></i>
+                        </li>
+                        <a href="#">View eSim Tech Specks</a>
+                        </ul>
+                        <a href="./cart.html" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        Activate 
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         @endif
+         @if(isset($unlimitedStandardDaysProduct) && count($unlimitedStandardDaysProduct) > 0)
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <div class="price_plan_box style_two  tag_enables  border border-success">
+                  <div class="tag">STANDARD <i class="bx bx-wifi"></i></div>
+                  <div class="inner_box">
+                     <div class="top">
+                        <h2>Unlimited</h2>
+                        <p>Best for Wi-Fi Sharing</p>
+                     </div>
+                     <div class="mid">
+                        <h4>${{$unlimitedStandardDaysProduct[0]['price_usd']}}</h4>
+                     </div>
+                     <p  class=" px-5"><em>{{$unlimitedStandardDaysProduct[0]['speed_policy']}}</em>
+                  </p>
+                  <p></p>
+                     <div class="bottom">
+                        <ul>
+                           <li>
+                              <span> Coverage in {{count($unlimitedStandardDaysProduct[0]['countries_supported'])}}  Country(ies)</span>
+                              <i class="fi fi-{{$country['country_iso2']}} "></i>
+                           </li>
+                           <li>
+                              <span> Wifi Hotspot included</span>
+                              <i class='bx bx-wifi' style="color: #078586; font-size: 22px;"></i>
+                           </li>
+                           <li>
+                              <span> {{$product['duration_days']}} Days Validity</span>
+                              <i class="fa fa-check" style="color: #078586;""></i>
+                           </li>
+                           <li>
+                           <span> 100% Money Back Guarantee</span>
+                           <i class="fa fa-check" style="color: #078586;""></i>
+                        </li>
+                        <a href="#">View eSim Tech Specks</a>
+                        </ul>
+                        <a href="./cart.html" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        Activate 
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         @endif
+         @if(isset($unlimitedMaxDaysProduct) && count($unlimitedMaxDaysProduct) > 0)
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <div class="price_plan_box style_two  tag_enables  border border-success">
+                  <div class="tag">MAX <i class="bx bx-sort-up"></i></div>
+                  <div class="inner_box">
+                     <div class="top">
+                        <h2>Unlimited</h2>
+                        <p>Best for Groups</p>
+                     </div>
+                     <div class="mid">
+                        <h4>${{$unlimitedMaxDaysProduct[0]['price_usd']}}</h4>
+                     </div>
+                     <p  class=" px-5"><em>{{$unlimitedMaxDaysProduct[0]['speed_policy']}}</em>
+                  </p>
+                  <p></p>
+                     <div class="bottom">
+                        <ul>
+                           <li>
+                              <span> Coverage in {{count($unlimitedMaxDaysProduct[0]['countries_supported'])}}  Country(ies)</span>
+                              <i class="fi fi-{{$country['country_iso2']}} "></i>
+                           </li>
+                           <li>
+                              <span> Wifi Hotspot included</span>
+                              <i class='bx bx-wifi' style="color: #078586; font-size: 22px;"></i>
+                           </li>
+                           <li>
+                              <span> {{$product['duration_days']}} Days Validity</span>
+                              <i class="fa fa-check" style="color: #078586;""></i>
+                           </li>
+                           <li>
+                           <span> 100% Money Back Guarantee</span>
+                           <i class="fa fa-check" style="color: #078586;""></i>
+                        </li>
+                        <a href="#">View eSim Tech Specks</a>
+                        </ul>
+                        <a href="./cart.html" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        Activate 
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         @endif
+      </div>
+   </section>
 @endsection
