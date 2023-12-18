@@ -1,0 +1,51 @@
+{
+    "result": 1,
+    "status": 200,
+    "request_id": "0fyodukhUnHBioNV6ePRYHQk",
+    "message": "",
+    "developer_message": "",
+    "product": [
+        {
+            "id": "yuK23J6OmY9c",
+            "name": "Spain Unlimited MAX - 10 Days",
+            "country_iso2": "es",
+            "country_iso3": "ESP",
+            "country_name": "Spain",
+            "data_gb": 50,
+            "unlimited_data": 1,
+            "dataCap": 5,
+            "dataUnit": "GB",
+            "dataCapPer": "day",
+            "speed_policy": "5GB per Day, then Unlimited 1Mbps",
+            "duration_days": 10,
+            "plan_type": "prepaid",
+            "price": 59,
+            "currency": "USD",
+            "price_usd": 59,
+            "price_eur": 59,
+            "price_gbp": 50,
+            "price_cad": 84,
+            "price_aud": 96,
+            "price_jpy": 9000,
+            "price_hkd": 479,
+            "price_sgd": 83,
+            "price_krw": 81600,
+            "price_ils": 239,
+            "price_brl": 319,
+            "price_mxn": 1109,
+            "countries_supported": [
+                "ESP"
+            ],
+            "regional_package": 0,
+            "rechargeable": 1,
+            "hotspot": 1,
+            "service_voice": 0,
+            "service_sms": 0,
+            "service_data": 1,
+            "network_4g": 1,
+            "network_5g": 0,
+            "url_shop": "https://maya.net/esim/spain?pid=GJOMA7ikwraC",
+            "url_direct": "https://maya.net/order/new?region=es&data=unlimited&billing=prepaid&type=max&days=10&pid=GJOMA7ikwraC"
+        }
+    ]
+}
