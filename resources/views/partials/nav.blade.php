@@ -123,6 +123,11 @@
                          </ul>
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
+                        <a href="#" class="dropdown-toggle nav-link">
+                           <span>Affiliate</span>
+                        </a>
+                     </li>
+                      <li class="menu-item menu-item-has-children nav-item">
                          <a href="#" class="dropdown-toggle nav-link">
                             <span>About</span>
                          </a>
