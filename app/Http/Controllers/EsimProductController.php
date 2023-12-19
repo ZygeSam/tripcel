@@ -5,13 +5,18 @@ namespace App\Http\Controllers;
 use App\Models\Esim;
 use Illuminate\Http\Request;
 use App\Services\ESimProductService;
+use App\Services\EsimService;
+use App\Services\MailService;
 use App\Traits\CurlableTrait;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreEsimBuyerRequest;
 use App\Models\User;
 use App\Payments\Paystack;
 use App\Payments\PaymentProcessor;
+use App\Http\Controllers\QrCodeController;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class EsimProductController extends Controller
 {
@@ -20,11 +25,17 @@ class EsimProductController extends Controller
     private $esimProduct;
     private $delimiter;
     private $paymentProcessor;
+    private $mailService;
+    private $esimService;
+    private $qrCode;
 
-    public function __construct(EsimProductService $esimProduct, PaymentProcessor $paymentProcessor) {
+    public function __construct(EsimProductService $esimProduct, PaymentProcessor $paymentProcessor, MailService $mailService, EsimService $esimService, QrCodeController $qrcode) {
         $this->esimProduct = $esimProduct;
+        $this->esimService = $esimService;
         $this->delimiter ='-';
         $this->paymentProcessor = $paymentProcessor;
+        $this->mailService = $mailService;
+        $this->qrCode = $qrcode;
     }
     
     public function getProducts(){
@@ -188,23 +199,50 @@ class EsimProductController extends Controller
         $request['amount'] =$this->cartTotal(session()->get('cart'));
         $request['currency'] ="NGN";
         $request['transaction_id'] ="TRC".now();
-        $request['redirect_url'] = route('confirmPayment', ['gateway' => $request['payment_gateway']]);
+        $request['redirect_url'] = route('confirmPayment', ['email'=> $user->email, 'gateway' => $request['payment_gateway']]);
         $response = $this->paymentProcessor->checkHandler($request['payment_gateway'])->initialize($request);
         return redirect()->to($response);
     }
-    public function confirmPayment($gateway){
-        session()->forget('cart');
+    public function confirmPayment($gateway, $email){
+        // session()->forget('cart');
+        
+        $cartedProducts = session()->get('cart');
         $products = collect($this->checkProducts()['products']);
         $countries = collect($this->getAllCountries($products));
         $response = $this->paymentProcessor->checkHandler($gateway)->verify_transaction();
         if($response['status'] == true){
-            $message = "Payment Successful";
-            return view('pages/confirmPayment', compact('message', 'countries', 'products'));
+            $user = User::where('email', $email)->first();
+            if($user){
+                $createdProfile=[];
+                foreach($cartedProducts['products'] as $prod){
+                    // return $this->esimService->createEsim($prod[0]['country_iso2'])['esim']['activation_code'];
+                    $createdProfile[] = $this->esimService->createEsim($prod[0]['country_iso2'])['esim']['activation_code'];
+                }
+                // return $this->generateCodeMessage($createdProfile);
+                // return view('emails.completePurchase', compact('createdProfile'));
+                //send mail
+                return $this->mailService->sendPurchaseInfo($user, 'Thank you for your Purchase, Activate Your ESim', $this->generateCodeMessage($createdProfile));
+                return view('pages/confirmPayment', compact('message', 'countries', 'products'));
+            }
+            
         }else{
             $message = "Payment Failed";
             return view('pages/confirmPayment', compact('message', 'countries', 'products'));
         }
+        
     }
 
+    public function generateCodeMessage($qrCodes){
+        
+        $message ="";
+        foreach($qrCodes as $key => $qrCode){
+            $file_path = "public/img/$key.svg";
+            // $file = "images{{$key}}/circle.svg";
+             $svgData = $this->qrCode->generateCode($qrCode);
+            $filePath = Storage::put($file_path, $svgData);
+            $message .= "<img src='/assets/images/blog/blog-image-12.jpg' alt='QR code for $qrCode'>";
+        }
+        return $message;
+    }
 
 }
