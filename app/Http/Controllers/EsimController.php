@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Services\ESimAuthService;
+use App\Services\EsimService;
 use App\Traits\CurlableTrait;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreEsimRequest;
@@ -17,10 +18,11 @@ class EsimController extends Controller
     protected $header;
     protected $params;
 
-    public function __construct(EsimAuthService $esimAuth) {
+    public function __construct(EsimAuthService $esimAuth, EsimService $esimService) {
         $this->token = $esimAuth->getToken();
         $this->header = $esimAuth->getHeader();
         $this->params = [];
+        $this->esimService = $esimService;
     }
 
     /**
@@ -54,12 +56,7 @@ class EsimController extends Controller
     public function store(StoreEsimRequest $request)
     {
         $request->validated();
-        $this->params = [
-            'tag'=>$request->input('tag') ?? "",
-        'region'=>$request->input('region') //should be an ISO country code or "europe, apac or latam"
-        ];
-        $this->url = config('esim.maya-api.apiTestUrl')."/connectivity-api/207131856/connectivity/v1/esim";
-        return $this->curl($this->header, $this->url, $this->params);
+        return $this->esimService->createEsim($request);
     }
 
     /**
