@@ -25,8 +25,25 @@ class StoreEsimBuyerRequest extends FormRequest
             'firstName'=> 'required',
             'lastName' => 'required',
             'email' => 'required|email',
+            'address'=> 'required',
             'phone'=> 'required',
             'password' => 'required',
+            'confirmPassword' => 'required|same:password',
+            'payment_gateway'=>'required'
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'firstName'=> 'The first name field is required',
+            'lastName' => 'The last name field is required',
+            'email' => 'The email field is required and it should be an email',
+            'address'=> 'The address field is required',
+            'phone'=> 'The phone field is required',
+            'password' => 'The password field is required',
+            'confirmPassword' => 'The confirm password field is required and should be the same as the password',
+            'payment_gateway'=>'The payment gateway field is required'
         ];
     }
 }
