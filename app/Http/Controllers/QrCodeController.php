@@ -8,7 +8,8 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 class QrCodeController extends Controller
 {
     public function generateCode($data, $size = 200, $margin = 10) {
-        return QrCode::size(200)
+        return QrCode::format('png')
+            ->size(200)
             ->margin(10)
             ->errorCorrection('H')
             ->generate($data);
