@@ -40,11 +40,12 @@
          <!----page-header----->
          <div class="mini_cart_togglers fixed_cart">
             <div class="mini-cart-count">
-               @if(is_null(session()->get('cart')))
+               0
+               {{-- @if(is_null(session()->get('cart')))
                   0
                @else
                   {{count(session()->get('cart')['products'])}}
-               @endif
+               @endif --}}
                
             </div>
             <i class="icon-shopping-cart"></i>
