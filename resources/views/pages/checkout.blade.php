@@ -12,7 +12,7 @@
     <div class="row gutter_30px">
        <div class="col-lg-6">
           <div class="woocommerce-billing-fields">
-             <h3>Your Tricel Mobile Account</h3>
+             <h3>Your Tripcel Mobile Account</h3>
              <div class="woocommerce-billing-fields__field-wrapper">
                 <p class="form-row form-row-first validate-required" id="billing_first_name_field">
                    <label>First name&nbsp;<abbr class="required" title="required">*</abbr></label>
