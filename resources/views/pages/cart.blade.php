@@ -14,7 +14,8 @@
        <tbody>
             @forelse($cart['products'] as $product)
                 <tr class="woocommerce-cart-form__cart-item cart_item p-5">
-                    <td class="product-remove">
+                  
+                  <td class="product-remove">
                     <a href="{{route('cart.remove', $product[0]['id'])}}" class="remove" aria-label="Remove this item" data-product_id="2650" data-product_sku="">×</a>						
                     </td>
                     <td class="product-name" data-title="Product">
@@ -27,6 +28,7 @@
                     <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>${{$product[0]['price_usd']}}</bdi></span>						
                     </td>
                 </tr>
+                
                 @empty
                 <p>No Products</p>
             @endforelse

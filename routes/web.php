@@ -17,7 +17,7 @@ Route::get('/', [EsimProductController::class, 'index'])->name('home');
 Route::get('/countries', [EsimProductController::class, 'getCountries'])->name('countries');
 Route::get('/regions/{region}', [EsimProductController::class, 'getRegionProducts'])->name('regions');
 Route::get('/countries/{country}', [EsimProductController::class, 'getCountryProducts'])->name('country');
-Route::get('/countries/{country}/cart', [EsimProductController::class, 'showCart'])->name('showCart');
+Route::get('/cart', [EsimProductController::class, 'showCart'])->name('showCart');
 Route::get('/countries/{country}/addtoCart/{esimProduct}', [EsimProductController::class, 'addToCart'])->name('cart');
 Route::get('/countries/removeFromCart/{esimProduct}', [EsimProductController::class, 'removeFromCart'])->name('cart.remove');
 Route::get('/checkout', [EsimProductController::class, 'checkout'])->name('checkout');

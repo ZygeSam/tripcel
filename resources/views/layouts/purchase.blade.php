@@ -79,7 +79,7 @@
                      <div class="col-lg-12">
                         <div class="breadcrumbs creote">
                            <ul class="breadcrumb m-auto">
-                              <li><a href="index.html">ESIm Data Plans</a></li>
+                              <li><a href="/">ESIm Data Plans</a></li>
                               <li class="active">REVIEW AND PAY</li>
                            </ul>
                         </div>

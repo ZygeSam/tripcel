@@ -144,17 +144,10 @@
                          <a href="#"
                             class="dropdown-toggle nav-link"><span>Contact Us</span></a>
                       </li>
-                      <li class="menu-item  menu-item-has-children dropdown nav-item">
-                         <a href="shop.html" class="dropdown-toggle nav-link">
-                            <span>Shop</span>
+                      <li class="menu-item  menu-item-has-children nav-item">
+                        <a href="{{route('showCart')}}" class="nav-link">
+                            <span>Cart</span> <i class="bx bx-cart-alt" style="color: #fff; font-size: 22px;"></i>
                          </a>
-                         <ul class="dropdown-menu">
-                            <li class="menu-item  nav-item">
-                               <a href="cart.html" class="dropdown-item nav-link">
-                                  <span>My Cart</span>
-                               </a>
-                            </li>
-                         </ul>
                       </li>
                    </ul>
                 </div>
@@ -162,10 +155,10 @@
              <div class="header_right_content">
                 <ul>
                    <li class="header-button">
-                      <a href="#" target="_blank" rel="" class="theme-btn one color_white_1"> Login </a>
+                      <a href="#" target="_blank" rel="" class="theme-btn one color_white_1"> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
                    </li>
                    <li class="header-button">
-                      <a href="#" target="_blank" rel="" class="theme-btn one color_white_1"> Sign up </a>
+                      <a href="#" target="_blank" rel="" class="theme-btn one color_white_1"> Sign up<i class='bx bx-user-plus p-1 mr-2' style="color: #078586; font-size: 22px;"></i> </a>
                    </li>
                 </ul>
              </div>
