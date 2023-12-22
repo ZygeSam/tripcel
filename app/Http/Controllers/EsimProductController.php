@@ -125,6 +125,10 @@ class EsimProductController extends Controller
         $products = collect($this->checkProducts()['products']);
         $countries = collect($this->getAllCountries($products));
         $cart = session()->get('cart');
+        if(is_null($cart)){
+            $cart['products']= [];
+        }
+        //display cart on view
         $totalPrice = $this->cartTotal($cart);
         return view('pages/cart', compact('cart', 'countries',  'totalPrice'));
     }
@@ -163,6 +167,9 @@ class EsimProductController extends Controller
     //function to calculate total of products in cart
     public function cartTotal($cart){
         $totalPrice = 0;
+        if(is_null($cart)){
+            return $totalPrice;
+        }
         foreach ($cart['products'] as $product) {
             $totalPrice += $product[0]['price_usd'];
         }
