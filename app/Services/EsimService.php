@@ -27,7 +27,8 @@ class EsimService
             'tag'=> "",
             'region'=>$request //should be an ISO country code or "europe, apac or latam"
         ];
-        $this->url = config('esim.maya-api.apiTestUrl')."/connectivity-api/207131856/connectivity/v1/esim";
+        $this->url = config('esim.maya-api.apiLiveUrl')."/connectivity/v1/esim";
+        // $this->url = config('esim.maya-api.apiTestUrl')."/connectivity-api/207131856/connectivity/v1/esim";
         return $this->curl($this->header, $this->url, $this->params);
     }
     /**
