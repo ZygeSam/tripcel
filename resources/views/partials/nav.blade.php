@@ -140,7 +140,7 @@
                          <a href="#"
                             class="dropdown-toggle nav-link"><span>How it Works</span></a>
                       </li>
-                      <li class="menu-item menu-item-has-children dropdown dropdown_full position-static mega_menu nav-item">
+                      <li class="menu-item menu-item-has-children nav-item">
                          <a href="#"
                             class="dropdown-toggle nav-link"><span>Contact Us</span></a>
                       </li>
