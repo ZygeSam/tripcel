@@ -8,6 +8,7 @@ use App\Services\ESimAuthService;
 class ESimProductService
 {
     use CurlableTrait;
+    
     protected $url;
     protected $token;
     protected $header;
@@ -21,10 +22,9 @@ class ESimProductService
     /**
      * Display a listing of the resource.
      */
-    public function getAllProducts($country=null, $region=null)
+    public function getAllProducts()
     {
-        $this->params = http_build_query(['country'=>$country, 'region'=>$region]);
-        $this->url = config('esim.maya-api.apiLiveUrl')."/partners/v1/products?$this->params";
+        $this->url = config('esim.maya-api.apiLiveUrl')."/partners/v1/products";
         return $this->curl($this->header, $this->url);
     }
 

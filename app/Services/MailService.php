@@ -4,26 +4,28 @@ namespace App\Services;
 
 use App\Mail\PurchaseMail;
 use Illuminate\Support\Facades\Mail;
+use Symfony\Component\Mailer\Mailer;
+use Symfony\Component\Mailer\Transport;
+use Symfony\Component\Mime\Email;
+
+use Symfony\Component\Mime\Part\DataPart;
+use Symfony\Component\Mime\Part\File;
 
 class MailService 
 {
-    public function sendPurchaseInfo($user, $subject, $message): array|string
+    public function sendPurchaseInfo($user, $subject, $qrCodes): array|string
     {
-            $mailData = [
-                'email_address' => $user['email'],
-                'subject' => $subject,
-                'message' => $message,
-            ];
-            
-            $mail = Mail::to($user['email'])->send(new PurchaseMail($mailData));
-            // Attach the QR code to the email
-            // Mail::send('emails.qrcode', ['mailData' => $mailData], function ($message) use ($mailData) {
-            //     $message->to($mailData['email_address'])->subject($mailData['subject']);
-            //     foreach($$mailData['message'] as $key => $qrCode){
-            //         $message->attachData($qrCode, "qrcode{{$key}}.png");
-            //     }
-            // });
+
+        $mailData=[
+            "email_address"=>$user,
+            "subject" => $subject,
+            "message" => $qrCodes
+        ];
+        $mail =Mail::to($user)->send(new PurchaseMail($mailData));
             if($mail){
+                foreach ($mailData['message'] as $key => $item) {
+                    unlink(public_path($item));
+                }
                 return true;
             }else{
                 return false;

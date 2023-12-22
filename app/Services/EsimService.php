@@ -4,10 +4,12 @@ namespace App\Services;
 use Illuminate\Support\Facades\Http;
 use App\Traits\CurlableTrait;
 use App\Services\EsimService;
+use App\Services\ESimAuthService;
 
 class EsimService
 {
     use CurlableTrait;
+
     protected $url;
     protected $token;
     protected $header;
@@ -21,7 +23,7 @@ class EsimService
 
     public function createEsim($request)
     {
-        $this->params = [
+       $this->params = [
             'tag'=> "",
             'region'=>$request //should be an ISO country code or "europe, apac or latam"
         ];
