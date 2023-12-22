@@ -20,6 +20,7 @@ Route::get('/countries/{country}', [EsimProductController::class, 'getCountryPro
 Route::get('/cart', [EsimProductController::class, 'showCart'])->name('showCart');
 Route::get('/countries/{country}/addtoCart/{esimProduct}', [EsimProductController::class, 'addToCart'])->name('cart');
 Route::get('/countries/removeFromCart/{esimProduct}', [EsimProductController::class, 'removeFromCart'])->name('cart.remove');
+Route::get('/countries/removeFromCartIcon/{esimProduct}', [EsimProductController::class, 'removeFromCartIcon'])->name('cartIcon.remove');
 Route::get('/checkout', [EsimProductController::class, 'checkout'])->name('checkout');
 Route::post('/checkout', [EsimProductController::class, 'buyProduct'])->name('buyProduct');
 Route::get('confirmPayment/{gateway}/{email}', [EsimProductController::class, 'confirmPayment'])->name('confirmPayment');

@@ -145,6 +145,19 @@ class EsimProductController extends Controller
         return view('pages/cart', compact('cart', 'countries',  'totalPrice'));
     }
 
+    public function removeFromCartIcon($request){
+        $products = collect($this->checkProducts()['products']);
+        $countries = collect($this->getAllCountries($products));
+        $cart = session()->get('cart');
+        $cart['products'] = collect($cart['products'])->filter(function ($product) use ($request) {
+            return $product[0]['id'] !== $request;
+        })->values()->all();
+        session()->put('cart', $cart);
+        $totalPrice = $this->cartTotal($cart);
+        //display cart on view
+        return back();
+    }
+
     public function addToCart($country, $esimProduct){
         $products = collect($this->checkProducts()['products']);
         $countries = collect($this->getAllCountries($products));
