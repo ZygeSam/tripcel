@@ -914,14 +914,16 @@
                      @empty
                      <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
                   @endforelse
-                  <div class="wc-proceed-to-checkout text-center" >
-                     <a href="{{route('checkout')}}" style="background-color: #078586; color: white" class=" p-4 checkout-button button alt wc-forward wp-element-button">
-                     Checkout</a>
-                  </div>
+                  @if(count(session()->get('cart')['products']) > 0)
+                     <div class="wc-proceed-to-checkout text-center" >
+                        <a href="{{route('checkout')}}" style="background-color: #078586; color: white" class=" p-4 checkout-button button alt wc-forward wp-element-button">
+                        Checkout</a>
+                     </div>
+                  @endif
+                  
                @else
                <p class="woocommerce-mini-cart__empty-message">There are no products in the cart.</p>
                @endif
-               
             </div>
          </div>
       </div>
