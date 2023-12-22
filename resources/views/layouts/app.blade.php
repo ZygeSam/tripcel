@@ -278,7 +278,7 @@
 </section>
 <!--about end-->
 <!--service-->
-<section class="service-section bg_op_3" style="background: url(assets/images/home-12-service-bg.jpg);">
+<section class="service-section bg_op_3" style="background: url({{asset("assets/images/home-12-service-bg.jpg")}});">
    <!--===============spacing==============-->
    <div class="pd_top_85"></div>
    <!--===============spacing==============-->
@@ -412,7 +412,7 @@
 <!--content end-->
 <section class="video-section">
    <div class="row">
-      <div class="col-xl-5 col-lg-5 col-md-12 pd_zero bg_op_1"  style="background: url(assets/images/banner-four-bg.jpg);">
+      <div class="col-xl-5 col-lg-5 col-md-12 pd_zero bg_op_1"  style="background: url({{asset("assets/images/banner-four-bg.jpg")}});">
            <!--===============spacing==============-->
            <div class="pd_top_210"></div>
            <!--===============spacing==============-->
@@ -427,7 +427,7 @@
           <!--===============spacing==============-->
       </div>
       <div class="col-xl-7 col-lg-7 col-md-12 bg_op_1"
-         style="background-image: url(assets/images/home-12-testi.jpg);">
+         style="background-image: url({{asset("assets/images/home-12-testi.jpg")}});">
          <!--===============spacing==============-->
          <div class="pd_top_80"></div>
          <!--===============spacing==============-->
