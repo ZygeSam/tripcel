@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
    <title>Tripcel</title>
    <!-- Fav Icon -->
-   <link rel="icon" href={{asset("assets/images/favicon.ico")}} type="image/x-icon">
+   <link rel="icon" href={{asset("assets/images/FII.png")}} type="image/x-icon">
    <!-- Fav Icon -->
    <!-- Google Fonts -->
    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Spartan%3A400%2C500%2C600%2C700%2C800%2C900%7CInter%3A300%2C400%2C500%2C600%2C700%2C800%2C900&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
@@ -664,7 +664,6 @@
                                     <ul>
                                        <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> How it’s Work</a></li>
                                        <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Testimonials</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> HR Solutions</a></li>
                                        <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Case Studies</a></li>
                                        <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Partners</a></li>
                                        <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Key Areas</a></li>
@@ -930,6 +929,4 @@
 <script type='text/javascript' src={{asset('assets/js/creote-extension.js')}}></script>
 <!---========================== javascript ==========================-->
 </body>
-
-<!-- Mirrored from themepanthers.com/html/creote-html/home-12.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Dec 2023 22:57:02 GMT -->
 </html>

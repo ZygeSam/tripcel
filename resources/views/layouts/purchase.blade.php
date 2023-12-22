@@ -193,7 +193,6 @@
                                     <ul>
                                        <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> How it’s Work</a></li>
                                        <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Testimonials</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> HR Solutions</a></li>
                                        <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Case Studies</a></li>
                                        <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Partners</a></li>
                                        <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Key Areas</a></li>
@@ -369,31 +368,31 @@
                      <h2> Latest News</h2>
                      <div class="post_enable">
                         <div class="modal_post_grid">
-                           <a href="blog-single.html">
+                           <a href="#">
                               <img width="852" height="812" src="{{asset('assets/images/blog/blog-image-9.jpg')}}"
                                  class="main_img wp-post-image" alt="img" />
                            </a>
                         </div>
                         <div class="modal_post_grid">
-                           <a href="blog-single.html">
+                           <a href="#">
                               <img width="852" height="812" src="{{asset('assets/images/blog/blog-image-8.jpg')}}"
                                  class="main_img wp-post-image" alt="img" />
                            </a>
                         </div>
                         <div class="modal_post_grid">
-                           <a href="blog-single.html">
+                           <a href="#">
                               <img width="852" height="812" src="{{asset('assets/images/blog/blog-image-7.jpg')}}"
                                  class="main_img wp-post-image" alt="img" />
                            </a>
                         </div>
                         <div class="modal_post_grid">
-                           <a href="blog-single.html">
+                           <a href="#">
                               <img width="852" height="812" src="{{('assets/images/blog/blog-image-6.jpg')}}"
                                  class="main_img wp-post-image" alt="img" />
                            </a>
                         </div>
                         <div class="modal_post_grid">
-                           <a href="blog-single.html">
+                           <a href="#">
                               <img width="852" height="812" src="{{('assets/images/blog/blog-image-5.jpg')}}"
                                  class="main_img wp-post-image" alt="img" />
                            </a>

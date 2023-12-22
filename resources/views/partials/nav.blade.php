@@ -2,7 +2,7 @@
     <div class="row align-items-center">
        <div class="col-lg-2 col-md-9 col-sm-9 col-xs-9 logo_column">
           <div class="header_logo_box">
-             <a href="index.html" class="logo navbar-brand">
+             <a href="{{route('home')}}" class="logo navbar-brand">
                 <img style="background-color: white; width: 6em; padding: 5px;" src={{asset("assets/images/FI.png")}} alt="Tripcel" class="logo_default">
              </a>
           </div>
@@ -19,7 +19,7 @@
                    <ul id="myNavbar" class="navbar_nav">
                       <li
                          class="menu-item  menu-item-has-children dropdown active dropdown_full position-static mega_menu nav-item">
-                         <a href="index.html" class="dropdown-toggle nav-link">
+                         <a href="" class="dropdown-toggle nav-link">
                             <span class="text-info">Travel Esim</span>
                          </a>
                          <ul class="dropdown-menu width_65_percentage">
@@ -132,11 +132,11 @@
                             <span>About</span>
                          </a>
                       </li>
-                      <li class="menu-item menu-item-has-children dropdown dropdown_full position-static mega_menu nav-item">
+                      <li class="menu-item menu-item-has-children nav-item">
                         <a href="#"
                            class="dropdown-toggle nav-link"><span>FAQ</span></a>
                      </li>
-                      <li class="menu-item menu-item-has-children dropdown dropdown_full position-static mega_menu nav-item">
+                      <li class="menu-item menu-item-has-children nav-item">
                          <a href="#"
                             class="dropdown-toggle nav-link"><span>How it Works</span></a>
                       </li>
