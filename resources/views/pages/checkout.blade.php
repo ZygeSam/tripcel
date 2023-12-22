@@ -26,6 +26,12 @@
                       <input type="text" class="input-text" name="lastName" id="billing_last_name" placeholder="" value="">
           
                 </p>
+                <p class="form-row form-row-last validate-required" id="billing_last_name_field">
+                  <label>Address&nbsp;<abbr class="required" title="required">*</abbr></label>
+                
+                     <input type="text" class="input-text" name="address" id="billing_last_name" placeholder="" value="">
+         
+               </p>
                 <p class="form-row form-row-first validate-required" id="billing_first_name_field">
                   <label>Email&nbsp;<abbr class="required" title="required">*</abbr></label>
                 
@@ -36,6 +42,12 @@
                   <label>Password&nbsp;<abbr class="required" title="required">*</abbr></label>
                 
                      <input type="password" class="input-text" name="password" id="billing_last_name" placeholder="" value="">
+         
+               </p>
+               <p class="form-row form-row-last validate-required" id="billing_last_name_field">
+                  <label>Confirm Password&nbsp;<abbr class="required" title="required">*</abbr></label>
+                
+                     <input type="password" class="input-text" name="confirmPassword" id="billing_last_name" placeholder="" value="">
          
                </p>
                 <p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field">
@@ -49,7 +61,7 @@
           <div class="row">
               <p>Choose a way to pay</p>
              <p><input type="radio" name="payment_gateway" value="Paystack" id=""> <img src="./assets/images/paystack.png" width="100" height="60" alt=""></p> 
-              <p><input type="radio" name="payment_gateway"  value="Transaction Cloud" id=""><svg class="icon" width="200" height="60" viewBox="0 0 316 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {{-- <p><input type="radio" name="payment_gateway"  value="TransactionCloud" id=""><svg class="icon" width="200" height="60" viewBox="0 0 316 52" fill="none" xmlns="http://www.w3.org/2000/svg"> --}}
                   <g clip-path="url(#clip0_107_1569)">
                   <path d="M36.1358 22.5322H3.78613V29.4679H36.1358V22.5322Z" fill="#091833"></path>
                   <path d="M15.6356 39.3148C15.1509 38.9089 14.6756 38.4769 14.2154 38.0045C10.9066 34.6101 9.25187 30.5975 9.25187 25.9656C9.25187 21.2903 10.8828 17.2985 14.1479 13.9946C14.2953 13.8446 14.4477 13.7057 14.5979 13.5637C12.3999 11.4907 10.6055 8.99552 8.40047 6.91699C8.13064 7.16846 7.86137 7.42269 7.59765 7.68802C2.53255 12.7694 0 18.9296 0 26.1685C0 33.3625 2.56586 39.4661 7.69842 44.4804C8.15341 44.9251 8.61866 45.3432 9.09031 45.7461C11.463 43.794 13.6715 41.6725 15.6356 39.3148Z" fill="#091833"></path>
