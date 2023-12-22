@@ -1,4 +1,6 @@
 @extends('layouts.app')
+@section('banner-heading', $country['country_name'].' eSim')
+@section('banner-sub-heading', 'Data Plans')
 @section('content')
 <section class="price_plan_with_tab price_tb_style_one">
     <div class="row">

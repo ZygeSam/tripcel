@@ -78,8 +78,8 @@
                            <div class="row align-items-center">
                               <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_content">
-                                    <h1 class="animate_up">Get Connected  <br>
-                                       Fast and secure<br>
+                                    <h1 class="animate_up">@yield('banner-heading', 'Get Connected') <br>
+                                       @yield('banner-sub-heading', 'Fast and secure ')<br>
                                        </h1>
                                        <h4>Get mobile data and sms plans anywhere with our prepaid and unlimited eSIM plans for international travel -- it's quick and easy.</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">
@@ -104,8 +104,8 @@
                            <div class="row align-items-center">
                               <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_content">
-                                    <h1 class="animate_up">Get Connected  <br>
-                                       Fast and secure<br>
+                                    <h1 class="animate_up">@yield('banner-heading', 'Get Connected  ')<br>
+                                       @yield('banner-sub-heading', 'Fast and secure ')<br>
                                        </h1>
                                        <h4>Get mobile data and sms plans anywhere with our prepaid and unlimited eSIM plans for international travel -- it's quick and easy.</h4>
                                        <div class="animate_down theme_btn_all color_two">
@@ -130,8 +130,8 @@
                            <div class="row align-items-center">
                               <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_content">
-                                    <h1 class="animate_up">Get Connected  <br>
-                                       Fast and secure<br>
+                                    <h1 class="animate_up">@yield('banner-heading', 'Get Connected  ')<br>
+                                       @yield('banner-sub-heading', 'Fast and secure ')<br>
                                        </h1>
                                        <h4>Get mobile data and sms plans anywhere with our prepaid and unlimited eSIM plans for international travel -- it's quick and easy.</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">
@@ -156,8 +156,8 @@
                            <div class="row align-items-center">
                               <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_content">
-                                    <h1 class="animate_up">Get Connected  <br>
-                                       Fast and secure<br>
+                                    <h1 class="animate_up">@yield('banner-heading', 'Get Connected  ')<br>
+                                       @yield('banner-sub-heading', 'Fast and secure ')<br>
                                        </h1>
                                        <h4>Get mobile data and sms plans anywhere with our prepaid and unlimited eSIM plans for international travel -- it's quick and easy.</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">

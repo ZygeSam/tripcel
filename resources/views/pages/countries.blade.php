@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('banner-heading', 'All International eSIMs')
 @section('content')
 <!--process-->
 <section class="process-section mr_top_minus_100 position-relative z_99">  
