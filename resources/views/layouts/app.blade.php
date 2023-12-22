@@ -172,7 +172,7 @@
                               </div>
                               <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_image animate_right">
-                                    <img src= "assets/images/esimphoneconnect.png" class="img-fluid" alt="img" />
+                                    <img src= {{asset("assets/images/esimphoneconnect.png")}} class="img-fluid" alt="img" />
                                  </div>
                               </div>
                            </div>
