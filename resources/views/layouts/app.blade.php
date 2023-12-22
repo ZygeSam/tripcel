@@ -40,7 +40,12 @@
          <!----page-header----->
          <div class="mini_cart_togglers fixed_cart">
             <div class="mini-cart-count">
-               {{count(session()->get('cart')['products'])}}
+               @if(is_null(session()->get('cart')))
+                  0
+               @else
+                  {{count(session()->get('cart')['products'])}}
+               @endif
+               
             </div>
             <i class="icon-shopping-cart"></i>
          </div>
@@ -206,10 +211,7 @@
                 <img src={{asset("assets/images/about/about-6.png")}} class="img-fluid" alt="image">
              </div>
              <div class="image two">
-                <img src={{asset("assets/images/about/about-7.png")}} class="img-fluid" alt="image">
-                <div class="video_box">
-                   <a href="#" class="lightbox-image"><i class="icon-play"></i></a>
-                </div>
+                <img src={{asset("assets/images/esmdisplay.jpg")}} class="img-fluid" alt="image">
              </div>
              <div class="authour_quotes">
                 <i class="icon-quote"></i>
