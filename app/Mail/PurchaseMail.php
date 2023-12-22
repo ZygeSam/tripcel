@@ -39,7 +39,7 @@ class PurchaseMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.completePurchase',
+           view: 'emails.completePurchase',
         );
     }
 

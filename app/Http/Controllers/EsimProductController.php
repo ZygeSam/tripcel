@@ -7,29 +7,27 @@ use Illuminate\Http\Request;
 use App\Services\ESimProductService;
 use App\Services\EsimService;
 use App\Services\MailService;
-use App\Traits\CurlableTrait;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreEsimBuyerRequest;
 use App\Models\User;
-use App\Payments\Paystack;
 use App\Payments\PaymentProcessor;
 use App\Http\Controllers\QrCodeController;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
+
 class EsimProductController extends Controller
 {
-    use CurlableTrait;
-
     private $esimProduct;
     private $delimiter;
     private $paymentProcessor;
     private $mailService;
     private $esimService;
     private $qrCode;
+    private $manager;
 
-    public function __construct(EsimProductService $esimProduct, PaymentProcessor $paymentProcessor, MailService $mailService, EsimService $esimService, QrCodeController $qrcode) {
+    public function __construct(ESimProductService $esimProduct, PaymentProcessor $paymentProcessor, MailService $mailService, EsimService $esimService, QrCodeController $qrcode) {
         $this->esimProduct = $esimProduct;
         $this->esimService = $esimService;
         $this->delimiter ='-';
@@ -46,11 +44,9 @@ class EsimProductController extends Controller
 
     public function checkProducts(){
         if(session()->has('products')){
-            $products = session()->get('products');
-        }else{
-            $products = collect($this->getProducts());
+            return  session()->get('products');
         }
-        return $products;
+        return collect($this->getProducts());
     }
 
     public function getAllCountries($products){
@@ -141,7 +137,6 @@ class EsimProductController extends Controller
         })->values()->all();
         session()->put('cart', $cart);
         $totalPrice = $this->cartTotal($cart);
-        // return back();
         //display cart on view
         return view('pages/cart', compact('cart', 'countries',  'totalPrice'));
     }
@@ -195,17 +190,15 @@ class EsimProductController extends Controller
         if(!$user){
             $user =  User::create($request->all());
         }
-        
         $request['amount'] =$this->cartTotal(session()->get('cart'));
         $request['currency'] ="NGN";
         $request['transaction_id'] ="TRC".now();
+        $request['description'] ="Purchase of esim";
         $request['redirect_url'] = route('confirmPayment', ['email'=> $user->email, 'gateway' => $request['payment_gateway']]);
         $response = $this->paymentProcessor->checkHandler($request['payment_gateway'])->initialize($request);
         return redirect()->to($response);
     }
     public function confirmPayment($gateway, $email){
-        // session()->forget('cart');
-        
         $cartedProducts = session()->get('cart');
         $products = collect($this->checkProducts()['products']);
         $countries = collect($this->getAllCountries($products));
@@ -214,35 +207,31 @@ class EsimProductController extends Controller
             $user = User::where('email', $email)->first();
             if($user){
                 $createdProfile=[];
-                foreach($cartedProducts['products'] as $prod){
-                    // return $this->esimService->createEsim($prod[0]['country_iso2'])['esim']['activation_code'];
-                    $createdProfile[] = $this->esimService->createEsim($prod[0]['country_iso2'])['esim']['activation_code'];
+                foreach($cartedProducts['products'] as $key=> $prod){
+                   $createdProfile[] = $this->generateCodeMessage(
+                        $this->qrCode->generateCode(
+                            $this->esimService->createEsim($prod[0]['country_iso2'])['esim']['activation_code']), $key);
                 }
-                // return $this->generateCodeMessage($createdProfile);
-                // return view('emails.completePurchase', compact('createdProfile'));
-                //send mail
-                return $this->mailService->sendPurchaseInfo($user, 'Thank you for your Purchase, Activate Your ESim', $this->generateCodeMessage($createdProfile));
-                return view('pages/confirmPayment', compact('message', 'countries', 'products'));
+                if($this->mailService->sendPurchaseInfo($user, 'Thank you for your Purchase, Activate Your ESim', $createdProfile)){
+                    $message = "Payment Success";
+                }
             }
-            
         }else{
             $message = "Payment Failed";
-            return view('pages/confirmPayment', compact('message', 'countries', 'products'));
         }
+        return view('pages/confirmPayment', compact('message', 'countries', 'products'));
         
     }
 
-    public function generateCodeMessage($qrCodes){
-        
-        $message ="";
-        foreach($qrCodes as $key => $qrCode){
-            $file_path = "public/img/$key.svg";
-            // $file = "images{{$key}}/circle.svg";
-             $svgData = $this->qrCode->generateCode($qrCode);
-            $filePath = Storage::put($file_path, $svgData);
-            $message .= "<img src='/assets/images/blog/blog-image-12.jpg' alt='QR code for $qrCode'>";
-        }
-        return $message;
+    public function generateCodeMessage($qrCode, $key){
+            $timestamp = now();
+            $file_path = "public/img/$timestamp-$key.png";
+            
+            $filePath = Storage::put($file_path, $qrCode);
+            $qrCodePath = Storage::url($file_path);
+            return $qrCodePath;
     }
+    
+    
 
 }
