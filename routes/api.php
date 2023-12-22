@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EsimProductController;
+use App\Http\Controllers\EsimController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,7 @@ use App\Http\Controllers\EsimProductController;
 |
 */
 
-Route::get('/products', [EsimProductController::class, 'index']);
+Route::post('/store', [EsimController::class, 'store']);
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
