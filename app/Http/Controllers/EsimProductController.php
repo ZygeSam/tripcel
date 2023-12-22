@@ -208,9 +208,10 @@ class EsimProductController extends Controller
             if($user){
                 $createdProfile=[];
                 foreach($cartedProducts['products'] as $key=> $prod){
+                   $qrFIleName = $user['firstName'].$user['lastName'].$key;
                    $createdProfile[] = $this->generateCodeMessage(
                         $this->qrCode->generateCode(
-                            $this->esimService->createEsim($prod[0]['country_iso2'])['esim']['activation_code']), $key);
+                            $this->esimService->createEsim($prod[0]['country_iso2'])['esim']['activation_code']), $qrFIleName);
                 }
                 if($this->mailService->sendPurchaseInfo($user, 'Thank you for your Purchase, Activate Your ESim', $createdProfile)){
                     $message = "Payment Success";
@@ -223,9 +224,8 @@ class EsimProductController extends Controller
         
     }
 
-    public function generateCodeMessage($qrCode, $key){
-            $timestamp = now();
-            $file_path = "public/img/$timestamp-$key.png";
+    public function generateCodeMessage($qrCode, $qrFIleName){
+            $file_path = "public/img/$qrFIleName.png";
             
             $filePath = Storage::put($file_path, $qrCode);
             $qrCodePath = Storage::url($file_path);
