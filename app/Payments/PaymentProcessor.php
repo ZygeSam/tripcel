@@ -15,6 +15,8 @@ class PaymentProcessor
         switch ($handler) {
             case "Paystack":
                 return $this->paystack();
+        case "TransactionCloud":
+                return $this->transactionCloud();
             default:
                 # code...
                 break;
@@ -54,5 +56,10 @@ class PaymentProcessor
     public function paystack()
     {
         return new Paystack();
+    }
+
+    public function transactionCloud()
+    {
+        return new TransactionCloud();
     }
 }

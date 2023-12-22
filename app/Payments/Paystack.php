@@ -60,7 +60,6 @@ class Paystack
             "callback_url" => $body['redirect_url'],
         ];
 
-        $this->curl($this->header, $url, json_encode($data));
         if ($response = $this->curl($this->header, $url, json_encode($data))) {
             if ($response['status'] = "true") {
                 return $response['data']['authorization_url'];
