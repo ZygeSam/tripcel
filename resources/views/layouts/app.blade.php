@@ -892,12 +892,12 @@
       </div>
       <div class="cart_content_box">
          <div class="contnet_cart_box">
-            <div class="widget_shopping_cart_content">
-               @forelse(session()->get('cart')['products'] as $product)
+            <div class="widget_shopping_cart_content" >
+               {{-- @forelse(session()->get('cart')['products'] as $product)
                   <tr class="woocommerce-cart-form__cart-item cart_item p-5">
                      
-                     <td class="product-remove">
-                     <a href="{{route('cart.remove', $product[0]['id'])}}" class="remove" aria-label="Remove this item" data-product_id="2650" data-product_sku="">×</a>						
+                     <td class="product-remove" style="background-color: #078586; color: white" >
+                        <a href="{{route('cart.remove', $product[0]['id'])}}" style="background-color: #078586; color: white"  class="py-2 mb-2 btn remove" aria-label="Remove this item" data-product_id="2650" data-product_sku="">×</a>						
                      </td>
                      <td class="product-name" data-title="Product">
                      <p>Package : {{$product[0]['name']}}</p>
@@ -909,9 +909,17 @@
                      <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>${{$product[0]['price_usd']}}</bdi></span>						
                      </td>
                   </tr>
+                  <hr>
+                  <br>
                   @empty
                   <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
                @endforelse
+               @if(!is_null(session()->get('cart')))
+                  <div class="wc-proceed-to-checkout text-center" >
+                     <a href="{{route('checkout')}}" style="background-color: #078586; color: white" class=" p-4 checkout-button button alt wc-forward wp-element-button">
+                     Checkout</a>
+                  </div>
+               @endif --}}
                
             </div>
          </div>
