@@ -149,6 +149,9 @@
                             <span>Cart</span> <i class="bx bx-cart-alt" style="color: #fff; font-size: 22px;"></i>
                          </a>
                       </li>
+                      <li class="menu-item  menu-item-has-children nav-item d-md-none">
+                        <a href="{{route('login')}}" target="_blank" rel="" class=""> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
+                      </li>
                    </ul>
                 </div>
              </div>
@@ -157,9 +160,7 @@
                    <li class="header-button">
                       <a href="{{route('login')}}" target="_blank" rel="" class="theme-btn one color_white_1"> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
                    </li>
-                   <li class="header-button">
-                      <a href="{{route('register')}}" target="_blank" rel="" class="theme-btn one color_white_1"> Sign up<i class='bx bx-user-plus p-1 mr-2' style="color: #078586; font-size: 22px;"></i> </a>
-                   </li>
+                   
                 </ul>
              </div>
           </div>
