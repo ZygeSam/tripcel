@@ -22,9 +22,10 @@ class ESimProductService
     /**
      * Display a listing of the resource.
      */
-    public function getAllProducts()
+    public function getAllProducts($country=null)
     {
-        $this->url = config('esim.maya-api.apiLiveUrl')."/partners/v1/products";
+        $this->params = http_build_query(['country'=>$country]);
+        $this->url = config('esim.maya-api.apiLiveUrl')."/partners/v1/products?$this->params";
         return $this->curl($this->header, $this->url);
     }
 
