@@ -27,7 +27,7 @@ class StoreEsimBuyerRequest extends FormRequest
             'email' => 'required|email',
             'address'=> 'required',
             'phone'=> 'required',
-            'password' => 'required',
+            'password' => 'required', "min:6", "confirmed",
             'confirmPassword' => 'required|same:password',
             'payment_gateway'=>'required'
         ];
