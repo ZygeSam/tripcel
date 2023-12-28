@@ -29,7 +29,7 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-medium d-block">Yomi Lokan</span>
+                            <span class="fw-medium d-block">{{auth()->user()->firstName}} {{auth()->user()->lastName}}</span>
                           </div>
                         </div>
                       </a>

@@ -45,7 +45,7 @@
                           </div>
                         </div>
                       </div>
-                    <h5 class="card-title text-primary">Welcome Yomi Lokan! 🎉</h5>
+                    <h5 class="card-title text-primary">Welcome {{auth()->user()->firstName}} {{auth()->user()->lastName}}! 🎉</h5>
                     <p class="mb-4">
                     You have to explore the world today. There's still more to be done with your Tripcel ESim
                     </p>
