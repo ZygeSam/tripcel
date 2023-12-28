@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EsimController;
 use App\Http\Controllers\EsimProductController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +25,33 @@ Route::get('/countries/removeFromCart/{esimProduct}', [EsimProductController::cl
 Route::get('/countries/removeFromCartIcon/{esimProduct}', [EsimProductController::class, 'removeFromCartIcon'])->name('cartIcon.remove');
 Route::get('/checkout', [EsimProductController::class, 'checkout'])->name('checkout');
 Route::post('/checkout', [EsimProductController::class, 'buyProduct'])->name('buyProduct');
-Route::get('confirmPayment/{gateway}/{email}', [EsimProductController::class, 'confirmPayment'])->name('confirmPayment');
+Route::get('confirmPayment/{gateway}/{transactionId}/{email}', [EsimProductController::class, 'confirmPayment'])->name('confirmPayment');
 Route::post('/store', [EsimController::class, 'store']);
 Route::get('/products', [EsimProductController::class, 'index']);
 Route::get('/products/{esimProduct}', [EsimProductController::class, 'show']);
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::prefix('client')->group(function (){
+    Route::get("/", [ClientController::class, 'index'])->name('client.index');
+    Route::get("/esim/{userId}", [ClientController::class, 'esim'])->name('esim.index');
+    Route::get("/add", [ClientController::class, 'create'])->name('esim.create');
+    Route::post("/store", [ClientController::class, 'store'])->name('esim.store');
+    Route::get("/topup", [ClientController::class, 'topUp'])->name('esim.topup');
+    Route::get("/addToCart", [ClientController::class, 'addToCart'])->name('esim.addToCart');
+    Route::get("/removeFromCart", [ClientController::class, 'removeFromCart'])->name('esim.removeFromCart');
+    Route::get("/pay", [ClientController::class, 'pay'])->name('esim.pay');
+    Route::post("/sms", [ClientController::class, 'sms'])->name('esim.sms');
+    Route::get("/confirmpay/{gateway}/{transactionId}", [ClientController::class, 'confirmPay'])->name('esim.confirmPay');
+    Route::get("/checkout", [ClientController::class, 'checkout'])->name('esim.checkout');
+    Route::get("/recharge", [ClientController::class, 'recharge'])->name('esim.recharge');
+    Route::get("/password", [ClientController::class, 'password'])->name('client.password');
+    Route::post("/passwordChange", [ClientController::class, 'changePassword'])->name('client.passwordChange');
+    Route::get("/profile", [ClientController::class, 'profile'])->name('client.profile');
+    Route::post("/profileUpdate", [ClientController::class, 'saveProfile'])->name('client.profileUpdate');
+    Route::get("/cart", [ClientController::class, 'showCart'])->name('client.cart');
+});
+
