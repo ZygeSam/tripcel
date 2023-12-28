@@ -46,7 +46,18 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        'email_verified_at' => 'datetime'
     ];
+
+    public function esims(){
+        return $this->hasMany(Esim::class);
+    }
+
+    public function esimTransactions(){
+        return $this->hasMany(EsimOrders::class);
+    }
+
+    public function transactions(){
+        return $this->hasManyThrough(Esim::class, EsimOrders::class, 'user_id',"user_id");
+    }
 }
