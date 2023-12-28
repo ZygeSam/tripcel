@@ -98,7 +98,7 @@
                                     
                                         </p>
                                         <p>
-                                            <button type="submit" class="btn btn-outline-tripcel">Register</button>
+                                            <button type="submit" class="btn btn-outline-tripcel">LOGIN</button>
                                         </p>
                                         
                                      </form>
