@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Esim;
+use App\Models\User;
+use App\Models\EsimOrders;
 use Illuminate\Http\Request;
-use App\Services\ESimProductService;
 use App\Services\EsimService;
 use App\Services\MailService;
-use Illuminate\Support\Facades\Http;
+use App\Services\ESimProductService;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\StoreEsimBuyerRequest;
-use App\Models\User;
+use App\Enums\TransactionStatus;
 use App\Payments\PaymentProcessor;
+use App\Http\Requests\StoreEsimBuyerRequest;
 use App\Http\Controllers\QrCodeController;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
@@ -210,33 +212,68 @@ class EsimProductController extends Controller
         if(!$user){
             $user =  User::create($request->all());
         }
+        //set request parameters
         $request['amount'] =$this->cartTotal(session()->get('cart'));
         $request['currency'] ="NGN";
         $request['transaction_id'] ="TRC".now();
-        $request['description'] ="Purchase of esim";
-        $request['redirect_url'] = route('confirmPayment', ['email'=> $user->email, 'gateway' => $request['payment_gateway']]);
+        $request['description'] = "Purchase Esim";
+        $request['redirect_url'] = route('confirmPayment', ['transactionId'=> $request['transaction_id'], 'gateway' => $request['payment_gateway'], 'email'=>$user['email']]);
+        
+        // save transaction to database
         $response = $this->paymentProcessor->checkHandler($request['payment_gateway'])->initialize($request);
         return redirect()->to($response);
+
     }
-    public function confirmPayment($gateway, $email){
+    public function confirmPayment($gateway, $transactionId, $email){
         $cartedProducts = session()->get('cart');
         $products = collect($this->checkProducts()['products']);
         $countries = collect($this->getAllCountries($products));
         $response = $this->paymentProcessor->checkHandler($gateway)->verify_transaction();
         if($response['status'] == true){
             $user = User::where('email', $email)->first();
-            if($user){
                 $createdProfile=[];
                 foreach($cartedProducts['products'] as $key=> $prod){
-                   $qrFIleName = $user['firstName'].$user['lastName'].$key;
+                    // save esim to esim database for user
+                   $createdSim = $this->esimService->createEsim($prod[0]['country_iso2']);
+                   $createdEsim = Esim::create([
+                    'eSimCountryIso2' => $prod[0]['country_iso2'],
+                    'eSimCountryIso3' => $prod[0]['country_iso3'],
+                    'eSimCountryName' => $prod[0]['country_name'],
+                    'esimIccid' => $createdSim['esim']['iccid'],
+                    "eSimState"=>  $createdSim['esim']['state'],
+                    "eSimManualCode"=> $createdSim['esim']['manual_code'],
+                    "eSimDateAssigned"=> $createdSim['esim']['date_assigned'],
+                    "eSimNetworkStatus"=> $createdSim['esim']['network_status'],
+                    "eSimActivationCode"=> $createdSim['esim']['activation_code'],
+                    "user_id"=> $user['id']
+                   ]);
+                   $eSimOrders = EsimOrders::create([
+                        'transactionId'=> $transactionId,
+                        'user_id'=> $user['id'],
+                        'eSimIccId'=>$createdEsim->esimIccid,
+                        'eSimProductId'=>$prod[0]['id'],
+                        'eSimPlanName'=> $prod[0]['name'],
+                        'unlimitedData'=> $prod[0]['unlimited_data'],
+                        'planType'=> $prod[0]['plan_type'],
+                        'price'=> $prod[0]['price'],
+                        'currrency' => $prod[0]['currency'],
+                        'countries_supported'=>implode(',', $prod[0]['countries_supported']),
+                        'paymentChannel' => $gateway
+                   ]);
+
+                    // generate qrCode file name
+                   $qrFIleName =  $user['firstName']. $user['lastName'].$key;
+
+                    // generate the qrCodes
                    $createdProfile[] = $this->generateCodeMessage(
                         $this->qrCode->generateCode(
-                            $this->esimService->createEsim($prod[0]['country_iso2'])['esim']['activation_code']), $qrFIleName);
+                            $createdSim['esim']['activation_code']), $qrFIleName);
                 }
-                if($this->mailService->sendPurchaseInfo($user, 'Thank you for your Purchase, Activate Your ESim', $createdProfile)){
-                    $message = "Payment Success";
+                    // mail tthe qr codes
+                if($this->mailService->sendPurchaseInfo( $user, 'Thank you for your Purchase, Activate Your ESim', $createdProfile)){
+                   session()->forget('cart');
+                   $message = "Payment Success";
                 }
-            }
         }else{
             $message = "Payment Failed";
         }
