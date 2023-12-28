@@ -1,7 +1,7 @@
 @extends('layouts.purchase')
 @section('content')
 <li class="py-2" style="list-style-type: none;"><a href="#">My Cart</a></li>
-<form class="woocommerce-cart-form" action="https://themepanthers.com/html/creote-html/cart.html" method="post">
+<form class="woocommerce-cart-form" action="" method="post">
     <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
        <thead>
           <tr>
@@ -43,7 +43,7 @@
           <tbody>
              <tr class="cart-subtotal">
                 <th>Subtotal</th>
-                <td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>30.00</bdi></span></td>
+                <td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>{{$totalPrice}}</bdi></span></td>
              </tr>
              <tr class="cart-subtotal">
               <th>Service fee</th>

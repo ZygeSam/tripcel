@@ -155,10 +155,10 @@
              <div class="header_right_content">
                 <ul>
                    <li class="header-button">
-                      <a href="#" target="_blank" rel="" class="theme-btn one color_white_1"> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
+                      <a href="{{route('login')}}" target="_blank" rel="" class="theme-btn one color_white_1"> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
                    </li>
                    <li class="header-button">
-                      <a href="#" target="_blank" rel="" class="theme-btn one color_white_1"> Sign up<i class='bx bx-user-plus p-1 mr-2' style="color: #078586; font-size: 22px;"></i> </a>
+                      <a href="{{route('register')}}" target="_blank" rel="" class="theme-btn one color_white_1"> Sign up<i class='bx bx-user-plus p-1 mr-2' style="color: #078586; font-size: 22px;"></i> </a>
                    </li>
                 </ul>
              </div>
