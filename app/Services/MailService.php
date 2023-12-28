@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Mail\PurchaseMail;
+use App\Mail\DataPurchaseMail;
 use Illuminate\Support\Facades\Mail;
 use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mailer\Transport;
@@ -30,5 +31,20 @@ class MailService
             }else{
                 return false;
             }
-        }
+    }
+
+    public function sendDataPurchaseInfo($email, $subject, $message): array|string
+    {
+            $mailData = [
+                'email_address' => $email,
+                'subject' => $subject,
+                'message' => $message,
+            ];
+            $mail = Mail::to($email)->send(new DataPurchaseMail($mailData));
+            if($mail){
+                return true;
+            }else{
+                return false;
+            }
+    }
 }
