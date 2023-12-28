@@ -35,7 +35,7 @@ Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::prefix('client')->middleware(['auth'])->group(function (){
+Route::prefix('client')->group(function () {
     Route::get("/", [ClientController::class, 'index'])->name('client.index');
     Route::get("/esim/{userId}", [ClientController::class, 'esim'])->name('esim.index');
     Route::get("/add", [ClientController::class, 'create'])->name('esim.create');

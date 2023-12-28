@@ -20,6 +20,7 @@ use App\Http\Requests\PasswordRequest;
 use App\Http\Requests\ClientProfileRequest;
 use App\Http\Controllers\QrCodeController;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use App\Http\Middleware\AuthenticateClient;
 
 class ClientController extends Controller
 {
@@ -39,6 +40,7 @@ class ClientController extends Controller
         $this->mailService = $mailService;
         $this->esimPlan = $esimPlan;
         $this->qrCode = $qrcode;
+        $this->middleware(AuthenticateClient::class);
     }
 
     /**
