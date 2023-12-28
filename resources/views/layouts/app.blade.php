@@ -15,7 +15,9 @@
    <!-- Style -->
    <link rel='stylesheet' href={{asset('assets/css/bootstrap.min.css')}} type='text/css' media='all' />
    <link rel='stylesheet' href={{asset('assets/css/owl.css')}} type='text/css' media='all' />
+   <link rel="stylesheet" href={{asset("assets/css/animate.css")}} type="text/css" media="all">
    <link rel='stylesheet' href={{asset('assets/css/swiper.min.css')}} type='text/css' media='all' />
+   <link rel="stylesheet" href={{asset("assets/css/aos.css")}} type="text/css" media="all">
    <link rel='stylesheet' href={{asset('assets/css/jquery.fancybox.min.css')}} type='text/css' media='all' />
    <link rel='stylesheet' href={{asset('assets/css/icomoon.css')}} type='text/css' media='all' />
    <link rel='stylesheet' href={{asset('assets/css/flexslider.css')}} type='text/css' media='all' />
@@ -23,10 +25,7 @@
    <link rel='stylesheet' href={{asset('assets/css/style.css')}} type='text/css' media='all' />
    <link rel='stylesheet' href={{asset('assets/css/scss/elements/theme-css.css')}} type='text/css' media='all' />
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
-/>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
    <link rel='stylesheet' id="creote-color-switcher-css" href='assets/css/scss/elements/color-switcher/color.css' type='text/css' media='all' />
    <!-- Style-->
    <!----woocommerce---->
