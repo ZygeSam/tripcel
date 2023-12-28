@@ -141,7 +141,7 @@ class ClientController extends Controller
             $isoCode = $selectedEsim->eSimCountryIso2;
         }
         $products = $this->esimProducts->getAllProducts($isoCode)['products'];
-        return view('dashboards.client.eSimTopup', compact('selectedEsim', 'products', 'esimPlans'));
+        return view('dashboards.client.eSimTopUp', compact('selectedEsim', 'products', 'esimPlans'));
     }
 
     public function showCart(){
