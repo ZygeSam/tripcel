@@ -344,7 +344,7 @@ class ClientController extends Controller
      */
     public function profile()
     {
-        $user = User::where('id', 1)->first();
+        $user = User::where('id', auth()->user()->id)->first();
         return view('dashboards.client.profile', compact('user'));
     }
 
