@@ -268,7 +268,7 @@
                         </li>
                         <a href="#">View eSim Tech Specks</a>
                         </ul>
-                        <a href="./cart.html" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedLiteDaysProduct[0]['id']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
                         </a>
                      </div>
@@ -311,7 +311,7 @@
                         </li>
                         <a href="#">View eSim Tech Specks</a>
                         </ul>
-                        <a href="./cart.html" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedStandardDaysProduct[0]['id']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
                         </a>
                      </div>
@@ -354,7 +354,7 @@
                         </li>
                         <a href="#">View eSim Tech Specks</a>
                         </ul>
-                        <a href="./cart.html" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedMaxDaysProduct[0]['id']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
                         </a>
                      </div>
