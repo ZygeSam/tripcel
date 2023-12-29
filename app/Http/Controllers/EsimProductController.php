@@ -223,6 +223,7 @@ class EsimProductController extends Controller
         $cartedProducts = session()->get('cart');
         $products = $this->products;
         $countries = $this->countries;
+        $totalPrice = $this->cartTotal($cartedProducts);
         $response = $this->paymentProcessor->checkHandler($gateway)->verify_transaction();
         if($response['status'] == true){
             $user = User::where('email', $email)->first();
@@ -266,13 +267,12 @@ class EsimProductController extends Controller
                 }
                     // mail tthe qr codes
                 if($this->mailService->sendPurchaseInfo( $user, 'Thank you for your Purchase, Activate Your ESim', $createdProfile)){
-                   session()->forget('cart');
                    $message = "Payment Success";
                 }
         }else{
             $message = "Payment Failed";
         }
-        return view('pages/confirmPayment', compact('message', 'countries', 'products'));
+        return view('pages/confirmPayment', compact('message', 'countries', 'products', 'totalPrice'));
         
     }
 
