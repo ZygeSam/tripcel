@@ -28,6 +28,8 @@ class EsimProductController extends Controller
     private $esimService;
     private $qrCode;
     private $manager;
+    private $products;
+    private $countries;
 
     public function __construct(ESimProductService $esimProduct, PaymentProcessor $paymentProcessor, MailService $mailService, EsimService $esimService, QrCodeController $qrcode) {
         $this->esimProduct = $esimProduct;
@@ -36,19 +38,12 @@ class EsimProductController extends Controller
         $this->paymentProcessor = $paymentProcessor;
         $this->mailService = $mailService;
         $this->qrCode = $qrcode;
+        $this->products = collect($this->getProducts()['products']);
+        $this->countries = collect($this->getAllCountries($this->products));
     }
     
     public function getProducts(){
-        $products = collect($this->esimProduct->getAllProducts());
-        session()->put(['products'=>$products]);
-        return session()->get('products');
-    }
-
-    public function checkProducts(){
-        if(session()->has('products')){
-            return  session()->get('products');
-        }
-        return collect($this->getProducts());
+        return $this->esimProduct->getAllProducts();
     }
 
     public function getAllCountries($products){
@@ -62,23 +57,23 @@ class EsimProductController extends Controller
              ];
          })->values()->all();
      }
+
     public function index()
-    { 
-        $products = collect($this->checkProducts()['products']);
-        $countries = $this->getAllCountries($products);
+    {   
+        $products = $this->products;
+        $countries = $this->countries;
         return view('pages/index', compact('products', 'countries'));
     }
 
     public function getCountries(){
-       $products = collect($this->checkProducts()['products']);
-       $countries = $this->getAllCountries($products);
+       $countries = $this->countries;
        return view('pages/countries', compact('countries'));
     }
 
     public function getRegionProducts($region){
-        $products = collect($this->checkProducts()['products']);
-        $countries = collect($this->getAllCountries($products));
-        $country = $countries->where('country_iso3', $region)->first();
+        $products = $this->products;
+        $countries = $this->countries;
+        $country = $this->countries->where('country_iso3', $region)->first();
         $fiveDaysProduct = $this->getProductDays($products, $country['country_name'], "- 5 days");
         $tenDaysProduct = $this->getProductDays($products, $country['country_name'], "- 10 days");
         $fifteenDaysProduct = $this->getProductDays($products, $country['country_name'], "- 15 days");
@@ -102,8 +97,8 @@ class EsimProductController extends Controller
     }
 
     public function getCountryProducts($country){
-       $products = collect($this->checkProducts()['products']);
-       $countries = collect($this->getAllCountries($products));
+        $products = $this->products;
+        $countries = $this->countries;
        $country = $countries->where('country_name', $country)->first();
        $fiveDaysProduct = $this->getProductDays($products, $country['country_name'], "- 5 days");
        $tenDaysProduct = $this->getProductDays($products, $country['country_name'], "- 10 days");
@@ -124,8 +119,8 @@ class EsimProductController extends Controller
         return $this->esimProduct->getAProduct($esimProduct);
     }
     public function showCart(){
-        $products = collect($this->checkProducts()['products']);
-        $countries = collect($this->getAllCountries($products));
+        $products = $this->products;
+        $countries = $this->countries;
         $cart = session()->get('cart');
         if(is_null($cart)){
             $cart['products']= [];
@@ -135,8 +130,8 @@ class EsimProductController extends Controller
         return view('pages/cart', compact('cart', 'countries',  'totalPrice'));
     }
     public function removeFromCart($request){
-        $products = collect($this->checkProducts()['products']);
-        $countries = collect($this->getAllCountries($products));
+        $products = $this->products;
+        $countries = $this->countries;
         $cart = session()->get('cart');
         $cart['products'] = collect($cart['products'])->filter(function ($product) use ($request) {
             return $product[0]['id'] !== $request;
@@ -148,8 +143,8 @@ class EsimProductController extends Controller
     }
 
     public function removeFromCartIcon($request){
-        $products = collect($this->checkProducts()['products']);
-        $countries = collect($this->getAllCountries($products));
+        $products = $this->products;
+        $countries = $this->countries;
         $cart = session()->get('cart');
         $cart['products'] = collect($cart['products'])->filter(function ($product) use ($request) {
             return $product[0]['id'] !== $request;
@@ -161,8 +156,8 @@ class EsimProductController extends Controller
     }
 
     public function addToCart($country, $esimProduct){
-        $products = collect($this->checkProducts()['products']);
-        $countries = collect($this->getAllCountries($products));
+        $products = $this->products;
+        $countries = $this->countries;
 
         if(session()->has('cart')){
             $cart = session()->get('cart');
@@ -192,8 +187,8 @@ class EsimProductController extends Controller
     }
     
     public function checkout(){
-        $products = collect($this->checkProducts()['products']);
-        $countries = collect($this->getAllCountries($products));
+        $products = $this->products;
+        $countries = $this->countries;
         if(session()->has('cart')){
             $cart = session()->get('cart');
             if (!isset($cart['products'])) {
@@ -226,8 +221,8 @@ class EsimProductController extends Controller
     }
     public function confirmPayment($gateway, $transactionId, $email){
         $cartedProducts = session()->get('cart');
-        $products = collect($this->checkProducts()['products']);
-        $countries = collect($this->getAllCountries($products));
+        $products = $this->products;
+        $countries = $this->countries;
         $response = $this->paymentProcessor->checkHandler($gateway)->verify_transaction();
         if($response['status'] == true){
             $user = User::where('email', $email)->first();

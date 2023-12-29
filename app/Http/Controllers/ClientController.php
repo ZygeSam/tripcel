@@ -31,6 +31,7 @@ class ClientController extends Controller
     protected $esimPlan;
     protected $qrCode;
     protected $products;
+    protected $countries;
 
     public function __construct(ESimProductService $esimProducts, EsimPlanTypeService $esimPlanType,PaymentProcessor $paymentProcessor, EsimService $esimService, EsimPlanService $esimPlan, QrCodeController $qrcode, MailService $mailService) {
         $this->paymentProcessor = $paymentProcessor;
@@ -40,6 +41,8 @@ class ClientController extends Controller
         $this->mailService = $mailService;
         $this->esimPlan = $esimPlan;
         $this->qrCode = $qrcode;
+        $this->products = collect($this->getProducts()['products']);
+        $this->countries = collect($this->getAllCountries($this->products));
         $this->middleware(AuthenticateClient::class);
     }
 
@@ -60,8 +63,7 @@ class ClientController extends Controller
 
     public function esim(Request $request)
     {
-        $products = collect($this->checkProducts()['products']);
-        $countries = $this->getAllCountries($products);
+        $countries = $this->countries;
         $userEsims = Esim::with('transactions') ->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->get();
         if(count($userEsims) ==0 ){
             $esimPlans = [];
@@ -82,16 +84,7 @@ class ClientController extends Controller
     }
 
     public function getProducts(){
-        $products = collect($this->esimProducts->getAllProducts());
-        session()->put(['products'=>$products]);
-        return session()->get('products');
-    }
-
-    public function checkProducts(){
-        if(session()->has('products')){
-            return  session()->get('products');
-        }
-        return collect($this->getProducts());
+        return $this->esimProducts->getAllProducts();
     }
 
     public function getAllCountries($products){
@@ -113,8 +106,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        $products = collect($this->checkProducts()['products']);
-        $countries = $this->getAllCountries($products);
+        $countries = $this->countries;
         return view('dashboards.client.addEsim', compact('countries'));
     }
 
@@ -137,16 +129,17 @@ class ClientController extends Controller
                     # code...
                     break;
             }
+            $products = $this->esimProducts->getAllRegionProducts($isoCode)['products'];
         }else{
             $isoCode = $selectedEsim->eSimCountryIso2;
+            $products = $this->esimProducts->getAllProducts($isoCode)['products'];
         }
-        $products = $this->esimProducts->getAllProducts($isoCode)['products'];
         return view('dashboards.client.eSimTopUp', compact('selectedEsim', 'products', 'esimPlans'));
     }
 
     public function showCart(){
-        $products = collect($this->checkProducts()['products']);
-        $countries = collect($this->getAllCountries($products));
+        $products = $this->products;
+        $countries = $this->countries;
         $cart = session()->get('cart');
         if(is_null($cart)){
             $cart['products']= [];
@@ -183,8 +176,8 @@ class ClientController extends Controller
     }
 
     public function removeFromCart(Request $request){
-        $products = collect($this->checkProducts()['products']);
-        $countries = collect($this->getAllCountries($products));
+        $products = $this->products;
+        $countries = $this->countries;
         $cart = session()->get('cart');
         $cart['products'] = collect($cart['products'])->filter(function ($product) use ($request) {
             return $product[0]['id'] !== $request->query('product_id');
@@ -265,11 +258,6 @@ class ClientController extends Controller
         return view('pages/confirmPayment', compact('message'));
         }
     }
-    
-
-    public function recharge(Request $request){
-        return $request;
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -279,8 +267,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        $products = collect($this->checkProducts()['products']);
-        $countries = collect($this->getAllCountries($products))->where('country_iso2', $request['esimProduct'])->first();
+        $countries = $this->countries->where('country_iso2', $request['esimProduct'])->first();
         $createdSim=$this->esimService->createEsim($request['esimProduct']);
         $user = auth()->user();
         $createdEsim = Esim::create([
