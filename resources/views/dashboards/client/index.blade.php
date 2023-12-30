@@ -160,7 +160,7 @@
                                 <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                 <div class="me-2">
                                     <h6 class="mb-0">{{$esim['eSimCountryName']}}: {{$esim['esimIccid']}}</h6>
-                                    <small class="text-tripcel">{{$esim['created_at']}}</small>
+                                    <small class="text-tripcel">Date Assigned:{{$esim['eSimDateAssigned']}}</small>
                                 </div>
                                 </div>
                             </li>
@@ -207,7 +207,7 @@
                                         <small class="text-tripcel">{{$transaction->eSimPlanName}}</small>
                                     </div>
                                     <div class="user-progress">
-                                        <small class="fw-medium">Expiry: 23/04/13</small>
+                                        {{-- <small class="fw-medium">Expiry: 23/04/13</small> --}}
                                     </div>
                                     </div>
                                 </li>
