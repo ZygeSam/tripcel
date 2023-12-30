@@ -1,10 +1,11 @@
 <div class="medium-container">
-    <div class="row align-items-center">
+    <div class="row align-items-center" style=" z-index: 1100;">
        <div class="col-lg-2 col-md-9 col-sm-9 col-xs-9 logo_column">
-          <div class="header_logo_box">
+          <div class="header_logo_box d-flex">
              <a href="{{route('home')}}" class="logo navbar-brand">
                 <img style="background-color: white; width: 6em; padding: 5px;" src={{asset("assets/images/FI.png")}} alt="Tripcel" class="logo_default">
              </a>
+             <i data-bs-toggle="modal" data-bs-target="#modalTop" class="pt-5 bx bx-search fs-4 lh-0" style="cursor: pointer; font-weight: 900; color:white;" data-bs-placement="bottom" data-bs-original-title="Search Regions"></i>
           </div>
        </div>
        <div class="col-lg-10 col-md-3 col-sm-3 col-xs-3 menu_column">
@@ -165,5 +166,32 @@
              </div>
           </div>
        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal modal-top fade" id="modalTop" tabindex="-1" style="z-index: 1200;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTopTitle">Choose Region</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col mb-3">
+                <a href="{{route('regions', ['region'=>'USA'])}}" class="mb-2 btn btn-outline-tripcel border- border-dark rounded-100">Usa+</a>
+                <a href="{{route('regions', ['region'=>'EUR'])}}" class="mb-2 btn btn-outline-tripcel border- border-dark rounded-100">Europe</a>
+                <a href="{{route('regions', ['region'=>'LAT'])}}" class="mb-2 btn btn-outline-tripcel border- border-dark rounded-100">South America</a>
+                <a href="{{route('regions', ['region'=>'APC'])}}" class="mb-2 btn btn-outline-tripcel border- border-dark rounded-100">Asia+</a>
+                <a href="{{route('regions', ['region'=>'CRB'])}}" class="mb-2 btn btn-outline-tripcel border- border-dark rounded-100">Carribean</a>
+              </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <a class="nav_link" href="{{route('countries')}}">Browse all 194 Destinations</a>
+         </div>
     </div>
  </div>
