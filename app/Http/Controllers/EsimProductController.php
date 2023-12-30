@@ -70,6 +70,10 @@ class EsimProductController extends Controller
        return view('pages/countries', compact('countries'));
     }
 
+    public function showRegions(Request $request){
+        return redirect()->route('regions', ['region'=>$request['region']]);
+    }
+
     public function getRegionProducts($region){
         $products = $this->products;
         $countries = $this->countries;

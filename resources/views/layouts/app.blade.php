@@ -193,7 +193,18 @@
        <div class="col-lg-10 m-auto">
           <div class="title_all_box style_one text-center dark_color">
              <div class="title_sections">
-                <div class="before_title">Give it a try</div>
+                <div class="before_title">Select a Region
+                  <form action="{{route('showRegions')}}" class="my-3" method="post">
+                     @csrf
+                     <select name="region" id="" class="p-3">
+                        <option class="p-4"value="USA">Usa</option>
+                        <option class="p-4"value="LAT">South America</option>
+                        <option class="p-4" value="APC">Asia</option>
+                        <option class="p-4"value="CRB">Carribean</option>
+                     </select>
+                     <button type="submit">Give it a try</button>
+                  </form>
+                </div>
                 <div class="title">Activate Your Travel SIM & Features in 5 Minutes</div>
              </div>
              <!--===============spacing==============-->
