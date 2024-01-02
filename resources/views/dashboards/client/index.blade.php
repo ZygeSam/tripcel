@@ -170,6 +170,7 @@
                                     </div>
                                     <div class="user-progress">
                                         <small class="fw-medium">Expiry: {{$transaction->dataEndTime}}</small>
+                                        
                                     </div>
                                     </div>
                                 </li>
