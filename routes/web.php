@@ -57,6 +57,9 @@ Route::prefix('client')->group(function () {
     Route::get("/profile", [ClientController::class, 'profile'])->name('client.profile');
     Route::post("/profileUpdate", [ClientController::class, 'saveProfile'])->name('client.profileUpdate');
     Route::get("/cart", [ClientController::class, 'showCart'])->name('client.cart');
+    Route::get("/support", [ClientController::class, 'support'])->name('client.support');
+    Route::get("/supportTicket/{id}", [ClientController::class, 'getSupportTicket'])->name('ticket.message');
+    Route::post("/supportTicket", [ClientController::class, 'supportTicket'])->name('client.supportTicket');
 });
 
 // Route::prefix('admin')->group(function () {
