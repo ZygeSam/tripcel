@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Esim;
 use App\Models\EsimOrders;
+use App\Models\SupportTicket;
 use App\Services\MailService;
 use App\Services\EsimService;
 use App\Services\EsimPlanService;
@@ -17,8 +18,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\PasswordRequest;
+use App\Http\Requests\SupportTicketRequest;
 use App\Http\Requests\ClientProfileRequest;
 use App\Http\Controllers\QrCodeController;
+use App\Http\Controllers\SupportTicketController;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use App\Http\Middleware\AuthenticateClient;
 
@@ -321,6 +324,28 @@ class ClientController extends Controller
     {
         $user = auth()->user();
         return view('dashboards.client.password', compact('user'));
+    }
+
+    public function support(){
+        $tickets = SupportTicket::where('user_id', auth()->user()->id)->latest()->get();
+        return view('dashboards.client.support', compact('tickets'));
+    }
+
+    public function getSupportTicket($id){
+        return $tickets = SupportTicket::where('user_id', auth()->user()->id)
+                    ->where('id', $id)
+                    ->first();
+    }
+
+    public function supportTicket(SupportTicketRequest $request){
+        $validatedData = $request->validated();
+        if($request->user_id !== null){
+            $sendTicket = SupportTicket::create($validatedData);
+            if($sendTicket){
+                return redirect()->back()->with('message', 'Message sent Successfully');
+            }
+        }
+        return redirect()->back()->with('message', 'User must be authenticated');
     }
 
     /**
