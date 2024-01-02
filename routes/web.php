@@ -30,11 +30,14 @@ Route::get('confirmPayment/{gateway}/{transactionId}/{email}', [EsimProductContr
 Route::post('/store', [EsimController::class, 'store']);
 Route::get('/products', [EsimProductController::class, 'index']);
 Route::get('/products/{esimProduct}', [EsimProductController::class, 'show']);
+
+// Client auth controller
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
 
 Route::prefix('client')->group(function () {
     Route::get("/", [ClientController::class, 'index'])->name('client.index');
@@ -51,6 +54,38 @@ Route::prefix('client')->group(function () {
     Route::get("/recharge", [ClientController::class, 'recharge'])->name('esim.recharge');
     Route::get("/password", [ClientController::class, 'password'])->name('client.password');
     Route::post("/passwordChange", [ClientController::class, 'changePassword'])->name('client.passwordChange');
+    Route::get("/profile", [ClientController::class, 'profile'])->name('client.profile');
+    Route::post("/profileUpdate", [ClientController::class, 'saveProfile'])->name('client.profileUpdate');
+    Route::get("/cart", [ClientController::class, 'showCart'])->name('client.cart');
+});
+
+Route::prefix('admin')->group(function () {
+
+    // Admin auth controller
+    Route::get('/login', [AuthController::class, 'adminLogin'])->name('adminLogin');
+    Route::post('/signin', [AuthController::class, 'adminSignin'])->name('adminSignin');
+    Route::get('/register', [AuthController::class, 'adminRegister'])->name('adminRegister');
+    Route::post('/signup', [AuthController::class, 'adminSignup'])->name('adminSignup');
+    Route::get('/logout', [AuthController::class, 'adminLogout'])->name('adminLogout');
+
+    Route::get("/", [ClientController::class, 'index'])->name('client.index');
+    Route::get("/esim/{userId}", [ClientController::class, 'esim'])->name('esim.index');
+    Route::get("/add", [ClientController::class, 'create'])->name('esim.create');
+    Route::post("/store", [ClientController::class, 'store'])->name('esim.store');
+    Route::get("/topup", [ClientController::class, 'topUp'])->name('esim.topup');
+    Route::get("/addToCart", [ClientController::class, 'addToCart'])->name('esim.addToCart');
+    Route::get("/removeFromCart", [ClientController::class, 'removeFromCart'])->name('esim.removeFromCart');
+    Route::get("/pay", [ClientController::class, 'pay'])->name('esim.pay');
+    Route::post("/sms", [ClientController::class, 'sms'])->name('esim.sms');
+    Route::get("/confirmpay/{gateway}/{transactionId}", [ClientController::class, 'confirmPay'])->name('esim.confirmPay');
+    Route::get("/checkout", [ClientController::class, 'checkout'])->name('esim.checkout');
+    Route::get("/recharge", [ClientController::class, 'recharge'])->name('esim.recharge');
+    Route::get("/password", [ClientController::class, 'password'])->name('client.password');
+    Route::post("/passwordChange", [ClientController::class, 'changePassword'])->name('client.passwordChange');
+    Route::get("/support", [ClientController::class, 'support'])->name('client.support');
+    Route::get("/supportTicket/{id}", [ClientController::class, 'getSupportTicket'])->name('ticket.message');
+    Route::post("/supportTicket", [ClientController::class, 'supportTicket'])->name('client.supportTicket');
+
     Route::get("/profile", [ClientController::class, 'profile'])->name('client.profile');
     Route::post("/profileUpdate", [ClientController::class, 'saveProfile'])->name('client.profileUpdate');
     Route::get("/cart", [ClientController::class, 'showCart'])->name('client.cart');
