@@ -56,8 +56,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $userEsims = Esim::with('transactions')->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->get();
-        $esimTransactions = EsimOrders::with('esim')->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->get();
+        $userEsims = Esim::with('transactions')->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->latest()->get();
+        $esimTransactions = EsimOrders::with('esim')->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->latest()->get();
         $totalEsims = $userEsims->count();
         
         return view('dashboards.client.index', compact('totalEsims', 'userEsims', 'esimTransactions'));

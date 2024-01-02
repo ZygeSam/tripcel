@@ -7,44 +7,6 @@
             <div class="d-flex align-items-end row">
                 <div class="col-sm-7">
                 <div class="card-body">
-                    <!-- Modal -->
-                    <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="modalCenterTitle">Create New Esim Profile</h5>
-                              <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                            </div>
-                            <form method="post" action="{{route('esim.sms')}}">
-                                  <div class="modal-body">
-                                          <div class="row">
-                                                  @csrf
-                                                  <div class="col mb-3">
-                                                      <select id="largeSelect" class="form-select form-select-md" name="esimProduct">
-                                                          @if(count($userEsims) > 0)
-                                                              @foreach ($userEsims as $esim)
-                                                                  <option value="{{$esim['esimIccid'] }}">{{$esim['eSimCountryName']}} - {{$esim['esimIccid'] }}</option>
-                                                              @endforeach
-                                                          @else
-                                                             <p>No Sim Available</p>
-                                                          @endif
-                                                      </select>
-                                                      <textarea placeholder="Message" class="form-control my-3" name="message" id="" ></textarea>
-                                                      <label for="sender_msisdn">Sender's Number</label><input class="form-control" type="text" name="sender_msisdn">
-                                                  </div>
-                                          </div>
-                                  </div>
-                                  <div class="modal-footer">
-                                      <button type="submit" class="btn btn-primary">Create</button>
-                                  </div>
-                            </form>
-                          </div>
-                        </div>
-                    </div>
                     <h5 class="card-title text-primary">Welcome {{auth()->user()->firstName}} {{auth()->user()->lastName}}! 🎉</h5>
                     <p class="mb-4">
                     You have to explore the world today. There's still more to be done with your Tripcel ESim
@@ -204,10 +166,10 @@
                                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                     <div class="me-2">
                                         <h6 class="mb-0">{{$transaction->esim['eSimCountryName']}}: {{$transaction->esim['esimIccid']}}</h6>
-                                        <small class="text-tripcel">{{$transaction->eSimPlanName}}</small>
+                                        <small class="text-tripcel">{{$transaction->eSimPlanName}} </small>
                                     </div>
                                     <div class="user-progress">
-                                        {{-- <small class="fw-medium">Expiry: 23/04/13</small> --}}
+                                        <small class="fw-medium">Expiry: {{$transaction->dataEndTime}}</small>
                                     </div>
                                     </div>
                                 </li>
