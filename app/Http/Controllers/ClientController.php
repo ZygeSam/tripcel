@@ -226,12 +226,13 @@ class ClientController extends Controller
 
     public function confirmPay($gateway, $transactionId){
         $cartedProducts = session()->get('cart');
+        $createdSimPlans = [];
         $response = $this->paymentProcessor->checkHandler($gateway)->verify_transaction();
         if($response['status'] == true){
             $user = auth()->user();
                 foreach($cartedProducts['products'] as $key=> $prod){
                         $esim = Esim::where('esimCountryName', $prod[0]['country_name'])->first();
-                        $createdSim = $this->esimPlan->createEsimPlan($esim->esimIccid, $prod[0]['id']);
+                        $createdSimPlan = $this->esimPlan->createEsimPlan($esim->esimIccid, $prod[0]['id']);
                         $esimOrders[] = [
                             'esimIccid'=>$esim->esimIccid,
                             'transactionId'=>$transactionId,
@@ -241,17 +242,23 @@ class ClientController extends Controller
                             'planType'=>$prod[0]['plan_type'],
                             'price'=>$prod[0]['price_usd'],
                             'currrency'=>$prod[0]['currency'],
-                            'countries_supported'=>implode(',', $prod[0]['countries_supported']),
+                            'countries_enabled'=>implode(',', $createdSimPlan['plan']['countries_enabled']),
+                            'planId' => $createdSimPlan['plan']['id'],
+                            'purchasedData' => $createdSimPlan['plan']['data_quota_bytes'],
+                            'dataStartTime' => $createdSimPlan['plan']['start_time'],
+                            'dataEndTime'=>$createdSimPlan['plan']['end_time'],
+                            'network_status' => $createdSimPlan['plan']['network_status'],
                             'paymentChannel'=>$gateway,
                             'status'=> TransactionStatus::DELIVERED,
                             'user_id'=>$user->id
                         ];
-                        $createdSim['country'] = $prod[0]['country_name'];
+                        $createdSimPlan['country'] = $prod[0]['country_name'];
+                        $createdSimPlans[] = $createdSimPlan;
                 }
                 $esimOrders = EsimOrders::insert($esimOrders);
                     // send user an email
                 if($esimOrders){
-                    $sentMail = $this->mailService->sendDataPurchaseInfo( $user['email'], 'Thank you for your Purchase', $createdSim);
+                    $sentMail = $this->mailService->sendDataPurchaseInfo( $user['email'], 'Thank you for your Purchase', $createdSimPlans);
                     if($sentMail){
                         session()->flash('message', 'Esim Plans Purchase Successful');
                         return redirect()->route('esim.index', ['userId' => $user->id]);

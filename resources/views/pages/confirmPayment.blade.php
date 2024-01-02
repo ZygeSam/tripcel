@@ -72,6 +72,7 @@
                         </div>
                      </div>
                     @endif
+                    {{session()->forget('cart')}}
                    </div>
                 </div>
                 <!--===============spacing==============-->

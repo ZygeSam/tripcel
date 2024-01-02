@@ -24,7 +24,12 @@ return new class extends Migration
             $table->string('planType');
             $table->integer('price');
             $table->string('currrency');
-            $table->string('countries_supported');
+            $table->string('countries_enabled');
+            $table->string('planId');
+            $table->string('purchasedData');
+            $table->string('dataStartTime');
+            $table->string('dataEndTime');
+            $table->string('network_status');
             $table->string('paymentChannel');
             $table->enum('status', TransactionStatus::getConstants())->default('pending');
             $table->unsignedBigInteger('user_id');
