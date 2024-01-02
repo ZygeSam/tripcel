@@ -44,14 +44,14 @@
                             </form>
                           </div>
                         </div>
-                      </div>
+                    </div>
                     <h5 class="card-title text-primary">Welcome {{auth()->user()->firstName}} {{auth()->user()->lastName}}! 🎉</h5>
                     <p class="mb-4">
                     You have to explore the world today. There's still more to be done with your Tripcel ESim
                     </p>
                     <a href="{{route('esim.index',['userId'=> 1])}}" class="btn btn-sm btn-outline-tripcel">View Esim</a>
                     <a href="{{route('esim.index',['userId'=> 1])}}" class="btn btn-sm btn-outline-tripcel">Top Up Esim</a>
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalCenter" class="btn btn-sm btn-outline-tripcel">Send SMS</buttona>
+                    {{-- <button type="button" data-bs-toggle="modal" data-bs-target="#modalCenter" class="btn btn-sm btn-outline-tripcel">Send SMS</buttona> --}}
                 </div>
                 </div>
                 
