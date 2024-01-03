@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Mail\PurchaseMail;
 use App\Mail\DataPurchaseMail;
+use App\Mail\ForgotPasswordMail;
 use Illuminate\Support\Facades\Mail;
 use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mailer\Transport;
@@ -46,5 +47,17 @@ class MailService
             }else{
                 return false;
             }
+    }
+
+    public function sendForgotPasswordInfo($email, $message){
+        $mailData = [
+            'message' => $message,
+        ];
+        $mail = Mail::to($email)->send(new ForgotPasswordMail($mailData));
+        if($mail){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

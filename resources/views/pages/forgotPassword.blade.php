@@ -6,7 +6,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="modalCenterTitle">Form Error</h5>
+                <h5 class="modal-title" id="modalCenterTitle">Message</h5>
                 <button
                     type="button"
                     class="btn-close"
@@ -76,14 +76,14 @@
                          <div class="login_content_box">
                             <a href="{{route('home')}}" class="login_logo"><img decoding="async" src="assets/images/FII.png" height="100" class="login_logo" alt="image"></a>
                             <div class="login_forms_box">
-                               <h6>Get Started</h6>
-                               <h2>Log into Account</h2>
+                               <h6>Forgot Password</h6>
+                               <h2>Enter your details</h2>
                                <ul class=" mb-3" id="" >
                                   <li class="" role="presentation">
                                   </li>
                                </ul>
                                   <div >
-                                     <form method="post" action="{{route('signin')}}" class="login-register-form register">
+                                     <form method="post" action="{{route('fgtPwd')}}" class="login-register-form register">
                                         @csrf
                                         <p class="form-row form-row-first validate-required" id="billing_first_name_field">
                                         <label>Email&nbsp;<abbr class="required" title="required">*</abbr></label>
@@ -91,15 +91,9 @@
                                             <input type="email" class="input-text" name="email" id="billing_first_name" placeholder="" value="">
                                     
                                         </p>
-                                        <p class="form-row form-row-last validate-required" id="billing_last_name_field">
-                                            <label>Password&nbsp;<abbr class="required" title="required">*</abbr></label>
-                                            
-                                                <input type="password" class="input-text" name="password" id="billing_last_name" placeholder="" value="">
-                                        </p>
                                         <p>
-                                            <button type="submit" class="btn btn-outline-tripcel">LOGIN</button>
+                                            <button type="submit" class="btn btn-outline-tripcel">SUBMIT</button>
                                         </p>
-                                        <p class="mt-3"><a href="{{route('forgotPassword')}}">Forgot Password ?</a></p>
                                         
                                      </form>
                                   </div>
