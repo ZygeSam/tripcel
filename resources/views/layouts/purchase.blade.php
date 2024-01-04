@@ -27,7 +27,6 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
 />
-   <link rel='stylesheet' id="creote-color-switcher-css" href='assets/css/scss/elements/color-switcher/color.css' type='text/css' media='all' />
    <!-- Style-->
    <!----woocommerce---->
    <link rel='stylesheet' href={{asset('assets/css/woocommerce-layout.css')}} type='text/css' media='all' />
@@ -436,27 +435,60 @@
 </div>
 <!---========================== javascript ==========================-->
 <script type='text/javascript' src={{asset('assets/js/jquery-3.6.0.min.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/bootstrap.min.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/jquery.fancybox.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/jQuery.style.switcher.min.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/jquery.flexslider-min.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/color-scheme.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/owl.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/swiper.min.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/isotope.min.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/countdown.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/simpleParallax.min.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/appear.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/jquery.countTo.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/sharer.js')}}></script>
-<script type='text/javascript' src={{asset('assets/js/validation.js')}}></script>
-<!-- map script -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU"></script>
-<script src={{asset("assets/js/gmaps.js")}}></script>
-<script src={{asset("assets/js/map-helper.js")}}></script>
+<script type='text/javascript' src={{asset('assets/js/bootstrap.min.js')}} defer></script>
+<script type='text/javascript' src={{asset('assets/js/jquery.fancybox.js')}} defer></script>
+<script type='text/javascript' src={{asset('assets/js/jQuery.style.switcher.min.js')}} defer></script>
+<script type='text/javascript' src={{asset('assets/js/jquery.flexslider-min.js')}} defer></script>
+<script type='text/javascript' src={{asset('assets/js/owl.js')}} defer></script>
+<script type='text/javascript' src={{asset('assets/js/swiper.min.js')}} defer></script>
+<script type='text/javascript' src={{asset('assets/js/isotope.min.js')}} defer></script>
+<script type='text/javascript' src={{asset('assets/js/simpleParallax.min.js')}} defer></script>
 <!-- main-js -->
 <script type='text/javascript' src={{asset('assets/js/creote-extension.js')}}></script>
 <!---========================== javascript ==========================-->
+<script>
+   $(document).ready(function() {
+    $.ajax({
+        url: "{{ route('getCountries') }}",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+         var countriesList1 = $("#countries-list1");
+            var countriesList2 = $("#countries-list2");
+            var countriesList3 = $("#countries-list3");
+            for (var i = 0; i < 5; i++) {
+                var listItem = $("<li>");
+                var link = $("<a>").attr("href", "{{ route('country', ['country' => ':country']) }}".replace(':country', data[i].country_name)).text(data[i].country_name);
+                var icon = $("<i>").addClass("fi fi-" + data[i].country_iso2 + " p-2 mx-1");
+                var small = $("<small>").addClass("d-flex align-items-center").append(icon).append(link);
+                listItem.append(small);
+                countriesList1.append(listItem);
+            }
+            for (var i = 20; i < 25; i++) {
+                var listItem = $("<li>");
+                var link = $("<a>").attr("href", "{{ route('country', ['country' => ':country']) }}".replace(':country', data[i].country_name)).text(data[i].country_name);
+                var icon = $("<i>").addClass("fi fi-" + data[i].country_iso2 + " p-2 mx-1");
+                var small = $("<small>").addClass("d-flex align-items-center").append(icon).append(link);
+                listItem.append(small);
+                countriesList2.append(listItem);
+            }
+            for (var i = 40; i < 45; i++) {
+                var listItem = $("<li>");
+                var link = $("<a>").attr("href", "{{ route('country', ['country' => ':country']) }}".replace(':country', data[i].country_name)).text(data[i].country_name);
+                var icon = $("<i>").addClass("fi fi-" + data[i].country_iso2 + " p-2 mx-1");
+                var small = $("<small>").addClass("d-flex align-items-center").append(icon).append(link);
+                listItem.append(small);
+                countriesList3.append(listItem);
+            }
+            var link = $("<a>").addClass("nav_link").attr("href", "{{ route('countries') }}").text("Get 194 Destinations");
+            var u = $("<u>").append(link);
+            countriesList2.after(u);
+
+            countriesList3.after('<h6>Popular ESim Destinations</h6>');
+    }
+   });
+   });
+</script>
 </body>
 
 <!-- Mirrored from themepanthers.com/html/creote-html/home-12.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Dec 2023 22:57:02 GMT -->
