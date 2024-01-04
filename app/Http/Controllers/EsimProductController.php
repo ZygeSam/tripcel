@@ -12,6 +12,7 @@ use App\Services\EsimPlanService;
 use App\Services\ESimProductService;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use App\Enums\TransactionStatus;
 use App\Payments\PaymentProcessor;
@@ -61,11 +62,18 @@ class EsimProductController extends Controller
          })->values()->all();
      }
 
-    public function index()
-    {   
-        $products = $this->products;
-        $countries = $this->countries;
-        return view('pages/index', compact('products', 'countries'));
+
+    public function getPageCountries()
+    {
+        $cacheKey = 'page_countries';
+        $countries = Cache::remember($cacheKey, now()->addHours(1), function () {
+            return $this->countries->take(50)->toArray();
+        });
+        return response()->json($countries);
+    }
+
+    public function index(){
+        return view('pages/index');
     }
 
     public function getCountries(){
@@ -78,17 +86,15 @@ class EsimProductController extends Controller
     }
 
     public function getRegionProducts($region){
-        $products = $this->products;
-        $countries = $this->countries;
         $country = $this->countries->where('country_iso3', $region)->first();
-        $fiveDaysProduct = $this->getProductDays($products, $country['country_name'], "- 5 days");
-        $tenDaysProduct = $this->getProductDays($products, $country['country_name'], "- 10 days");
-        $fifteenDaysProduct = $this->getProductDays($products, $country['country_name'], "- 15 days");
-        $thirtyDaysProduct = $this->getProductDays($products, $country['country_name'], "- 30 days");
-        $unlimitedLiteDaysProduct = $this->getProductDays($products, $country['country_name'], "- 5 days", true, 'Unlimited LITE');
-        $unlimitedStandardDaysProduct = $this->getProductDays($products, $country['country_name'], "- 5 days", true, 'Unlimited STANDARD');
-        $unlimitedMaxDaysProduct = $this->getProductDays($products, $country['country_name'], "- 5 days", true, 'Unlimited MA');
-        return view('pages.regions', compact('countries', 'country', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
+        $fiveDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days");
+        $tenDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 10 days");
+        $fifteenDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 15 days");
+        $thirtyDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 30 days");
+        $unlimitedLiteDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited LITE');
+        $unlimitedStandardDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited STANDARD');
+        $unlimitedMaxDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited MA');
+        return view('pages.regions', compact('country', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
     }
 
     public function getProductDays($products, $country, $days="- 5 days", $unlimited = false, $unlimitedPlan='Unlimited LITE'){
@@ -104,18 +110,16 @@ class EsimProductController extends Controller
     }
 
     public function getCountryProducts($country){
-        $products = $this->products;
-        $countries = $this->countries;
-       $country = $countries->where('country_name', $country)->first();
-       $fiveDaysProduct = $this->getProductDays($products, $country['country_name'], "- 5 days");
-       $tenDaysProduct = $this->getProductDays($products, $country['country_name'], "- 10 days");
-       $fifteenDaysProduct = $this->getProductDays($products, $country['country_name'], "- 15 days");
-       $thirtyDaysProduct = $this->getProductDays($products, $country['country_name'], "- 30 days");
-       $unlimitedLiteDaysProduct = $this->getProductDays($products, $country['country_name'], "- 5 days", true, 'Unlimited LITE');
-       $unlimitedStandardDaysProduct = $this->getProductDays($products, $country['country_name'], "- 5 days", true, 'Unlimited STANDARD');
-       $unlimitedMaxDaysProduct = $this->getProductDays($products, $country['country_name'], "- 5 days", true, 'Unlimited MA');
+       $country = $this->countries->where('country_name', $country)->first();
+       $fiveDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days");
+       $tenDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 10 days");
+       $fifteenDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 15 days");
+       $thirtyDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 30 days");
+       $unlimitedLiteDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited LITE');
+       $unlimitedStandardDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited STANDARD');
+       $unlimitedMaxDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited MA');
     
-       return view('pages.country', compact('countries', 'country', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
+       return view('pages.country', compact('country', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
     }
 
     /**
@@ -126,19 +130,15 @@ class EsimProductController extends Controller
         return $this->esimProduct->getAProduct($esimProduct);
     }
     public function showCart(){
-        $products = $this->products;
-        $countries = $this->countries;
         $cart = session()->get('cart');
         if(is_null($cart)){
             $cart['products']= [];
         }
         //display cart on view
         $totalPrice = $this->cartTotal($cart);
-        return view('pages/cart', compact('cart', 'countries',  'totalPrice'));
+        return view('pages/cart', compact('cart','totalPrice'));
     }
     public function removeFromCart($request){
-        $products = $this->products;
-        $countries = $this->countries;
         $cart = session()->get('cart');
         $cart['products'] = collect($cart['products'])->filter(function ($product) use ($request) {
             return $product[0]['id'] !== $request;
@@ -146,12 +146,10 @@ class EsimProductController extends Controller
         session()->put('cart', $cart);
         $totalPrice = $this->cartTotal($cart);
         //display cart on view
-        return view('pages/cart', compact('cart', 'countries',  'totalPrice'));
+        return view('pages/cart', compact('cart', 'totalPrice'));
     }
 
     public function removeFromCartIcon($request){
-        $products = $this->products;
-        $countries = $this->countries;
         $cart = session()->get('cart');
         $cart['products'] = collect($cart['products'])->filter(function ($product) use ($request) {
             return $product[0]['id'] !== $request;
@@ -163,22 +161,12 @@ class EsimProductController extends Controller
     }
 
     public function addToCart($country, $esimProduct){
-        $products = $this->products;
-        $countries = $this->countries;
-
-        if(session()->has('cart')){
-            $cart = session()->get('cart');
-            if (!isset($cart['products'])) {
-                $cart['products'] = [];
-            }
-        }else{
-            session()->put('cart', []);
-        }
+        $cart = session()->get('cart', ['products' => []]);
         $cart['products'][]= $this->show($esimProduct)['product'];
         session()->put('cart', $cart);
         $totalPrice = $this->cartTotal($cart);
         //display cart on view
-        return view('pages/cart', compact('cart', 'countries',  'totalPrice'));
+        return view('pages/cart', compact('cart','totalPrice'));
     }
 
     //function to calculate total of products in cart
@@ -194,18 +182,9 @@ class EsimProductController extends Controller
     }
     
     public function checkout(){
-        $products = $this->products;
-        $countries = $this->countries;
-        if(session()->has('cart')){
-            $cart = session()->get('cart');
-            if (!isset($cart['products'])) {
-                $cart['products'] = [];
-            }
-        }else{
-            return redirect()->back();
-        }
+        $cart = session()->get('cart', ['products' => []]);
         $totalPrice = $this->cartTotal($cart);
-        return view('pages/checkout', compact('countries', 'cart', 'totalPrice'));
+        return view('pages/checkout', compact('cart', 'totalPrice'));
     }
 
     public function buyProduct(StoreEsimBuyerRequest $request){
