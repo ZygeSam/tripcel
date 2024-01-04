@@ -16,6 +16,7 @@ use App\Http\Controllers\EsimProductController;
 |
 */
 Route::get('/', [EsimProductController::class, 'index'])->name('home');
+Route::get('/get-countries', [EsimProductController::class, 'getPageCountries'])->name('getCountries');
 Route::get('/countries', [EsimProductController::class, 'getCountries'])->name('countries');
 Route::get('/regions/{region}', [EsimProductController::class, 'getRegionProducts'])->name('regions');
 Route::post('/regions', [EsimProductController::class, 'showRegions'])->name('showRegions');

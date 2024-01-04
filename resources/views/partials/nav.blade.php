@@ -70,53 +70,20 @@
                                      </div>
                                   </div>
                                   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                     <div class="list_item_box style_one">
-                                        <ul>
-                                          @for($i=0; $i<5; $i++)
-                                          <li>
-                                             <small class="d-flex align-items-center">
-                                               <i class="fi fi-{{$countries[$i]['country_iso2']}} p-2 mx-1"></i>
-                                                <a class="nav_link" href="{{route('country', ['country'=>$countries[$i]['country_name']])}}">{{$countries[$i]['country_name']}}</a>
-                                             </small>
-                                          </li>
-                                          @endfor
-                                        </ul>
-                                     </div>
-                                  </div>
-                                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                     <div class="list_item_box style_one">
-                                        <ul>
-                                          @for($i=20; $i<25; $i++)
-                                          <li>
-                                             <small class="d-flex align-items-center">
-                                               <i class="fi fi-{{$countries[$i]['country_iso2']}} p-2 mx-1"></i>
-                                                <a class="nav_link" href="{{route('country', ['country'=>$countries[$i]['country_name']])}}">{{$countries[$i]['country_name']}}</a>
-                                             </small>
-                                          </li>
-                                          @endfor
-                                        </ul>
-                                        <u>
-                                           <a class="nav_link" href="{{route('countries')}}">Get 194 Destinations</a>
-                                        </u>
-                                        
-                                     </div>
-                                  </div>
-                                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                     <div class="list_item_box style_one">
-                                        <ul>
-                                          @for($i=40; $i<45; $i++)
-                                          <li>
-                                             <small class="d-flex align-items-center">
-                                               <i class="fi fi-{{$countries[$i]['country_iso2']}} p-2 mx-1"></i>
-                                                <a class="nav_link" href="{{route('country', ['country'=>$countries[$i]['country_name']])}}">{{$countries[$i]['country_name']}}</a>
-                                             </small>
-                                          </li>
-                                          @endfor
-                                        </ul>
-                                     </div>
-                                     <h6>Popular ESim Destinations</h6>
-                                  </div>
-                                  
+                                    <div class="list_item_box style_one">
+                                        <ul id="countries-list1"></ul>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                       <div class="list_item_box style_one">
+                                          <ul id="countries-list2"></ul>
+                                       </div>
+                                 </div>
+                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                    <div class="list_item_box style_one">
+                                       <ul id="countries-list3"></ul>
+                                    </div>
+                                 </div>
                                </div>
                                
                             </li>

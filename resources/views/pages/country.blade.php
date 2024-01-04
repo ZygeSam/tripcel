@@ -116,7 +116,7 @@
                                  </div>
                               </div>
                               <div class="bottom">
-                              <a href="route('cart',['c'])" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['id']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
                                  Activate Now
                                  </a>
                            </div>
@@ -163,7 +163,7 @@
                                  </div>
                               </div>
                               <div class="bottom">
-                              <a href="route('cart',['c'])" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['id']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
                                  Activate Now
                                  </a>
                            </div>
@@ -210,7 +210,7 @@
                                 </div>
                              </div>
                              <div class="bottom">
-                             <a href="route('cart',['c'])" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                             <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['id']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
                                 Activate Now
                                 </a>
                           </div>
@@ -257,7 +257,7 @@
                                     </div>
                                  </div>
                                  <div class="bottom">
-                                 <a href="route('cart',['c'])" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                                 <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['id']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
                                     Activate Now
                                     </a>
                               </div>
