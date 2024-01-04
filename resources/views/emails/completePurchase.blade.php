@@ -14,16 +14,6 @@
             margin: 0;
             padding: 0;
         }
-
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
         h1 {
             color: #333333;
         }
@@ -33,11 +23,6 @@
             margin-bottom: 20px;
         }
 
-        .qr-code {
-            width: 100%;
-            max-width: 200px;
-            margin: 10px 0;
-        }
     </style>
 </head>
 <body>
@@ -56,7 +41,7 @@
 </p>
     <p>
         @foreach ($mailData['message'] as $item)
-            <img src="{{ $message->embed((public_path($item)) )}}">
+            <img width="400px" height="400px" src="{{ $message->embed((public_path($item)) )}}">
         @endforeach
     </p>
 <p style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody"><span style="font-family:UICTFontTextStyleBody">&nbsp;&nbsp; </span>- Open the Camera app on your device.</span></p>
