@@ -71,15 +71,15 @@
                      <div class="col-md-12 pt-4 mt-5">
                         <div class="banner_title_inner">
                            <div class="title_page">
-                              Purchase ESIms
+                              @yield('pageTitle', 'Purchase ESIms')
                            </div>
                         </div>
                      </div>
                      <div class="col-lg-12">
                         <div class="breadcrumbs creote">
                            <ul class="breadcrumb m-auto">
-                              <li><a href="/">ESIm Data Plans</a></li>
-                              <li class="active">REVIEW AND PAY</li>
+                              <li><a href="/">@yield('previousPageTitle', 'ESIm Data Plans')</a></li>
+                              <li class="active">@yield('presentPageTitle', 'REVIEW AND PAY')</li>
                            </ul>
                         </div>
                      </div>

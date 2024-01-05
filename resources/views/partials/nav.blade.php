@@ -95,12 +95,12 @@
                         </a>
                      </li>
                       <li class="menu-item menu-item-has-children nav-item">
-                         <a href="#" class="dropdown-toggle nav-link">
+                         <a href="{{route('about')}}" class="dropdown-toggle nav-link">
                             <span>About</span>
                          </a>
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
-                        <a href="#"
+                        <a href="{{route('faq')}}"
                            class="dropdown-toggle nav-link"><span>FAQ</span></a>
                      </li>
                       <li class="menu-item menu-item-has-children nav-item">
