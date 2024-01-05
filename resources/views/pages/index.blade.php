@@ -16,11 +16,11 @@
                                    alt="icon png">
                              </div>
                           </div>
-                          <h2><a href="#" class="color_white">Data Plans</a></h2>
+                          <h2><a href="#" class="color_white">Travel Smarter, Travel Wider with e-Sim</a></h2>
                        </div>
-                       <p class="color_white">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                          Voluptatum nisi ducimus officiis veniam consectetur error dolorum voluptatem eius 
-                          tempore voluptatibus. Quos accusamus nisi ipsa explicabo sit quidem maxime quasi veniam?</p>
+                       <p class="color_white">Experience Speed Beyond Borders. Enjoy lightning-fast 4G/LTE and 5G
+                         mobile data on top-tier networks, accessible in each corner of the globe</p>
+                         <p><a href="#" class="btn btn-outline-info">View Plans & Pricing</a></p>
                     </div>
                  </div>
               </div>
@@ -36,11 +36,12 @@
                                    alt="icon png" />
                              </div>
                           </div>
-                          <h2><a href="#"> SMS Plans </a></h2>
+                          <h2><a href="#">Dual Sim Functionality</a></h2>
                        </div>
-                       <p class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                          Voluptatum nisi ducimus officiis veniam consectetur error dolorum voluptatem eius 
-                          tempore voluptatibus. Quos accusamus nisi ipsa explicabo sit quidem maxime quasi veniam?</p>
+                       <p class="text-dark">Maintain your existing SIM for incoming calls, while leveraging our eSIM
+                         data plans for internet and app usage. Keep your number, enhance your connectivity.
+                     </p>
+                     <p><a href="#" class="btn btn-outline-dark">View Plans & Pricing</a></p>
                     </div>
                  </div>
               </div>
@@ -55,11 +56,11 @@
                                    alt="icon png" />
                              </div>
                           </div>
-                          <h2><a href="#" class="color_white">Swift Network</a></h2>
+                          <h2><a href="#" class="color_white">Activation in seconds</a></h2>
                        </div>
-                       <p class="color_white">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                          Voluptatum nisi ducimus officiis veniam consectetur error dolorum voluptatem eius 
-                          tempore voluptatibus. Quos accusamus nisi ipsa explicabo sit quidem maxime quasi veniam?</p>
+                       <p class="color_white">Activate on any eSIM compatible device in less than 5 minutes, 
+                        no physical SIM card required. Instant connectivity at your fingertips.</p>
+                        <p><a href="#" class="btn btn-outline-light">View Plans & Pricing</a></p>
                     </div>
                  </div>
               </div>

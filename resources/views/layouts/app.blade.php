@@ -81,12 +81,12 @@
                            <div class="row align-items-center">
                               <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_content">
-                                    <h1 class="animate_up">@yield('banner-heading', 'Get Connected') <br>
-                                       @yield('banner-sub-heading', 'Fast and secure ')<br>
+                                    <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
+                                       @yield('banner-sub-heading', 'Borders ')<br>
                                        </h1>
-                                       <h4>Get mobile data and sms plans anywhere with our prepaid and unlimited eSIM plans for international travel -- it's quick and easy.</h4>
+                                       <h4>Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">
-                                          <a href="#" class="theme-btn one">Get Started</a>  
+                                          <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
                                        </div>
                                  </div>
                               </div>
@@ -107,12 +107,12 @@
                            <div class="row align-items-center">
                               <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_content">
-                                    <h1 class="animate_up">@yield('banner-heading', 'Get Connected  ')<br>
-                                       @yield('banner-sub-heading', 'Fast and secure ')<br>
+                                    <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
+                                       @yield('banner-sub-heading', 'Borders ')<br>
                                        </h1>
-                                       <h4>Get mobile data and sms plans anywhere with our prepaid and unlimited eSIM plans for international travel -- it's quick and easy.</h4>
-                                       <div class="animate_down theme_btn_all color_two">
-                                          <a href="#" class="theme-btn one">Get Started</a>  
+                                       <h4>Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.</h4>
+                                       <div class="animate_down theme_btn_all color_two my-4">
+                                          <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
                                        </div>
                                  </div>
                               </div>
@@ -133,12 +133,12 @@
                            <div class="row align-items-center">
                               <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_content">
-                                    <h1 class="animate_up">@yield('banner-heading', 'Get Connected  ')<br>
-                                       @yield('banner-sub-heading', 'Fast and secure ')<br>
+                                    <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
+                                       @yield('banner-sub-heading', 'Borders ')<br>
                                        </h1>
-                                       <h4>Get mobile data and sms plans anywhere with our prepaid and unlimited eSIM plans for international travel -- it's quick and easy.</h4>
+                                       <h4>Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">
-                                          <a href="#" class="theme-btn one">Get Started</a>  
+                                          <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
                                        </div>
                                  </div>
                               </div>
@@ -159,12 +159,12 @@
                            <div class="row align-items-center">
                               <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_content">
-                                    <h1 class="animate_up">@yield('banner-heading', 'Get Connected  ')<br>
-                                       @yield('banner-sub-heading', 'Fast and secure ')<br>
+                                    <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
+                                       @yield('banner-sub-heading', 'Borders ')<br>
                                        </h1>
-                                       <h4>Get mobile data and sms plans anywhere with our prepaid and unlimited eSIM plans for international travel -- it's quick and easy.</h4>
+                                       <h4>Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">
-                                          <a href="#" class="theme-btn one">Get Started</a>  
+                                          <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
                                        </div>
                                  </div>
                               </div>
@@ -204,7 +204,7 @@
                      <button type="submit">Give it a try</button>
                   </form>
                 </div>
-                <div class="title">Activate Your Travel SIM & Features in 5 Minutes</div>
+                <div class="title">Get Your Travel e-Sim in 5 Minutes</div>
              </div>
              <!--===============spacing==============-->
              <div class="pd_bottom_40"></div>
@@ -231,8 +231,8 @@
        <div class="col-xl-6 col-lg-6 col-md-12 pd_left_60 md_pd_left_15">
           <div class="title_all_box style_one  dark_color">
              <div class="title_sections left">
-                <h5 class="title font_20">We took the time to develop a strong eSim profile
-                   with assurance of good interent connection and 4G/5g speed.</h5>
+                <h5 class="title font_20">Enable one of our Unlimited or Prepaid eSIM plans
+                   using your phone’s built-in eSIM chip, in addition to your current phone plan.</h5>
              </div>
           </div>
           <!--===============spacing==============-->
@@ -241,42 +241,43 @@
                 <li class="list_items pd_bottom_10">
                    <small class="d-flex align-items-center">
                       <span class="icon_bx">
-                         <i class="bx bx-qr"></i>
+                         <i class="bx bx-qr fs-1"></i>
                       </span>
                       <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                         Get a QR Code delivered to your mail </a>
+                        Receive a QR code in your email </a>
+                   </small></li>
+                <li class="list_items pd_bottom_10">
+                   <small class="d-flex align-items-center">
+                      <span class="icon_bx fs-1">
+                         <i class=" bx bx-run fs-1"></i>
+                      </span>
+                      <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                        Quick and effortless installation </a>
                    </small></li>
                 <li class="list_items pd_bottom_10">
                    <small class="d-flex align-items-center">
                       <span class="icon_bx">
-                         <i class=" bx bx-run "></i>
+                         <i class=" bx bx-signal-5 fs-1"></i>
                       </span>
                       <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                          Get Rocket Speed of your eSim application </a>
+                        Automatically connect to mobile internet</a>
                    </small></li>
-                <li class="list_items pd_bottom_10">
+                {{-- <li class="list_items pd_bottom_10">
                    <small class="d-flex align-items-center">
                       <span class="icon_bx">
-                         <i class=" bx bx-signal-5"></i>
-                      </span>
-                      <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                         Get Connected to good mobile internet automatically </a>
-                   </small></li>
-                <li class="list_items pd_bottom_10">
-                   <small class="d-flex align-items-center">
-                      <span class="icon_bx">
-                         <i class="bx bx-sort-up"></i>
+                         <i class="bx bx-sort-up fs-1"></i>
                       </span>
                       <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
                          Enjoy your browsing with your data plan with 4G/5G networks </a>
-                   </small></li>
+                   </small>
+               </li> --}}
              </ul>
           </div>
           <!--===============spacing==============-->
           <div class="pd_bottom_15"></div>
           <!--===============spacing==============-->
           <div class="theme_btn_all color_one">
-             <a href="#" class="theme-btn one">Get Started</a>
+             <a href="#" class="theme-btn one">See How It Works</a>
           </div>
        </div>
     </div>
@@ -297,8 +298,14 @@
             <div class="title_all_box style_one text-center light_color">
                <div class="title_sections">
                   <!-- <div class="before_title">Leading</div> -->
-                  <div class="title">France Unlimited eSIM Plans</div>
-                  <p>We will work with you to provide the adequate and best experience for your eSim</p>
+                  <div class="title">Select Your Destination</div>
+                  <p>Your Travel eSIM Includes:</p>
+                  <ul class=" d-md-flex  text-white list-unstyled text-center align-items-center justify-content-center">
+                     <li class="mx-2"> <i class="fs-3 mx-2 bx bx-wifi"></i>Wi-Fi Hotspot</li>
+                     <li class="mx-2"><i class="fs-3 mx-2 bx bx-timer"></i>Immediate Activation</li>
+                     <li class="mx-2"> <i class="fs-3 mx-2 bx bx-transfer"></i>4G/5G Data</li>
+                     <li class="mx-2"><i class="fs-3 mx-2 bx bx-check"></i>Optional Auto-Renewal</li>
+                  </ul>
                   <p>Stay Connected to family and friends</p>
                </div>
                <!--===============spacing==============-->
@@ -315,6 +322,146 @@
    <!--===============spacing==============-->
 </section>
 <!--service end-->
+
+{{-- Testimonial start --}}
+<div class="container">
+   <div class="row">
+      <div class="col-lg-7 m-auto">
+         <div class="title_all_box style_six text-center dark_color">
+            <div class="title_sections">
+               <div class="title">Words From Our Customers</div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <section class="testimonial-section bg_op_1" style="background-image: url(../assets/images/testi-home-9.jpg);">
+      <!--===============spacing==============-->
+      <div class="pd_top_90"></div>
+      <!--===============spacing==============-->
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="title_all_box style_one text-center light_color">
+                     <div class="title_sections">
+                        <div class="before_title color_white">Customer Reviews</div>
+                        <h6 class="title color_white">See What Our Clients Speak</h6>
+                     </div>
+                     <!--===============spacing==============-->
+                     <div class="pd_top_20"></div>
+                     <!--===============spacing==============-->
+                  </div>
+               </div>
+            </div>
+
+            <div class="row">
+               <div class="col-lg-9 m-auto">
+                  <div class="testimonial_sec style_v2_two">
+                     <div class="swiper-container swiper-initialized swiper-horizontal swiper-backface-hidden" data-swiper="{
+                        &quot;autoplay&quot;: {
+                          &quot;delay&quot;: 6000
+                        },
+                        &quot;freeMode&quot;: false,
+                        &quot;loop&quot;: true,
+                        &quot;speed&quot;: 1000,
+                        &quot;centeredSlides&quot;: false,
+                        &quot;slidesPerView&quot;: 1,
+                        &quot;spaceBetween&quot;: 30,
+                        &quot;pagination&quot;: {
+                          &quot;el&quot;: &quot;.swiper-pagination&quot;,
+                          &quot;clickable&quot;: true
+                        },
+                        &quot;navigation&quot;: {
+                           &quot;nextEl&quot;: &quot;.next-single-one&quot;,
+                           &quot;prevEl&quot;: &quot;.prev-single-one&quot;
+                         },
+                        &quot;breakpoints&quot;: {
+                           &quot;1200&quot;: {
+                              &quot;slidesPerView&quot;: 1
+                           },
+                           &quot;1024&quot;: {
+                            &quot;slidesPerView&quot;: 1
+                           },
+                          &quot;768&quot;: {
+                            &quot;slidesPerView&quot;: 1
+                          },
+                          &quot;576&quot;: {
+                            &quot;slidesPerView&quot;: 1 
+                          },
+                          &quot;0&quot;: {
+                            &quot;slidesPerView&quot;: 1 
+                          }
+                        }
+                      }">
+                        <div class="swiper-wrapper" id="swiper-wrapper-4c8e8afbb1cfd3c1" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-2088px, 0px, 0px);">
+                           
+                           
+                           
+                           
+                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="4 / 4" data-swiper-slide-index="3" style="width: 666px; margin-right: 30px;">
+                              <div class="testimonial_box clearfix">
+                                 <div class="authour_details">
+                                    <div class="comment">
+                                       The eSIM is an absolute must for those looking for a reliable internet companion on their global adventures.
+                                    </div>
+                                    <div class="details clearfix">
+                                       <div class="c_content">
+                                          <div class="content_in">
+                                             <h2>Oliver Campbell</h2>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><div class="swiper-slide" role="group" aria-label="1 / 4" data-swiper-slide-index="0" style="width: 666px; margin-right: 30px;">
+                              <div class="testimonial_box clearfix">
+                                 <div class="authour_details">
+                                    <div class="comment">
+                                       The Travel eSIM was an absolute lifesaver during my trip to France. Its activation was quick and effortless, providing fast, reliable data right from the get-go. Despite traveling across different cities, the connection remained consistent and strong, allowing me to share my journey in real-time. A must-have for travelers seeking seamless global connectivity.
+                                    </div>
+                                    <div class="details clearfix">
+                                       <div class="c_content">
+                                          <div class="content_in">
+                                             <h2>Kunle Okunola</h2>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><div class="swiper-slide swiper-slide-prev" role="group" aria-label="2 / 4" data-swiper-slide-index="1" style="width: 666px; margin-right: 30px;">
+                              <div class="testimonial_box clearfix">
+                                 <div class="authour_details">
+                                    <div class="comment">
+                                       The Travel eSIM was my perfect companion during my coast-to-coast adventure in the USA. Its instant activation and fast data speeds were exceptional, making road navigation and spontaneous video calls a breeze.
+                                    </div>
+                                    <div class="details clearfix">
+                                       <div class="c_content">
+                                          <div class="content_in">
+                                             <h2>Miranda Devon</h2>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                        </div>
+                     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                     <div class="arrows">
+                        <div class="prev-single-one" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-4c8e8afbb1cfd3c1"></div>
+                        <div class="next-single-one" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-4c8e8afbb1cfd3c1"></div>
+                     </div>
+                  </div>
+            </div>
+            </div>
+         </div>
+      <!--===============spacing==============-->
+      <div class="pd_bottom_80"></div>
+      <!--===============spacing==============-->
+      </section>
+</div>
+{{-- Tesimonial end --}}
+
 <!--content-->
 <section class="content-section">
    <div class="container">
