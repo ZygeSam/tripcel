@@ -32,6 +32,14 @@ Route::post('/store', [EsimController::class, 'store']);
 Route::get('/products', [EsimProductController::class, 'index']);
 Route::get('/products/{esimProduct}', [EsimProductController::class, 'show']);
 
+Route::get('/faq', function () {
+    return view('pages.faq');
+})->name('faq');
+
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
+
 // Client auth controller
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
