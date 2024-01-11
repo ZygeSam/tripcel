@@ -166,7 +166,7 @@
          <div class="row">
             <div class="col-lg-12">
                <div class="title_all_box style_one text-center dark_color">
-                  <div class="title_sections">
+                  <div class="title_sections mt-4">
                      <div class="before_title"> WHAT YOU GET</div>
                      <h2>For USing Tripcel</h2>
                   </div>
