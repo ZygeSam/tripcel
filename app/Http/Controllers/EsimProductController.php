@@ -10,6 +10,7 @@ use App\Services\EsimService;
 use App\Services\MailService;
 use App\Services\EsimPlanService;
 use App\Services\ESimProductService;
+use App\Services\EsimPlanTypeService;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Cache;
@@ -29,12 +30,13 @@ class EsimProductController extends Controller
     private $mailService;
     private $esimService;
     private $esimPlan;
+    private $esimPlanType;
     private $qrCode;
     private $manager;
     private $products;
     private $countries;
 
-    public function __construct(EsimPlanService $esimPlan, ESimProductService $esimProduct, PaymentProcessor $paymentProcessor, MailService $mailService, EsimService $esimService, QrCodeController $qrcode) {
+    public function __construct(EsimPlanTypeService $esimPlanType, EsimPlanService $esimPlan, ESimProductService $esimProduct, PaymentProcessor $paymentProcessor, MailService $mailService, EsimService $esimService, QrCodeController $qrcode) {
         $this->esimProduct = $esimProduct;
         $this->esimService = $esimService;
         $this->delimiter ='-';
@@ -42,24 +44,16 @@ class EsimProductController extends Controller
         $this->mailService = $mailService;
         $this->qrCode = $qrcode;
         $this->esimPlan = $esimPlan;
-        $this->products = collect($this->getProducts()['products']);
-        $this->countries = collect($this->getAllCountries($this->products));
+        $this->esimPlanType = $esimPlanType;
+        $this->countries = collect($this->getAllCountries());
     }
     
     public function getProducts(){
         return $this->esimProduct->getAllProducts();
     }
 
-    public function getAllCountries($products){
-        return $countries = $products->unique(function ($item) {
-             return $item['country_iso2'].$item['country_iso3'].$item['country_name'];
-         })->map(function ($item) {
-             return [
-                 "country_iso2" => $item['country_iso2'],
-                 "country_iso3" => $item['country_iso3'],
-                 "country_name" => $item['country_name'],
-             ];
-         })->values()->all();
+    public function getAllCountries(){
+        return $countries = collect($this->readApi("data/countries.json"));
      }
 
 
@@ -73,12 +67,19 @@ class EsimProductController extends Controller
     }
 
     public function index(){
-        return view('pages/index');
+        $countries = $this->countries;
+        return view('pages/index',compact('countries'));
+    }
+
+    public function readApi($filepath){
+        $jsonString = file_get_contents($filepath, true);
+        return  collect(json_decode($jsonString, true));
     }
 
     public function getCountries(){
-       $countries = $this->countries;
-       return view('pages/countries', compact('countries'));
+    //    $countries = $this->countries;
+        $countries = collect($this->readApi("data/countries.json"));
+        return view('pages/countries', compact('countries'));
     }
 
     public function showRegions(Request $request){
