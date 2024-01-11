@@ -177,13 +177,6 @@
          <div class="pd_bottom_20"></div>
          <!--===============spacing==============-->
          <div class="price_plan_with_tab price_tb_style_one">
-            <div class="tab_pricing_list">
-               <ul class="nav nav-tabs" id="myTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                     
-                  </li>
-               </ul>
-            </div>
             <div class="tab-content price_tab_content" id="myTabContent">
                <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <div class="row">
