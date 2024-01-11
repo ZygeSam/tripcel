@@ -40,6 +40,26 @@ Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
 
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
+
+Route::get('/howitworks', function () {
+    return view('pages.howitworks');
+})->name('howitworks');
+
+Route::get('/termsncond', function () {
+    return view('pages.termsncond');
+})->name('termsncond');
+
+Route::get('/privacy', function () {
+    return view('pages.privacy');
+})->name('privacy');
+
+Route::get('/compatibility', function () {
+    return view('pages.compatibility');
+})->name('compatibility');
+
 // Client auth controller
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
