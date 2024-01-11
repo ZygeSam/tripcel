@@ -70,9 +70,9 @@
 
             <!--- slider-->
             <section class="slider style_page_twelve nav_position_one">
-               <div class="banner_carousel owl-carousel owl_nav_block owl_dots_none theme_carousel owl-theme"
+               <div class="owl-carousel  theme_carousel"
                data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 7000, "smartSpeed": 1800, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "1" } , "1000":{ "items" : "1" }}}'>
-
+{{-- 
                   <div class="slide-item-content">
                      <div class="slide-item content_left">
                         <div class="image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
@@ -98,7 +98,7 @@
                            </div>
                         </div>
                      </div>
-                  </div>
+                  </div> --}}
                   <div class="slide-item-content">
                      <div class="slide-item content_left">
                         <div class="image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
@@ -125,7 +125,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="slide-item-content">
+                  {{-- <div class="slide-item-content">
                      <div class="slide-item content_left">
                         <div class="image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
                         </div>
@@ -177,7 +177,7 @@
                         </div>
                      </div>
                   </div>
-              
+               --}}
                </div>
             </section>
             <!---slider-end--->
@@ -192,14 +192,17 @@
        <div class="col-lg-10 m-auto">
           <div class="title_all_box style_one text-center dark_color">
              <div class="title_sections">
-                <div class="before_title">Select a Region
+                <div class="before_title">Select a Country
                   <form action="{{route('showRegions')}}" class="my-3" method="post">
                      @csrf
                      <select name="region" id="" class="p-3">
-                        <option class="p-4"value="USA">Usa</option>
-                        <option class="p-4"value="LAT">South America</option>
-                        <option class="p-4" value="APC">Asia</option>
-                        <option class="p-4"value="CRB">Carribean</option>
+                        @if(count($countries) > 0)
+                           @foreach($countries as $country)
+                              <option class="p-4"value="{{$country['country_iso2']}}">{{$country['country_name']}}</option>
+                           @endforeach
+                        @else
+                           <p>No country available</p>
+                        @endif
                      </select>
                      <button type="submit">Give it a try</button>
                   </form>
@@ -235,6 +238,11 @@
                    using your phone’s built-in eSIM chip, in addition to your current phone plan.</h5>
              </div>
           </div>
+          <div class="pd_bottom_10"></div>
+          <div class="description_box">
+            <p>Tripcel provides data connectivity service, fast and secure to all fun and business -minded individual. Through
+               a unique combination of on demand technologies.</p>
+         </div>
           <!--===============spacing==============-->
           <div class="list_item_box style_two style_list p-4 mt-3">
              <ul class="list-inline">
@@ -287,6 +295,97 @@
    <!--===============spacing==============-->
 </section>
 <!--about end-->
+<section class="service-section bg_op_3" style="background: url(assets/images/home-12-service-bg.jpg);">
+   <!--===============spacing==============-->
+   <div class="pd_top_85"></div>
+   <!--===============spacing==============-->
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="title_all_box style_one text-center light_color">
+               <div class="title_sections">
+                  <div class="before_title">Leading</div>
+                  <div class="title">Effective Solutions</div>
+                  <p>We work with your company to identify position requirements, implement recruitment
+                     programs, and <br> initiate employee assessments that maximize recruitment efforts</p>
+               </div>
+               <!--===============spacing==============-->
+               <div class="pd_bottom_20"></div>
+               <!--===============spacing==============-->
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="row">
+         <div class="service_section grid_all three_column dark_color">
+            <div class="grid_show_case grid_layout clearfix" style="position: relative; height: 490px;">
+               <div class="grid_box _card" style="position: absolute; left: 0px; top: 0px;">
+                  <div class="service_post style_three">
+                     <div class="image_box">
+                        <img loading="lazy" width="500" height="500" src="assets/images/service/service-image-6.jpg" alt="img">
+                     </div>
+                     <div class="text_box">
+                        <div class="text_box_inner">
+                           <span class="icon icon-thumbs-up icon"></span>
+                           <h2 class="title_service"><a href="index.html/service/talent-management/index.html" rel="bookmark">Talent Management</a></h2>
+                           <p class="short_desc">Once your company has hired the best employees, the next
+                              step.</p>
+                           <a class="read_more" href="index.html/service/talent-management/index.html"> Read More<i class="icon-right-arrow-long"></i></a>
+                           <div class="bg_icon">
+                              <span class="icon icon-thumbs-up icon"></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid_box _card" style="position: absolute; left: 379.953px; top: 0px;">
+                  <div class="service_post style_three">
+                     <div class="image_box">
+                        <img width="500" height="500" src="assets/images/service/service-image-5.jpg" alt="img" loading="lazy">
+                     </div>
+                     <div class="text_box">
+                        <div class="text_box_inner">
+                           <span class="icon icon-thumbs-up icon"></span>
+                           <h2 class="title_service"><a href="index.html/service/health-care-benefits/index.html" rel="bookmark">Health Care Benefits</a></h2>
+                           <p class="short_desc">Workplace conflict can become a costly and time-consuming
+                              process .</p>
+                           <a class="read_more" href="index.html/service/health-care-benefits/index.html"> Read More<i class="icon-right-arrow-long"></i></a>
+                           <div class="bg_icon">
+                              <span class="icon icon-thumbs-up icon"></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid_box _card" style="position: absolute; left: 759.906px; top: 0px;">
+                  <div class="service_post style_three">
+                     <div class="image_box">
+                        <img width="500" height="500" src="assets/images/service/service-image-4.jpg" alt="img" loading="lazy">
+                     </div>
+                     <div class="text_box">
+                        <div class="text_box_inner">
+                           <span class="icon icon-thumbs-up icon"></span>
+                           <h2 class="title_service"><a href="index.html/service/risk-management/index.html" rel="bookmark">Risk Management</a></h2>
+                           <p class="short_desc">Mitigate workplace issues before they escalate ,Shared Time
+                              Human.</p>
+                           <a class="read_more" href="index.html/service/risk-management/index.html"> Read More<i class="icon-right-arrow-long"></i></a>
+                           <div class="bg_icon">
+                              <span class="icon icon-thumbs-up icon"></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--===============spacing==============-->
+   <div class="pd_bottom_65"></div>
+   <!--===============spacing==============-->
+</section>
 <!--service-->
 <section class="service-section bg_op_3" style="background: url({{asset("assets/images/home-12-service-bg.jpg")}});">
    <!--===============spacing==============-->
@@ -471,7 +570,10 @@
                <div class="title_sections">
                   <div class="before_title">Get in Charge</div>
                   <div class="title">Try Our Services</div>
-                  
+                  <div class="description_box">
+                     <p>Our power of choice is untrammelled and when nothing prevents being able to do what
+                        we like best every pleasure.</p>
+                  </div>
                </div>
             </div>
             <!--===============spacing==============-->
@@ -720,6 +822,7 @@
                <div class="title_sections">
                   <div class="before_title">Find Out Our</div>
                   <div class="title">News, Adverts & Announcements</div>
+                  <p>Visit our blog and get the latest news and information on how to make you travel, call and data experience sweet and safer</p>
                </div>
                <!--===============spacing==============-->
                <div class="pd_bottom_20"></div>
@@ -777,110 +880,122 @@
             <!--===============spacing==============-->
             <div class="pd_top_80"></div>
             <!--===============spacing==============-->
-            <div class="auto-container">
+            <div class="container">
                <div class="row">
-                  <div class="col-lg-4 col-md-6 col-sm-12">
-                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                           <div class="footer_widgets wid_tit style_two">
-                              <div class="fo_wid_title">
-                                 <h2>Informations</h2>
-                              </div>
+                  <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12">
+                     <div class="footer_widgets about_company light_color">
+                        <div class="about_company_inner">
+                           <div class="footer_logo">
+                              <a href="#" target="_blank" rel="nofollow">
+                                 <img src={{asset("assets/images/FII.png")}} alt="logo">
+                              </a>
                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                           <div class="footer_widgets clearfix navigation_foo light_color style_four">
-                              <div class="navigation_foo_box">
-                                 <div class="navigation_foo_inner">
-
-                                    <ul>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Careers</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Infrastructure</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Client Support</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Privacy Policy</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Terms of Use</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Sitemap</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Contact</a></li>
-                                    </ul>
-
-
+                           <!--===============spacing==============-->
+                              <div class="mr_bottom_20"></div>
+                           <!--===============spacing==============-->
+                           <div class="content_box">
+                              <p> 
+                                 Duty the obligations of business will frequently occur that pleasure have too
+                                 repudiated annoyances endures accepted.
+                              </p>
+                              <div class="consulting">
+                                 <div class="image">
+                                    <img src="assets/images/authour-image.png" alt="need help">
+                                 </div>
+                                 <div class="help_con">
+                                    <h6>Need Help?</h6>
+                                    <h2>
+                                       <a href="#" target="_blank" rel="nofollow"> Free Consultation</a>
+                                    </h2>
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <div class="col-md-6 col-sm-12">
-                           <div class="footer_widgets clearfix navigation_foo light_color style_four">
-                              <div class="navigation_foo_box">
-                                 <div class="navigation_foo_inner">
-
-
-                                    <ul>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> How it’s Work</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Testimonials</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Case Studies</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Partners</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Key Areas</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Pricing</a></li>
-                                    </ul>
-                                 </div>
-
-
-                              </div>
-                           </div>
-                        </div>
                      </div>
-
+                 
                   </div>
-                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                     <div class="footer_widgets wid_tit style_two">
+                  <div class="col-lg-1 hidden-lg"></div>
+                  <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12">
+                     <div class="footer_widgets wid_tit style_one">
+                        <div class="fo_wid_title">
+                           <h2>Information</h2>
+                        </div>
+                     </div>
+                     <!--===============spacing==============-->
+                        <div class="mr_bottom_20"></div>
+                     <!--===============spacing==============-->
+                     <div class="footer_widgets clearfix navigation_foo light_color style_one">
+                        <div class="navigation_foo_box">
+                           <div class="navigation_foo_box">
+                              <div class="navigation_foo_inner">
+                                 <div class="menu-information-container">
+                                    <ul class="menu">
+                                       <li class="menu-item"><a href="#">How it’s Work</a></li>
+                                       <li class="menu-item"><a href="#">Testimonials</a></li>
+                                       <li class="menu-item"><a href="#">Case Studies</a></li>
+                                       <li class="menu-item"><a href="#">Pricing</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12">
+                     <div class="footer_widgets wid_tit style_one">
+                        <div class="fo_wid_title">
+                           <h2>Essentials</h2>
+                        </div>
+                     </div>
+                     <!--===============spacing==============-->
+                     <div class="mr_bottom_20"></div>
+                     <!--===============spacing==============-->
+                     <div class="footer_widgets clearfix navigation_foo light_color style_one">
+                        <div class="navigation_foo_box">
+                           <div class="navigation_foo_inner">
+                              
+                                 <ul class="menu">
+                                    <li class="menu-item"><a href="#">Phone Compatibility</a></li>
+                                    <li class="menu-item"><a href="#">Privacy Policy</a></li>
+                                    <li class="menu-item"><a href="#">Terms and Conditions</a></li>
+                                 </ul>
+                            
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-1 hidden-lg"></div>
+                  <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12">
+                     <div class="footer_widgets wid_tit style_one">
                         <div class="fo_wid_title">
                            <h2>Get In Touch</h2>
                         </div>
                      </div>
-                     <div class="footer_widgets foo_subscribe light_color style_one">
-                        <div class="item_subscribe with_text">
-                           <p class="color_white">Subscribe Us &amp; Recive Our Offers and Updates i Your Inbox Directly.</p>
-                           <div class="shortcodes">
-
-                              <form class="mc4wp-form" method="post" data-name="Subscibe">
-                                 <div class="mc4wp-form-fields">
-                                    <input type="email" name="EMAIL" placeholder="Your email address" required="">
-                                    <input type="submit" value="Sign up">
+                     <!--===============spacing==============-->
+                     <div class="mr_bottom_20"></div>
+                     <!--===============spacing==============-->
+                     <div class="footer_widgets get_in_touch_foo light_color">
+                        <div class="get_intouch_inrfo">
+                           <div class="foo_cont_inner">
+                              <div class="top">
+                                 <h6> Location</h6>
+                                 <p> 280 Granite Run Drive Suite #200
+                                    Lancaster, PA 1760
+                                 </p>
+                              </div>
+                              <div class="bottom">
+                                 <h6> Contact</h6>
+                                 <div class="con_content">
+                                    <h5> Phone :</h5>
+                                    <a href="tel:+9806071234"> +98 060 712 34</a>
                                  </div>
-                              </form>
-
+                                 <div class="con_content">
+                                    <h5> Mail Us :</h5>
+                                    <a href="tel:sendmail@creote.com"> sendmail@creote.com</a>
+                                 </div>
+                              </div>
                            </div>
-                           <p class="color_white">* We do not share your email id</p>
                         </div>
-                     </div>
-                     <div class="social_media_v_one style_two">
-                        <ul>
-                           <li>
-                              <a href="#"> <span class="fa fa-facebook"></span>
-                                 <small>facebook</small>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#"> <span class="fa fa-twitter"></span>
-                                 <small>twitter</small>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#"> <span class="fa fa-skype"></span>
-                                 <small>skype</small>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#"> <span class="fa fa-instagram"></span>
-                                 <small>instagram</small>
-                              </a>
-                           </li>
-                        </ul>
                      </div>
                   </div>
                </div>
@@ -1029,7 +1144,7 @@
                      </div>
                   </div>
                   <div class="copright">
-                     © 2023 Creote. All Rights Reserved.
+                     © 2023 Tripcel. All Rights Reserved.
                   </div>
                </div>
             </div>

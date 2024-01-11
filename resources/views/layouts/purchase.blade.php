@@ -142,140 +142,7 @@
          <!--===============PAGE CONTENT==============-->
          <!--===============PAGE CONTENT==============-->
       </div>
-      <div class="footer_area  footer_twelve bg_dark_2" id="footer_contents">
-         <div class="footer_widgets_wrap">
-            <!--===============spacing==============-->
-            <div class="pd_top_80"></div>
-            <!--===============spacing==============-->
-            <div class="auto-container">
-               <div class="row">
-                  <div class="col-lg-4 col-md-6 col-sm-12">
-                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                           <div class="footer_widgets wid_tit style_two">
-                              <div class="fo_wid_title">
-                                 <h2>Informations</h2>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                           <div class="footer_widgets clearfix navigation_foo light_color style_four">
-                              <div class="navigation_foo_box">
-                                 <div class="navigation_foo_inner">
-
-                                    <ul>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Careers</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Infrastructure</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Client Support</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Privacy Policy</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Terms of Use</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Sitemap</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Contact</a></li>
-                                    </ul>
-
-
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                           <div class="footer_widgets clearfix navigation_foo light_color style_four">
-                              <div class="navigation_foo_box">
-                                 <div class="navigation_foo_inner">
-
-
-                                    <ul>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> How it’s Work</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Testimonials</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Case Studies</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Partners</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Key Areas</a></li>
-                                       <li><a href="#" class="color_white"><i class="fa fa-circle-o"></i> Pricing</a></li>
-                                    </ul>
-                                 </div>
-
-
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                     <div class="footer_widgets wid_tit style_two">
-                        <div class="fo_wid_title">
-                           <h2>Get In Touch</h2>
-                        </div>
-                     </div>
-                     <div class="footer_widgets foo_subscribe light_color style_one">
-                        <div class="item_subscribe with_text">
-                           <p class="color_white">Subscribe Us &amp; Recive Our Offers and Updates i Your Inbox Directly.</p>
-                           <div class="shortcodes">
-
-                              <form class="mc4wp-form" method="post" data-name="Subscibe">
-                                 <div class="mc4wp-form-fields">
-                                    <input type="email" name="EMAIL" placeholder="Your email address" required="">
-                                    <input type="submit" value="Sign up">
-                                 </div>
-                              </form>
-
-                           </div>
-                           <p class="color_white">* We do not share your email id</p>
-                        </div>
-                     </div>
-                     <div class="social_media_v_one style_two">
-                        <ul>
-                           <li>
-                              <a href="#"> <span class="fa fa-facebook"></span>
-                                 <small>facebook</small>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#"> <span class="fa fa-twitter"></span>
-                                 <small>twitter</small>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#"> <span class="fa fa-skype"></span>
-                                 <small>skype</small>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#"> <span class="fa fa-instagram"></span>
-                                 <small>instagram</small>
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!--===============spacing==============-->
-            <div class="pd_bottom_60"></div>
-            <!--===============spacing==============-->
-         </div>
-   
-            <div class="auto-container">
-               <div class="footer-copyright text-center bg_dark_1 rounded_top_left_30 rounded_top_right_30">
-                  <!--===============spacing==============-->
-                  <div class="pd_top_25"></div>
-                  <!--===============spacing==============-->
-                  <div class="row">
-                     <div class="col-lg-12">
-                        <p class="color_white">© 2023 Tripcel</a> All Rights Reserved.</p>
-                     </div>
-                  </div>
-                   <!--===============spacing==============-->
-                   <div class="pd_bottom_5"></div>
-                   <!--===============spacing==============-->
-            </div>
-         </div>
-      </div>
+      @include('partials.otherpagesfooter')
   <!---==============mobile menu =================-->
   <div class="crt_mobile_menu">
    <div class="menu-backdrop"></div>
@@ -317,7 +184,7 @@
                <div class="form_content">
             
                       
-                     <form class="contact-form" method="post" action="https://themepanthers.com/html/creote-html/sendemail.php">
+                     <form class="contact-form" method="post" action="">
                         <p>
                            <label> Your name<br />
                              <input type="text" name="name" value="" size="40"   aria-required="true" aria-invalid="false" placeholder="Enter Your Name" /> 
