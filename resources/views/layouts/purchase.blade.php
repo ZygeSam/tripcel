@@ -53,7 +53,7 @@
          <!----header----->
          <div class="header_area " id="header_contents">
             <div class="position-relative">
-               <header class="header header_default style_nine  head_absolute transparent-bg get_sticky_header">
+               <header class="header header_default style_nine  head_absolute  get_sticky_header">
                   @include('partials.nav')
                </header>
             </div>
