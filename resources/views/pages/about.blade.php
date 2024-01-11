@@ -22,12 +22,6 @@
                   <!--===============spacing==============-->
                   <div class="pd_bottom_15"></div>
                   <!--===============spacing==============-->
-                  <div class="extra_content image_with_content dark_color">
-                     <div class="simple_image">
-                        <img src="assets/images/FII.png" alt="img">
-                        <h2> Since 2002, <br> Operating in Ontario.</h2>
-                     </div>
-                  </div>
                   <!--===============spacing==============-->
                   <div class="pd_bottom_20"></div>
                   <!--===============spacing==============-->
