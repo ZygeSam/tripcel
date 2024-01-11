@@ -104,11 +104,11 @@
                            class="dropdown-toggle nav-link"><span>FAQ</span></a>
                      </li>
                       <li class="menu-item menu-item-has-children nav-item">
-                         <a href="#"
+                         <a href="{{route('howitworks')}}"
                             class="dropdown-toggle nav-link"><span>How it Works</span></a>
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
-                         <a href="#"
+                         <a href="{{route('contact')}}"
                             class="dropdown-toggle nav-link"><span>Contact Us</span></a>
                       </li>
                       <li class="menu-item  menu-item-has-children nav-item">

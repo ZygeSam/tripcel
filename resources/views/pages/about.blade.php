@@ -32,10 +32,29 @@
                   <div class="pd_bottom_20"></div>
                   <!--===============spacing==============-->
                   <div class="description_box">
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptatibus perferendis, autem eveniet nihil necessitatibus aliquid nobis maxime delectus expedita. Asperiores odit facilis ut laboriosam eaque obcaecati, sapiente vel nihil temporibus maiores illo earum, blanditiis deleniti aliquid quibusdam eveniet eos dolor? Dolore accusamus quod ab natus magni iusto illo similique? </p>
+                     <p>Tripcel eSIM provides unlimited travel connectivity! Think of a world where you can travel the world without worrying about staying connected. 
+
+                        As avid travellers, we have experienced the frustrations of being without internet in unfamiliar places—juggling SIM cards and paying exorbitant roaming fees. So, Tripcel was created with the goal of changing the way you connect while you are traveling.
+                        
+                        Our mission is to provide a simple, affordable travel data plan without connectivity issues. We believe travel should be free, exploratory, and culturally diverse, not restricted or expensive. 
+                        
+                        Tripcel is a revolutionary solution that connects your eSIM-compatible smartphone, tablet, or PC to over 200+ countries in under 2 minutes. No more SIM cards or SIM swapping—our technology ensures easy connectivity regardless of your location.
+                        
+                        Tripcel is more than a connection—it is a personal journey. We have created a boutique experience to meet your specific needs as a traveler. 
+                        
+                        From the moment you become a part of our Tripcel family, you'll sense the personal touch and attention to detail that set us apart.
+                        
+                        Enjoy uninterrupted connectivity on your next adventure. Make Tripcel your travel companion to share memories, navigate easily, and stay in touch with loved ones. 
+                        
+                        Welcome to a world where travel knows no boundaries and connectivity is as effortless as breathing. 
+                     </p>
+                     <h3 class="pt-3">Welcome to Tripcel</h3>
                   </div>
                   <!--===============spacing==============-->
                   <div class="pd_bottom_25"></div>
+                  <div class="theme_btn_all color_one">
+                     <a href="{{route('contact')}}" rel="nofollow" class="theme-btn five">Contact us<i class="icon-right-arrow"></i></a>
+                  </div>
                   <!--===============spacing==============-->
                   <div class="row gutter_15px">
                      <div class="col-lg-6 col-md-12">
@@ -47,9 +66,7 @@
                      </div>
                   </div>
 
-                  <div class="theme_btn_all color_one">
-                     <a href="#" target="_blank" rel="nofollow" class="theme-btn five">Contact us<i class="icon-right-arrow"></i></a>
-                  </div>
+                  
                </div>
             </div>
             <div class="col-xl-6 col-lg-12">
@@ -108,7 +125,11 @@
                      </div>
                      <div class="txt_content">
                         <h3><a href="#" target="_blank" rel="nofollow">Our Mission</a></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, excepturi.</p>
+                        <p>Our mission is to redefine travel by providing seamless connectivity to travelers worldwide with a simple, affordable travel data plan. 
+
+                           We aim to remove communication barriers so every traveler can explore the world. Through cutting-edge technology and personalized services, we empower people to travel freely and create unforgettable memories.
+                           
+                           </p>
                      </div>
                   </div>
                </div>
@@ -123,11 +144,26 @@
                         <h3><a href="#" target="_blank" rel="nofollow">Our Core Values</a></h3>
                         <p>We pride ourselves in these values and we make sure every of our staff exhibit them</p>
                         <ul>
-                           <li>Integrity</li>
-                           <li>Commitment to excellence</li>
-                           <li>Consumer focus</li>
-                           <li>Accountability</li>
-                           <li>Inclusiveness</li>
+                           <li><b>Innovation:</b>
+                              Our passion for innovation drives us to find new ways to improve travel connectivity. We use technology to stay ahead of the competition and offer cutting-edge services.
+                              </li>
+                           <li><b>Customer-centricity:</b>
+                              Our customers are at the heart of everything we do. We tailor experiences to each traveler's needs and exceed expectations.
+                           </li>
+                           <li><b>Reliability:</b>
+                              Trust is the foundation of our brand. Tripcel provides reliable and consistent connectivity solutions worldwide, ensuring customer trust.
+
+                           </li>
+                           <li><b>Freedom:</b>
+                              We believe in the freedom to explore without boundaries. Our services remove connectivity barriers so travelers can fully experience diverse cultures and experiences.
+                           </li>
+                           <li><b>Integrity: </b>
+                              Honesty and transparency are the pillars of our interactions. We respect customers, partners, and colleagues and conduct business ethically.
+                           </li>
+                           <li>
+                              <b>Adaptability:</b>
+                              Travel and technology are dynamic, so we adapt. We adapt our services to meet customer and travel industry needs by being agile and responsive.
+                           </li>
                         </ul>
                      </div>
                   </div>
@@ -141,7 +177,10 @@
                      </div>
                      <div class="txt_content">
                         <h3><a href="#" target="_blank" rel="nofollow">Our Vision</a></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, omnis?</p>
+                        <p>Tripcel aims to lead the world in innovative travel connectivity solutions. We want to make connectivity easy so travelers can connect with people, cultures, and experiences. 
+
+                           We push boundaries and embrace advancements to set new standards in the travel industry, making Tripcel the top choice for travelers seeking unmatched connectivity.
+                           </p>
                      </div>
                   </div>
                </div>
@@ -171,25 +210,28 @@
                         <div class="tabs_header clearfix">
                            <ul class="showcase_tabs_btns nav-pills nav   clearfix">
                               <li class="nav-item">
-                                 <a class="s_tab_btn nav-link active" data-tab="#tabtabone">01. Affordable</a>
+                                 <a class="s_tab_btn nav-link active" data-tab="#tabtabone">Seamless Connectivity Everywhere</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="s_tab_btn nav-link" data-tab="#tabtabtwo">02. Wifi</a>
+                                 <a class="s_tab_btn nav-link" data-tab="#tabtabtwo">Innovative eSIM Technology</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="s_tab_btn nav-link" data-tab="#tabtabthree">03. QR code Activation</a>
+                                 <a class="s_tab_btn nav-link" data-tab="#tabtabthree">Affordable Travel Data Plans</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="s_tab_btn nav-link" data-tab="#tabtabfour">04. Speed</a>
+                                 <a class="s_tab_btn nav-link" data-tab="#tabtabfour">Freedom to Explore Without Restrictions</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="s_tab_btn nav-link" data-tab="#tabtabfive">05. Dedicated Team</a>
+                                 <a class="s_tab_btn nav-link" data-tab="#tabtabfive">Personalized Boutique Experience</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="s_tab_btn nav-link" data-tab="#tabtabsix">Reliable and Consistent Service</a>
                               </li>
                            </ul>
-                           <div class="toll_free">
+                           {{-- <div class="toll_free">
                               <a href="tel:180667586677"> <i class="icon-phone-call"></i>Call For Free
                                  Consultation</a>
-                           </div>
+                           </div> --}}
                         </div>
                         <div class="s_tab_wrapper">
                            <div class="s_tabs_content">
@@ -198,9 +240,7 @@
                                     <div class="content_image">
                                        <h6>Why Tripcel</h6>
 
-                                       <h2>Affordable &amp; Flexible plans</h2>
-
-                                       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam cumque praesentium quam fugiat enim sed perferendis voluptatem, corporis sint doloribus eaque ex ullam quos, mollitia aliquid nostrum labore iusto et velit obcaecati minima harum. Quibusdam odio commodi corporis aperiam error.</p>
+                                       <p>In over 200 countries, Tripcel provides unmatched connectivity, allowing you to stay connected anywhere. Travel without searching for local SIM cards or dealing with connectivity issues.</p>
 
                                     </div>
                                  </div>
@@ -210,10 +250,7 @@
                                     <div class="content_image">
                                        <h6>Why Tripcel</h6>
 
-                                       <h2>Wifi &amp; Hotspot</h2>
-
-                                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas unde animi repellat voluptate soluta modi doloremque dolore ducimus dolorem? Quam, repellat odit molestiae nostrum adipisci nemo quisquam. Nisi error corrupti eius hic rerum saepe eligendi voluptatibus, consequuntur, magni vel doloribus.</p>
-
+                                       <p>Tripcel's eSIM technology advances travel connectivity. Our innovative solution lets you connect in under 2 minutes with your eSIM-compatible smartphone, tablet, or PC without SIM cards.</p>
                                     </div>
                                  </div>
                               </div>
@@ -222,9 +259,7 @@
                                     <div class="content_image">
                                        <h6>Why Tripcel</h6>
 
-                                       <h2>QR Code Esim Activation</h2>
-
-                                       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate pariatur rem dolorum voluptatum distinctio nobis tenetur quos ab esse similique. Accusantium rerum quasi earum commodi alias quod pariatur nesciunt laboriosam nihil ut debitis, ducimus voluptates quibusdam. Hic non quisquam consectetur.</p>
+                                       <p>We know how important budgeting is when traveling. Instead of expensive roaming charges, Tripcel offers affordable travel data plans. You can enjoy seamless connectivity without breaking the bank.</p>
 
                                     </div>
                                  </div>
@@ -234,9 +269,7 @@
                                     <div class="content_image">
                                        <h6>Why Tripcel</h6>
 
-                                       <h2>Speed</h2>
-
-                                       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem possimus deserunt in repudiandae veniam nostrum laborum, ex minima temporibus? Molestiae modi, veritatis enim deleniti aspernatur delectus, sed nam eos aperiam debitis iure iste possimus animi doloribus. Repellendus, deserunt soluta? Tempore?</p>
+                                       <p>Travel should be about freedom and exploration, not about limitations. With Tripcel, bypass connectivity issues and fully experience new cultures. Helping you travel freely is our goal.</p>
 
                                     </div>
                                  </div>
@@ -246,9 +279,19 @@
                                     <div class="content_image">
                                        <h6>Why Tripcel</h6>
 
-                                       <h2>Dedcated Team</h2>
+                                       <p>Tripcel values personalized travel. We personalize your boutique experience. Join our Tripcel family and experience our meticulousness.
+                                       </p>
 
-                                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt labore ratione consequuntur possimus eaque ipsum optio reiciendis esse temporibus non exercitationem provident tempora recusandae perferendis, nemo illum neque nisi enim molestiae hic consectetur soluta quos molestias. Dolor non est harum.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="s_tab fade" id="tabtabsix">
+                                 <div class="tab_content one" style="background-image:url(assets/images/page-header-default.jpg)">
+                                    <div class="content_image">
+                                       <h6>Why Tripcel</h6>
+
+                                       <p>Trust is key to connectivity. Tripcel provides reliable, consistent services. Our service lets you share your travel memories and stay in touch with loved ones.
+                                       </p>
 
                                     </div>
                                  </div>
