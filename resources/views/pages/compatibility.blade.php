@@ -94,7 +94,7 @@
                                        <div class="row fs-5">
                                           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-5 mb-lg-0 mb-xl-0">
                                              <div class="image">
-                                                <img src={{asset("assets/images/checkout-rafiki.png")}} alt="img">
+                                                <img src={{asset("assets/images/speed-test.png")}} alt="img">
                                              </div>
                                           </div>
                                           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
