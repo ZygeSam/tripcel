@@ -3,7 +3,7 @@
        <div class="col-lg-2 col-md-9 col-sm-9 col-xs-9 logo_column">
           <div class="header_logo_box d-flex">
              <a href="{{route('home')}}" class="logo navbar-brand">
-                <img style="background-color: white; width: 6em; padding: 5px;" src={{asset("assets/images/FI.png")}} alt="Tripcel" class="logo_default">
+                <img style="width: 6em; padding: 5px;" src={{asset("assets/images/FI.png")}} alt="Tripcel" class="logo_default">
              </a>
          </div>
        </div>
@@ -91,32 +91,32 @@
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
                         <a href="#" class="dropdown-toggle nav-link">
-                           <span>Affiliate</span>
+                           <span class="text-secondary">Affiliate</span>
                         </a>
                      </li>
                       <li class="menu-item menu-item-has-children nav-item">
                          <a href="{{route('about')}}" class="dropdown-toggle nav-link">
-                            <span>About</span>
+                            <span class="text-secondary">About</span>
                          </a>
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
                         <a href="{{route('faq')}}"
-                           class="dropdown-toggle nav-link"><span>FAQ</span></a>
+                           class="dropdown-toggle nav-link"><span class="text-secondary">FAQ</span></a>
                      </li>
                       <li class="menu-item menu-item-has-children nav-item">
                          <a href="{{route('howitworks')}}"
-                            class="dropdown-toggle nav-link"><span>How it Works</span></a>
+                            class="dropdown-toggle nav-link"><span class="text-secondary">How it Works</span></a>
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
                          <a href="{{route('contact')}}"
-                            class="dropdown-toggle nav-link"><span>Contact Us</span></a>
+                            class="dropdown-toggle nav-link"><span class="text-secondary">Contact Us</span></a>
                       </li>
                       <li class="menu-item  menu-item-has-children nav-item">
                         <a href="{{route('showCart')}}" class="nav-link">
-                            <span>Cart</span> <i class="bx bx-cart-alt" style="color: #fff; font-size: 22px;"></i>
+                            <span class="text-secondary">Cart</span> <i class="bx bx-cart-alt" style="color: #fff; font-size: 22px;"></i>
                          </a>
                       </li>
-                      <li class="menu-item  menu-item-has-children nav-item d-md-none">
+                      <li class="d-xs-block d-sm-block d-md-block d-lg-block d-xl-none">
                         <a href="{{route('login')}}" target="_blank" rel="" class=""> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
                       </li>
                    </ul>
