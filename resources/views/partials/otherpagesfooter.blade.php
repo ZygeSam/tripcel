@@ -18,8 +18,7 @@
                       <!--===============spacing==============-->
                       <div class="content_box">
                          <p> 
-                            Duty the obligations of business will frequently occur that pleasure have too
-                            repudiated annoyances endures accepted.
+                            We'll always be here to make communication seamless and access to information through mobile data easy
                          </p>
                          <div class="consulting">
                             <div class="image">
@@ -112,7 +111,7 @@
                             </div>
                             <div class="con_content">
                                <h5> Mail Us :</h5>
-                               <a href="tel:sendmail@creote.com"> sendmail@creote.com</a>
+                               <a href="tel:sendmail@creote.com"> sendmail@tripcel.com</a>
                             </div>
                          </div>
                       </div>
