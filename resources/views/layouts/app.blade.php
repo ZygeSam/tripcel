@@ -289,7 +289,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-4 border border-2 rounded-3">
                      <div class="service_post style_three">
                         <div class="image_box">
                            <img width="500" height="500" src={{asset("assets/images/compatible.jpeg")}} alt="img" loading="lazy">
@@ -306,7 +306,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-4 border border-2 rounded-3">
                      <div class="service_post style_three">
                         <div class="image_box">
                            <img width="500" height="500" src={{asset("assets/images/privacy.jpg")}} alt="img" loading="lazy">
