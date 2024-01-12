@@ -45,6 +45,7 @@ class EsimProductController extends Controller
         $this->qrCode = $qrcode;
         $this->esimPlan = $esimPlan;
         $this->esimPlanType = $esimPlanType;
+        $this->products = collect($this->getProducts()['products']);
         $this->countries = collect($this->getAllCountries());
     }
     
@@ -77,13 +78,12 @@ class EsimProductController extends Controller
     }
 
     public function getCountries(){
-    //    $countries = $this->countries;
-        $countries = collect($this->readApi("data/countries.json"));
+        $countries = $this->countries;
         return view('pages/countries', compact('countries'));
     }
 
-    public function showRegions(Request $request){
-        return redirect()->route('regions', ['region'=>$request['region']]);
+    public function showCountries(Request $request){
+        return redirect()->to($request['country']);
     }
 
     public function getRegionProducts($region){
@@ -95,7 +95,7 @@ class EsimProductController extends Controller
         $unlimitedLiteDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited LITE');
         $unlimitedStandardDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited STANDARD');
         $unlimitedMaxDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited MA');
-        return view('pages.regions', compact('country', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
+        return view('pages.regions', compact('country', 'countries', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
     }
 
     public function getProductDays($products, $country, $days="- 5 days", $unlimited = false, $unlimitedPlan='Unlimited LITE'){
@@ -111,6 +111,7 @@ class EsimProductController extends Controller
     }
 
     public function getCountryProducts($country){
+       $countries = $this->countries;
        $country = $this->countries->where('country_name', $country)->first();
        $fiveDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days");
        $tenDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 10 days");
@@ -120,7 +121,7 @@ class EsimProductController extends Controller
        $unlimitedStandardDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited STANDARD');
        $unlimitedMaxDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited MA');
     
-       return view('pages.country', compact('country', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
+       return view('pages.country', compact('country', 'countries', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
     }
 
     /**

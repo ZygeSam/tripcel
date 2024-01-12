@@ -72,9 +72,9 @@
             <section class="slider style_page_twelve nav_position_one">
                <div class="owl-carousel  theme_carousel"
                data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 7000, "smartSpeed": 1800, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "1" } , "1000":{ "items" : "1" }}}'>
-{{-- 
+
                   <div class="slide-item-content">
-                     <div class="slide-item content_left">
+                     <div class="slide-item content_left pb-5 mt-5">
                         <div class="image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
                         </div>
                         <div class="medium-container">
@@ -84,33 +84,7 @@
                                     <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
                                        @yield('banner-sub-heading', 'Borders ')<br>
                                        </h1>
-                                       <h4>Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.</h4>
-                                       <div class="animate_down theme_btn_all color_two my-4">
-                                          <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
-                                       </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="slider_image animate_left">
-                                    <img src= "{{asset('assets/images/esim.jpg')}}" class="img-fluid" alt="img" />
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div> --}}
-                  <div class="slide-item-content">
-                     <div class="slide-item content_left">
-                        <div class="image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
-                        </div>
-                        <div class="medium-container">
-                           <div class="row align-items-center">
-                              <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="slider_content">
-                                    <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
-                                       @yield('banner-sub-heading', 'Borders ')<br>
-                                       </h1>
-                                       <h4>Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.</h4>
+                                       <h4>@yield('banner-content','Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.')</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">
                                           <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
                                        </div>
@@ -125,59 +99,6 @@
                         </div>
                      </div>
                   </div>
-                  {{-- <div class="slide-item-content">
-                     <div class="slide-item content_left">
-                        <div class="image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
-                        </div>
-                        <div class="medium-container">
-                           <div class="row align-items-center">
-                              <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="slider_content">
-                                    <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
-                                       @yield('banner-sub-heading', 'Borders ')<br>
-                                       </h1>
-                                       <h4>Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.</h4>
-                                       <div class="animate_down theme_btn_all color_two my-4">
-                                          <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
-                                       </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="slider_image animate_right">
-                                    <img src= "{{asset('assets/images/esimMobile.png')}}" class="img-fluid" alt="img" />
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="slide-item-content">
-                     <div class="slide-item content_left">
-                        <div class="image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
-                        </div>
-                        <div class="medium-container">
-                           <div class="row align-items-center">
-                              <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="slider_content">
-                                    <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
-                                       @yield('banner-sub-heading', 'Borders ')<br>
-                                       </h1>
-                                       <h4>Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.</h4>
-                                       <div class="animate_down theme_btn_all color_two my-4">
-                                          <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
-                                       </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="slider_image animate_right">
-                                    <img src= {{asset("assets/images/esimphoneconnect.png")}} class="img-fluid" alt="img" />
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               --}}
                </div>
             </section>
             <!---slider-end--->
@@ -193,12 +114,12 @@
           <div class="title_all_box style_one text-center dark_color">
              <div class="title_sections">
                 <div class="before_title">Select a Country
-                  <form action="{{route('showRegions')}}" class="my-3" method="post">
+                  <form action="{{route('showCountries')}}" class="my-3" method="post">
                      @csrf
-                     <select name="region" id="" class="p-3">
+                     <select name="country" id="" class="p-3">
                         @if(count($countries) > 0)
                            @foreach($countries as $country)
-                              <option class="p-4"value="{{$country['country_iso2']}}">{{$country['country_name']}}</option>
+                              <option class="p-4"value="{{route('country', ['country'=>$country['country_name']])}}">{{$country['country_name']}}</option>
                            @endforeach
                         @else
                            <p>No country available</p>
@@ -295,93 +216,116 @@
    <!--===============spacing==============-->
 </section>
 <!--about end-->
-<section class="service-section bg_op_3" style="background: url(assets/images/home-12-service-bg.jpg);">
+<section class="service-section bg_op_3" style="background: url({{asset('assets/images/home-12-service-bg.jpg')}});">
    <!--===============spacing==============-->
    <div class="pd_top_85"></div>
    <!--===============spacing==============-->
-   <div class="container">
-      <div class="row">
-         <div class="col-lg-12">
-            <div class="title_all_box style_one text-center light_color">
-               <div class="title_sections">
-                  <div class="before_title">Leading</div>
-                  <div class="title">Effective Solutions</div>
-                  <p>We work with your company to identify position requirements, implement recruitment
-                     programs, and <br> initiate employee assessments that maximize recruitment efforts</p>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="title_all_box style_one text-center light_color">
+                  <div class="title_sections">
+                     <div class="title">Discover the Benefits</div>
+                  </div>
+                  <!--===============spacing==============-->
+                  <div class="pd_bottom_20"></div>
+                  <!--===============spacing==============-->
                </div>
-               <!--===============spacing==============-->
-               <div class="pd_bottom_20"></div>
-               <!--===============spacing==============-->
             </div>
          </div>
       </div>
-   </div>
 
-   <div class="container">
-      <div class="row">
-         <div class="service_section grid_all three_column dark_color">
-            <div class="grid_show_case grid_layout clearfix" style="position: relative; height: 490px;">
-               <div class="grid_box _card" style="position: absolute; left: 0px; top: 0px;">
-                  <div class="service_post style_three">
-                     <div class="image_box">
-                        <img loading="lazy" width="500" height="500" src="assets/images/service/service-image-6.jpg" alt="img">
-                     </div>
-                     <div class="text_box">
-                        <div class="text_box_inner">
-                           <span class="icon icon-thumbs-up icon"></span>
-                           <h2 class="title_service"><a href="index.html/service/talent-management/index.html" rel="bookmark">Talent Management</a></h2>
-                           <p class="short_desc">Once your company has hired the best employees, the next
-                              step.</p>
-                           <a class="read_more" href="index.html/service/talent-management/index.html"> Read More<i class="icon-right-arrow-long"></i></a>
-                           <div class="bg_icon">
+      <div class="container">
+         <div class="row">
+                  <div class="col-4" >
+                     <div class="service_post style_three">
+                        <div class="image_box">
+                           <img loading="lazy" width="500" height="500" src={{asset("assets/images/service/service-image-6.jpg")}} alt="img">
+                        </div>
+                        <div class="text_box">
+                           <div class="text_box_inner">
                               <span class="icon icon-thumbs-up icon"></span>
+                              <h2 class="title_service"><a href="index.html/service/talent-management/index.html" rel="bookmark">Unlimited Data Access</a></h2>
+                              <p class="short_desc">OEnjoy the freedom of unlimited data, which allows you to navigate, share, and stay connected without worrying about data limitations. Stream, browse, and explore Turkey at your own pace.
+                              </p>
+                              <div class="bg_icon">
+                                 <span class="icon icon-thumbs-up icon"></span>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
-               </div>
-               <div class="grid_box _card" style="position: absolute; left: 379.953px; top: 0px;">
-                  <div class="service_post style_three">
-                     <div class="image_box">
-                        <img width="500" height="500" src="assets/images/service/service-image-5.jpg" alt="img" loading="lazy">
-                     </div>
-                     <div class="text_box">
-                        <div class="text_box_inner">
-                           <span class="icon icon-thumbs-up icon"></span>
-                           <h2 class="title_service"><a href="index.html/service/health-care-benefits/index.html" rel="bookmark">Health Care Benefits</a></h2>
-                           <p class="short_desc">Workplace conflict can become a costly and time-consuming
-                              process .</p>
-                           <a class="read_more" href="index.html/service/health-care-benefits/index.html"> Read More<i class="icon-right-arrow-long"></i></a>
-                           <div class="bg_icon">
+                  <div class="col-4" >
+                     <div class="service_post style_three">
+                        <div class="image_box">
+                           <img width="500" height="500" src={{asset("assets/images/fastint.jpeg")}} alt="img" loading="lazy">
+                        </div>
+                        <div class="text_box">
+                           <div class="text_box_inner">
                               <span class="icon icon-thumbs-up icon"></span>
+                              <h2 class="title_service"><a href="index.html/service/health-care-benefits/index.html" rel="bookmark">Fast and Reliable Connection</a></h2>
+                              <p class="short_desc">Tripcel eSIM provides a fast and reliable internet connection, ensuring you have a seamless online experience wherever your journey takes you in Turkey.</p>
+                              <div class="bg_icon">
+                                 <span class="icon icon-thumbs-up icon"></span>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
-               </div>
-               <div class="grid_box _card" style="position: absolute; left: 759.906px; top: 0px;">
-                  <div class="service_post style_three">
-                     <div class="image_box">
-                        <img width="500" height="500" src="assets/images/service/service-image-4.jpg" alt="img" loading="lazy">
-                     </div>
-                     <div class="text_box">
-                        <div class="text_box_inner">
-                           <span class="icon icon-thumbs-up icon"></span>
-                           <h2 class="title_service"><a href="index.html/service/risk-management/index.html" rel="bookmark">Risk Management</a></h2>
-                           <p class="short_desc">Mitigate workplace issues before they escalate ,Shared Time
-                              Human.</p>
-                           <a class="read_more" href="index.html/service/risk-management/index.html"> Read More<i class="icon-right-arrow-long"></i></a>
-                           <div class="bg_icon">
+                  <div class="col-4" >
+                     <div class="service_post style_three">
+                        <div class="image_box">
+                           <img width="500" height="500" src={{asset("assets/images/activate.png")}} alt="img" loading="lazy">
+                        </div>
+                        <div class="text_box">
+                           <div class="text_box_inner">
                               <span class="icon icon-thumbs-up icon"></span>
+                              <h2 class="title_service"><a href="index.html/service/risk-management/index.html" rel="bookmark">Easy Activation</a></h2>
+                              <p class="short_desc">No need to visit a local store or wait in long queues. Activate your eSIM with just a few clicks, allowing you to start using data right away</p>
+                              <div class="bg_icon">
+                                 <span class="icon icon-thumbs-up icon"></span>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
-               </div>
-            </div>
+                  <div class="col-4">
+                     <div class="service_post style_three">
+                        <div class="image_box">
+                           <img width="500" height="500" src={{asset("assets/images/compatible.jpeg")}} alt="img" loading="lazy">
+                        </div>
+                        <div class="text_box">
+                           <div class="text_box_inner">
+                              <span class="icon icon-thumbs-up icon"></span>
+                              <h2 class="title_service">Compatibility with Your Device</a></h2>
+                              <p class="short_desc">Tripcel eSIM is compatible with unlocked iPhones and Android devices, offering flexibility for a wide range of smartphones.</p>
+                              <div class="bg_icon">
+                                 <span class="icon icon-thumbs-up icon"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-4">
+                     <div class="service_post style_three">
+                        <div class="image_box">
+                           <img width="500" height="500" src={{asset("assets/images/privacy.jpg")}} alt="img" loading="lazy">
+                        </div>
+                        <div class="text_box">
+                           <div class="text_box_inner">
+                              <span class="icon icon-thumbs-up icon"></span>
+                              <h2 class="title_service">Privacy and Security</a></h2>
+                              <p class="short_desc">We take your privacy seriously. Tripcel eSIM plans come with end-to-end encryption, providing a secure connection for all your mobile device traffic..</p>
+                              <div class="bg_icon">
+                                 <span class="icon icon-thumbs-up icon"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
          </div>
       </div>
-   </div>
+   
    <!--===============spacing==============-->
    <div class="pd_bottom_65"></div>
    <!--===============spacing==============-->
@@ -396,7 +340,6 @@
          <div class="col-lg-12">
             <div class="title_all_box style_one text-center light_color">
                <div class="title_sections">
-                  <!-- <div class="before_title">Leading</div> -->
                   <div class="title">Select Your Destination</div>
                   <p>Your Travel eSIM Includes:</p>
                   <ul class=" d-md-flex  text-white list-unstyled text-center align-items-center justify-content-center">
@@ -423,7 +366,7 @@
 <!--service end-->
 
 {{-- Testimonial start --}}
-<div class="container mt-3">
+<div class="container my-5 py-5">
    <div class="row">
       <div class="col-lg-7 m-auto">
          <div class="title_all_box style_six text-center dark_color">

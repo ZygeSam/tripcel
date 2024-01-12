@@ -19,7 +19,7 @@ Route::get('/', [EsimProductController::class, 'index'])->name('home');
 Route::get('/get-countries', [EsimProductController::class, 'getPageCountries'])->name('getCountries');
 Route::get('/countries', [EsimProductController::class, 'getCountries'])->name('countries');
 Route::get('/regions/{region}', [EsimProductController::class, 'getRegionProducts'])->name('regions');
-Route::post('/regions', [EsimProductController::class, 'showRegions'])->name('showRegions');
+Route::post('/destinations', [EsimProductController::class, 'showCountries'])->name('showCountries');
 Route::get('/countries/{country}', [EsimProductController::class, 'getCountryProducts'])->name('country');
 Route::get('/cart', [EsimProductController::class, 'showCart'])->name('showCart');
 Route::get('/countries/{country}/addtoCart/{esimProduct}', [EsimProductController::class, 'addToCart'])->name('cart');
