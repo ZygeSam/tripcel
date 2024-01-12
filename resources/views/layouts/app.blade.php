@@ -47,13 +47,6 @@
             </div>
             <i class="icon-shopping-cart"></i>
          </div>
-         <!----preloader----->
-         <div class="preloader-wrap">
-            <div class="preloader" style="background-image:url({{asset('assets/images/preloader.gif')}})">
-            </div>
-            <div class="overlay"></div>
-         </div>
-         <!----preloader end----->
          <!----header----->
          <div class="header_area " id="header_contents">
             <div class="position-relative">
@@ -77,22 +70,22 @@
                      <div class="slide-item content_left pb-5 mt-5">
                         <div class="image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
                         </div>
-                        <div class="medium-container">
+                        <div class="container-fluid">
                            <div class="row align-items-center">
-                              <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_content">
                                     <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
                                        @yield('banner-sub-heading', 'Borders ')<br>
                                        </h1>
-                                       <h4>@yield('banner-content','Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.')</h4>
+                                       <h4 class="text-light">@yield('banner-content','Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.')</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">
                                           <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
                                        </div>
                                  </div>
                               </div>
-                              <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="slider_image animate_right">
-                                    <img src= "{{asset('assets/images/esimworld.png')}}" class="img-fluid" alt="img" />
+                              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-0 m-0">
+                                 <div class="animate_right p-0 m-0">
+                                    <img src= "{{asset('assets/images/cellular.jpg')}}" height="500" alt="img" />
                                  </div>
                               </div>
                            </div>

@@ -43,13 +43,6 @@
             </div>
             <i class="icon-shopping-cart"></i>
          </div>
-         <!----preloader----->
-         <div class="preloader-wrap">
-            <div class="preloader" style="background-image:url({{asset('assets/images/preloader.gif')}})">
-            </div>
-            <div class="overlay"></div>
-         </div>
-         <!----preloader end----->
          <!----header----->
          <div class="header_area " id="header_contents">
             <div class="position-relative">
