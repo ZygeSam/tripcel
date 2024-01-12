@@ -193,101 +193,161 @@
    </section>
    <!---service end--->
    <!---tab---->
-      <section class="tab-section bg_op_1" style="background-image:url(assets/images/tab-sec-bg.jpg);">
-         <!--===============spacing==============-->
-             <div class="pd_top_100"></div>
-         <!--===============spacing==============-->
-            <div class="container">
-               <div class="row">
-                  <div class="tabs_all_box  tabs_all_box_start type_one">
-                     <div class="tab_over_all_box">
-                        <div class="tabs_header clearfix">
-                           <ul class="showcase_tabs_btns nav-pills nav   clearfix">
-                              <li class="nav-item">
-                                 <a class="s_tab_btn nav-link active" data-tab="#tabtabone">Seamless Connectivity Everywhere</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="s_tab_btn nav-link" data-tab="#tabtabtwo">Innovative eSIM Technology</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="s_tab_btn nav-link" data-tab="#tabtabthree">Affordable Travel Data Plans</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="s_tab_btn nav-link" data-tab="#tabtabfour">Freedom to Explore Without Restrictions</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="s_tab_btn nav-link" data-tab="#tabtabfive">Personalized Boutique Experience</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="s_tab_btn nav-link" data-tab="#tabtabsix">Reliable and Consistent Service</a>
-                              </li>
-                           </ul>
-                           {{-- <div class="toll_free">
-                              <a href="tel:180667586677"> <i class="icon-phone-call"></i>Call For Free
-                                 Consultation</a>
-                           </div> --}}
-                        </div>
-                        <div class="s_tab_wrapper">
-                           <div class="s_tabs_content">
-                              <div class="s_tab fade active-tab show" id="tabtabone">
-                                 <div class="tab_content one" style="background-image:url(assets/images/tab-image.jpg)">
-                                    <div class="content_image">
-                                       <h6>Why Tripcel</h6>
+   <section class="tabs_all_box  tabs_all_box_start type_three my-5 py-5">
+      <div class="tab_over_all_box">
+         <div class="tabs_header clearfix">
+            <ul class="showcase_tabs_btns nav-pills nav   clearfix">
+               <li class="nav-item"><a class="s_tab_btn nav-link active" data-tab="#thereetabtabone">Inclusive Global Coverage</a></li>
+               <li class="nav-item"><a class="s_tab_btn nav-link" data-tab="#thereetabtabtwo">Tech-Driven Innovation</a></li>
+               <li class="nav-item"><a class="s_tab_btn nav-link" data-tab="#thereetabtabthree">Integrity and Transparency</a></li>
+               <li class="nav-item"><a class="s_tab_btn nav-link" data-tab="#thereetabtabfour">Confidence in Uninterrupted Connectivity</a></li>
+            </ul>
+         </div>
+         <div class="s_tab_wrapper">
+            <div class="s_tabs_content">
+               <div class="s_tab fade active-tab show" id="thereetabtabone">
+                  <div class="tab_content one">
+                     <div class="image">
+                        <img decoding="async" src="../assets/images/cal-to-action.jpg" alt="img">  
+                     </div>
+                     <div class="content_bx">
+                        <h6>Why Tricel></h6>
+                        <p>Tripcel provides global coverage for popular and off-the-beaten-path destinations. Throughout your adventures, we want to keep you connected.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="s_tab fade" id="thereetabtabtwo">
+                  <div class="tab_content one">
+                     <div class="image">
+                        <img decoding="async" src="../assets/images/cal-to-action-2.jpg" alt="img">  
+                     </div>
+                     <div class="content_bx">
+                        <h6>Why Tripcel ?</h6>
+                        <p>Tripcel thrives on innovation. Our tech-driven approach gives you the latest travel connectivity advances. Our innovative solutions keep you ahead.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="s_tab fade" id="thereetabtabthree">
+                  <div class="tab_content one">
+                     <div class="image">
+                        <img decoding="async" src="../assets/images/expertise-bg-1.jpg" alt="img">  
+                     </div>
+                     <div class="content_bx">
+                        <h6>Why Tripcel?</h6>
+                        <p>Tripcel conducts business with integrity and transparency. We value honesty with customers, partners, and colleagues. Tripcel provides trustworthy travel connectivity.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="s_tab fade" id="thereetabtabfour">
+                  <div class="tab_content one">
+                     <div class="image">
+                        <img decoding="async" src="../assets/images/expertise-bg-1.jpg" alt="img">  
+                     </div>
+                     <div class="content_bx">
+                        <h6>Why Tripcel?</h6>
+                        <p>Go on your next adventure knowing Tripcel will provide uninterrupted connectivity. Stay in touch with loved ones, share your travel memories, and navigate easily. Tripcel ensures connectivity-free travel. 
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>   
+   <section class="tab-section bg_op_1" style="background-image:url({{asset('assets/images/tab-sec-bg.jpg')}});">
+      <!--===============spacing==============-->
+          <div class="pd_top_100"></div>
+      <!--===============spacing==============-->
+         <div class="container">
+            <div class="row">
+               <div class="tabs_all_box  tabs_all_box_start type_one">
+                  <div class="tab_over_all_box">
+                     <div class="tabs_header clearfix">
+                        <ul class="showcase_tabs_btns nav-pills nav   clearfix">
+                           <li class="nav-item">
+                              <a class="s_tab_btn nav-link active" data-tab="#tabtabone">Seamless Connectivity Everywhere</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="s_tab_btn nav-link" data-tab="#tabtabtwo">Innovative eSIM Technology</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="s_tab_btn nav-link" data-tab="#tabtabthree">Affordable Travel Data Plans</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="s_tab_btn nav-link" data-tab="#tabtabfour">Freedom to Explore Without Restrictions</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="s_tab_btn nav-link" data-tab="#tabtabfive">Personalized Boutique Experience</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="s_tab_btn nav-link" data-tab="#tabtabsix">Reliable and Consistent Service</a>
+                           </li>
+                        </ul>
 
-                                       <p>In over 200 countries, Tripcel provides unmatched connectivity, allowing you to stay connected anywhere. Travel without searching for local SIM cards or dealing with connectivity issues.</p>
+                     </div>
+                     <div class="s_tab_wrapper">
+                        <div class="s_tabs_content">
+                           <div class="s_tab fade active-tab show" id="tabtabone">
+                              <div class="tab_content one" style="background-image:url(assets/images/tab-image.jpg)">
+                                 <div class="content_image">
+                                    <h6>Why Tripcel</h6>
 
-                                    </div>
+                                    <p>In over 200 countries, Tripcel provides unmatched connectivity, allowing you to stay connected anywhere. Travel without searching for local SIM cards or dealing with connectivity issues.</p>
+
                                  </div>
                               </div>
-                              <div class="s_tab fade" id="tabtabtwo">
-                                 <div class="tab_content one" style="background-image:url(assets/images/blog/blog-image-8.jpg)">
-                                    <div class="content_image">
-                                       <h6>Why Tripcel</h6>
+                           </div>
+                           <div class="s_tab fade" id="tabtabtwo">
+                              <div class="tab_content one" style="background-image:url(assets/images/blog/blog-image-8.jpg)">
+                                 <div class="content_image">
+                                    <h6>Why Tripcel</h6>
 
-                                       <p>Tripcel's eSIM technology advances travel connectivity. Our innovative solution lets you connect in under 2 minutes with your eSIM-compatible smartphone, tablet, or PC without SIM cards.</p>
-                                    </div>
+                                    <p>Tripcel's eSIM technology advances travel connectivity. Our innovative solution lets you connect in under 2 minutes with your eSIM-compatible smartphone, tablet, or PC without SIM cards.</p>
                                  </div>
                               </div>
-                              <div class="s_tab fade" id="tabtabthree">
-                                 <div class="tab_content one" style="background-image:url(assets/images/banner-five-bg.jpg)">
-                                    <div class="content_image">
-                                       <h6>Why Tripcel</h6>
+                           </div>
+                           <div class="s_tab fade" id="tabtabthree">
+                              <div class="tab_content one" style="background-image:url(assets/images/banner-five-bg.jpg)">
+                                 <div class="content_image">
+                                    <h6>Why Tripcel</h6>
 
-                                       <p>We know how important budgeting is when traveling. Instead of expensive roaming charges, Tripcel offers affordable travel data plans. You can enjoy seamless connectivity without breaking the bank.</p>
+                                    <p>We know how important budgeting is when traveling. Instead of expensive roaming charges, Tripcel offers affordable travel data plans. You can enjoy seamless connectivity without breaking the bank.</p>
 
-                                    </div>
                                  </div>
                               </div>
-                              <div class="s_tab fade" id="tabtabfour">
-                                 <div class="tab_content one" style="background-image:url(assets/images/service-sidebar-contact-bg.jpg)">
-                                    <div class="content_image">
-                                       <h6>Why Tripcel</h6>
+                           </div>
+                           <div class="s_tab fade" id="tabtabfour">
+                              <div class="tab_content one" style="background-image:url(assets/images/service-sidebar-contact-bg.jpg)">
+                                 <div class="content_image">
+                                    <h6>Why Tripcel</h6>
 
-                                       <p>Travel should be about freedom and exploration, not about limitations. With Tripcel, bypass connectivity issues and fully experience new cultures. Helping you travel freely is our goal.</p>
+                                    <p>Travel should be about freedom and exploration, not about limitations. With Tripcel, bypass connectivity issues and fully experience new cultures. Helping you travel freely is our goal.</p>
 
-                                    </div>
                                  </div>
                               </div>
-                              <div class="s_tab fade" id="tabtabfive">
-                                 <div class="tab_content one" style="background-image:url(assets/images/page-header-default.jpg)">
-                                    <div class="content_image">
-                                       <h6>Why Tripcel</h6>
+                           </div>
+                           <div class="s_tab fade" id="tabtabfive">
+                              <div class="tab_content one" style="background-image:url(assets/images/page-header-default.jpg)">
+                                 <div class="content_image">
+                                    <h6>Why Tripcel</h6>
 
-                                       <p>Tripcel values personalized travel. We personalize your boutique experience. Join our Tripcel family and experience our meticulousness.
-                                       </p>
+                                    <p>Tripcel values personalized travel. We personalize your boutique experience. Join our Tripcel family and experience our meticulousness.
+                                    </p>
 
-                                    </div>
                                  </div>
                               </div>
-                              <div class="s_tab fade" id="tabtabsix">
-                                 <div class="tab_content one" style="background-image:url(assets/images/page-header-default.jpg)">
-                                    <div class="content_image">
-                                       <h6>Why Tripcel</h6>
+                           </div>
+                           <div class="s_tab fade" id="tabtabsix">
+                              <div class="tab_content one" style="background-image:url(assets/images/page-header-default.jpg)">
+                                 <div class="content_image">
+                                    <h6>Why Tripcel</h6>
 
-                                       <p>Trust is key to connectivity. Tripcel provides reliable, consistent services. Our service lets you share your travel memories and stay in touch with loved ones.
-                                       </p>
+                                    <p>Trust is key to connectivity. Tripcel provides reliable, consistent services. Our service lets you share your travel memories and stay in touch with loved ones.
+                                    </p>
 
-                                    </div>
                                  </div>
                               </div>
                            </div>
@@ -296,11 +356,12 @@
                   </div>
                </div>
             </div>
-         <!--===============spacing==============-->
-            <div class="pd_bottom_90"></div>
-         <!--===============spacing==============-->
-      </section>
-      <!---tab-end--->
+         </div>
+      <!--===============spacing==============-->
+         <div class="pd_bottom_90"></div>
+      <!--===============spacing==============-->
+   </section>
+   <!---tab-end--->
      <!---team--->
      <section class="team-section">
       <!--===============spacing==============-->
@@ -397,7 +458,7 @@
       <!--===============spacing==============-->
       <div class="pd_bottom_60"></div>
       <!--===============spacing==============-->
-   </section>
+     </section>
    <!---team-end--->
    <!--===============spacing==============-->
    <div class="pd_bottom_40"></div>

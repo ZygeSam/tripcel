@@ -799,7 +799,7 @@
                   <div class="grid_box _card">
                      <div class="news_box style_ten">
                         <div class="image_box">
-                           <img width="750" height="420" src="assets/images/blog/blog-image-14.jpg"
+                           <img width="750" height="420" src={{asset("assets/images/blog/blog-image-14.jpg")}}
                               class="img-fluid" alt="img" loading="lazy">
                         </div>
                         <h2 class="title"><a href="#" rel="bookmark">Places to visit this summer</a></h2>
