@@ -87,6 +87,7 @@ class EsimProductController extends Controller
     }
 
     public function getRegionProducts($region){
+        $countries = $this->countries;
         $country = $this->countries->where('country_iso3', $region)->first();
         $fiveDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days");
         $tenDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 10 days");
