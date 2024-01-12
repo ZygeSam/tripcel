@@ -52,7 +52,7 @@
                          <div class="navigation_foo_inner">
                             <div class="menu-information-container">
                                <ul class="menu">
-                                  <li class="menu-item"><a href="#">How it’s Work</a></li>
+                                  <li class="menu-item"><a href="{{route('howitworks')}}">How it’s Work</a></li>
                                   <li class="menu-item"><a href="#">Testimonials</a></li>
                                </ul>
                             </div>
