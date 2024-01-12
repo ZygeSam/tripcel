@@ -1,9 +1,9 @@
 <div class="medium-container">
-    <div class="row align-items-center" style=" z-index: 1100;">
+    <div class="row align-items-center" style="z-index: 1100;">
        <div class="col-lg-2 col-md-9 col-sm-9 col-xs-9 logo_column">
           <div class="header_logo_box d-flex">
              <a href="{{route('home')}}" class="logo navbar-brand">
-                <img style="width: 6em; padding: 5px;" src={{asset("assets/images/FI.png")}} alt="Tripcel" class="logo_default">
+                <img src={{asset("assets/images/FI.png")}} alt="Tripcel" class="logo_default">
              </a>
          </div>
        </div>

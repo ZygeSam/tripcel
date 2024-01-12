@@ -4786,7 +4786,7 @@ body .enabled_custom_title .title_page .main_tit {
   top: 0;
   width: 100%;
   z-index: -1;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(255, 254, 254, 0.1);
   -ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   transition: top 0.3s ease;
@@ -5759,7 +5759,7 @@ body.single-header {
   animation-name: slideInUp;
 }
 .fixed-header .get_sticky_header.style_two {
-  background: var(--primary-color-two);
+  background: #ffffff;
 }
 
 .fixed-header .header_default.style_seven.style_eight.get_sticky_header {
@@ -5771,7 +5771,7 @@ body.single-header {
   background: #ffffff !important;
 }
 .fixed-header .header_default.style_nine {
-  background: var(--primary-color-one) !important;
+  background: #ffffff !important;
 }
 .fixed-header .header_default.style_nine .theme-btn {
   background: #fff;

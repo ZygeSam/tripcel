@@ -5759,7 +5759,7 @@ body.single-header {
   animation-name: slideInUp;
 }
 .fixed-header .get_sticky_header.style_two {
-  background: var(--primary-color-two);
+  background: #ffffff;
 }
 
 .fixed-header .header_default.style_seven.style_eight.get_sticky_header {
