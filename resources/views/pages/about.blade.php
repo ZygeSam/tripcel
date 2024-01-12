@@ -211,8 +211,8 @@
                         <img decoding="async" src="../assets/images/cal-to-action.jpg" alt="img">  
                      </div>
                      <div class="content_bx">
-                        <h6>Why Tricel></h6>
-                        <p>Tripcel provides global coverage for popular and off-the-beaten-path destinations. Throughout your adventures, we want to keep you connected.
+                        <h4>Why Tricel?</h4>
+                        <p class="fs-5">Tripcel provides global coverage for popular and off-the-beaten-path destinations. Throughout your adventures, we want to keep you connected.
                         </p>
                      </div>
                   </div>
@@ -223,8 +223,8 @@
                         <img decoding="async" src="../assets/images/cal-to-action-2.jpg" alt="img">  
                      </div>
                      <div class="content_bx">
-                        <h6>Why Tripcel ?</h6>
-                        <p>Tripcel thrives on innovation. Our tech-driven approach gives you the latest travel connectivity advances. Our innovative solutions keep you ahead.
+                        <h4>Why Tripcel ?</h6>
+                        <p class="fs-5">Tripcel thrives on innovation. Our tech-driven approach gives you the latest travel connectivity advances. Our innovative solutions keep you ahead.
                         </p>
                      </div>
                   </div>
@@ -235,8 +235,8 @@
                         <img decoding="async" src="../assets/images/expertise-bg-1.jpg" alt="img">  
                      </div>
                      <div class="content_bx">
-                        <h6>Why Tripcel?</h6>
-                        <p>Tripcel conducts business with integrity and transparency. We value honesty with customers, partners, and colleagues. Tripcel provides trustworthy travel connectivity.
+                        <h4>Why Tripcel?</h4>
+                        <p class="fs-5">Tripcel conducts business with integrity and transparency. We value honesty with customers, partners, and colleagues. Tripcel provides trustworthy travel connectivity.
                         </p>
                      </div>
                   </div>
@@ -247,8 +247,8 @@
                         <img decoding="async" src="../assets/images/expertise-bg-1.jpg" alt="img">  
                      </div>
                      <div class="content_bx">
-                        <h6>Why Tripcel?</h6>
-                        <p>Go on your next adventure knowing Tripcel will provide uninterrupted connectivity. Stay in touch with loved ones, share your travel memories, and navigate easily. Tripcel ensures connectivity-free travel. 
+                        <h4>Why Tripcel?</h4>
+                        <p class="fs-5">Go on your next adventure knowing Tripcel will provide uninterrupted connectivity. Stay in touch with loved ones, share your travel memories, and navigate easily. Tripcel ensures connectivity-free travel. 
                         </p>
                      </div>
                   </div>
