@@ -230,7 +230,7 @@
 
       <div class="container">
          <div class="row">
-                  <div class="col-4" >
+                  <div class="col-md-6 col-lg-4 " >
                      <div class="service_post style_three">
                         <div class="image_box">
                            <img loading="lazy" width="500" height="500" src={{asset("assets/images/service/service-image-6.jpg")}} alt="img">
@@ -248,7 +248,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-4" >
+                  <div class="col-md-6 col-lg-4 " >
                      <div class="service_post style_three">
                         <div class="image_box">
                            <img width="500" height="500" src={{asset("assets/images/fastint.jpeg")}} alt="img" loading="lazy">
@@ -265,7 +265,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-4" >
+                  <div class="col-md-6 col-lg-4 " >
                      <div class="service_post style_three">
                         <div class="image_box">
                            <img width="500" height="500" src={{asset("assets/images/activate.png")}} alt="img" loading="lazy">
@@ -282,7 +282,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-4 border border-2 rounded-3">
+                  <div class="col-md-6 col-lg-4  border border-2 rounded-3">
                      <div class="service_post style_three">
                         <div class="image_box">
                            <img width="500" height="500" src={{asset("assets/images/compatible.jpeg")}} alt="img" loading="lazy">
@@ -299,7 +299,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-4 border border-2 rounded-3">
+                  <div class="col-md-6 col-lg-4  border border-2 rounded-3">
                      <div class="service_post style_three">
                         <div class="image_box">
                            <img width="500" height="500" src={{asset("assets/images/privacy.jpg")}} alt="img" loading="lazy">
