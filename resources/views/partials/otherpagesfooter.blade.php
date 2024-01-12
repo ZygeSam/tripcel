@@ -9,7 +9,7 @@
                 <div class="footer_widgets about_company light_color">
                    <div class="about_company_inner">
                       <div class="footer_logo">
-                         <a href="#" target="_blank" rel="nofollow">
+                         <a href="{{route('home')}}" target="_blank" rel="nofollow">
                             <img src={{asset("assets/images/FII.png")}} alt="logo">
                          </a>
                       </div>
