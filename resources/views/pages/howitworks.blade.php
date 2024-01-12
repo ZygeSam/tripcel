@@ -64,7 +64,7 @@
                            <a class="s_tab_btn nav-link" data-tab="#tabtabtwothree">03. SCAN CODE</a>
                         </li>
                         <li class="nav-item">
-                           <a class="s_tab_btn nav-link" data-tab="#tabtabtwofour">03. CONNECT</a>
+                           <a class="s_tab_btn nav-link" data-tab="#tabtabtwofour">04. CONNECT & ENJOY</a>
                         </li>
                      </ul>
                   </div>
@@ -75,7 +75,7 @@
                               <div class="row">
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-5 mb-lg-0 mb-xl-0">
                                     <div class="image">
-                                       <img src="assets/images/tab-ser-img.png" alt="img">
+                                       <img src={{asset("assets/images/checkout-rafiki.png")}} alt="img">
                                     </div>
                                  </div>
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -93,7 +93,7 @@
                               <div class="row">
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-5 mb-lg-0 mb-xl-0">
                                     <div class="image">
-                                       <img src="assets/images/tab-ser-img.png" alt="img">
+                                       <img src={{asset("assets/images/Selectplan.png")}} alt="img">
                                     </div>
                                  </div>
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -112,7 +112,7 @@
                               <div class="row">
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-5 mb-lg-0 mb-xl-0">
                                     <div class="image">
-                                       <img src="assets/images/tab-ser-img.png" alt="img">
+                                       <img src={{asset("assets/images/QRCode.png")}} alt="img">
                                     </div>
                                  </div>
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -130,7 +130,7 @@
                               <div class="row">
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-5 mb-lg-0 mb-xl-0">
                                     <div class="image">
-                                       <img src="assets/images/tab-ser-img.png" alt="img">
+                                       <img src={{asset("assets/images/Online-bro.png")}} alt="img">
                                     </div>
                                  </div>
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -168,7 +168,7 @@
                <div class="title_all_box style_one text-center dark_color">
                   <div class="title_sections mt-4">
                      <div class="before_title"> WHAT YOU GET</div>
-                     <h2>For USing Tripcel</h2>
+                     <h2>For Using Tripcel</h2>
                   </div>
                </div>
             </div>
