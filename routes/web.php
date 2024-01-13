@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EsimController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\EsimProductController;
+use App\Http\Controllers\NetworkController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +32,8 @@ Route::get('confirmPayment/{gateway}/{transactionId}/{email}', [EsimProductContr
 Route::post('/store', [EsimController::class, 'store']);
 Route::get('/products', [EsimProductController::class, 'index']);
 Route::get('/products/{esimProduct}', [EsimProductController::class, 'show']);
+Route::post('/networks', [NetworkController::class, 'getCountryNetwork'])->name('countryNetwork');
+Route::get('/networks/{country?}', [NetworkController::class, 'getNetworkByCountry'])->name('countryCoverage');
 
 Route::get('/faq', function () {
     return view('pages.faq');
@@ -59,6 +62,10 @@ Route::get('/privacy', function () {
 Route::get('/compatibility', function () {
     return view('pages.compatibility');
 })->name('compatibility');
+
+// Route::get('/networks', function () {
+//     return view('pages.networks');
+// })->name('networks');
 
 // Client auth controller
 Route::get('/login', [AuthController::class, 'login'])->name('login');

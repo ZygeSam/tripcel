@@ -53,7 +53,7 @@
                             <div class="menu-information-container">
                                <ul class="menu">
                                   <li class="menu-item"><a href="{{route('howitworks')}}">How It Works</a></li>
-                                  <li class="menu-item"><a href="#">Testimonials</a></li>
+                                  <li class="menu-item"><a href="{{route('countryCoverage')}}">Network and Coverage</a></li>
                                </ul>
                             </div>
                          </div>

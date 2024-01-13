@@ -1,0 +1,2509 @@
+{
+    "result": 1,
+    "status": 200,
+    "request_id": "ZxbSLAG9aNmIACMKnLRl5qko",
+    "message": "",
+    "developer_message": "",
+    "networks": [
+        {
+            "country_iso2": "af",
+            "country_name": "Afghanistan",
+            "network_name": "AWCC",
+            "network_mccmnc": 41201,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "al",
+            "country_name": "Albania",
+            "network_name": "Vodafone",
+            "network_mccmnc": 27602,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "dz",
+            "country_name": "Algeria",
+            "network_name": "Mobilis",
+            "network_mccmnc": 60301,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ad",
+            "country_name": "Andorra",
+            "network_name": "Andorra Telecom",
+            "network_mccmnc": 21303,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ai",
+            "country_name": "Anguilla",
+            "network_name": "Flow",
+            "network_mccmnc": 365840,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ag",
+            "country_name": "Antigua and Barbuda",
+            "network_name": "Flow",
+            "network_mccmnc": 344920,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ar",
+            "country_name": "Argentina",
+            "network_name": "Movistar",
+            "network_mccmnc": 72207,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "am",
+            "country_name": "Armenia",
+            "network_name": "ArmenTel",
+            "network_mccmnc": 28301,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "am",
+            "country_name": "Armenia",
+            "network_name": "MTS Armenia -VivaCell",
+            "network_mccmnc": 28305,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "aw",
+            "country_name": "Aruba",
+            "network_name": "Setar GSM",
+            "network_mccmnc": 36301,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "au",
+            "country_name": "Australia",
+            "network_name": "Optus",
+            "network_mccmnc": 50502,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "at",
+            "country_name": "Austria",
+            "network_name": "3 AT",
+            "network_mccmnc": 23205,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "at",
+            "country_name": "Austria",
+            "network_name": "A1",
+            "network_mccmnc": 23201,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "az",
+            "country_name": "Azerbaijan",
+            "network_name": "BAKCELL GSM 2000",
+            "network_mccmnc": 40002,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bs",
+            "country_name": "Bahamas",
+            "network_name": "BTC",
+            "network_mccmnc": 364390,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bh",
+            "country_name": "Bahrain",
+            "network_name": "BATELCO",
+            "network_mccmnc": 42601,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bd",
+            "country_name": "Bangladesh",
+            "network_name": "Grameenphone",
+            "network_mccmnc": 47001,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bb",
+            "country_name": "Barbados",
+            "network_name": "Flow",
+            "network_mccmnc": 342600,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "be",
+            "country_name": "Belgium",
+            "network_name": "Telenet",
+            "network_mccmnc": 20620,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "be",
+            "country_name": "Belgium",
+            "network_name": "Orange",
+            "network_mccmnc": 20610,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "be",
+            "country_name": "Belgium",
+            "network_name": "Proximus",
+            "network_mccmnc": 20601,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bz",
+            "country_name": "Belize",
+            "network_name": "Digi",
+            "network_mccmnc": 70267,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bj",
+            "country_name": "Benin",
+            "network_name": "MTN",
+            "network_mccmnc": 61603,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bm",
+            "country_name": "Bermuda",
+            "network_name": "CellularOne",
+            "network_mccmnc": 350000,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bt",
+            "country_name": "Bhutan",
+            "network_name": "B-Mobile",
+            "network_mccmnc": 40211,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bo",
+            "country_name": "Bolivia",
+            "network_name": "VIVA",
+            "network_mccmnc": 73601,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ba",
+            "country_name": "Bosnia and Herzegovina",
+            "network_name": "HT Eronet / Mostar",
+            "network_mccmnc": 21803,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bw",
+            "country_name": "Botswana",
+            "network_name": "Mascom - MTN Botswana",
+            "network_mccmnc": 65201,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "br",
+            "country_name": "Brazil",
+            "network_name": "VIVO",
+            "network_mccmnc": 72406,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "vg",
+            "country_name": "British Virgin Islands",
+            "network_name": "Flow",
+            "network_mccmnc": 348170,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bn",
+            "country_name": "Brunei",
+            "network_name": "Progresif",
+            "network_mccmnc": 52802,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "bn",
+            "country_name": "Brunei",
+            "network_name": "DTSCom",
+            "network_mccmnc": 52811,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "bg",
+            "country_name": "Bulgaria",
+            "network_name": "Yettel",
+            "network_mccmnc": 28405,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bg",
+            "country_name": "Bulgaria",
+            "network_name": "A1",
+            "network_mccmnc": 28401,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bg",
+            "country_name": "Bulgaria",
+            "network_name": "Vivacom",
+            "network_mccmnc": 28403,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bf",
+            "country_name": "Burkina Faso",
+            "network_name": "Airtel Burkina Faso",
+            "network_mccmnc": 61302,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bi",
+            "country_name": "Burundi",
+            "network_name": "Lumitel",
+            "network_mccmnc": 64208,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "kh",
+            "country_name": "Cambodia",
+            "network_name": "hello",
+            "network_mccmnc": 45602,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "cm",
+            "country_name": "Cameroon",
+            "network_name": "MTN Cameroon Ltd.",
+            "network_mccmnc": 62401,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ca",
+            "country_name": "Canada",
+            "network_name": "Bell Mobility",
+            "network_mccmnc": 302610,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "ca",
+            "country_name": "Canada",
+            "network_name": "Telus",
+            "network_mccmnc": 302220,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "cv",
+            "country_name": "Cape Verde",
+            "network_name": "CVMovel SA",
+            "network_mccmnc": 62501,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ky",
+            "country_name": "Cayman Islands",
+            "network_name": "Flow",
+            "network_mccmnc": 346140,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "td",
+            "country_name": "Chad",
+            "network_name": "Airtel Tchad S.A",
+            "network_mccmnc": 62201,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "cl",
+            "country_name": "Chile",
+            "network_name": "Movistar",
+            "network_mccmnc": 73002,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "cl",
+            "country_name": "Chile",
+            "network_name": "Entel",
+            "network_mccmnc": 73001,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "cn",
+            "country_name": "China",
+            "network_name": "CHINA UNICOM GSM",
+            "network_mccmnc": 46001,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "co",
+            "country_name": "Colombia",
+            "network_name": "Movistar",
+            "network_mccmnc": 732123,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "co",
+            "country_name": "Colombia",
+            "network_name": "Tigo",
+            "network_mccmnc": 732111,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "cr",
+            "country_name": "Costa Rica",
+            "network_name": "Movistar/LIBERTY",
+            "network_mccmnc": 71204,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "hr",
+            "country_name": "Croatia",
+            "network_name": "TM HR",
+            "network_mccmnc": 21902,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "cw",
+            "country_name": "Curacao",
+            "network_name": "Digicel (Curacao)",
+            "network_mccmnc": 36268,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "cy",
+            "country_name": "Cyprus",
+            "network_name": "CYTA",
+            "network_mccmnc": 28001,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "cy",
+            "country_name": "Cyprus",
+            "network_name": "epic",
+            "network_mccmnc": 28010,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "cz",
+            "country_name": "Czech Republic",
+            "network_name": "O2",
+            "network_mccmnc": 23002,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "cz",
+            "country_name": "Czech Republic",
+            "network_name": "Vodafone",
+            "network_mccmnc": 23003,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "dk",
+            "country_name": "Denmark",
+            "network_name": "3 DK",
+            "network_mccmnc": 23806,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "dk",
+            "country_name": "Denmark",
+            "network_name": "TDC Mobil",
+            "network_mccmnc": 23801,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "dm",
+            "country_name": "Dominica",
+            "network_name": "Flow",
+            "network_mccmnc": 366110,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "do",
+            "country_name": "Dominican Republic",
+            "network_name": "Altice",
+            "network_mccmnc": 37001,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "do",
+            "country_name": "Dominican Republic",
+            "network_name": "viva",
+            "network_mccmnc": 37004,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ec",
+            "country_name": "Ecuador",
+            "network_name": "Movistar",
+            "network_mccmnc": 74000,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "eg",
+            "country_name": "Egypt",
+            "network_name": "Orange",
+            "network_mccmnc": 60201,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "sv",
+            "country_name": "El Salvador",
+            "network_name": "Movistar",
+            "network_mccmnc": 70604,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ee",
+            "country_name": "Estonia",
+            "network_name": "Tele2",
+            "network_mccmnc": 24803,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ee",
+            "country_name": "Estonia",
+            "network_name": "Elisa",
+            "network_mccmnc": 24802,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "et",
+            "country_name": "Ethiopia",
+            "network_name": "ETMTN",
+            "network_mccmnc": 63601,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "fo",
+            "country_name": "Faroe Islands",
+            "network_name": "Faroese Telecom GSM",
+            "network_mccmnc": 28801,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "fj",
+            "country_name": "Fiji",
+            "network_name": "VODAFONE",
+            "network_mccmnc": 54201,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "fi",
+            "country_name": "Finland",
+            "network_name": "Elisa",
+            "network_mccmnc": 24405,
+            "support_lte": 0,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "fi",
+            "country_name": "Finland",
+            "network_name": "Telia",
+            "network_mccmnc": 24491,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "fr",
+            "country_name": "France",
+            "network_name": "Free",
+            "network_mccmnc": 20815,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "fr",
+            "country_name": "France",
+            "network_name": "Bouygues Telecom",
+            "network_mccmnc": 20820,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gf",
+            "country_name": "French Guiana",
+            "network_name": "Digicel (French Guiana)",
+            "network_mccmnc": 34020,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "pf",
+            "country_name": "French Polynesia",
+            "network_name": "Vodafone",
+            "network_mccmnc": 54715,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ga",
+            "country_name": "Gabon",
+            "network_name": "Airtel Gabon SA",
+            "network_mccmnc": 62803,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gm",
+            "country_name": "Gambia",
+            "network_name": "AFRICELL",
+            "network_mccmnc": 60702,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ge",
+            "country_name": "Georgia",
+            "network_name": "Beeline",
+            "network_mccmnc": 28204,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "de",
+            "country_name": "Germany",
+            "network_name": "Vodafone",
+            "network_mccmnc": 26202,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "de",
+            "country_name": "Germany",
+            "network_name": "O2",
+            "network_mccmnc": 26203,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gh",
+            "country_name": "Ghana",
+            "network_name": "Vodafone Ghana",
+            "network_mccmnc": 62002,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gi",
+            "country_name": "Gibraltar",
+            "network_name": "GIBTEL",
+            "network_mccmnc": 26601,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gr",
+            "country_name": "Greece",
+            "network_name": "WIND (NOVA)",
+            "network_mccmnc": 20209,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gl",
+            "country_name": "Greenland",
+            "network_name": "Tele Greenland",
+            "network_mccmnc": 29001,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gd",
+            "country_name": "Grenada",
+            "network_name": "Flow",
+            "network_mccmnc": 352110,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gp",
+            "country_name": "Guadeloupe",
+            "network_name": "Orange Caraibes",
+            "network_mccmnc": 34001,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gu",
+            "country_name": "Guam",
+            "network_name": "IT&E Wireless",
+            "network_mccmnc": 310110,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gt",
+            "country_name": "Guatemala",
+            "network_name": "Tigo",
+            "network_mccmnc": 70402,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gg",
+            "country_name": "Guernsey",
+            "network_name": "Sure",
+            "network_mccmnc": 23455,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gn",
+            "country_name": "Guinea",
+            "network_name": "MTN Guinea",
+            "network_mccmnc": 61104,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gw",
+            "country_name": "Guinea-Bissau",
+            "network_name": "MTN Guinea Bissau",
+            "network_mccmnc": 63202,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gy",
+            "country_name": "Guyana",
+            "network_name": "Cellink Plus",
+            "network_mccmnc": 34020,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ht",
+            "country_name": "Haiti",
+            "network_name": "Comcel",
+            "network_mccmnc": 0,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "hn",
+            "country_name": "Honduras",
+            "network_name": "Claro",
+            "network_mccmnc": 708001,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "hk",
+            "country_name": "Hong Kong",
+            "network_name": "CSL",
+            "network_mccmnc": 45400,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "hu",
+            "country_name": "Hungary",
+            "network_name": "Yettel",
+            "network_mccmnc": 21601,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "hu",
+            "country_name": "Hungary",
+            "network_name": "Vodafone",
+            "network_mccmnc": 21670,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "is",
+            "country_name": "Iceland",
+            "network_name": "NOVA",
+            "network_mccmnc": 27411,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "in",
+            "country_name": "India",
+            "network_name": "AirTel",
+            "network_mccmnc": 404,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "in",
+            "country_name": "India",
+            "network_name": "Vi (Vodafone Idea)",
+            "network_mccmnc": 404,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "id",
+            "country_name": "Indonesia",
+            "network_name": "TELKOMSEL",
+            "network_mccmnc": 51010,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "ie",
+            "country_name": "Ireland",
+            "network_name": "3",
+            "network_mccmnc": 27205,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ie",
+            "country_name": "Ireland",
+            "network_name": "Eir (METEOR)",
+            "network_mccmnc": 27201,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "im",
+            "country_name": "Isle of Man",
+            "network_name": "Manx (Isle of Man)",
+            "network_mccmnc": 23458,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "il",
+            "country_name": "Israel",
+            "network_name": "Pelephone",
+            "network_mccmnc": 42503,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "il",
+            "country_name": "Israel",
+            "network_name": "Partner",
+            "network_mccmnc": 42501,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "it",
+            "country_name": "Italy",
+            "network_name": "Wind Tre",
+            "network_mccmnc": 22288,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "it",
+            "country_name": "Italy",
+            "network_name": "Iliad",
+            "network_mccmnc": 22250,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "it",
+            "country_name": "Italy",
+            "network_name": "Vodafone",
+            "network_mccmnc": 22210,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ci",
+            "country_name": "Ivory Coast",
+            "network_name": "MTN Cote d'Ivoire",
+            "network_mccmnc": 61205,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "jm",
+            "country_name": "Jamaica",
+            "network_name": "Flow",
+            "network_mccmnc": 338180,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "jp",
+            "country_name": "Japan",
+            "network_name": "KDDI",
+            "network_mccmnc": 44050,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "je",
+            "country_name": "Jersey",
+            "network_name": "Jersey Telecom",
+            "network_mccmnc": 23450,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "jo",
+            "country_name": "Jordan",
+            "network_name": "Umniah",
+            "network_mccmnc": 41603,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "kz",
+            "country_name": "Kazakhstan",
+            "network_name": "Beeline",
+            "network_mccmnc": 40101,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ke",
+            "country_name": "Kenya",
+            "network_name": "Airtel",
+            "network_mccmnc": 63903,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ki",
+            "country_name": "Kiribati",
+            "network_name": "Kiribati Frigate",
+            "network_mccmnc": 54501,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "xk",
+            "country_name": "Kosovo",
+            "network_name": "vala",
+            "network_mccmnc": 22101,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "kw",
+            "country_name": "Kuwait",
+            "network_name": "Zain",
+            "network_mccmnc": 41902,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "kg",
+            "country_name": "Kyrgyzstan",
+            "network_name": "Beeline KG",
+            "network_mccmnc": 43701,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "la",
+            "country_name": "Laos",
+            "network_name": "ETL MOBILE",
+            "network_mccmnc": 45702,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "la",
+            "country_name": "Laos",
+            "network_name": "LAO TELECOMMUNICATIONS",
+            "network_mccmnc": 45701,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "lv",
+            "country_name": "Latvia",
+            "network_name": "Bite Latvija",
+            "network_mccmnc": 24705,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "lv",
+            "country_name": "Latvia",
+            "network_name": "TELE2",
+            "network_mccmnc": 24702,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "li",
+            "country_name": "Liechtenstein",
+            "network_name": "Salt (former Orange)",
+            "network_mccmnc": 29502,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "lt",
+            "country_name": "Lithuania",
+            "network_name": "Bite",
+            "network_mccmnc": 24602,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "lt",
+            "country_name": "Lithuania",
+            "network_name": "TELE2",
+            "network_mccmnc": 24603,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "lu",
+            "country_name": "Luxembourg",
+            "network_name": "Orange",
+            "network_mccmnc": 27099,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "lu",
+            "country_name": "Luxembourg",
+            "network_name": "Tango",
+            "network_mccmnc": 27077,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mo",
+            "country_name": "Macau",
+            "network_name": "CTM",
+            "network_mccmnc": 45501,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mk",
+            "country_name": "Macedonia",
+            "network_name": "A1",
+            "network_mccmnc": 29403,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mg",
+            "country_name": "Madagascar",
+            "network_name": "Zain",
+            "network_mccmnc": 64601,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mw",
+            "country_name": "Malawi",
+            "network_name": "Airtel Malawi Ltd",
+            "network_mccmnc": 65010,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "my",
+            "country_name": "Malaysia",
+            "network_name": "Celcom",
+            "network_mccmnc": 50213,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "my",
+            "country_name": "Malaysia",
+            "network_name": "Maxis",
+            "network_mccmnc": 50212,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "ml",
+            "country_name": "Mali",
+            "network_name": "Orange MALI",
+            "network_mccmnc": 61002,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mt",
+            "country_name": "Malta",
+            "network_name": "go mobile",
+            "network_mccmnc": 27821,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mt",
+            "country_name": "Malta",
+            "network_name": "Epic",
+            "network_mccmnc": 27801,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mq",
+            "country_name": "Martinique",
+            "network_name": "Digicel (French Guiana)",
+            "network_mccmnc": 34020,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mr",
+            "country_name": "Mauritania",
+            "network_name": "Chinguitel Mauritania",
+            "network_mccmnc": 60902,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mu",
+            "country_name": "Mauritius",
+            "network_name": "m.tel",
+            "network_mccmnc": 61701,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "yt",
+            "country_name": "Mayotte",
+            "network_name": "Orange F",
+            "network_mccmnc": 20801,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "yt",
+            "country_name": "Mayotte",
+            "network_name": "SFR",
+            "network_mccmnc": 20810,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mx",
+            "country_name": "Mexico",
+            "network_name": "AT&T Mexico",
+            "network_mccmnc": 334010,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mx",
+            "country_name": "Mexico",
+            "network_name": "Movistar",
+            "network_mccmnc": 33403,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mx",
+            "country_name": "Mexico",
+            "network_name": "Telcel",
+            "network_mccmnc": 334020,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "md",
+            "country_name": "Moldova",
+            "network_name": "Orange Moldova",
+            "network_mccmnc": 25901,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mc",
+            "country_name": "Monaco",
+            "network_name": "Monaco Telecom S.A.M.",
+            "network_mccmnc": 21210,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mn",
+            "country_name": "Mongolia",
+            "network_name": "Unitel",
+            "network_mccmnc": 42888,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "me",
+            "country_name": "Montenegro",
+            "network_name": "Telenor",
+            "network_mccmnc": 22002,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "me",
+            "country_name": "Montenegro",
+            "network_name": "MTEL",
+            "network_mccmnc": 29703,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ms",
+            "country_name": "Montserrat",
+            "network_name": "Flow",
+            "network_mccmnc": 354860,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ma",
+            "country_name": "Morocco",
+            "network_name": "Orange (Meditel)",
+            "network_mccmnc": 60400,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mz",
+            "country_name": "Mozambique",
+            "network_name": "Vodacom Mozambique",
+            "network_mccmnc": 64304,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "nr",
+            "country_name": "Nauru",
+            "network_name": "Digicel (Nauru)",
+            "network_mccmnc": 54202,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "np",
+            "country_name": "Nepal",
+            "network_name": "Nepal Telecommunications Corporation",
+            "network_mccmnc": 42901,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "np",
+            "country_name": "Nepal",
+            "network_name": "Ncell",
+            "network_mccmnc": 42902,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "nl",
+            "country_name": "Netherlands",
+            "network_name": "KPN",
+            "network_mccmnc": 20408,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "nl",
+            "country_name": "Netherlands",
+            "network_name": "Vodafone",
+            "network_mccmnc": 20404,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "an",
+            "country_name": "Netherlands Antilles",
+            "network_name": "Digicel Curacao",
+            "network_mccmnc": 36269,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "nz",
+            "country_name": "New Zealand",
+            "network_name": "Spark New Zealand",
+            "network_mccmnc": 53005,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ni",
+            "country_name": "Nicaragua",
+            "network_name": "Tigo",
+            "network_mccmnc": 710300,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ne",
+            "country_name": "Niger",
+            "network_name": "Zain Niger",
+            "network_mccmnc": 61402,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ng",
+            "country_name": "Nigeria",
+            "network_name": "MTN Nigeria",
+            "network_mccmnc": 62130,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mp",
+            "country_name": "Northern Mariana Islands",
+            "network_name": "IT&E Wireless",
+            "network_mccmnc": 0,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "no",
+            "country_name": "Norway",
+            "network_name": "Telia",
+            "network_mccmnc": 24202,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "om",
+            "country_name": "Oman",
+            "network_name": "Omantel",
+            "network_mccmnc": 42202,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "pk",
+            "country_name": "Pakistan",
+            "network_name": "Jazz",
+            "network_mccmnc": 41001,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ps",
+            "country_name": "Palestine",
+            "network_name": "JAWWAL",
+            "network_mccmnc": 42505,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "pa",
+            "country_name": "Panama",
+            "network_name": "Tigo",
+            "network_mccmnc": 714020,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "pg",
+            "country_name": "Papua New Guinea",
+            "network_name": "Digicel (PNG)",
+            "network_mccmnc": 53703,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "py",
+            "country_name": "Paraguay",
+            "network_name": "Tigo",
+            "network_mccmnc": 74404,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "pe",
+            "country_name": "Peru",
+            "network_name": "Movistar",
+            "network_mccmnc": 71606,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ph",
+            "country_name": "Philippines",
+            "network_name": "Globe Telecom",
+            "network_mccmnc": 51502,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "pl",
+            "country_name": "Poland",
+            "network_name": "P4 Poland",
+            "network_mccmnc": 26006,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "pl",
+            "country_name": "Poland",
+            "network_name": "Orange",
+            "network_mccmnc": 26003,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "pt",
+            "country_name": "Portugal",
+            "network_name": "NOS",
+            "network_mccmnc": 26803,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "pt",
+            "country_name": "Portugal",
+            "network_name": "Vodafone",
+            "network_mccmnc": 26801,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "pr",
+            "country_name": "Puerto Rico",
+            "network_name": "Claro",
+            "network_mccmnc": 330110,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "qa",
+            "country_name": "Qatar",
+            "network_name": "Vodafone",
+            "network_mccmnc": 42702,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "cg",
+            "country_name": "Republic of the Congo",
+            "network_name": "MTN Congo",
+            "network_mccmnc": 62910,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "re",
+            "country_name": "Reunion",
+            "network_name": "Orange F",
+            "network_mccmnc": 20801,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "re",
+            "country_name": "Reunion",
+            "network_name": "SFR",
+            "network_mccmnc": 20810,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ro",
+            "country_name": "Romania",
+            "network_name": "ORANGE",
+            "network_mccmnc": 22610,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ro",
+            "country_name": "Romania",
+            "network_name": "Vodafone RO",
+            "network_mccmnc": 22601,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ru",
+            "country_name": "Russia",
+            "network_name": "Beeline",
+            "network_mccmnc": 25044,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ru",
+            "country_name": "Russia",
+            "network_name": "MTS",
+            "network_mccmnc": 25001,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "rw",
+            "country_name": "Rwanda",
+            "network_name": "MTN-RWA",
+            "network_mccmnc": 63510,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "bl",
+            "country_name": "Saint Barthelemy",
+            "network_name": "Orange Caraibes",
+            "network_mccmnc": 34001,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "kn",
+            "country_name": "Saint Kitts and Nevis",
+            "network_name": "Flow",
+            "network_mccmnc": 356110,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "lc",
+            "country_name": "Saint Lucia",
+            "network_name": "Flow",
+            "network_mccmnc": 358110,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "mf",
+            "country_name": "Saint Martin",
+            "network_name": "Digicel (French Guiana)",
+            "network_mccmnc": 34020,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "vc",
+            "country_name": "Saint Vincent and the Grenadines",
+            "network_name": "Flow",
+            "network_mccmnc": 360110,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ws",
+            "country_name": "Samoa",
+            "network_name": "Digicel (Samoa) Limited",
+            "network_mccmnc": 54900,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "sa",
+            "country_name": "Saudi Arabia",
+            "network_name": "Zain SA",
+            "network_mccmnc": 42004,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "sn",
+            "country_name": "Senegal",
+            "network_name": "Tigo",
+            "network_mccmnc": 0,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "rs",
+            "country_name": "Serbia",
+            "network_name": "Yettel",
+            "network_mccmnc": 22001,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "sc",
+            "country_name": "Seychelles",
+            "network_name": "AIRTEL",
+            "network_mccmnc": 63310,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "sl",
+            "country_name": "Sierra Leone",
+            "network_name": "Africell Lintel Sierra Leone",
+            "network_mccmnc": 61905,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "sg",
+            "country_name": "Singapore",
+            "network_name": "SingTel",
+            "network_mccmnc": 52501,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "sk",
+            "country_name": "Slovakia",
+            "network_name": "Orange SK",
+            "network_mccmnc": 23101,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "sk",
+            "country_name": "Slovakia",
+            "network_name": "O2",
+            "network_mccmnc": 23106,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "si",
+            "country_name": "Slovenia",
+            "network_name": "Telemach",
+            "network_mccmnc": 29370,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "si",
+            "country_name": "Slovenia",
+            "network_name": "A1 Slovenija",
+            "network_mccmnc": 29340,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "za",
+            "country_name": "South Africa",
+            "network_name": "Vodacom",
+            "network_mccmnc": 65501,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "kr",
+            "country_name": "South Korea",
+            "network_name": "KT",
+            "network_mccmnc": 45008,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "kr",
+            "country_name": "South Korea",
+            "network_name": "SK Telecom",
+            "network_mccmnc": 45005,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "es",
+            "country_name": "Spain",
+            "network_name": "Vodafone",
+            "network_mccmnc": 21401,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "es",
+            "country_name": "Spain",
+            "network_name": "Yoigo",
+            "network_mccmnc": 21404,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "es",
+            "country_name": "Spain",
+            "network_name": "Movistar",
+            "network_mccmnc": 21405,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "lk",
+            "country_name": "Sri Lanka",
+            "network_name": "Hutch",
+            "network_mccmnc": 41308,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "lk",
+            "country_name": "Sri Lanka",
+            "network_name": "DIALOG",
+            "network_mccmnc": 41302,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "lk",
+            "country_name": "Sri Lanka",
+            "network_name": "Mobitel LK",
+            "network_mccmnc": 41301,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "sd",
+            "country_name": "Sudan",
+            "network_name": "zain SD",
+            "network_mccmnc": 63401,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "sr",
+            "country_name": "Suriname",
+            "network_name": "Digicel (Suriname)",
+            "network_mccmnc": 74603,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "sz",
+            "country_name": "Swaziland",
+            "network_name": "MTN Swaziland",
+            "network_mccmnc": 65310,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "se",
+            "country_name": "Sweden",
+            "network_name": "3 Sweden",
+            "network_mccmnc": 24002,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "se",
+            "country_name": "Sweden",
+            "network_name": "Tele2",
+            "network_mccmnc": 24007,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ch",
+            "country_name": "Switzerland",
+            "network_name": "Salt",
+            "network_mccmnc": 22803,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ch",
+            "country_name": "Switzerland",
+            "network_name": "Sunrise",
+            "network_mccmnc": 22802,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "tw",
+            "country_name": "Taiwan",
+            "network_name": "Chunghwa",
+            "network_mccmnc": 46692,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "tw",
+            "country_name": "Taiwan",
+            "network_name": "Taiwan Mobile",
+            "network_mccmnc": 46693,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "tj",
+            "country_name": "Tajikistan",
+            "network_name": "Beeline TJ",
+            "network_mccmnc": 43605,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "tz",
+            "country_name": "Tanzania",
+            "network_name": "Zain Tanzania.",
+            "network_mccmnc": 64005,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "th",
+            "country_name": "Thailand",
+            "network_name": "TrueMove H",
+            "network_mccmnc": 52000,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "th",
+            "country_name": "Thailand",
+            "network_name": "AIS",
+            "network_mccmnc": 52001,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "th",
+            "country_name": "Thailand",
+            "network_name": "DTAC",
+            "network_mccmnc": 52005,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "tl",
+            "country_name": "Timor-Leste",
+            "network_name": "Viettel Timor",
+            "network_mccmnc": 51403,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "tg",
+            "country_name": "Togo",
+            "network_name": "Moov",
+            "network_mccmnc": 61503,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "to",
+            "country_name": "Tonga",
+            "network_name": "Digicel (Tonga) Limited",
+            "network_mccmnc": 53988,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "tt",
+            "country_name": "Trinidad and Tobago",
+            "network_name": "Digicel Trinidad & Tobago",
+            "network_mccmnc": 374130,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "tn",
+            "country_name": "Tunisia",
+            "network_name": "Ooredoo",
+            "network_mccmnc": 60503,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "tr",
+            "country_name": "Turkey",
+            "network_name": "Turk Telecom (AVEA)",
+            "network_mccmnc": 28603,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "tr",
+            "country_name": "Turkey",
+            "network_name": "TurkCell",
+            "network_mccmnc": 28601,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "tc",
+            "country_name": "Turks and Caicos Islands",
+            "network_name": "Flow",
+            "network_mccmnc": 376350,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "vi",
+            "country_name": "U.S. Virgin Islands",
+            "network_name": "AT&T",
+            "network_mccmnc": 310410,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ug",
+            "country_name": "Uganda",
+            "network_name": "MTN Uganda",
+            "network_mccmnc": 64110,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gb",
+            "country_name": "UK",
+            "network_name": "O2",
+            "network_mccmnc": 23410,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gb",
+            "country_name": "UK",
+            "network_name": "Three UK",
+            "network_mccmnc": 23420,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "gb",
+            "country_name": "UK",
+            "network_name": "EE",
+            "network_mccmnc": 23430,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ua",
+            "country_name": "Ukraine",
+            "network_name": "KYIVSTAR",
+            "network_mccmnc": 25503,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ae",
+            "country_name": "United Arab Emirates",
+            "network_name": "du",
+            "network_mccmnc": 42403,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "uy",
+            "country_name": "Uruguay",
+            "network_name": "Movistar",
+            "network_mccmnc": 74807,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "us",
+            "country_name": "USA",
+            "network_name": "AT&T",
+            "network_mccmnc": 310150,
+            "support_lte": 1,
+            "support_5g": 1,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "uz",
+            "country_name": "Uzbekistan",
+            "network_name": "Beeline",
+            "network_mccmnc": 43404,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "vu",
+            "country_name": "Vanuatu",
+            "network_name": "Digicel (Vanuatu) Ltd",
+            "network_mccmnc": 54105,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "ve",
+            "country_name": "Venezuela",
+            "network_name": "Movistar",
+            "network_mccmnc": 73404,
+            "support_lte": 0,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        },
+        {
+            "country_iso2": "vn",
+            "country_name": "Vietnam",
+            "network_name": "Mobifone",
+            "network_mccmnc": 45201,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "vn",
+            "country_name": "Vietnam",
+            "network_name": "Vietnamobile",
+            "network_mccmnc": 45205,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 0
+        },
+        {
+            "country_iso2": "zm",
+            "country_name": "Zambia",
+            "network_name": "Airtel Zambia Ltd",
+            "network_mccmnc": 64501,
+            "support_lte": 1,
+            "support_5g": 0,
+            "support_hotspot": 1,
+            "permanent_roaming": 1
+        }
+    ]
+}
