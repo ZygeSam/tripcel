@@ -1,5 +1,9 @@
 @extends('layouts.app')
 @section('banner-heading', 'International eSIMs')
+@section('image')
+    <!-- Your custom image or content goes here -->
+    <x-image :image="asset('assets/images/banner.jpg')"></x-image>
+@endsection
 @section('content')
 <!--process-->
 <section class="process-section mr_top_minus_100 position-relative z_99">  

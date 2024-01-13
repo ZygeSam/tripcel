@@ -1,0 +1,1 @@
+<x-image :image="asset('assets/images/cellular.jpg')"></x-image>

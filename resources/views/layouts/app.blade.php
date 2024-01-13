@@ -78,13 +78,15 @@
                                        </h1> <br>
                                        <h4 class="text-light">@yield('banner-content','Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.')</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">
-                                          <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
+                                          <a href="{{route('countries')}}" class="theme-btn one">Get Your Travel eSim Plan</a>  
                                        </div>
                                  </div>
                               </div>
                               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-0 m-0">
                                  <div class="animate_right p-0 m-0">
-                                    <img src= "{{asset('assets/images/cellular.jpg')}}" height="500" alt="img" />
+                                    @section('image')
+                                          @include('partials.default-image')
+                                    @show
                                  </div>
                               </div>
                            </div>
@@ -198,7 +200,7 @@
           <div class="pd_bottom_15"></div>
           <!--===============spacing==============-->
           <div class="theme_btn_all color_one">
-             <a href="#" class="theme-btn one">See How It Works</a>
+             <a href="{{route('howitworks')}}" class="theme-btn one">See How It Works</a>
           </div>
        </div>
     </div>
@@ -609,12 +611,6 @@
            <!--===============spacing==============-->
            <div class="pd_top_210"></div>
            <!--===============spacing==============-->
-         <div class="video_btn_all text-center">
-            <div class="video_box">
-               <!-- <a href="#" class="lightbox-image"><i
-                     class="icon-play"></i></a> -->
-            </div>
-         </div>
           <!--===============spacing==============-->
           <div class="pd_top_210"></div>
           <!--===============spacing==============-->
