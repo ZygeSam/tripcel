@@ -45,16 +45,16 @@ class EsimProductController extends Controller
         $this->qrCode = $qrcode;
         $this->esimPlan = $esimPlan;
         $this->esimPlanType = $esimPlanType;
-        $this->products = collect($this->getProducts()['products']);
+        $this->products = collect($this->getProducts());
         $this->countries = collect($this->getAllCountries());
     }
     
     public function getProducts(){
-        return $this->esimProduct->getAllProducts();
+        return collect($this->readApi("data/products.json"));
     }
 
     public function getAllCountries(){
-        return $countries = collect($this->readApi("data/countries.json"));
+        return collect($this->readApi("data/countries.json"));
      }
 
 
