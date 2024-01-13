@@ -62,21 +62,20 @@
          <div id="content" class="site-content ">
 
             <!--- slider-->
-            <section class="slider style_page_twelve nav_position_one">
-               <div class="owl-carousel  theme_carousel"
-               data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 7000, "smartSpeed": 1800, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "1" } , "1000":{ "items" : "1" }}}'>
+            <section class="container-fluid image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
+               <div class="row">
 
                   <div class="slide-item-content">
-                     <div class="slide-item content_left pb-5 mt-5">
+                     <div class="slide-item content_left pt-5 mt-5">
                         <div class="image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
                         </div>
                         <div class="container-fluid">
                            <div class="row align-items-center">
                               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="slider_content">
+                                 <div class="slider_content p-5">
                                     <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
                                        @yield('banner-sub-heading', 'Borders ')<br>
-                                       </h1>
+                                       </h1> <br>
                                        <h4 class="text-light">@yield('banner-content','Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.')</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">
                                           <a href="#" class="theme-btn one">Get Your Travel eSim Plan</a>  
@@ -268,7 +267,7 @@
                   <div class="col-md-6 col-lg-4 " >
                      <div class="service_post style_three">
                         <div class="image_box">
-                           <img width="500" height="500" src={{asset("assets/images/activate.png")}} alt="img" loading="lazy">
+                           <img width="500" height="500" src={{asset("assets/images/activation.jpeg")}} alt="img" loading="lazy">
                         </div>
                         <div class="text_box">
                            <div class="text_box_inner">

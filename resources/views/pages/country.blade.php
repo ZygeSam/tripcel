@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('banner-heading', 'Explore Seamless Connectivity with ')
-@section('banner-sub-heading', 'Tripcel eSIM in '. $country['country_name'])
+@section('banner-heading', 'Explore Seamless Connectivity')
+@section('banner-sub-heading', ' with Tripcel eSIM in '. $country['country_name'])
 @section('banner-content', 'With Tripcel eSIM, travel connectivity is easier than ever! Enjoy unlimited data in Turkey without SIM card hassles. Whether you\'re a tourist exploring the rich history, a business traveler attending meetings, or simply enjoying the vibrant culture, Tripcel eSIM ensures you stay connected effortlessly.')
 @section('content')
 <section class="price_plan_with_tab price_tb_style_one">
