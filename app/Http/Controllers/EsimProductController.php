@@ -192,19 +192,24 @@ class EsimProductController extends Controller
 
     public function buyProduct(StoreEsimBuyerRequest $request){
         $request->validated();
-        $user = User::where('email', $request['email'])->first();
-        if(!$user){
-            $user =  User::create($request->all());
+        if(auth()->user()){
+            $user = auth()->user();
+        }else{
+            $user = User::where('email', $request['email'])->first();
+            if(!$user){
+                $user =  User::create($request->all());
+            }
         }
+        $data = $user;
         //set request parameters
-        $request['amount'] =$this->cartTotal(session()->get('cart'));
-        $request['currency'] ="NGN";
-        $request['transaction_id'] ="TRC".strtotime('now');
-        $request['description'] = "Purchase Esim";
-        $request['redirect_url'] = route('confirmPayment', ['transactionId'=> $request['transaction_id'], 'gateway' => $request['payment_gateway'], 'email'=>$user['email']]);
-        
+        $data['amount'] =$this->cartTotal(session()->get('cart'));
+        $data['currency'] ="NGN";
+        $data['transaction_id'] ="TRC".strtotime('now');
+        $data['description'] = "Purchase Esim";
+        $data['redirect_url'] = route('confirmPayment', ['transactionId'=> $data['transaction_id'], 'gateway' => $request['payment_gateway'], 'email'=>$user['email']]);
+    
         // save transaction to database
-        $response = $this->paymentProcessor->checkHandler($request['payment_gateway'])->initialize($request);
+        $response = $this->paymentProcessor->checkHandler($request['payment_gateway'])->initialize($data);
         return redirect()->to($response);
 
     }

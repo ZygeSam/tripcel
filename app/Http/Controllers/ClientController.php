@@ -44,8 +44,8 @@ class ClientController extends Controller
         $this->mailService = $mailService;
         $this->esimPlan = $esimPlan;
         $this->qrCode = $qrcode;
-        $this->products = collect($this->getProducts()['products']);
-        $this->countries = collect($this->getAllCountries($this->products));
+        $this->products = $this->getProducts();
+        $this->countries = $this->getAllCountries();
         $this->middleware(AuthenticateClient::class);
     }
 
@@ -55,7 +55,7 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    { 
         $userEsims = Esim::with('transactions')->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->latest()->get();
         $esimTransactions = EsimOrders::with('esim')->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->latest()->get();
         $totalEsims = $userEsims->count();
@@ -87,20 +87,29 @@ class ClientController extends Controller
     }
 
     public function getProducts(){
-        return $this->esimProducts->getAllProducts();
+        return collect($this->readApi("data/products.json"));
     }
 
-    public function getAllCountries($products){
-        return $countries = $products->unique(function ($item) {
-             return $item['country_iso2'].$item['country_iso3'].$item['country_name'];
-         })->map(function ($item) {
-             return [
-                 "country_iso2" => $item['country_iso2'],
-                 "country_iso3" => $item['country_iso3'],
-                 "country_name" => $item['country_name'],
-             ];
-         })->values()->all();
+    public function getAllCountries(){
+        return collect($this->readApi("data/countries.json"));
      }
+
+     public function readApi($filepath){
+        $jsonString = file_get_contents($filepath, true);
+        return  collect(json_decode($jsonString, true));
+    }
+
+    public function getAllProducts($isocode){
+        return $this->products->filter(function($product) use ($isocode){
+            return $product['country_iso2'] == $isocode;
+        });
+    }
+
+    public function getAllRegionProducts($isocode){
+        return $this->products->filter(function($product) use ($isocode){
+            return $product['country_iso2'] == $isocode;
+        });
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -132,10 +141,12 @@ class ClientController extends Controller
                     # code...
                     break;
             }
-            $products = $this->esimProducts->getAllRegionProducts($isoCode)['products'];
+            // $products = $this->esimProducts->getAllRegionProducts($isoCode)['products'];
+            $products = $this->getAllRegionProducts($isoCode);
         }else{
             $isoCode = $selectedEsim->eSimCountryIso2;
-            $products = $this->esimProducts->getAllProducts($isoCode)['products'];
+            // $products = $this->esimProducts->getAllProducts($isoCode)['products'];
+            $products = $this->getAllProducts($isoCode);
         }
         return view('dashboards.client.eSimTopUp', compact('selectedEsim', 'products', 'esimPlans'));
     }

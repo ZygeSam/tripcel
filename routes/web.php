@@ -72,13 +72,13 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/fgtPwd', [AuthController::class, 'forgotPassword'])->name('forgotPassword');
 Route::post('/forgot-password', [AuthController::class, 'PasswordChange'])->name('fgtPwd');
 Route::get('passwordUpdate/{email}', [AuthController::class, 'passwordUpdate'])->name('passwordUpdate')->middleware(['signed']);
 Route::post('/reset-password', [AuthController::class, 'resetPassword'])->name('resetPassword');
 
 Route::prefix('client')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get("/", [ClientController::class, 'index'])->name('client.index');
     Route::get("/esim/{userId}", [ClientController::class, 'esim'])->name('esim.index');
     Route::get("/add", [ClientController::class, 'create'])->name('esim.create');

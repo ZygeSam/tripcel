@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreEsimBuyerRequest extends FormRequest
@@ -21,7 +22,12 @@ class StoreEsimBuyerRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        if (Auth::check()) {
+            return [
+                'payment_gateway'=>'required'
+            ];
+        }else{
+            return [
             'firstName'=> 'required',
             'lastName' => 'required',
             'email' => 'required|email',
@@ -31,6 +37,8 @@ class StoreEsimBuyerRequest extends FormRequest
             'confirmPassword' => 'required|same:password',
             'payment_gateway'=>'required'
         ];
+        }
+        
     }
 
     public function messages(): array
