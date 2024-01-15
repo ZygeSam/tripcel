@@ -90,8 +90,8 @@
                          </ul>
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
-                        <a href="#" class="dropdown-toggle nav-link">
-                           <span class="text-secondary">Affiliate</span>
+                        <a href="{{route('countryCoverage')}}" class="dropdown-toggle nav-link">
+                           <span class="text-secondary">Network Coverage</span>
                         </a>
                      </li>
                       <li class="menu-item menu-item-has-children nav-item">
@@ -116,18 +116,46 @@
                             <span class="text-secondary">Cart</span> <i class="bx bx-cart-alt" style="color: #fff; font-size: 22px;"></i>
                          </a>
                       </li>
-                      <li class="d-xs-block d-sm-block d-md-block d-lg-block d-xl-none">
-                        <a href="{{route('login')}}" target="_blank" rel="" class=""> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
-                      </li>
+                      @guest
+                        <li class="d-xs-block d-sm-block d-md-block d-lg-block d-xl-none">
+                           <a href="{{route('login')}}" target="_blank" rel="" class=""> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
+                        </li>
+                      @endguest
+                      @auth('web')
+                        <li class="menu-item  menu-item-has-children nav-item">
+                           <a href="{{route('client.index')}}" class="nav-link">
+                              <span class="text-secondary">Dashboard</span> <i class="bx bx-home-heart" style="color: #078586; font-size: 22px;"></i>
+                           </a>
+                        </li>
+                        <li class="d-xs-block d-sm-block d-md-block d-lg-block d-xl-none">
+                           <a type="button" onclick="document.getElementById('logout-form').submit()">Logout<i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-out-circle"></i></a>
+                           <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                              @csrf
+                           </form>
+                        </li>
+                      @endauth
                    </ul>
                 </div>
              </div>
              <div class="header_right_content">
                 <ul>
-                   <li class="header-button">
-                      <a href="{{route('login')}}" target="_blank" rel="" class="theme-btn one color_white_1"> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
-                   </li>
-                   
+                  @guest
+                      <li class="header-button">
+                        <a href="{{route('login')}}" target="_blank" rel="" class="theme-btn one color_white_1"> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
+                     </li>
+                  @endguest
+                  @auth('web')
+                  
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                     @csrf
+                  </form>
+                     <li class="header-button">
+                        <a type="button" onclick="document.getElementById('logout-form').submit()" class="theme-btn one color_white_1">Logout<i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-out-circle"></i></a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                           @csrf
+                        </form>
+                     </li>
+                  @endauth
                 </ul>
              </div>
           </div>

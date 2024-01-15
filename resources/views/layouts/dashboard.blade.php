@@ -33,6 +33,7 @@
     <link rel="stylesheet" href={{asset("assets/vendor/fonts/boxicons.css")}} />
 
     <!-- Core CSS -->
+    <link rel='stylesheet' href={{asset('assets/css/bootstrap.min.css')}} type='text/css' media='all' />
     <link rel="stylesheet" href={{asset("assets/vendor/css/core.css")}} class="template-customizer-core-css" />
     <link rel="stylesheet" href={{asset("assets/vendor/css/theme-default.css")}} class="template-customizer-theme-css" />
     <link rel="stylesheet" href={{asset("assets/css/demo.css")}} />
@@ -75,7 +76,7 @@
             @yield('content')
             <!-- / Content -->
 
-            @include('partials.footer')
+            @include('partials.otherpagesfooter')
           </div>
           <!-- Content wrapper -->
         </div>

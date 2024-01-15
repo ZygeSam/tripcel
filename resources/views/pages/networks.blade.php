@@ -20,7 +20,7 @@
                            <p>No country available</p>
                         @endif
                      </select>
-                     <button type="submit">Give it a try</button>
+                     <button type="submit">CHECK COVERAGE</button>
                   </form>
                   </div>
                </div>

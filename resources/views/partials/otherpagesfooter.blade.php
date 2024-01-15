@@ -22,7 +22,7 @@
                          </p>
                          <div class="consulting">
                             <div class="image">
-                               <img src="assets/images/authour-image.png" alt="need help">
+                               <img src={{asset("assets/images/authour-image.png")}} alt="need help">
                             </div>
                             <div class="help_con">
                                <h6>Need Help?</h6>
@@ -51,9 +51,9 @@
                       <div class="navigation_foo_box">
                          <div class="navigation_foo_inner">
                             <div class="menu-information-container">
-                               <ul class="menu">
+                               <ul class="menu d-block">
                                   <li class="menu-item"><a href="{{route('howitworks')}}">How It Works</a></li>
-                                  <li class="menu-item"><a href="{{route('countryCoverage')}}">Network and Coverage</a></li>
+                                  <li class="menu-item"><a href="{{route('countryCoverage')}}">Network Coverage</a></li>
                                </ul>
                             </div>
                          </div>
@@ -74,7 +74,7 @@
                    <div class="navigation_foo_box">
                       <div class="navigation_foo_inner">
                          
-                            <ul class="menu">
+                            <ul class="menu d-block">
                                <li class="menu-item"><a href="{{route('compatibility')}}">Phone Compatibility</a></li>
                                <li class="menu-item"><a href="{{route('privacy')}}">Privacy Policy</a></li>
                                <li class="menu-item"><a href="{{route('termsncond')}}">Terms and Conditions</a></li>

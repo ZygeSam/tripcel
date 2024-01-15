@@ -12,7 +12,7 @@
                     You have to explore the world today. There's still more to be done with your Tripcel ESim
                     </p>
                     <a href="{{route('esim.index',['userId'=> 1])}}" class="btn btn-sm btn-outline-tripcel">View Esim</a>
-                    <a href="{{route('esim.index',['userId'=> 1])}}" class="btn btn-sm btn-outline-tripcel">Top Up Esim</a>
+                    <a href="{{route('home')}}" target="_blank" class="btn btn-sm btn-outline-tripcel">Go to Homepage</a>
                     {{-- <button type="button" data-bs-toggle="modal" data-bs-target="#modalCenter" class="btn btn-sm btn-outline-tripcel">Send SMS</buttona> --}}
                 </div>
                 </div>
@@ -91,7 +91,7 @@
         <div class="row">
         <!-- ESim List -->
         <div class="col-md-6 col-lg-6 col-xl-6 order-0 mb-4">
-            <div class="card ">
+            <div class="card h-100">
             <div class="card-header d-flex align-items-center justify-content-between pb-0">
                 <div class="card-title mb-0">
                 <h5 class="m-0 me-2">Esim List</h5>
@@ -101,7 +101,6 @@
                 href="{{route('esim.index',['userId'=> 1])}}"
                     class="btn btn-outline-tripcel text-tripcel"
                     id="transactionID"
-                    data-bs-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false">
                     View More
@@ -110,7 +109,7 @@
             </div>
             <hr>
             <div class="card-body overflow-auto">
-                <ul class="p-0 m-0">
+                <ul class="p-0 m-0" style="max-height: 700px; overflow-y: auto;">
                     @if(count($userEsims)>0)
                         @foreach($userEsims as $esim)
                             <li class="d-flex mb-4 pb-1">
@@ -146,15 +145,14 @@
                 href="{{route('esim.index',['userId'=> 1])}}"
                     class="btn btn-outline-tripcel text-tripcel"
                     id="transactionID"
-                    data-bs-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false">
                     View More
                 </a>
                 </div>
             </div>
-            <div class="card-body">
-                <ul class="p-0 m-0" style="max-height: 500px; overflow-y: auto;">
+            <div class="card-body overflow-auto">
+                <ul class="p-0 m-0" style="max-height: 700px; overflow-y: auto;">
                     @if(count($esimTransactions)>0)
                         @foreach($esimTransactions as $transaction)
                                 <li class="d-flex mb-4 pb-1">

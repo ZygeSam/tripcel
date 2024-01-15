@@ -72,7 +72,7 @@
                         <div class="container-fluid">
                            <div class="row align-items-center">
                               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="slider_content p-5">
+                                 <div class="slider_content p-5 mt-5">
                                     <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
                                        @yield('banner-sub-heading', 'Borders ')<br>
                                        </h1> <br>
