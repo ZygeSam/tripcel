@@ -63,7 +63,7 @@
                   <div class="row">
                      <div class="col-md-12 pt-4 mt-5">
                         <div class="banner_title_inner">
-                           <div class="title_page">
+                           <div class="title_page pt-4">
                               @yield('pageTitle', 'Purchase ESIms')
                            </div>
                         </div>
