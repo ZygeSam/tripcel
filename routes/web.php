@@ -75,6 +75,7 @@ Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
 Route::get('/fgtPwd', [AuthController::class, 'forgotPassword'])->name('forgotPassword');
 Route::post('/forgot-password', [AuthController::class, 'PasswordChange'])->name('fgtPwd');
 Route::get('passwordUpdate/{email}', [AuthController::class, 'passwordUpdate'])->name('passwordUpdate')->middleware(['signed']);
+Route::get('verifyEmailUrl/{email}/{gateway}', [EsimProductController::class, 'verifyEmail'])->name('verifyEmailUrl')->middleware(['signed']);
 Route::post('/reset-password', [AuthController::class, 'resetPassword'])->name('resetPassword');
 
 Route::prefix('client')->group(function () {
