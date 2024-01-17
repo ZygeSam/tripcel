@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Mail\PurchaseMail;
 use App\Mail\DataPurchaseMail;
 use App\Mail\ForgotPasswordMail;
+use App\Mail\VerifyEmail;
 use Illuminate\Support\Facades\Mail;
 use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mailer\Transport;
@@ -60,4 +61,18 @@ class MailService
             return false;
         }
     }
+
+    public function sendEmailVerification($email, $message)
+    {
+        $mailData = [
+            'message' => $message,
+        ];
+        $mail = Mail::to($email)->send(new VerifyEmail($mailData));
+        if($mail){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
