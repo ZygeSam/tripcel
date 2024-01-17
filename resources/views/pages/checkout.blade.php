@@ -1,5 +1,35 @@
 @extends('layouts.purchase')
 @section('content')
+@if(session()->has('message'))
+        <div class="modal fade" id="messageModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalCenterTitle">Information</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                    <div class="modal-body">
+                            <div class="row">
+                               {{session()->get('message')}}
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        
+                    </div>
+            
+            </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#messageModal').modal('show');
+            });
+        </script>
+    @endif
 @if($errors->any())
     <div class="alert alert-danger my-4">
         @foreach($errors->all() as $error)
@@ -123,6 +153,7 @@
     <div class="row">
       <p>Choose a way to pay</p>
      <p><input type="radio" name="payment_gateway" value="Paystack" id=""> <img src="./assets/images/payment.png" width="150" height="80" alt=""></p> 
+     <p><input type="radio" name="payment_gateway" value="TransactionCloud" id=""><img src="./assets/images/transactioncloud.png" width="250" height="300" alt=""></p> 
   </div>
     <div class="col-lg-6 col-md-12 col-sm-12 column mt-4">
       <div class="field-input message-btn">

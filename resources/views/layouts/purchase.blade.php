@@ -32,6 +32,7 @@
    <link rel='stylesheet' href={{asset('assets/css/woocommerce-layout.css')}} type='text/css' media='all' />
    <link rel='stylesheet' href={{asset('assets/css/woocommerce.css')}} type='text/css' media='all' />
    <!----woocommerce---->
+   <script type='text/javascript' src={{asset('assets/js/jquery-3.6.0.min.js')}}></script>
 </head>
 <body class="home theme-creote page-home-default-one">
    <div id="page" class="page_wapper hfeed site">
@@ -64,7 +65,7 @@
                      <div class="col-md-12 pt-4 mt-5">
                         <div class="banner_title_inner">
                            <div class="title_page pt-4">
-                              @yield('pageTitle', 'Purchase eSIm')
+                              @yield('pageTitle', 'Purchase eSim')
                            </div>
                         </div>
                      </div>
@@ -294,7 +295,6 @@
 </svg>
 </div>
 <!---========================== javascript ==========================-->
-<script type='text/javascript' src={{asset('assets/js/jquery-3.6.0.min.js')}}></script>
 <script type='text/javascript' src={{asset('assets/js/bootstrap.min.js')}} defer></script>
 <script type='text/javascript' src={{asset('assets/js/jquery.fancybox.js')}} defer></script>
 <script type='text/javascript' src={{asset('assets/js/jQuery.style.switcher.min.js')}} defer></script>
