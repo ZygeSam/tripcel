@@ -12,6 +12,7 @@ use App\Services\EsimPlanService;
 use App\Services\ESimProductService;
 use App\Services\EsimPlanTypeService;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
@@ -130,7 +131,9 @@ class EsimProductController extends Controller
      */
     public function show($esimProduct)
     {
-        return $this->esimProduct->getAProduct($esimProduct);
+        return collect($this->products->filter(function($product) use ($esimProduct){
+            return $product['id'] === $esimProduct;
+        }))->values()->all();
     }
     public function showCart(){
         $cart = session()->get('cart');
@@ -165,7 +168,7 @@ class EsimProductController extends Controller
 
     public function addToCart($country, $esimProduct){
         $cart = session()->get('cart', ['products' => []]);
-        $cart['products'][]= $this->show($esimProduct)['product'];
+        $cart['products'][]= $this->show($esimProduct);
         session()->put('cart', $cart);
         $totalPrice = $this->cartTotal($cart);
         //display cart on view
@@ -190,29 +193,82 @@ class EsimProductController extends Controller
         return view('pages/checkout', compact('cart', 'totalPrice'));
     }
 
+    public function productDescription($cart){
+        $description ="";
+        if(is_null($cart)){
+            return $description;
+        }
+        foreach ($cart['products'] as $product) {
+            $description .= $product[0]['name'] ." \t";
+        }
+        return $description;
+    }
+
+    public function checkUser($request){
+        $user = User::where('email', $request['email'])->exists();
+        if ($user) {
+            User::whereNotNull('email_verified_at');
+        }else{
+            $user =  User::create($request->all());
+        }
+    }
+
+    public function makeTransaction($data){
+        $data['amount'] = $this->cartTotal(session()->get('cart'));
+        $data['currency'] = "USD";
+        $data['transaction_id'] = "TRC".strtotime('now');
+        $data['description'] = $this->productDescription(session()->get('cart'));
+        $data['redirect_url'] = route('confirmPayment', ['transactionId'=> $data['transaction_id'], 'gateway' => $data['payment_gateway'], 'email'=>$data['email']]);
+        return $response = $this->paymentProcessor->checkHandler($data['payment_gateway'])->initialize($data);
+    }
+
+    public function verifyEmail($email, $gateway){
+        $user = User::where('email', $email)->update(['email_verified_at'=> now()]);
+        $data =  User::where('email', $email)->first();
+        $data['payment_gateway'] = $gateway;
+        return redirect()->to($this->makeTransaction($data));
+    }
+
     public function buyProduct(StoreEsimBuyerRequest $request){
         $request->validated();
         if(auth()->user()){
-            $user = auth()->user();
-        }else{
-            $user = User::where('email', $request['email'])->first();
-            if(!$user){
-                $user =  User::create($request->all());
-            }
+            $data = auth()->user();
+            $data['payment_gateway'] = $request['payment_gateway'];
+            return redirect()->to($this->makeTransaction($data));
         }
-        $data = $user;
-        //set request parameters
-        $data['amount'] =$this->cartTotal(session()->get('cart'));
-        $data['currency'] ="NGN";
-        $data['transaction_id'] ="TRC".strtotime('now');
-        $data['description'] = "Purchase Esim";
-        $data['redirect_url'] = route('confirmPayment', ['transactionId'=> $data['transaction_id'], 'gateway' => $request['payment_gateway'], 'email'=>$user['email']]);
-    
-        // save transaction to database
-        $response = $this->paymentProcessor->checkHandler($request['payment_gateway'])->initialize($data);
-        return redirect()->to($response);
 
+        $user_exists = User::where('email', $request['email'])->exists();
+        if ($user_exists) {
+            $data = User::where('email', $request['email'])->first();
+            if( User::whereNotNull('email_verified_at')->exists() == false){
+                $verifyEmailUrl = $this->emailVerificationLink($data->email, $request['payment_gateway']);
+                $sentMail = $this->mailService->sendEmailVerification($data->email, $verifyEmailUrl);
+                if($sentMail){
+                    $message = "Kindly Check your inbox to verify your email and proceed to continue purchase";
+                }
+                return back()->with('message', $message);
+            }else{
+                $data['payment_gateway'] = $request['payment_gateway'];
+                return redirect()->to($this->makeTransaction($data));
+            }
+        }else{
+            $data =  User::create($request->all());
+            $verifyEmailUrl = $this->emailVerificationLink($user->email, $request['payment_gateway']);
+            $sentMail = $this->mailService->sendEmailVerification($data->email, $verifyEmailUrl);
+            if($sentMail){
+                $message = "Kindly Check your inbox to verify your email and proceed to continue purchase";
+            }
+            return back()->with('message', $message);
+        }
     }
+
+    public function emailVerificationLink($email,  $gateway){
+        return  URL::temporarySignedRoute(
+            'verifyEmailUrl', now()->addMinutes(10), ['email' => $email, 'gateway' => $gateway]
+        );
+    }
+
+
     public function confirmPayment($gateway, $transactionId, $email){
         $cartedProducts = session()->get('cart');
         $user = User::where('email', $email)->first();
