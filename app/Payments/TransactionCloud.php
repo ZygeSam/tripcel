@@ -32,72 +32,41 @@ class TransactionCloud
      */
     public function initialize($body)
     {
-        $url = "https://sandbox-api.transaction.cloud/v1/customize-product/TC-PR_yyyyxxxx";
-        $data = [
-            "prices" => [
-                [
-                    "currency" => 'USD',
-                    "value" => $body['amount'].'.00'
-                ]
-            ],
-            "description" => "description of customized product",
-            "payload" => "payload example",
-            "transactionIdToMigrate" => $body['transaction_id'],
-            "expiresIn" => 3600,
-            "userFirstName" => $body["firstName"],
-            "userLastName" => $body["lastName"],
-            "userMail" => $body['email']
-        ];
+        $url = "https://sandbox-api.transaction.cloud/v1/customize-product/TC-PR_1W33lq1";
+        $curl = curl_init();
 
-        // Make the cURL request
-        return $this->curl($this->header, $url, $data);
-        return redirect()->to($this->curl($this->header, $url));
+            curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => '{
+                "prices": [{"currency": "USD", "value": ' . $body["amount"] . '.00}],
+                "description": "' . $body["description"] . '",
+                "payload": "payload example",
+                "transactionIdToMigrate": "TC-TR_XXXYYZZ",
+                "expiresIn": 3600,
+                "userFirstName": "' . $body["firstName"] . '",
+                "userLastName": "' . $body["lastName"] . '",
+                "userMail": "' . $body["email"] . '"
+            }'
+            ,
+            CURLOPT_HTTPHEADER => array(
+                'Authorization: API_Z2GZL8U43NPQ3R4RRD:M9GTRYG70EHR72ECAZ',
+                'Content-Type: application/json',
+                'Cache-Control: no-cache'
+            ),
+            ));
+
+            $response = curl_exec($curl);
+
+            curl_close($curl);
+            return json_decode($response, true)['link'];
+
     }
 
-
-    public function verify_transaction()
-    {
-        $ref =  $_GET['reference'];
-        $url = "https://api.paystack.co/transaction/verify/" . rawurlencode($ref);
-        return $response = $this->curl($this->header,  $url);
-    }
-
-    public function resolve_account_number($body)
-    {
-        $account_number = $body['account_number'];
-        $account_bank = $body['bank_code'];
-
-        $url = "https://api.paystack.co/bank/resolve?account_number=$account_number&bank_code=$account_bank";
-
-        $response = $this->curl($this->header, $url);
-
-        if ($response['status'] == true) {
-            return $response['data']['account_name'];
-        } else {
-            http_response_code(400);
-            return response()->json([
-                'status' => false,
-                'statusCode' => http_response_code(400),
-                'message' => "Could not verify bank account",
-                'data' => []
-            ]);;
-        }
-    }
-
-    /**
-     * Get details of the supplied bank verification number, BVN
-     * @param $ref
-     * @return bool|mixed
-     */
-    public function resolve_bvn($ref)
-    {
-        $url = "https://api.paystack.co/bank/resolve_bvn/" . rawurlencode($ref);
-        $response = $this->curl($this->header, $this->sk_paystack, $url);
-
-        if ($response['status'] == true) {
-            return $response;
-        } else {
-            return false;
-        }
-    }
 }
