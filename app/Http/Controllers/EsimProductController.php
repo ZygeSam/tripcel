@@ -269,12 +269,15 @@ class EsimProductController extends Controller
     }
 
 
-    public function confirmPayment($gateway, $transactionId, $email){
-        $cartedProducts = session()->get('cart');
-        $user = User::where('email', $email)->first();
+    public function confirmPayment($gateway, $transactionId=null, $email=null){
         $products = $this->products;
         $countries = $this->countries;
+        $cartedProducts = session()->get('cart');
         $totalPrice = $this->cartTotal($cartedProducts);
+        if($gateway == "TransactionCloud"){
+            return view('pages/confirmPayment', compact('message', 'countries', 'products', 'totalPrice'));
+        }
+        $user = User::where('email', $email)->first();
         $response = $this->paymentProcessor->checkHandler($gateway)->verify_transaction();
         if($response['status'] == true){
                 $createdProfile=[];
