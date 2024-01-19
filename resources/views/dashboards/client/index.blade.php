@@ -11,7 +11,7 @@
                     <p class="mb-4">
                     You have to explore the world today. There's still more to be done with your Tripcel ESim
                     </p>
-                    <a href="{{route('esim.index',['userId'=> 1])}}" class="btn btn-sm btn-outline-tripcel">View Esim</a>
+                    <a href="{{route('esim.index',['userId'=> auth()->user()->id])}}" class="btn btn-sm btn-outline-tripcel">View Esim</a>
                     <a href="{{route('home')}}" target="_blank" class="btn btn-sm btn-outline-tripcel">Go to Homepage</a>
                     {{-- <button type="button" data-bs-toggle="modal" data-bs-target="#modalCenter" class="btn btn-sm btn-outline-tripcel">Send SMS</buttona> --}}
                 </div>

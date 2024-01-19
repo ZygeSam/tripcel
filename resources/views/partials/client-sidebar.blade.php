@@ -18,6 +18,12 @@
       <li class="menu-item active open">
         <a href="{{route('client.index')}}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
+          <div data-i18n="Dashboards">Dashboard</div>
+        </a>
+      </li>
+      <li class="menu-item open">
+        <a href="{{route('esim.index',['userId'=> auth()->user()->id])}}" class="menu-link">
+          <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Dashboards">My eSim</div>
         </a>
       </li>

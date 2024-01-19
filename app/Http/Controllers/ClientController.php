@@ -64,11 +64,11 @@ class ClientController extends Controller
     }
 
 
-    public function esim(Request $request)
+    public function esim( Request $request)
     {
         $countries = $this->countries;
         $userEsims = Esim::with('transactions') ->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->get();
-        if(count($userEsims) ==0 ){
+        if(count($userEsims) == 0 ){
             $esimPlans = [];
             return view('dashboards.client.esim', compact('countries', 'userEsims', 'esimPlans'));
         }
