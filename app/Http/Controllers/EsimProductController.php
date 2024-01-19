@@ -159,12 +159,11 @@ class EsimProductController extends Controller
     }
 
     public function checkPrice($array, $price){
-        $modifiedProducts = $array->map(function($product) use($price){
+        return $array->map(function($product) use($price){
             $product['price_usd'] = ceil(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
             $product['data_quota_mb'] = ceil($product['data_quota_mb']/1024);
             return $product;
-        })->unique('data_quota_mb')->sortBy('data_quota_mb')->values();
-        return $modifiedProducts;
+        })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
     }
 
     public function getRegionProducts($region){
@@ -196,12 +195,20 @@ class EsimProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($esimProduct)
+    public function show($esimProduct, $country)
     {
-        return collect($this->products->filter(function($product) use ($esimProduct){
-            return $product['id'] === $esimProduct;
-        }))->values()->all();
+        $price = $this->pricing->filter(function($productPrice) use ($country){
+            $country = $this->countries->where('country_name', $country)->first();
+            return $productPrice['ISO3'] === $country['country_iso3'];
+        })->values()->all();
+
+        $products = $this->products->filter(function($product) use ($esimProduct){
+            return $product['uid'] === $esimProduct;
+        })->values();
+
+        return $product = $this->checkPrice($products, $price);
     }
+
     public function showCart(){
         $cart = session()->get('cart');
         if(is_null($cart)){
@@ -211,10 +218,10 @@ class EsimProductController extends Controller
         $totalPrice = $this->cartTotal($cart);
         return view('pages/cart', compact('cart','totalPrice'));
     }
-    public function removeFromCart($request){
+    public function removeFromCart($esimProduct){
         $cart = session()->get('cart');
-        $cart['products'] = collect($cart['products'])->filter(function ($product) use ($request) {
-            return $product[0]['id'] !== $request;
+        $cart['products'] = collect($cart['products'])->filter(function ($product) use ($esimProduct) {
+            return $product[0]['uid'] !== $esimProduct;
         })->values()->all();
         session()->put('cart', $cart);
         $totalPrice = $this->cartTotal($cart);
@@ -222,10 +229,10 @@ class EsimProductController extends Controller
         return view('pages/cart', compact('cart', 'totalPrice'));
     }
 
-    public function removeFromCartIcon($request){
+    public function removeFromCartIcon($esimProduct){
         $cart = session()->get('cart');
-        $cart['products'] = collect($cart['products'])->filter(function ($product) use ($request) {
-            return $product[0]['id'] !== $request;
+        $cart['products'] = collect($cart['products'])->filter(function ($product) use ($esimProduct) {
+            return $product[0]['uid'] !== $esimProduct;
         })->values()->all();
         session()->put('cart', $cart);
         $totalPrice = $this->cartTotal($cart);
@@ -234,10 +241,10 @@ class EsimProductController extends Controller
     }
 
     public function addToCart($country, $esimProduct){
-        $cart = session()->get('cart', ['products' => []]);
-        $cart['products'][]= $this->show($esimProduct);
+        $cart = session()->get('cart');
+        $cart['products'][]= $this->show($esimProduct, $country);
         session()->put('cart', $cart);
-        $totalPrice = $this->cartTotal($cart);
+        $totalPrice = $this->cartTotal(($cart));
         //display cart on view
         return view('pages/cart', compact('cart','totalPrice'));
     }
