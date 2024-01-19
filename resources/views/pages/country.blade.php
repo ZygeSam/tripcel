@@ -45,7 +45,7 @@
                   @forelse ($fiveDaysProduct as $product)
                      <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="price_plan_box style_one  border border-dark">
-                           <div class="tag">{{$product['data_gb']}} GB</div>
+                           <div class="tag">@convertToGig($product['data_quota_mb']) GB</div>
                            <div class="inner_box">
                               <div class="top">
                                  <h2>{{$country['country_name']}} eSim</h2>
@@ -60,7 +60,7 @@
                                                 <i class=" icon-checked"></i>
                                              </span>
                                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                                             {{$product['duration_days']}} Days Data Pass </a>
+                                             {{$product['validity_days']}} Days Data Pass </a>
                                           </small></li>
                                        <li class="list_items pd_bottom_10">
                                           <small class="d-flex align-items-center">
@@ -68,13 +68,13 @@
                                                 <i class=" icon-checked"></i>
                                              </span>
                                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                                                {{$product['data_gb']}} Gigabytes</a>
+                                                {{$product['data_quota_mb']}} Gigabytes</a>
                                           </small></li>
                                     </ul>
                                  </div>
                               </div>
                               <div class="bottom">
-                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['id']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
                                  Activate Now
                                  </a>
                            </div>
@@ -91,7 +91,7 @@
                   @forelse ($tenDaysProduct as $product)
                      <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="price_plan_box style_one  border border-dark">
-                           <div class="tag">{{$product['data_gb']}} GB</div>
+                           <div class="tag">{{$product['data_quota_mb']}} GB</div>
                            <div class="inner_box">
                               <div class="top">
                                  <h2>{{$country['country_name']}} eSim</h2>
@@ -107,7 +107,7 @@
                                                 <i class=" icon-checked"></i>
                                              </span>
                                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                                                {{$product['duration_days']}} Days Data Pass </a>
+                                                {{$product['validity_days']}} Days Data Pass </a>
                                           </small></li>
                                        <li class="list_items pd_bottom_10">
                                           <small class="d-flex align-items-center">
@@ -115,13 +115,13 @@
                                                 <i class=" icon-checked"></i>
                                              </span>
                                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                                                {{$product['data_gb']}} Gigabytes</a>
+                                                {{$product['data_quota_mb']}} Gigabytes</a>
                                           </small></li>
                                     </ul>
                                  </div>
                               </div>
                               <div class="bottom">
-                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['id']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
                                  Activate Now
                                  </a>
                            </div>
@@ -138,7 +138,7 @@
                   @forelse ($fifteenDaysProduct as $product)
                      <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="price_plan_box style_one  border border-dark">
-                           <div class="tag">{{$product['data_gb']}} GB</div>
+                           <div class="tag">{{$product['data_quota_mb']}} GB</div>
                            <div class="inner_box">
                               <div class="top">
                                  <h2>{{$country['country_name']}} eSim</h2>
@@ -154,7 +154,7 @@
                                                 <i class=" icon-checked"></i>
                                              </span>
                                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                                                {{$product['duration_days']}} Days Data Pass </a>
+                                                {{$product['validity_days']}} Days Data Pass </a>
                                           </small></li>
                                        <li class="list_items pd_bottom_10">
                                           <small class="d-flex align-items-center">
@@ -162,13 +162,13 @@
                                                 <i class=" icon-checked"></i>
                                              </span>
                                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                                                {{$product['data_gb']}} Gigabytes</a>
+                                                {{$product['data_quota_mb']}} Gigabytes</a>
                                           </small></li>
                                     </ul>
                                  </div>
                               </div>
                               <div class="bottom">
-                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['id']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
                                  Activate Now
                                  </a>
                            </div>
@@ -185,7 +185,7 @@
                  @forelse ($thirtyDaysProduct as $product)
                     <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                        <div class="price_plan_box style_one  border border-dark">
-                          <div class="tag">{{$product['data_gb']}} GB</div>
+                          <div class="tag">{{$product['data_quota_mb']}} GB</div>
                           <div class="inner_box">
                              <div class="top">
                                 <h2>{{$country['country_name']}} eSim</h2>
@@ -201,7 +201,7 @@
                                                <i class=" icon-checked"></i>
                                             </span>
                                             <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                                             {{$product['duration_days']}} Days Data Pass </a>
+                                             {{$product['validity_days']}} Days Data Pass </a>
                                          </small></li>
                                       <li class="list_items pd_bottom_10">
                                          <small class="d-flex align-items-center">
@@ -209,13 +209,13 @@
                                                <i class=" icon-checked"></i>
                                             </span>
                                             <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                                               {{$product['data_gb']}} Gigabytes</a>
+                                               {{$product['data_quota_mb']}} Gigabytes</a>
                                          </small></li>
                                    </ul>
                                 </div>
                              </div>
                              <div class="bottom">
-                             <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['id']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                             <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
                                 Activate Now
                                 </a>
                           </div>
@@ -232,7 +232,7 @@
                      @forelse ($thirtyDaysProduct as $product)
                         <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                            <div class="price_plan_box style_one  border border-dark">
-                              <div class="tag">{{$product['data_gb']}} GB</div>
+                              <div class="tag">{{$product['data_quota_mb']}} GB</div>
                               <div class="inner_box">
                                  <div class="top">
                                     <h2>{{$country['country_name']}} eSim</h2>
@@ -248,7 +248,7 @@
                                                    <i class=" icon-checked"></i>
                                                 </span>
                                                 <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                                                   {{$product['duration_days']}} Days Data Pass </a>
+                                                   {{$product['validity_days']}} Days Data Pass </a>
                                              </small></li>
                                           <li class="list_items pd_bottom_10">
                                              <small class="d-flex align-items-center">
@@ -256,13 +256,13 @@
                                                    <i class=" icon-checked"></i>
                                                 </span>
                                                 <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                                                   {{$product['data_gb']}} Gigabytes</a>
+                                                   {{$product['data_quota_mb']}} Gigabytes</a>
                                              </small></li>
                                        </ul>
                                     </div>
                                  </div>
                                  <div class="bottom">
-                                 <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['id']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                                 <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
                                     Activate Now
                                     </a>
                               </div>
@@ -281,7 +281,7 @@
 
 @endsection
 
-@section('unlimitedplans')
+{{-- @section('unlimitedplans')
    <section class="price-section">
       <div class="row">
          @if(isset($unlimitedLiteDaysProduct) && count($unlimitedLiteDaysProduct) > 0)
@@ -311,7 +311,7 @@
                               <i class='bx bx-wifi-off' style="color: #078586; font-size: 22px;"></i>
                            </li>
                            <li>
-                              <span> {{$product['duration_days']}} Days Validity </span>
+                              <span> {{$product['validity_days']}} Days Validity </span>
                               <i class="fa fa-check" style="color: #078586;""></i>
                            </li>
                            <li>
@@ -320,7 +320,7 @@
                         </li>
                         <a href="#">View eSim Tech Specks</a>
                         </ul>
-                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedLiteDaysProduct[0]['id']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedLiteDaysProduct[0]['uid']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
                         </a>
                      </div>
@@ -354,7 +354,7 @@
                               <i class='bx bx-wifi' style="color: #078586; font-size: 22px;"></i>
                            </li>
                            <li>
-                              <span> {{$product['duration_days']}} Days Validity</span>
+                              <span> {{$product['validity_days']}} Days Validity</span>
                               <i class="fa fa-check" style="color: #078586;""></i>
                            </li>
                            <li>
@@ -363,7 +363,7 @@
                         </li>
                         <a href="#">View eSim Tech Specks</a>
                         </ul>
-                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedStandardDaysProduct[0]['id']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedStandardDaysProduct[0]['uid']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
                         </a>
                      </div>
@@ -397,7 +397,7 @@
                               <i class='bx bx-wifi' style="color: #078586; font-size: 22px;"></i>
                            </li>
                            <li>
-                              <span> {{$product['duration_days']}} Days Validity</span>
+                              <span> {{$product['validity_days']}} Days Validity</span>
                               <i class="fa fa-check" style="color: #078586;""></i>
                            </li>
                            <li>
@@ -406,7 +406,7 @@
                         </li>
                         <a href="#">View eSim Tech Specks</a>
                         </ul>
-                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedMaxDaysProduct[0]['id']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedMaxDaysProduct[0]['uid']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
                         </a>
                      </div>
@@ -416,4 +416,4 @@
          @endif
       </div>
    </section>
-@endsection
+@endsection --}}

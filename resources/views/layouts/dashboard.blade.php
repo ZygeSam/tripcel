@@ -75,8 +75,6 @@
 
             @yield('content')
             <!-- / Content -->
-
-            @include('partials.otherpagesfooter')
           </div>
           <!-- Content wrapper -->
         </div>

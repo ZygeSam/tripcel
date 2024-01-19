@@ -33,35 +33,35 @@
                                            <li>
                                               <small class="d-flex align-items-center">
                                                  <i class="fi fi-us p-2 mx-1"></i>
-                                                 <a class="nav_link" href="{{route('regions', ['region'=>'USA'])}}">USA+</a>
+                                                 <a class="nav_link" href="{{route('country', ['country'=>'USA'])}}">USA+</a>
                                                  <span>5G</span>
                                               </small>
                                            </li>
                                            <li>
                                               <small class="d-flex align-items-center">
                                                  <i class="fi fi-eu p-2 mx-1"></i>
-                                                 <a class="nav_link" href="{{route('regions', ['region'=>'EUR'])}}">Europe</a>
+                                                 <a class="nav_link" href="{{route('regions', ['region'=>'Europe'])}}">Europe</a>
                                                  <span>5G</span>
                                               </small>
                                            </li>
                                            <li>
                                               <small class="d-flex align-items-center">
                                                  <i class="fi fi-as p-2 mx-1"></i>
-                                                 <a class="nav_link" href="{{route('regions', ['region'=>'APC'])}}">Asia+</a>
+                                                 <a class="nav_link" href="{{route('regions', ['region'=>'Asia'])}}">Asia+</a>
                                                  <span>5G</span>
                                               </small>
                                            </li>
                                            <li>
                                               <small class="d-flex align-items-center">
                                                  <i class="fi fi-sa p-2 mx-1"></i>
-                                                 <a class="nav_link" href="{{route('regions', ['region'=>'LAT'])}}">South America+</a>
+                                                 <a class="nav_link" href="{{route('regions', ['region'=>'South America'])}}">South America+</a>
                                                  <span>5G</span>
                                               </small>
                                            </li>
                                            <li>
                                               <small class="d-flex align-items-center">
                                                  <i class="fi fi-cr p-2 mx-1"></i>
-                                                 <a class="nav_link" href="{{route('regions', ['region'=>'CRB'])}}">Carribean</a>
+                                                 <a class="nav_link" href="{{route('regions', ['region'=>'Caribbean'])}}">Carribean</a>
                                                  <span>5G</span>
                                               </small>
                                            </li>
