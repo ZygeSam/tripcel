@@ -28,7 +28,7 @@ Route::get('/countries/removeFromCart/{esimProduct}', [EsimProductController::cl
 Route::get('/countries/removeFromCartIcon/{esimProduct}', [EsimProductController::class, 'removeFromCartIcon'])->name('cartIcon.remove');
 Route::get('/checkout', [EsimProductController::class, 'checkout'])->name('checkout');
 Route::post('/checkout', [EsimProductController::class, 'buyProduct'])->name('buyProduct');
-Route::get('confirmPayment/{gateway}/{transactionId}/{email}', [EsimProductController::class, 'confirmPayment'])->name('confirmPayment');
+Route::get('confirmPayment/{gateway}/{transactionId?}/{email?}', [EsimProductController::class, 'confirmPayment'])->name('confirmPayment');
 Route::post('/store', [EsimController::class, 'store']);
 Route::get('/products', [EsimProductController::class, 'index']);
 Route::get('/products/{esimProduct}', [EsimProductController::class, 'show']);

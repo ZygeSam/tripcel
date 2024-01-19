@@ -16,13 +16,14 @@
                 <tr class="woocommerce-cart-form__cart-item cart_item p-5">
                   
                   <td class="product-remove">
-                    <a href="{{route('cart.remove', $product[0]['id'])}}" class="remove" aria-label="Remove this item" data-product_id="2650" data-product_sku="">×</a>						
+                    <a href="{{route('cart.remove', $product[0]['uid'])}}" class="remove" aria-label="Remove this item" data-product_id="2650" data-product_sku="">×</a>						
                     </td>
                     <td class="product-name" data-title="Product">
                     <p>Package : {{$product[0]['name']}}</p>
                     <p>Starting Date:@php echo date("Y-m-d", strtotime("now"));  @endphp</p> 
-                    <p> Daily Data: {{$product[0]['data_gb']}}GB</p>
-                    <p>Throttle: 1Mbps</p>					
+                    <p> Daily Data: {{$product[0]['data_quota_mb']}}GB</p>
+                    <p>Throttle: 1Mbps</p>		
+                    <hr class="hr-4">			
                     </td>
                     <td class="product-price" data-title="Price">
                     <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>${{$product[0]['price_usd']}}</bdi></span>						
