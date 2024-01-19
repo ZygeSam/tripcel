@@ -43,7 +43,6 @@
                @else
                   {{count(session()->get('cart')['products'])}}
                @endif
-               
             </div>
             <i class="icon-shopping-cart"></i>
          </div>
@@ -952,14 +951,13 @@
                @if(!is_null(session()->get('cart')))
                   @forelse(session()->get('cart')['products'] as $product)
                      <tr class="woocommerce-cart-form__cart-item cart_item p-5">
-                        
                         <td class="product-remove" style="background-color: #078586; color: white" >
-                           <a href="{{route('cartIcon.remove', $product[0]['id'])}}" style="background-color: #078586; color: white"  class="py-2 mb-2 btn remove" aria-label="Remove this item" data-product_id="2650" data-product_sku="">×</a>						
+                           <a href="{{route('cartIcon.remove', $product[0]['uid'])}}" style="background-color: #078586; color: white"  class="py-2 mb-2 btn remove" aria-label="Remove this item" data-product_id="2650" data-product_sku="">×</a>						
                         </td>
                         <td class="product-name" data-title="Product">
                         <p>Package : {{$product[0]['name']}}</p>
                         <p>Starting Date:@php echo date("Y-m-d", strtotime("now"));  @endphp</p> 
-                        <p> Daily Data: {{$product[0]['data_gb']}}GB</p>
+                        <p> Daily Data: {{$product[0]['data_quota_mb']}}GB</p>
                         <p>Throttle: 1Mbps</p>					
                         </td>
                         <td class="product-price" data-title="Price">
