@@ -89,7 +89,7 @@
                               <span class="icon_bx">
                                  <i class=" icon-checked"></i>
                               </span>
-                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                              <a class="nav_link" href="#"  rel="&quot;nofollow&quot;">
                                  4G/5G </a>
                            </small></li>
                         <li class="list_items pd_bottom_10">
@@ -97,7 +97,7 @@
                               <span class="icon_bx">
                                  <i class=" icon-checked"></i>
                               </span>
-                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                              <a class="nav_link" href="#"  rel="&quot;nofollow&quot;">
                                  Data Plans</a>
                            </small></li>
                         <li class="list_items pd_bottom_10">
@@ -105,14 +105,14 @@
                               <span class="icon_bx">
                                  <i class=" icon-checked"></i>
                               </span>
-                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                              <a class="nav_link" href="#"  rel="&quot;nofollow&quot;">
                                  SMS Plans </a>
                            </small></li>
                      </ul>
                   </div>
                </div>
                <div class="bottom">
-                  <a href="{{route('regions', ['region' => 'EUR'])}}" target="_blank" rel="nofollow" class="theme-btn two">
+                  <a href="{{route('regions', ['region' => 'EUR'])}}" rel="nofollow" class="theme-btn two">
                      See pricing plans
                   </a>
                </div>
@@ -136,7 +136,7 @@
                               <span class="icon_bx">
                                  <i class=" icon-checked"></i>
                               </span>
-                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                              <a class="nav_link" href="#"  rel="&quot;nofollow&quot;">
                                  4G/5G </a>
                            </small></li>
                         <li class="list_items pd_bottom_10">
@@ -144,7 +144,7 @@
                               <span class="icon_bx">
                                  <i class=" icon-checked"></i>
                               </span>
-                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                              <a class="nav_link" href="#"  rel="&quot;nofollow&quot;">
                                  Data Plans</a>
                            </small></li>
                         <li class="list_items pd_bottom_10">
@@ -152,14 +152,14 @@
                               <span class="icon_bx">
                                  <i class=" icon-checked"></i>
                               </span>
-                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                              <a class="nav_link" href="#"  rel="&quot;nofollow&quot;">
                                  SMS Plans </a>
                            </small></li>
                      </ul>
                   </div>
                </div>
                <div class="bottom">
-                  <a href="{{route('regions', ['region' => 'USA'])}}" target="_blank" rel="nofollow" class="theme-btn two">
+                  <a href="{{route('regions', ['region' => 'USA'])}}" rel="nofollow" class="theme-btn two">
                      See pricing plans
                      </a>
                </div>
@@ -183,7 +183,7 @@
                               <span class="icon_bx">
                                  <i class=" icon-checked"></i>
                               </span>
-                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                              <a class="nav_link" href="#"  rel="&quot;nofollow&quot;">
                                  4G/5G </a>
                            </small></li>
                         <li class="list_items pd_bottom_10">
@@ -191,7 +191,7 @@
                               <span class="icon_bx">
                                  <i class=" icon-checked"></i>
                               </span>
-                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                              <a class="nav_link" href="#"  rel="&quot;nofollow&quot;">
                                  Data Plans</a>
                            </small></li>
                         <li class="list_items pd_bottom_10">
@@ -199,14 +199,14 @@
                               <span class="icon_bx">
                                  <i class=" icon-checked"></i>
                               </span>
-                              <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                              <a class="nav_link" href="#"  rel="&quot;nofollow&quot;">
                                  SMS Plans </a>
                            </small></li>
                      </ul>
                   </div>
                </div>
                <div class="bottom">
-                  <a href="{{route('regions', ['region' => 'APC'])}}" target="_blank" rel="nofollow" class="theme-btn two">
+                  <a href="{{route('regions', ['region' => 'APC'])}}" rel="nofollow" class="theme-btn two">
                      See pricing plans
                      </a>
                </div>

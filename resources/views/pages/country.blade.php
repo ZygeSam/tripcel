@@ -59,7 +59,7 @@
                                              <span class="icon_bx">
                                                 <i class=" icon-checked"></i>
                                              </span>
-                                             <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                                             <a class="nav_link" href="#" rel="&quot;nofollow&quot;">
                                              {{$product['validity_days']}} Days Data Pass </a>
                                           </small></li>
                                        <li class="list_items pd_bottom_10">
@@ -67,14 +67,14 @@
                                              <span class="icon_bx">
                                                 <i class=" icon-checked"></i>
                                              </span>
-                                             <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                                             <a class="nav_link" href="#" rel="&quot;nofollow&quot;">
                                                 {{$product['data_quota_mb']}} Gigabytes</a>
                                           </small></li>
                                     </ul>
                                  </div>
                               </div>
                               <div class="bottom">
-                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}"  rel="nofollow" class="border border-success p-3 rounded-4">
                                  Activate Now
                                  </a>
                            </div>
@@ -106,7 +106,7 @@
                                              <span class="icon_bx">
                                                 <i class=" icon-checked"></i>
                                              </span>
-                                             <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                                             <a class="nav_link" href="#" rel="&quot;nofollow&quot;">
                                                 {{$product['validity_days']}} Days Data Pass </a>
                                           </small></li>
                                        <li class="list_items pd_bottom_10">
@@ -114,14 +114,14 @@
                                              <span class="icon_bx">
                                                 <i class=" icon-checked"></i>
                                              </span>
-                                             <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                                             <a class="nav_link" href="#" rel="&quot;nofollow&quot;">
                                                 {{$product['data_quota_mb']}} Gigabytes</a>
                                           </small></li>
                                     </ul>
                                  </div>
                               </div>
                               <div class="bottom">
-                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}"  rel="nofollow" class="border border-success p-3 rounded-4">
                                  Activate Now
                                  </a>
                            </div>
@@ -153,7 +153,7 @@
                                              <span class="icon_bx">
                                                 <i class=" icon-checked"></i>
                                              </span>
-                                             <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                                             <a class="nav_link" href="#" rel="&quot;nofollow&quot;">
                                                 {{$product['validity_days']}} Days Data Pass </a>
                                           </small></li>
                                        <li class="list_items pd_bottom_10">
@@ -161,14 +161,14 @@
                                              <span class="icon_bx">
                                                 <i class=" icon-checked"></i>
                                              </span>
-                                             <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                                             <a class="nav_link" href="#" rel="&quot;nofollow&quot;">
                                                 {{$product['data_quota_mb']}} Gigabytes</a>
                                           </small></li>
                                     </ul>
                                  </div>
                               </div>
                               <div class="bottom">
-                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                              <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}"  rel="nofollow" class="border border-success p-3 rounded-4">
                                  Activate Now
                                  </a>
                            </div>
@@ -200,7 +200,7 @@
                                             <span class="icon_bx">
                                                <i class=" icon-checked"></i>
                                             </span>
-                                            <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                                            <a class="nav_link" href="#" rel="&quot;nofollow&quot;">
                                              {{$product['validity_days']}} Days Data Pass </a>
                                          </small></li>
                                       <li class="list_items pd_bottom_10">
@@ -208,14 +208,14 @@
                                             <span class="icon_bx">
                                                <i class=" icon-checked"></i>
                                             </span>
-                                            <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                                            <a class="nav_link" href="#" rel="&quot;nofollow&quot;">
                                                {{$product['data_quota_mb']}} Gigabytes</a>
                                          </small></li>
                                    </ul>
                                 </div>
                              </div>
                              <div class="bottom">
-                             <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                             <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}"  rel="nofollow" class="border border-success p-3 rounded-4">
                                 Activate Now
                                 </a>
                           </div>
@@ -247,7 +247,7 @@
                                                 <span class="icon_bx">
                                                    <i class=" icon-checked"></i>
                                                 </span>
-                                                <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                                                <a class="nav_link" href="#" rel="&quot;nofollow&quot;">
                                                    {{$product['validity_days']}} Days Data Pass </a>
                                              </small></li>
                                           <li class="list_items pd_bottom_10">
@@ -255,14 +255,14 @@
                                                 <span class="icon_bx">
                                                    <i class=" icon-checked"></i>
                                                 </span>
-                                                <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                                                <a class="nav_link" href="#" rel="&quot;nofollow&quot;">
                                                    {{$product['data_quota_mb']}} Gigabytes</a>
                                              </small></li>
                                        </ul>
                                     </div>
                                  </div>
                                  <div class="bottom">
-                                 <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}" target="_blank" rel="nofollow" class="border border-success p-3 rounded-4">
+                                 <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $product['uid']])}}"  rel="nofollow" class="border border-success p-3 rounded-4">
                                     Activate Now
                                     </a>
                               </div>
@@ -320,7 +320,7 @@
                         </li>
                         <a href="#">View eSim Tech Specks</a>
                         </ul>
-                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedLiteDaysProduct[0]['uid']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedLiteDaysProduct[0]['uid']])}}" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
                         </a>
                      </div>
@@ -363,7 +363,7 @@
                         </li>
                         <a href="#">View eSim Tech Specks</a>
                         </ul>
-                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedStandardDaysProduct[0]['uid']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedStandardDaysProduct[0]['uid']])}}" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
                         </a>
                      </div>
@@ -406,7 +406,7 @@
                         </li>
                         <a href="#">View eSim Tech Specks</a>
                         </ul>
-                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedMaxDaysProduct[0]['uid']])}}" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;" class="theme-btn two">
+                        <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedMaxDaysProduct[0]['uid']])}}" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
                         </a>
                      </div>

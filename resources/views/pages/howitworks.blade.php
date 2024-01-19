@@ -300,7 +300,7 @@
                      <div class="about_member">
                         <div class="authour_details">
                            <div class="button_view">
-                              <a href="#" target="_blank" rel="nofollow" class="theme-btn one"> 
+                              <a href="#"  rel="nofollow" class="theme-btn one"> 
                                  Andrew Cameron
                               </a>
                            </div>
@@ -321,7 +321,7 @@
                      <div class="about_member">
                         <div class="authour_details">
                            <div class="button_view">
-                              <a href="#" target="_blank" rel="nofollow" class="theme-btn one"> 
+                              <a href="#"  rel="nofollow" class="theme-btn one"> 
                                  Sofia Charlotte
                               </a>
                            </div>

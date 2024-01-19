@@ -40,7 +40,11 @@
          <!----page-header----->
          <div class="mini_cart_togglers fixed_cart">
             <div class="mini-cart-count">
-               0
+               @if(is_null(session()->get('cart')))
+                  0
+               @else
+                  {{count(session()->get('cart')['products'])}}
+               @endif
             </div>
             <i class="icon-shopping-cart"></i>
          </div>
@@ -278,8 +282,38 @@
       </div>
       <div class="cart_content_box">
          <div class="contnet_cart_box">
-            <div class="widget_shopping_cart_content">
-               <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
+            <div class="widget_shopping_cart_content" >
+               @if(!is_null(session()->get('cart')))
+                  @forelse(session()->get('cart')['products'] as $product)
+                     <tr class="woocommerce-cart-form__cart-item cart_item p-5">
+                        <td class="product-remove" style="background-color: #078586; color: white" >
+                           <a href="{{route('cartIcon.remove', $product[0]['uid'])}}" style="background-color: #078586; color: white"  class="py-2 mb-2 btn remove" aria-label="Remove this item" data-product_id="2650" data-product_sku="">×</a>						
+                        </td>
+                        <td class="product-name" data-title="Product">
+                        <p>Package : {{$product[0]['name']}}</p>
+                        <p>Starting Date:@php echo date("Y-m-d", strtotime("now"));  @endphp</p> 
+                        <p> Daily Data: {{$product[0]['data_quota_mb']}}GB</p>
+                        <p>Throttle: 1Mbps</p>					
+                        </td>
+                        <td class="product-price" data-title="Price">
+                        <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>${{$product[0]['price_usd']}}</bdi></span>						
+                        </td>
+                     </tr>
+                     <hr>
+                     <br>
+                     @empty
+                     <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
+                  @endforelse
+                  @if(count(session()->get('cart')['products']) > 0)
+                     <div class="wc-proceed-to-checkout text-center" >
+                        <a href="{{route('checkout')}}" style="background-color: #078586; color: white" class=" p-4 checkout-button button alt wc-forward wp-element-button">
+                        Checkout</a>
+                     </div>
+                  @endif
+                  
+               @else
+               <p class="woocommerce-mini-cart__empty-message">There are no products in the cart.</p>
+               @endif
             </div>
          </div>
       </div>

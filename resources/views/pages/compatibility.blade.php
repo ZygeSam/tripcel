@@ -175,13 +175,13 @@
                         </p>
                         <div class="bottom_content">
                            <div class="button_content">
-                              <a href="#" target="_blank" rel="nofollow" class="theme-btn three">CHECK DEVICE COMPATIBILITY<i class="icon-right-arrow-long"></i></a>
+                              <a href="#"  rel="nofollow" class="theme-btn three">CHECK DEVICE COMPATIBILITY<i class="icon-right-arrow-long"></i></a>
                            </div>
                            <div class="button_content">
-                              <a href="#" target="_blank" rel="nofollow" class="theme-btn three">EXPLORE PLANS<i class="icon-right-arrow-long"></i></a>
+                              <a href="#"  rel="nofollow" class="theme-btn three">EXPLORE PLANS<i class="icon-right-arrow-long"></i></a>
                            </div>
                            <div class="button_content">
-                              <a href="#" target="_blank" rel="nofollow" class="theme-btn three">GET YOUR TRIPCEL eSIM NOW<i class="icon-right-arrow-long"></i></a>
+                              <a href="#"  rel="nofollow" class="theme-btn three">GET YOUR TRIPCEL eSIM NOW<i class="icon-right-arrow-long"></i></a>
                            </div>
                         </div>
                      </div>
