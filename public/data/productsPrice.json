@@ -1,0 +1,1546 @@
+[
+    {
+     "Region": "Afghanistan",
+     "ISO2": "af",
+     "ISO3": "AFG",
+     "PricePerMB": 0.17805,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Albania",
+     "ISO2": "al",
+     "ISO3": "ALB",
+     "PricePerMB": 0.00333,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Algeria",
+     "ISO2": "dz",
+     "ISO3": "DZA",
+     "PricePerMB": 0.02037,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Andorra",
+     "ISO2": "ad",
+     "ISO3": "AND",
+     "PricePerMB": 0.00267,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Anguilla",
+     "ISO2": "ai",
+     "ISO3": "AIA",
+     "PricePerMB": 0.01707,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Antigua and Barbuda",
+     "ISO2": "ag",
+     "ISO3": "ATG",
+     "PricePerMB": 0.01646,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Argentina",
+     "ISO2": "ar",
+     "ISO3": "ARG",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Armenia",
+     "ISO2": "am",
+     "ISO3": "ARM",
+     "PricePerMB": 0.00628,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Aruba",
+     "ISO2": "aw",
+     "ISO3": "ABW",
+     "PricePerMB": 0.0122,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Australia",
+     "ISO2": "au",
+     "ISO3": "AUS",
+     "PricePerMB": 0.0036,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Austria",
+     "ISO2": "at",
+     "ISO3": "AUT",
+     "PricePerMB": 0.0026,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Azerbaijan",
+     "ISO2": "az",
+     "ISO3": "AZE",
+     "PricePerMB": 0.00939,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Bahamas",
+     "ISO2": "bs",
+     "ISO3": "BHS",
+     "PricePerMB": 0.01646,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Bahrain",
+     "ISO2": "bh",
+     "ISO3": "BHR",
+     "PricePerMB": 0.00939,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Bangladesh",
+     "ISO2": "bd",
+     "ISO3": "BGD",
+     "PricePerMB": 0.00413,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Barbados",
+     "ISO2": "bb",
+     "ISO3": "BRB",
+     "PricePerMB": 0.01646,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Belgium",
+     "ISO2": "be",
+     "ISO3": "BEL",
+     "PricePerMB": 0.00227,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Belize",
+     "ISO2": "bz",
+     "ISO3": "BLZ",
+     "PricePerMB": 0.02134,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Benin",
+     "ISO2": "bj",
+     "ISO3": "BEN",
+     "PricePerMB": 0.04878,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Bermuda",
+     "ISO2": "bm",
+     "ISO3": "BMU",
+     "PricePerMB": 0.04512,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Bhutan",
+     "ISO2": "bt",
+     "ISO3": "BTN",
+     "PricePerMB": 0.01512,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Bolivia",
+     "ISO2": "bo",
+     "ISO3": "BOL",
+     "PricePerMB": 0.00854,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Bosnia",
+     "ISO2": "ba",
+     "ISO3": "BIH",
+     "PricePerMB": 0.00634,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Botswana",
+     "ISO2": "bw",
+     "ISO3": "BWA",
+     "PricePerMB": 0.0111,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Brazil",
+     "ISO2": "br",
+     "ISO3": "BRA",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "British Virgin Islands",
+     "ISO2": "vg",
+     "ISO3": "VGB",
+     "PricePerMB": 0.01707,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Brunei",
+     "ISO2": "bn",
+     "ISO3": "BRN",
+     "PricePerMB": 0.00939,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Bulgaria",
+     "ISO2": "bg",
+     "ISO3": "BGR",
+     "PricePerMB": 0.00249,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Burkina Faso",
+     "ISO2": "bf",
+     "ISO3": "BFA",
+     "PricePerMB": 0.18768,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Burundi",
+     "ISO2": "bi",
+     "ISO3": "BDI",
+     "PricePerMB": 0.15854,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Cambodia",
+     "ISO2": "kh",
+     "ISO3": "KHM",
+     "PricePerMB": 0.00756,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Cameroon",
+     "ISO2": "cm",
+     "ISO3": "CMR",
+     "PricePerMB": 0.0111,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Canada",
+     "ISO2": "ca",
+     "ISO3": "CAN",
+     "PricePerMB": 0.0078,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Cape Verde",
+     "ISO2": "cv",
+     "ISO3": "CPV",
+     "PricePerMB": 0.05817,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Cayman Islands",
+     "ISO2": "ky",
+     "ISO3": "CYM",
+     "PricePerMB": 0.01646,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Chad",
+     "ISO2": "td",
+     "ISO3": "TCD",
+     "PricePerMB": 0.05817,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Chile",
+     "ISO2": "cl",
+     "ISO3": "CHL",
+     "PricePerMB": 0.00915,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "China",
+     "ISO2": "cn",
+     "ISO3": "CHN",
+     "PricePerMB": 0.0036,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Colombia",
+     "ISO2": "co",
+     "ISO3": "COL",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Costa Rica",
+     "ISO2": "cr",
+     "ISO3": "CRI",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Croatia",
+     "ISO2": "hr",
+     "ISO3": "HRV",
+     "PricePerMB": 0.00253,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Curacao",
+     "ISO2": "cw",
+     "ISO3": "CUW",
+     "PricePerMB": 0.05817,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Cyprus",
+     "ISO2": "cy",
+     "ISO3": "CYP",
+     "PricePerMB": 0.00227,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Czech Republic",
+     "ISO2": "cz",
+     "ISO3": "CZE",
+     "PricePerMB": 0.0028,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Denmark",
+     "ISO2": "dk",
+     "ISO3": "DNK",
+     "PricePerMB": 0.00227,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Dominica",
+     "ISO2": "dm",
+     "ISO3": "DMA",
+     "PricePerMB": 0.01829,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Dominican Republic",
+     "ISO2": "do",
+     "ISO3": "DOM",
+     "PricePerMB": 0.01067,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Ecuador",
+     "ISO2": "ec",
+     "ISO3": "ECU",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Egypt",
+     "ISO2": "eg",
+     "ISO3": "EGY",
+     "PricePerMB": 0.01463,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "El Salvador",
+     "ISO2": "sv",
+     "ISO3": "SLV",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Estonia",
+     "ISO2": "ee",
+     "ISO3": "EST",
+     "PricePerMB": 0.00213,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Ethiopia",
+     "ISO2": "et",
+     "ISO3": "ETH",
+     "PricePerMB": 0.18768,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Faroe Islands",
+     "ISO2": "fo",
+     "ISO3": "FRO",
+     "PricePerMB": 0.00695,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Fiji",
+     "ISO2": "fj",
+     "ISO3": "FJI",
+     "PricePerMB": 0.00939,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Finland",
+     "ISO2": "fi",
+     "ISO3": "FIN",
+     "PricePerMB": 0.00311,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "France",
+     "ISO2": "fr",
+     "ISO3": "FRA",
+     "PricePerMB": 0.002,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "French Guiana",
+     "ISO2": "gf",
+     "ISO3": "GUF",
+     "PricePerMB": 0.00793,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "French Polynesia",
+     "ISO2": "pf",
+     "ISO3": "PYF",
+     "PricePerMB": 0.13366,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Gabon",
+     "ISO2": "ga",
+     "ISO3": "GAB",
+     "PricePerMB": 0.03378,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Gambia",
+     "ISO2": "gm",
+     "ISO3": "GMB",
+     "PricePerMB": 0.18012,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Georgia",
+     "ISO2": "ge",
+     "ISO3": "GEO",
+     "PricePerMB": 0.00453,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Germany",
+     "ISO2": "de",
+     "ISO3": "DEU",
+     "PricePerMB": 0.00247,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Ghana",
+     "ISO2": "gh",
+     "ISO3": "GHA",
+     "PricePerMB": 0.0032,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Gibraltar",
+     "ISO2": "gi",
+     "ISO3": "GIB",
+     "PricePerMB": 0.00659,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Greece",
+     "ISO2": "gr",
+     "ISO3": "GRC",
+     "PricePerMB": 0.00227,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Greenland",
+     "ISO2": "gl",
+     "ISO3": "GRL",
+     "PricePerMB": 0.01634,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Grenada",
+     "ISO2": "gd",
+     "ISO3": "GRD",
+     "PricePerMB": 0.01646,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Guadeloupe",
+     "ISO2": "gp",
+     "ISO3": "GLP",
+     "PricePerMB": 0.00659,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Guam",
+     "ISO2": "gu",
+     "ISO3": "GUM",
+     "PricePerMB": 0.01512,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Guatemala",
+     "ISO2": "gt",
+     "ISO3": "GTM",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Guernsey",
+     "ISO2": "gg",
+     "ISO3": "GGY",
+     "PricePerMB": 0.03159,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Guinea",
+     "ISO2": "gn",
+     "ISO3": "GIN",
+     "PricePerMB": 0.01317,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Guinea-Bissau",
+     "ISO2": "gw",
+     "ISO3": "GNB",
+     "PricePerMB": 0.01317,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Guyana",
+     "ISO2": "gy",
+     "ISO3": "GUY",
+     "PricePerMB": 0.04512,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Haiti",
+     "ISO2": "ht",
+     "ISO3": "HTI",
+     "PricePerMB": 0.06098,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Honduras",
+     "ISO2": "hn",
+     "ISO3": "HND",
+     "PricePerMB": 0.00854,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Hong Kong",
+     "ISO2": "hk",
+     "ISO3": "HKG",
+     "PricePerMB": 0.00293,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Hungary",
+     "ISO2": "hu",
+     "ISO3": "HUN",
+     "PricePerMB": 0.0028,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Iceland",
+     "ISO2": "is",
+     "ISO3": "ISL",
+     "PricePerMB": 0.00227,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "India",
+     "ISO2": "in",
+     "ISO3": "IND",
+     "PricePerMB": 0.00512,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Indonesia",
+     "ISO2": "id",
+     "ISO3": "IDN",
+     "PricePerMB": 0.00253,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Ireland",
+     "ISO2": "ie",
+     "ISO3": "IRL",
+     "PricePerMB": 0.0022,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Isle of Man",
+     "ISO2": "im",
+     "ISO3": "IMN",
+     "PricePerMB": 0.00549,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Israel",
+     "ISO2": "il",
+     "ISO3": "ISR",
+     "PricePerMB": 0.002,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Italy",
+     "ISO2": "it",
+     "ISO3": "ITA",
+     "PricePerMB": 0.00204,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Ivory Coast",
+     "ISO2": "ci",
+     "ISO3": "CIV",
+     "PricePerMB": 0.0111,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Jamaica",
+     "ISO2": "jm",
+     "ISO3": "JAM",
+     "PricePerMB": 0.01829,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Japan",
+     "ISO2": "jp",
+     "ISO3": "JPN",
+     "PricePerMB": 0.0061,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Jersey",
+     "ISO2": "je",
+     "ISO3": "JEY",
+     "PricePerMB": 0.00373,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Jordan",
+     "ISO2": "jo",
+     "ISO3": "JOR",
+     "PricePerMB": 0.03378,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Kazakhstan",
+     "ISO2": "kz",
+     "ISO3": "KAZ",
+     "PricePerMB": 0.00227,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Kenya",
+     "ISO2": "ke",
+     "ISO3": "KEN",
+     "PricePerMB": 0.03,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Kiribati",
+     "ISO2": "ki",
+     "ISO3": "KIR",
+     "PricePerMB": 0.03829,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Kosovo",
+     "ISO2": "xk",
+     "ISO3": "KSV",
+     "PricePerMB": 0.01073,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Kuwait",
+     "ISO2": "kw",
+     "ISO3": "KWT",
+     "PricePerMB": 0.00451,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Kyrgyzstan",
+     "ISO2": "kg",
+     "ISO3": "KGZ",
+     "PricePerMB": 0.01512,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Laos",
+     "ISO2": "la",
+     "ISO3": "LAO",
+     "PricePerMB": 0.01695,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Latvia",
+     "ISO2": "lv",
+     "ISO3": "LVA",
+     "PricePerMB": 0.002,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Liechtenstein",
+     "ISO2": "li",
+     "ISO3": "LIE",
+     "PricePerMB": 0.0072,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Lithuania",
+     "ISO2": "lt",
+     "ISO3": "LTU",
+     "PricePerMB": 0.002,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Luxembourg",
+     "ISO2": "lu",
+     "ISO3": "LUX",
+     "PricePerMB": 0.00227,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Macau",
+     "ISO2": "mo",
+     "ISO3": "MAC",
+     "PricePerMB": 0.004,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Macedonia",
+     "ISO2": "mk",
+     "ISO3": "MKD",
+     "PricePerMB": 0.00756,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Madagascar",
+     "ISO2": "mg",
+     "ISO3": "MDG",
+     "PricePerMB": 0.04134,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Malawi",
+     "ISO2": "mw",
+     "ISO3": "MWI",
+     "PricePerMB": 0.04317,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Malaysia",
+     "ISO2": "my",
+     "ISO3": "MYS",
+     "PricePerMB": 0.00293,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Mali",
+     "ISO2": "ml",
+     "ISO3": "MLI",
+     "PricePerMB": 0.18768,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Malta",
+     "ISO2": "mt",
+     "ISO3": "MLT",
+     "PricePerMB": 0.00227,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Martinique",
+     "ISO2": "mq",
+     "ISO3": "MTQ",
+     "PricePerMB": 0.00793,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Mauritania",
+     "ISO2": "mr",
+     "ISO3": "MRT",
+     "PricePerMB": 0.11585,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Mauritius",
+     "ISO2": "mu",
+     "ISO3": "MUS",
+     "PricePerMB": 0.04134,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Mayotte",
+     "ISO2": "yt",
+     "ISO3": "MYT",
+     "PricePerMB": 0.0028,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Mexico",
+     "ISO2": "mx",
+     "ISO3": "MEX",
+     "PricePerMB": 0.00833,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Moldova",
+     "ISO2": "md",
+     "ISO3": "MDA",
+     "PricePerMB": 0.00488,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Monaco",
+     "ISO2": "mc",
+     "ISO3": "MCO",
+     "PricePerMB": 0.01415,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Mongolia",
+     "ISO2": "mn",
+     "ISO3": "MNG",
+     "PricePerMB": 0.01585,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Montenegro",
+     "ISO2": "me",
+     "ISO3": "MNE",
+     "PricePerMB": 0.00482,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Montserrat",
+     "ISO2": "ms",
+     "ISO3": "MSR",
+     "PricePerMB": 0.01707,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Morocco",
+     "ISO2": "ma",
+     "ISO3": "MAR",
+     "PricePerMB": 0.02927,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Mozambique",
+     "ISO2": "mz",
+     "ISO3": "MOZ",
+     "PricePerMB": 0.01134,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Nauru",
+     "ISO2": "nr",
+     "ISO3": "NRU",
+     "PricePerMB": 0.0389,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Nepal",
+     "ISO2": "np",
+     "ISO3": "NPL",
+     "PricePerMB": 0.02817,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Netherlands",
+     "ISO2": "nl",
+     "ISO3": "NLD",
+     "PricePerMB": 0.0028,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Netherlands Antilles",
+     "ISO2": "an",
+     "ISO3": "ANT",
+     "PricePerMB": 0.02,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "New Zealand",
+     "ISO2": "nz",
+     "ISO3": "NZL",
+     "PricePerMB": 0.00293,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Nicaragua",
+     "ISO2": "ni",
+     "ISO3": "NIC",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Niger",
+     "ISO2": "ne",
+     "ISO3": "NER",
+     "PricePerMB": 0.07122,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Nigeria",
+     "ISO2": "ng",
+     "ISO3": "NGA",
+     "PricePerMB": 0.01207,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Northern Mariana Islands",
+     "ISO2": "mp",
+     "ISO3": "MNP",
+     "PricePerMB": 0.03,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Norway",
+     "ISO2": "no",
+     "ISO3": "NOR",
+     "PricePerMB": 0.0026,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Oman",
+     "ISO2": "om",
+     "ISO3": "OMN",
+     "PricePerMB": 0.00549,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Pakistan",
+     "ISO2": "pk",
+     "ISO3": "PAK",
+     "PricePerMB": 0.0044,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Palestine",
+     "ISO2": "ps",
+     "ISO3": "PSE",
+     "PricePerMB": 0.01134,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Panama",
+     "ISO2": "pa",
+     "ISO3": "PAN",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Papua New Guinea",
+     "ISO2": "pg",
+     "ISO3": "PNG",
+     "PricePerMB": 0.05634,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Paraguay",
+     "ISO2": "py",
+     "ISO3": "PRY",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Peru",
+     "ISO2": "pe",
+     "ISO3": "PER",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Philippines",
+     "ISO2": "ph",
+     "ISO3": "PHL",
+     "PricePerMB": 0.0036,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Poland",
+     "ISO2": "pl",
+     "ISO3": "POL",
+     "PricePerMB": 0.00213,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Portugal",
+     "ISO2": "pt",
+     "ISO3": "PRT",
+     "PricePerMB": 0.00307,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Puerto Rico",
+     "ISO2": "pr",
+     "ISO3": "PRI",
+     "PricePerMB": 0.01646,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Qatar",
+     "ISO2": "qa",
+     "ISO3": "QAT",
+     "PricePerMB": 0.0061,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Republic of the Congo",
+     "ISO2": "cg",
+     "ISO3": "COG",
+     "PricePerMB": 0.06098,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Reunion",
+     "ISO2": "re",
+     "ISO3": "REU",
+     "PricePerMB": 0.0028,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Romania",
+     "ISO2": "ro",
+     "ISO3": "ROU",
+     "PricePerMB": 0.0028,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Russia",
+     "ISO2": "ru",
+     "ISO3": "RUS",
+     "PricePerMB": 0.00466,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Rwanda",
+     "ISO2": "rw",
+     "ISO3": "RWA",
+     "PricePerMB": 0.04878,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Saint Barthelemy",
+     "ISO2": "bl",
+     "ISO3": "BLM",
+     "PricePerMB": 0.12317,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Saint Kitts and Nevis",
+     "ISO2": "kn",
+     "ISO3": "KNA",
+     "PricePerMB": 0.01646,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Saint Lucia",
+     "ISO2": "lc",
+     "ISO3": "LCA",
+     "PricePerMB": 0.01829,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Saint Martin",
+     "ISO2": "mf",
+     "ISO3": "MAF",
+     "PricePerMB": 0.07927,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Saint Vincent and the Grenadines",
+     "ISO2": "vc",
+     "ISO3": "VCT",
+     "PricePerMB": 0.01646,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Samoa",
+     "ISO2": "ws",
+     "ISO3": "WSM",
+     "PricePerMB": 0.06012,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Saudi Arabia",
+     "ISO2": "sa",
+     "ISO3": "SAU",
+     "PricePerMB": 0.01171,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Senegal",
+     "ISO2": "sn",
+     "ISO3": "SEN",
+     "PricePerMB": 0.21463,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Serbia",
+     "ISO2": "rs",
+     "ISO3": "SRB",
+     "PricePerMB": 0.00451,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Seychelles",
+     "ISO2": "sc",
+     "ISO3": "SYC",
+     "PricePerMB": 0.02683,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Sierra Leone",
+     "ISO2": "SL",
+     "ISO3": "SLE",
+     "PricePerMB": 0.20402,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Singapore",
+     "ISO2": "sg",
+     "ISO3": "SGP",
+     "PricePerMB": 0.0036,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Slovakia",
+     "ISO2": "sk",
+     "ISO3": "SVK",
+     "PricePerMB": 0.00253,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Slovenia",
+     "ISO2": "si",
+     "ISO3": "SVN",
+     "PricePerMB": 0.0026,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "South Africa",
+     "ISO2": "za",
+     "ISO3": "ZAF",
+     "PricePerMB": 0.0032,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "South Korea",
+     "ISO2": "kr",
+     "ISO3": "KOR",
+     "PricePerMB": 0.00413,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Spain",
+     "ISO2": "es",
+     "ISO3": "ESP",
+     "PricePerMB": 0.00244,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Sri Lanka",
+     "ISO2": "lk",
+     "ISO3": "LKA",
+     "PricePerMB": 0.00756,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Sudan",
+     "ISO2": "sd",
+     "ISO3": "SSD",
+     "PricePerMB": 0.02683,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Suriname",
+     "ISO2": "sr",
+     "ISO3": "SUR",
+     "PricePerMB": 0.07927,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Swaziland",
+     "ISO2": "sz",
+     "ISO3": "SWZ",
+     "PricePerMB": 0.01317,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Sweden",
+     "ISO2": "se",
+     "ISO3": "SWE",
+     "PricePerMB": 0.00227,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Switzerland",
+     "ISO2": "ch",
+     "ISO3": "CHE",
+     "PricePerMB": 0.00333,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Taiwan",
+     "ISO2": "tw",
+     "ISO3": "TWN",
+     "PricePerMB": 0.00307,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Tajikistan",
+     "ISO2": "tj",
+     "ISO3": "TJK",
+     "PricePerMB": 0.02085,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Tanzania",
+     "ISO2": "tz",
+     "ISO3": "TZA",
+     "PricePerMB": 0.03537,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Thailand",
+     "ISO2": "th",
+     "ISO3": "THA",
+     "PricePerMB": 0.00316,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Timor-Leste",
+     "ISO2": "tl",
+     "ISO3": "TLS",
+     "PricePerMB": 0.03,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Togo",
+     "ISO2": "tg",
+     "ISO3": "TGO",
+     "PricePerMB": 0.3078,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Tonga",
+     "ISO2": "to",
+     "ISO3": "TON",
+     "PricePerMB": 0.03402,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Trinidad and Tobago",
+     "ISO2": "tt",
+     "ISO3": "TTO",
+     "PricePerMB": 0.01695,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Tunisia",
+     "ISO2": "tn",
+     "ISO3": "TUN",
+     "PricePerMB": 0.00427,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Turkey",
+     "ISO2": "tr",
+     "ISO3": "TUR",
+     "PricePerMB": 0.00187,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Turks and Caicos Islands",
+     "ISO2": "tc",
+     "ISO3": "TCA",
+     "PricePerMB": 0.01768,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "U.S. Virgin Islands",
+     "ISO2": "vi",
+     "ISO3": "VIR",
+     "PricePerMB": 0.01037,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Uganda",
+     "ISO2": "ug",
+     "ISO3": "UGA",
+     "PricePerMB": 0.0111,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "UK",
+     "ISO2": "gb",
+     "ISO3": "GBR",
+     "PricePerMB": 0.00187,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Ukraine",
+     "ISO2": "ua",
+     "ISO3": "UKR",
+     "PricePerMB": 0.00333,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "United Arab Emirates",
+     "ISO2": "ae",
+     "ISO3": "ARE",
+     "PricePerMB": 0.00598,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Uruguay",
+     "ISO2": "uy",
+     "ISO3": "URY",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "USA",
+     "ISO2": "us",
+     "ISO3": "USA",
+     "PricePerMB": 0.004,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Uzbekistan",
+     "ISO2": "uz",
+     "ISO3": "UZB",
+     "PricePerMB": 0.00227,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Vanuatu",
+     "ISO2": "vu",
+     "ISO3": "VUT",
+     "PricePerMB": 0.0661,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Venezuela",
+     "ISO2": "ve",
+     "ISO3": "VEN",
+     "PricePerMB": 0.00732,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Vietnam",
+     "ISO2": "vn",
+     "ISO3": "VNM",
+     "PricePerMB": 0.00427,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    },
+    {
+     "Region": "Zambia",
+     "ISO2": "zm",
+     "ISO3": "ZMB",
+     "PricePerMB": 0.03378,
+     "FlatComm": 0.5,
+     "CommPerDay": 0.1
+    }
+]
