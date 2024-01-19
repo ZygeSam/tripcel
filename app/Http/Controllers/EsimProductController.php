@@ -36,6 +36,7 @@ class EsimProductController extends Controller
     private $manager;
     private $products;
     private $countries;
+    private $pricing;
 
     public function __construct(EsimPlanTypeService $esimPlanType, EsimPlanService $esimPlan, ESimProductService $esimProduct, PaymentProcessor $paymentProcessor, MailService $mailService, EsimService $esimService, QrCodeController $qrcode) {
         $this->esimProduct = $esimProduct;
@@ -47,15 +48,29 @@ class EsimProductController extends Controller
         $this->esimPlan = $esimPlan;
         $this->esimPlanType = $esimPlanType;
         $this->products = collect($this->getProducts());
+        $this->pricing = collect($this->getProductsPrice());
         $this->countries = collect($this->getAllCountries());
     }
     
     public function getProducts(){
-        return collect($this->readApi("data/products.json"));
+        // return $this->esimPlanType->getEsimPlanTypes()['plan_types'];
+        return $this->readApi("data/products.json");
+    }
+
+    public function getProductsPrice(){
+        // return $this->esimPlanType->getEsimPlanTypes()['plan_types'];
+        return $this->readApi("data/productsPrice.json");
     }
 
     public function getAllCountries(){
-        return collect($this->readApi("data/countries.json"));
+        $productsPrice =  collect($this->readApi("data/productsPrice.json"));
+        return  $productsPrice ->map(function($item){
+                return [
+                    "country_iso2" => $item['ISO2'],
+                    "country_iso3" => $item['ISO3'],
+                    "country_name" => $item['Region'],
+                ];
+        })->unique()->values()->all();
      }
 
 
@@ -87,41 +102,93 @@ class EsimProductController extends Controller
         return redirect()->to($request['country']);
     }
 
-    public function getRegionProducts($region){
-        $countries = $this->countries;
-        $country = $this->countries->where('country_iso3', $region)->first();
-        $fiveDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days");
-        $tenDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 10 days");
-        $fifteenDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 15 days");
-        $thirtyDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 30 days");
-        $unlimitedLiteDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited LITE');
-        $unlimitedStandardDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited STANDARD');
-        $unlimitedMaxDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited MA');
-        return view('pages.regions', compact('country', 'countries', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
+    public function byte_format($bytes) {
+        return ($bytes/1024);
+    }
+    
+    public function getRegionProductDays($region, $days=5, $unlimited = false, $unlimitedPlan='Unlimited LITE'){
+        $price = $this->pricing->filter(function($productPrice) use ($region){
+            switch ($region) {
+                case 'Asia':
+                    return $productPrice['ISO3'] === "CHN";
+                    break;
+
+                case 'South America':
+                    return $productPrice['ISO3'] === "BOL";
+                    break;
+
+                case 'Europe':
+                    return $productPrice['ISO3'] === "AUT";
+                    break;
+                
+                case 'Caribbean':
+                    return $productPrice['ISO3'] === "JAM";
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        })->values()->all();
+
+        return $this->products->filter(function($product) use ($region, $days){
+            if($product['validity_days'] === $days){
+                return strpos($product['name'], $region) !== false;
+            }
+            
+        })->map(function($product) use($price){
+            $product['price_usd'] = ceil(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
+            $product['data_quota_mb']=ceil($product['data_quota_mb']/1024);
+            return $product;
+        })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
+    }
+    public function getProductDays($country, $days=5, $unlimited = false, $unlimitedPlan='Unlimited LITE'){
+        $price = $this->pricing->filter(function($productPrice) use ($country){
+            return $productPrice['ISO3'] === $country;
+        })->values()->all();
+        
+        return $this->products->filter(function ($product) use ($country, $unlimited, $days, $unlimitedPlan) {
+            if($product['validity_days'] === $days){
+                return in_array($country, $product['countries_enabled']);
+            }
+        })->map(function($product) use($price){
+            $product['price_usd'] = ceil(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
+            $product['data_quota_mb']=ceil($product['data_quota_mb']/1024);
+            return $product;
+        })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
     }
 
-    public function getProductDays($products, $country, $days="- 5 days", $unlimited = false, $unlimitedPlan='Unlimited LITE'){
-        return $products->filter(function ($product) use ($country, $unlimited, $days, $unlimitedPlan) {
-            if ($product['country_name'] === $country) {
-                $productName = $product['name'];
-                if($unlimited){
-                    return strpos($productName, $unlimitedPlan) !== false && stripos($productName, $days) !== false;
-                }
-                return strpos($productName, 'Unlimited') === false && stripos($productName, $days) !== false;
-            }
-        })->sortBy('data_gb')->values()->all();
+    public function checkPrice($array, $price){
+        $modifiedProducts = $array->map(function($product) use($price){
+            $product['price_usd'] = ceil(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
+            $product['data_quota_mb'] = ceil($product['data_quota_mb']/1024);
+            return $product;
+        })->unique('data_quota_mb')->sortBy('data_quota_mb')->values();
+        return $modifiedProducts;
+    }
+
+    public function getRegionProducts($region){
+        $countries = $this->countries;
+        $fiveDaysProduct = $this->getRegionProductDays($region, 5);
+        $tenDaysProduct = $this->getRegionProductDays($region, 10);
+        $fifteenDaysProduct = $this->getRegionProductDays($region, 15);
+        $thirtyDaysProduct = $this->getRegionProductDays($region, 30);
+        $unlimitedLiteDaysProduct = $this->getRegionProductDays($region, 5, true, 'Unlimited LITE');
+        $unlimitedStandardDaysProduct = $this->getRegionProductDays($region, 5, true, 'Unlimited STANDARD');
+        $unlimitedMaxDaysProduct = $this->getRegionProductDays($region, 5, true, 'Unlimited MAX');
+        return view('pages.regions', compact('region', 'countries', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
     }
 
     public function getCountryProducts($country){
        $countries = $this->countries;
        $country = $this->countries->where('country_name', $country)->first();
-       $fiveDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days");
-       $tenDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 10 days");
-       $fifteenDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 15 days");
-       $thirtyDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 30 days");
-       $unlimitedLiteDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited LITE');
-       $unlimitedStandardDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited STANDARD');
-       $unlimitedMaxDaysProduct = $this->getProductDays($this->products, $country['country_name'], "- 5 days", true, 'Unlimited MA');
+       $fiveDaysProduct = $this->getProductDays($country['country_iso3'], 5);
+       $tenDaysProduct = $this->getProductDays($country['country_iso3'], 10);
+       $fifteenDaysProduct = $this->getProductDays($country['country_iso3'], 15);
+       $thirtyDaysProduct = $this->getProductDays($country['country_iso3'], 30);
+       $unlimitedLiteDaysProduct = $this->getProductDays($country['country_iso3'], 5, true, 'Unlimited LITE');
+       $unlimitedStandardDaysProduct = $this->getProductDays($country['country_iso3'], 5, true, 'Unlimited STANDARD');
+       $unlimitedMaxDaysProduct = $this->getProductDays($country['country_iso3'], 5, true, 'Unlimited MAX');
     
        return view('pages.country', compact('country', 'countries', 'fiveDaysProduct', 'tenDaysProduct', 'fifteenDaysProduct', 'thirtyDaysProduct', 'unlimitedLiteDaysProduct', 'unlimitedStandardDaysProduct', 'unlimitedMaxDaysProduct'));
     }
