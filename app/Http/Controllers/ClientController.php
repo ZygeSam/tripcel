@@ -113,17 +113,15 @@ class ClientController extends Controller
     }
 
     public function getAllProducts($isocode){
-        $price = $this->pricing->filter(function($productPrice) use ($isocode){
-            return $productPrice['ISO3'] === $isocode;
-        })->values()->all();
-        
+        $price = $this->pricing->firstWhere('ISO3', $isocode);
+
         return $this->products->filter(function ($product) use ($isocode) {
                 return in_array($isocode, $product['countries_enabled']);
         })->map(function($product) use($price){
-            $product['price_usd'] = ceil(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
+            $product['price_usd'] = ceil(($price['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price['CommPerDay']) + $price['FlatComm']);
             $product['data_quota_mb']=ceil($product['data_quota_mb']/1024);
             return $product;
-        })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
+        })->sortBy('data_quota_mb')->values()->all();
     }
 
     public function getAllRegionProducts($isocode){
@@ -146,10 +144,7 @@ class ClientController extends Controller
     public function topUp(Request $request)
     {
         $selectedEsim = Esim::with('transactions')->where('eSimCountryName', $request->query('country'))->first();
-        $esimPlans = $this->esimService->getEsimPlans($selectedEsim->esimIccid)['plans'];
-        $isoCode = $selectedEsim->eSimCountryIso3;
-        return $products = $this->getAllProducts($isoCode);
-        // return view('dashboards.client.eSimTopUp', compact('selectedEsim', 'products', 'esimPlans'));
+        return $products = $this->getAllProducts($selectedEsim->eSimCountryIso3);
     }
 
     public function showCart(){
