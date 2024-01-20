@@ -86,15 +86,7 @@
     </div>
     <!-- / Layout wrapper -->
 
-    <div class="buy-now">
-      <a
-        href="{{route('esim.index',['userId'=> 1])}}"
-        target="_blank"
-        class="btn btn-buy-now"
-        style="background-color: #078586; color: #fff;" 
-        >Buy Data</a
-      >
-    </div>
+    
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
