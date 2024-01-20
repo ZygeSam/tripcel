@@ -51,7 +51,7 @@
                           <span class="flex-grow-1 align-middle ms-1">Cart</span>
                           <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">
                             @if(session()->has('cart'))
-                              {{count(session()->get('cart')['products'])}}
+                              {{count(session()->get('cart', ['products'=>[]]))}}
                             @else
                             0
                             @endif

@@ -86,6 +86,7 @@ Route::prefix('client')->group(function () {
     Route::post("/store", [ClientController::class, 'store'])->name('esim.store');
     Route::get("/topup", [ClientController::class, 'topUp'])->name('esim.topup');
     Route::get("/addToCart", [ClientController::class, 'addToCart'])->name('esim.addToCart');
+    Route::get("/addToCartModal", [ClientController::class, 'addToCartModal'])->name('esim.addToCartModal');
     Route::get("/removeFromCart", [ClientController::class, 'removeFromCart'])->name('esim.removeFromCart');
     Route::get("/pay", [ClientController::class, 'pay'])->name('esim.pay');
     Route::post("/sms", [ClientController::class, 'sms'])->name('esim.sms');

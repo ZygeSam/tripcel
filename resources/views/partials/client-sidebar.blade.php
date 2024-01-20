@@ -21,7 +21,7 @@
           <div data-i18n="Dashboards">Dashboard</div>
         </a>
       </li>
-      <li class="menu-item open">
+      <li class="menu-item">
         <a href="{{route('esim.index',['userId'=> auth()->user()->id])}}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Dashboards">My eSim</div>
