@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
         <div class="modal-header">
-        <h5 class="modal-title" id="modalCenterTitle">Support Ticket</h5>
+        <h5 class="modal-title" id="modalCenterTitle"></h5>
         <button
             type="button"
             class="btn-close"
@@ -12,9 +12,7 @@
             aria-label="Close"></button>
         </div>
             <div class="modal-body">
-                    <div class="row">
-                            {{session()->get('message')}}
-                    </div>
+                    
             </div>
             <div class="modal-footer">
                 
@@ -117,7 +115,7 @@
                                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                             <div class="me-2">
                                                 <h6 class="mb-0">{{$esim['eSimCountryName']}}: {{$esim['esimIccid']}}</h6>
-                                                <small class="text-dark"><b>Status:</b>{{$esim['eSimNetworkStatus']}}</small>
+                                                <small class="text-dark"><b>Status: </b>{{$esim['eSimNetworkStatus']}}</small>
                                                 <small class="text-tripcel">{{$esim['created_at']}}</small>
                                             </div>
                                         </a>
@@ -208,30 +206,27 @@
                 }
             },
             error: function() {
-                console.error('Error during AJAX call.');
+                console.error('Error adding to cart.');
             }
         });
 }
-    $(document).ready(function() {
-        $('a[data-data-value]').on('click', function(e) {
-            e.preventDefault();
+$(document).ready(function() {
+    $('a[data-data-value]').on('click', function(e) {
+        e.preventDefault();
 
-            var esimCountryName = $(this).data('data-value');
-            var esimIccid = $(this).data('esim-iccid-value');
-            var country = $(this).data('country-value');
+        var esimCountryName = $(this).data('data-value');
+        var esimIccid = $(this).data('esim-iccid-value');
+        var country = $(this).data('country-value');
 
-            $.ajax({
-                url: '{{ route("esim.topup", ["userId" => auth()->user()->id]) }}&country=' + esimCountryName,
-                type: 'GET',
-                success: function(data) {
-                    console.log(data)
-                    console.log(esimIccid)
-                    console.log(country)
-                    $('#successModal .modal-body').html(""); // Clear existing content
+        $.ajax({
+            url: '{{ route("esim.topup", ["userId" => auth()->user()->id]) }}&country=' + esimCountryName,
+            type: 'GET',
+            success: function(data) {
+                var modalContent = ""; // Initialize an empty string to store HTML content
 
-                    // Loop through each result and append it to the modal body
-                    $.each(data, function(index, result) {
-                        var cardHtml = '<div class="card">' +
+                // Loop through each result and append it to the modal content string
+                $.each(data, function(index, result) {
+                    modalContent += '<div class="card">' +
                         '<div class="card-body d-flex justify-content-between">' +
                         '<div class="text-left>' +
                         '<h4 class="card-title">' + result.name + '</h4>' +
@@ -242,26 +237,30 @@
                         '</div>' +
                         '</div>' +
                         '</div>';
+                });
 
-                        $('#successModal .modal-body').append(cardHtml);
-                    });
-                    checkoutLink = '<div class="row justify-content-end"> <a class="btn btn-primary" href="{{route("esim.checkout")}}">Checkout</a></div>'
-                    $('#successModal .modal-body').append(checkoutLink);
-                    $('#modalCenterTitle').text('Recharge Esim');
-                    $('#successModal').modal('show');
+                // Add the checkout link to the modal content string
+                modalContent += '<div class="row justify-content-end"><a class="btn btn-primary" href="{{ route("esim.checkout") }}">Checkout</a></div>';
 
-                    // Event handler for the dynamically added "Add to Cart" buttons
-                    $('.addToCartBtn').on('click', function() {
-                        var productId = $(this).data('product-id');
-                        addToCart(productId, esimIccid, country, this);
-                    });
-                },
-                error: function() {
-                    alert('Error loading modal contents');
-                }
-            });
+                // Set the modal body content with the concatenated string
+                $('#successModal .modal-body').html(modalContent);
+
+                $('#modalCenterTitle').text('Recharge Esim');
+                $('#successModal').modal('show');
+
+                // Event handler for the dynamically added "Add to Cart" buttons
+                $('.addToCartBtn').on('click', function() {
+                    var productId = $(this).data('product-id');
+                    addToCart(productId, esimIccid, country, this);
+                });
+            },
+            error: function() {
+                alert('Error loading modal contents');
+            }
         });
     });
+});
+
 </script>
 
 
