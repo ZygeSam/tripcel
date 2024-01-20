@@ -58,7 +58,6 @@ class EsimProductController extends Controller
     }
 
     public function getProductsPrice(){
-        // return $this->esimPlanType->getEsimPlanTypes()['plan_types'];
         return $this->readApi("data/productsPrice.json");
     }
 

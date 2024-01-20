@@ -35,6 +35,7 @@ class ClientController extends Controller
     protected $qrCode;
     protected $products;
     protected $countries;
+    private $pricing;
 
     public function __construct(ESimProductService $esimProducts, EsimPlanTypeService $esimPlanType,PaymentProcessor $paymentProcessor, EsimService $esimService, EsimPlanService $esimPlan, QrCodeController $qrcode, MailService $mailService) {
         $this->paymentProcessor = $paymentProcessor;
@@ -44,8 +45,9 @@ class ClientController extends Controller
         $this->mailService = $mailService;
         $this->esimPlan = $esimPlan;
         $this->qrCode = $qrcode;
-        $this->products = $this->getProducts();
-        $this->countries = $this->getAllCountries();
+        $this->products = collect($this->getProducts());
+        $this->pricing = collect($this->getProductsPrice());
+        $this->countries = collect($this->getAllCountries());
         $this->middleware(AuthenticateClient::class);
     }
 
@@ -90,8 +92,19 @@ class ClientController extends Controller
         return collect($this->readApi("data/products.json"));
     }
 
+    public function getProductsPrice(){
+        return $this->readApi("data/productsPrice.json");
+    }
+
     public function getAllCountries(){
-        return collect($this->readApi("data/countries.json"));
+        $productsPrice =  collect($this->readApi("data/productsPrice.json"));
+        return  $productsPrice ->map(function($item){
+                return [
+                    "country_iso2" => $item['ISO2'],
+                    "country_iso3" => $item['ISO3'],
+                    "country_name" => $item['Region'],
+                ];
+        })->unique()->values()->all();
      }
 
      public function readApi($filepath){
@@ -100,9 +113,17 @@ class ClientController extends Controller
     }
 
     public function getAllProducts($isocode){
-        return $this->products->filter(function($product) use ($isocode){
-            return $product['country_iso2'] == $isocode;
-        });
+        $price = $this->pricing->filter(function($productPrice) use ($isocode){
+            return $productPrice['ISO3'] === $isocode;
+        })->values()->all();
+        
+        return $this->products->filter(function ($product) use ($isocode) {
+                return in_array($isocode, $product['countries_enabled']);
+        })->map(function($product) use($price){
+            $product['price_usd'] = ceil(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
+            $product['data_quota_mb']=ceil($product['data_quota_mb']/1024);
+            return $product;
+        })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
     }
 
     public function getAllRegionProducts($isocode){
@@ -124,31 +145,11 @@ class ClientController extends Controller
 
     public function topUp(Request $request)
     {
-       $selectedEsim = Esim::with('transactions')->where('eSimCountryName', $request->query('country'))->first();
+        $selectedEsim = Esim::with('transactions')->where('eSimCountryName', $request->query('country'))->first();
         $esimPlans = $this->esimService->getEsimPlans($selectedEsim->esimIccid)['plans'];
-        if($selectedEsim->eSimCountryIso2 == "0"){
-            switch ($selectedEsim->eSimCountryName) {
-                case 'Europe':
-                    $isoCode = "europe";
-                    break;
-                case 'Asia':
-                    $isoCode = "apac";
-                    break;
-                case 'South America':
-                    $isoCode = "latam";
-                    break;
-                default:
-                    # code...
-                    break;
-            }
-            // $products = $this->esimProducts->getAllRegionProducts($isoCode)['products'];
-            $products = $this->getAllRegionProducts($isoCode);
-        }else{
-            $isoCode = $selectedEsim->eSimCountryIso2;
-            // $products = $this->esimProducts->getAllProducts($isoCode)['products'];
-            $products = $this->getAllProducts($isoCode);
-        }
-        return view('dashboards.client.eSimTopUp', compact('selectedEsim', 'products', 'esimPlans'));
+        $isoCode = $selectedEsim->eSimCountryIso3;
+        return $products = $this->getAllProducts($isoCode);
+        // return view('dashboards.client.eSimTopUp', compact('selectedEsim', 'products', 'esimPlans'));
     }
 
     public function showCart(){
@@ -173,6 +174,36 @@ class ClientController extends Controller
             session()->put('cart', []);
         }
     }
+
+    public function checkPrice($array, $price){
+        return $array->map(function($product) use($price){
+            $product['price_usd'] = ceil(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
+            $product['data_quota_mb'] = ceil($product['data_quota_mb']/1024);
+            return $product;
+        })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
+    }
+
+    public function show($esimProduct, $country)
+    {
+        $price = $this->pricing->filter(function($productPrice) use ($country){
+            $country = $this->countries->where('country_name', $country)->first();
+            return $productPrice['ISO3'] === $country['country_iso3'];
+        })->values()->all();
+
+        $products = $this->products->filter(function($product) use ($esimProduct){
+            return $product['uid'] === $esimProduct;
+        })->values();
+
+        return $product = $this->checkPrice($products, $price);
+    }
+
+    public function addToCartModal(Request $request){
+        $cart = session()->get('cart');
+        $cart['products'][]= $this->show($request->query('esimProduct'), $request->query('country') );;
+        session()->put('cart', $cart);
+        $totalPrice = $this->cartTotal(($cart));
+        return true;
+    }
     public function addToCart(Request $request){
         if(session()->has('cart')){
             $cart = session()->get('cart');
@@ -194,7 +225,7 @@ class ClientController extends Controller
         $countries = $this->countries;
         $cart = session()->get('cart');
         $cart['products'] = collect($cart['products'])->filter(function ($product) use ($request) {
-            return $product[0]['id'] !== $request->query('product_id');
+            return $product[0]['uid'] !== $request->query('product_id');
         })->values()->all();
         session()->put('cart', $cart);
         $totalPrice = $this->cartTotal($cart);
@@ -225,7 +256,7 @@ class ClientController extends Controller
         $request['email'] = $user['email'];
         $request['payment_gateway'] ="Paystack";
         $request['amount'] =$this->cartTotal(session()->get('cart'));
-        $request['currency'] ="NGN";
+        $request['currency'] ="USD";
         $request['transaction_id'] ="TRC".strtotime("now");
         $request['description'] = "Purchase Esim";
         $request['payment_gateway'] = "Paystack";
@@ -235,36 +266,52 @@ class ClientController extends Controller
         return redirect()->to($response);
     }
 
+    public function checkCountry($isoCode){
+        $country = $this->countries->filter(function($country){
+            return in_array($isocode, $product['countries_enabled']);
+        });
+    }
+
     public function confirmPay($gateway, $transactionId){
         $cartedProducts = session()->get('cart');
-        $createdSimPlans = [];
         $response = $this->paymentProcessor->checkHandler($gateway)->verify_transaction();
         if($response['status'] == true){
             $user = auth()->user();
+           
+            // return $cartedProducts;
                 foreach($cartedProducts['products'] as $key=> $prod){
-                        $esim = Esim::where('esimCountryName', $prod[0]['country_name'])->first();
-                        $createdSimPlan = $this->esimPlan->createEsimPlan($esim->esimIccid, $prod[0]['id']);
+                        // return $prod;
+
+                        $currentDate = date('Y-m-d');
+                        $numberOfDays = $prod[0]['validity_days'];
+                        $newDate = date('Y-m-d', strtotime($currentDate . ' + ' . $numberOfDays . ' days'));
+
+                        $esim = Esim::where('esimCountryIso3', $prod[0]['countries_enabled'][0])->first();
                         $esimOrders[] = [
                             'esimIccid'=>$esim->esimIccid,
                             'transactionId'=>$transactionId,
-                            'eSimProductId'=>$prod[0]['id'],
+                            'eSimProductId'=>$prod[0]['uid'],
                             'eSimPlanName'=>$prod[0]['name'],
-                            'unlimitedData'=>$prod[0]['unlimited_data'],
-                            'planType'=>$prod[0]['plan_type'],
+                            'unlimitedData'=>false,
+                            'planType'=>false,
                             'price'=>$prod[0]['price_usd'],
-                            'currrency'=>$prod[0]['currency'],
-                            'countries_enabled'=>implode(',', $createdSimPlan['plan']['countries_enabled']),
-                            'planId' => $createdSimPlan['plan']['id'],
-                            'purchasedData' => $createdSimPlan['plan']['data_quota_bytes'],
-                            'dataStartTime' => $createdSimPlan['plan']['start_time'],
-                            'dataEndTime'=>$createdSimPlan['plan']['end_time'],
-                            'network_status' => $createdSimPlan['plan']['network_status'],
+                            'currrency'=>"USD",
+                            'countries_enabled'=>implode(',', $prod[0]['countries_enabled']),
+                            'planId' => $prod[0]['uid'],
+                            'purchasedData' => $prod[0]['data_quota_bytes'],
+                            'dataStartTime' => $currentDate,
+                            'dataEndTime'=>$newDate,
+                            'network_status' => "not active",
                             'paymentChannel'=>$gateway,
                             'status'=> TransactionStatus::DELIVERED,
                             'user_id'=>$user->id
                         ];
-                        $createdSimPlan['country'] = $prod[0]['country_name'];
-                        $createdSimPlans[] = $createdSimPlan;
+                        $prod[0]['country'] = $esim->eSimCountryName;
+                        $prod[0]['iccid'] = $esim->esimIccid;
+                        $prod[0]['start_time'] = $currentDate;
+                        $prod[0]['end_time'] = $newDate;
+                        $prod[0]['network_status'] = "not active";
+                        $createdSimPlans[] = $prod[0];
                 }
                 $esimOrders = EsimOrders::insert($esimOrders);
                     // send user an email
