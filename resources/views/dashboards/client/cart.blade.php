@@ -18,12 +18,12 @@
                             <tr class="woocommerce-cart-form__cart-item cart_item p-5">
                             
                             <td class="product-remove">
-                                <a href="{{route('esim.removeFromCart', ['product_id' =>$product[0]['id']])}}" class="px-5 remove btn btn-outline-tripcel" aria-label="Remove this item" data-product_id="2650" data-product_sku="">×</a>						
+                                <a href="{{route('esim.removeFromCart', ['product_id' =>$product[0]['uid']])}}" class="px-5 remove btn btn-outline-tripcel" aria-label="Remove this item" data-product_id="2650" data-product_sku="">×</a>						
                                 </td>
                                 <td class="product-name" data-title="Product">
                                 <p>Package : {{$product[0]['name']}}</p>
                                 <p>Starting Date:@php echo date("Y-m-d", strtotime("now"));  @endphp</p> 
-                                <p> Daily Data: {{$product[0]['data_gb']}}GB</p>
+                                <p> Daily Data: {{$product[0]['data_quota_mb']}}GB</p>
                                 <p>Throttle: 1Mbps</p>					
                                 </td>
                                 <td class="product-price" data-title="Price">

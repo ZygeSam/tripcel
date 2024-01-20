@@ -19,7 +19,7 @@
                                 <td class="product-name" data-title="Product">
                                 <p>Package : {{$product[0]['name']}}</p>
                                 <p>Starting Date:@php echo date("Y-m-d", strtotime("now"));  @endphp</p> 
-                                <p> Daily Data: {{$product[0]['data_gb']}}GB</p>
+                                <p> Daily Data: {{$product[0]['data_quota_mb']}}GB</p>
                                 <p>Throttle: 1Mbps</p>					
                                 </td>
                                 <td class="product-price" data-title="Price">

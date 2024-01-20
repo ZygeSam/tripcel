@@ -66,7 +66,7 @@
                             <select id="largeSelect" class="form-select form-select-md" name="esimProduct">
                                 @if(count($products) > 0)
                                     @foreach ($products as $product)
-                                        <option value="{{$product['id']}}">{{$product['name']}} - ${{$product['price']}}</option>
+                                        <option value="{{$product['uid']}}">{{$product['name']}} - ${{$product['price_usd']}}</option>
                                     @endforeach
                                 @endif
                             </select>
