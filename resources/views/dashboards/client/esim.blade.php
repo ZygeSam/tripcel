@@ -30,7 +30,7 @@
         <!-- Basic Layout -->
         <div class="row mb-4">
             <div class="col-xl col-lg-6 col-md-6">
-                <div class="card mb-2 h-75">
+                <div class="card mb-2 h-100">
                     <div class="card-header d-flex justify-content-between align-items-center">
                                 <!-- Modal -->
                                 <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
@@ -103,7 +103,7 @@
                                 @endif
                         <h5 class="mb-0">ESim List</h5>  <a type="button" data-bs-toggle="modal" data-bs-target="#modalCenter" class="text-tripcel">Add New Esim</a>
                     </div>
-                    <div class="card-body overflow-auto">
+                    <div class="card-body overflow-auto ">
                         <ul class="p-0 m-0">
                             @if(count($userEsims)>0)
                                 @foreach($userEsims as $esim)
@@ -117,6 +117,7 @@
                                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                             <div class="me-2">
                                                 <h6 class="mb-0">{{$esim['eSimCountryName']}}: {{$esim['esimIccid']}}</h6>
+                                                <small class="text-dark"><b>Status:</b>{{$esim['eSimNetworkStatus']}}</small>
                                                 <small class="text-tripcel">{{$esim['created_at']}}</small>
                                             </div>
                                         </a>
@@ -136,18 +137,14 @@
                 </div>
             </div>
             <div class="col-xl col-lg-6 col-md-6">
-                <div class="card">
+                <div class="card h-100">
                     <h5 class="card-header">{{$selectedEsim["eSimCountryName"] ?? ""}} <i class="fi fi-{{$selectedEsim["eSimCountryIso2"] ?? ""}}"></i></h5>
                     <div class="table-responsive text-nowrap">
                         <table class="table table-hover">
                         <thead>
                             <tr>
                             <th>Data</th>
-                            <th>Start Time</th>
-                            <th>End Time</th>
-                            <th>Status</th>
-                            <th>Date Activated</th>
-                            <th>Countries Enabled</th>
+                            <th>Expury Time</th>
                             
                             </tr>
                         </thead>
@@ -157,18 +154,22 @@
                                     <tr>
                                         <td>
                                             <div class="progress">
-                                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: {{(($plan['data_quota_bytes'])/$plan['data_quota_bytes'])*100}}%"></div>
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: {{(($plan['data_bytes_remaining'])/$plan['data_quota_bytes'])*100}}%"></div>
                                               </div>
-                                            <span class="fw-medium">{{($plan['data_quota_bytes']/1024)/1024}} GB</span>- {{($plan['data_bytes_remaining']/1024)/1024}} GB
-                                        </td>
-                                        <td>
-                                            {{$plan['start_time']}}
+                                            <span class="fw-medium">
+                                                @php
+                                                    $decimals = 2;
+                                                    $bytes = max($plan['data_bytes_remaining'], 0);
+                                                    $bytes1 = max($plan['data_quota_bytes'], 0);
+                                                    $units = array('B', 'KB', 'MB', 'GB', 'TB', 'PB');
+                                                    $factor = floor((strlen($plan['data_bytes_remaining']) - 1) / 3);
+                                                    $factor1 = floor((strlen($plan['data_quota_bytes']) - 1) / 3);
+                                                    $unit = isset($units[$factor]) ? $units[$factor] : 'B';
+                                                    $unit1 = isset($units[$factor1]) ? $units[$factor1] : 'B';
+                                                @endphp
+                                                {{sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . ' ' . $unit}}</span> - {{sprintf("%.{$decimals}f", $bytes / pow(1024, $factor1)) . ' ' . $unit1}}
                                         </td>
                                         <td>{{$plan['end_time']}}</td>
-                                        <td>
-                                            <span class="badge @if($plan['network_status'] == 'Active') bg-label-primary @else bg-label-danger @endif me-1">{{$plan['network_status']}}</span></td>
-                                        <td>{{$plan['date_activated']}}</td>
-                                        <td> {{implode(",",$plan['countries_enabled'])}}</td>
                                     </tr>
                                 @endforeach
                             @else
@@ -180,49 +181,6 @@
                         </table>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card mb-4">
-            <div class="card-header d-flex bg-tripcel justify-content-between align-items-center">
-                <h5 class="mb-0 text-white">{{$selectedEsim["eSimCountryName"] ?? ""}}<i class="mx-3 fi fi-{{$selectedEsim["eSimCountryIso2"] ?? ''}} fs-5 "></i></h5> 
-            </div>
-            <div class="card-body">
-                <table class="table table-borderless">
-                    <tbody>
-                        <tr>
-                        <td class="align-middle"><small class="text-light fw-medium">ICCID</small></td>
-                        <td class="py-3">
-                            <p class="mb-0">
-                            {{$selectedEsim["esimIccid"] ?? ""}}
-                            </p>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td class="align-middle"><small class="text-light fw-medium">STATE</small></td>
-                        <td class="py-4">
-                            <p class="lead mb-0">
-                            {{$selectedEsim["eSimState"] ?? ""}}
-                            </p>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td class="align-middle"><small class="text-light fw-medium">ASSIGNED DATE</small></td>
-                        <td class="py-3">
-                            <p class="text-muted mb-0">
-                                {{$selectedEsim["eSimDateAssigned"] ?? ""}}
-                            </p>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td class="align-middle"><small class="text-light fw-medium">NETWORK STATUS</small></td>
-                        <td class="py-3">
-                            <p class="text-muted mb-0">
-                                {{$selectedEsim["eSimNetworkStatus"] ?? ""}}
-                            </p>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
