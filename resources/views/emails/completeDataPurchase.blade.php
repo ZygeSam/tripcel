@@ -47,12 +47,11 @@
 <p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody">Thank you for choosing <b style="font-family:UICTFontTextStyleBody">Tripcel</b>! Your new data plan is ready to activate. Please follow the instructions below carefully:</span></p>
     @foreach($mailData['message'] as $item)
             You have purchased data plan for yor {{$item['country']}} phone number:  {{$item['iccid']}}
-            <p> Data bytes bought: {{$item['plan']['data_quota_bytes']}}</p>
-            <p> Data bytes remaining: {{$item['plan']['data_bytes_remaining']}}</p>
-            <p> Data starts by: {{$item['plan']['start_time']}}</p>
-            <p> Data ends by: {{$item['plan']['end_time']}}</p>
-            <p> Network Status: {{$item['plan']['network_status']}}</p>
-            <p>Countries enabled: {{implode(',',$item['plan']['countries_enabled'])}}</p>
+            <p> Data bytes bought: {{$item['data_quota_bytes']}}</p>
+            <p> Data starts by: {{$item['start_time']}}</p>
+            <p> Data ends by: {{$item['end_time']}}</p>
+            <p> Network Status: {{$item['network_status']}}</p>
+            <p>Countries enabled: {{implode(',',$item['countries_enabled'])}}</p>
             <hr>
     @endforeach
 <p style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody"></span><br></p>
