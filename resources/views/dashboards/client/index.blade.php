@@ -29,27 +29,25 @@
             </div>
             </div>
         </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 order-1 ">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title d-flex align-items-start justify-content-between">
-                        <div class="avatar flex-shrink-0">
-                            <img
-                            src={{asset("assets/images/icons/unicons/chart-success.png")}}
-                            alt="chart success"
-                            class="rounded" />
+        <div class="col-lg-4 col-md-12 col-sm-12 order-1 ">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-body p-4 ">
+                            <p class="display-6">What do you want to do today?</p>
+                                <span class="fw-medium d-block mb-1 d-fl list-unstyled">
+                                    <li><a href="{{route('client.support')}}" class="text-tripcel">Get Help with an eSim</a></li>
+                                    <li><a href="{{route('client.profile')}}" class="text-tripcel">Update my profile and settings</a></li>
+                                    <li><a href="{{route('esim.index', auth()->user()->id)}}" class="text-tripcel">Order a New eSim</a></li>
+                                </span>
+                            </div>
                         </div>
-                        </div>
-                        <span class="fw-medium d-block mb-1 d-fl">Total eSims</span>
-                        @if($totalEsims == 0)
-                            <a href="#"><h3 class="card-title mb-2">0</h3></a>
-                        @else
-                            <a href="{{route('esim.index',['userId'=> 1])}}"><h3 class="card-title mb-2">{{$totalEsims}}</h3></a>
-                        @endif
-                    </div>
                 </div>
+                
+            </div>
+                
         </div>
-        <div class="col-12 col-md-12 col-lg-6 col-sm-12 order-3 order-md-2">
+        <div class="col-12 col-md-12 col-lg-4 col-sm-12 order-3 order-md-2">
             <div class="row">
             <div class="col-12 mb-4">
                 <div class="card">
@@ -61,6 +59,29 @@
                     </div>
                     <span class="d-block mb-1">Data balance</span>
                     <h6 class="card-title text-nowrap mb-1"><a href="{{route('esim.index',['userId'=> auth()->user()->id])}}">Click here</a></h6>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4 col-sm-12 order-3 order-md-2">
+            <div class="row">
+            <div class="col-12 mb-4">
+                <div class="card">
+                <div class="card-body">
+                    <div class="card-title d-flex align-items-start justify-content-between">
+                    <div class="avatar flex-shrink-0">
+                        <img src={{asset("assets/images/icons/unicons/chart-success.png")}} alt="Credit Card" class="rounded" />
+                    </div>
+                    </div>
+                    <span class="d-block mb-1">Total eSims</span>
+                    <h6 class="card-title text-nowrap mb-1">
+                        @if($totalEsims == 0)
+                                    <a href="#"><h3 class="card-title mb-2">0</h3></a>
+                                @else
+                                    <a href="{{route('esim.index',['userId'=> 1])}}"><h3 class="card-title mb-2">{{$totalEsims}}</h3></a>
+                                @endif
+                    </h6>
                 </div>
                 </div>
             </div>
