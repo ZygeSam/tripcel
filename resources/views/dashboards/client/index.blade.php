@@ -165,7 +165,7 @@
                                     <div class="me-2">
                                         <h5 class="mb-0 text-dark">{{$transaction->esim['eSimCountryName']}}: {{$transaction->esim['esimIccid']}}</h5>
                                         <small class="text-dark">{{$transaction->eSimPlanName}} </small> <br>
-                                        <small class="fw-medium text-dark">Expiry: {{$transaction->dataEndTime}}</small>
+                                        <small class="fw-medium text-dark">Expiry: @formatDateWithoutTime($transaction->dataEndTime)</small>
                                     </div>
                                     </div>
                                 </li>

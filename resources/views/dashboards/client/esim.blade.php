@@ -25,7 +25,7 @@
 </div>
 
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="py-3 mb-4"><span class="text-muted fw-light"><a href="{{route('client.index')}}">Dashboard/</a></span> Esim</h4>
+        <h4 class="py-3 mb-4"><span class="text-muted fw-light"><a href="{{route('client.index')}}">Dashboard/</a></span> eSIM</h4>
 
         <!-- Basic Layout -->
         <div class="row mb-4">

@@ -24,7 +24,7 @@
       <li class="menu-item @if (request()->fullUrl() == route('esim.index',['userId'=> auth()->user()->id])) active open @endif">
         <a href="{{route('esim.index',['userId'=> auth()->user()->id])}}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
-          <div data-i18n="Dashboards">My eSIM</div>
+          <div data-i18n="Dashboards">My eSIMs</div>
         </a>
       </li>
       <!-- Profile Nav -->
