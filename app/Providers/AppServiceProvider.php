@@ -23,5 +23,9 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('convertToGig', function ($bytes) {
             return "<?php echo $bytes ?>";
         });
+
+        Blade::directive('formatDateWithoutTime', function ($expression) {
+            return "<?php echo date('Y-m-d', strtotime($expression)); ?>";
+        });
     }
 }
