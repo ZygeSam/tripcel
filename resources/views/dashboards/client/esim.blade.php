@@ -142,7 +142,6 @@
                         <thead>
                             <tr>
                             <th>Data</th>
-                            <th>Expiry Time</th>
                             
                             </tr>
                         </thead>
@@ -166,8 +165,9 @@
                                                     $unit1 = isset($units[$factor1]) ? $units[$factor1] : 'B';
                                                 @endphp
                                                 {{sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . ' ' . $unit}}</span> - {{sprintf("%.{$decimals}f", $bytes / pow(1024, $factor1)) . ' ' . $unit1}}
+                                                <br>
+                                                <b>EXPIRY DATE:</b> @formatDateWithoutTime($plan['end_time'])
                                         </td>
-                                        <td>@formatDateWithoutTime($plan['end_time'])</td>
                                     </tr>
                                 @endforeach
                             @else
