@@ -11,9 +11,8 @@
                     <p class="mb-4">
                     You have to explore the world today. There's still more to be done with your Tripcel ESim
                     </p>
-                    <a href="{{route('esim.index',['userId'=> auth()->user()->id])}}" class="btn btn-sm btn-outline-tripcel">View Esim</a>
+                    <a href="{{route('esim.index',['userId'=> auth()->user()->id])}}" class="btn btn-sm btn-outline-tripcel">View eSim</a>
                     <a href="{{route('home')}}" target="_blank" class="btn btn-sm btn-outline-tripcel">Go to Homepage</a>
-                    {{-- <button type="button" data-bs-toggle="modal" data-bs-target="#modalCenter" class="btn btn-sm btn-outline-tripcel">Send SMS</buttona> --}}
                 </div>
                 </div>
                 
@@ -31,44 +30,24 @@
             </div>
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 order-1 ">
-            <div class="row">
-            <div class="col-lg-6 col-md-12 col-12 mb-4">
                 <div class="card">
-                <div class="card-body">
-                    <div class="card-title d-flex align-items-start justify-content-between">
-                    <div class="avatar flex-shrink-0">
-                        <img
-                        src={{asset("assets/images/icons/unicons/chart-success.png")}}
-                        alt="chart success"
-                        class="rounded" />
+                    <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="avatar flex-shrink-0">
+                            <img
+                            src={{asset("assets/images/icons/unicons/chart-success.png")}}
+                            alt="chart success"
+                            class="rounded" />
+                        </div>
+                        </div>
+                        <span class="fw-medium d-block mb-1 d-fl">Total eSims</span>
+                        @if($totalEsims == 0)
+                            <a href="#"><h3 class="card-title mb-2">0</h3></a>
+                        @else
+                            <a href="{{route('esim.index',['userId'=> 1])}}"><h3 class="card-title mb-2">{{$totalEsims}}</h3></a>
+                        @endif
                     </div>
-                    </div>
-                    <span class="fw-medium d-block mb-1 d-fl">Total ESIm</span>
-                    @if($totalEsims == 0)
-                        <a href="#"><h3 class="card-title mb-2">0</h3></a>
-                    @else
-                        <a href="{{route('esim.index',['userId'=> 1])}}"><h3 class="card-title mb-2">{{$totalEsims}}</h3></a>
-                    @endif
                 </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-12 mb-4">
-                <div class="card">
-                <div class="card-body">
-                    <div class="card-title d-flex align-items-start justify-content-between">
-                    <div class="avatar flex-shrink-0">
-                        <img
-                        src={{asset("assets/images/icons/unicons/wallet-info.png")}}
-                        alt="Credit Card"
-                        class="rounded" />
-                    </div>
-                    </div>
-                    <span>SMS and Credit Balance</span>
-                    <h6 class="card-title text-nowrap mb-1"><a href="{{route('esim.index',['userId'=> 1])}}">Click here</a></h6>
-                </div>
-                </div>
-            </div>
-            </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 col-sm-12 order-3 order-md-2">
             <div class="row">
@@ -94,7 +73,7 @@
             <div class="card h-100">
             <div class="card-header d-flex align-items-center justify-content-between pb-0">
                 <div class="card-title mb-0">
-                <h5 class="m-0 me-2">Esim List</h5>
+                <h4 class="m-0 me-2">eSim List</h4>
                 </div>
                 <div class="dropdown">
                 <a
@@ -120,8 +99,8 @@
                                 </div>
                                 <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                 <div class="me-2">
-                                    <h6 class="mb-0">{{$esim['eSimCountryName']}}: {{$esim['esimIccid']}}</h6>
-                                    <small class="text-tripcel">Date Assigned:{{$esim['eSimDateAssigned']}}</small>
+                                    <h5 class="mb-0 text-dark">{{$esim['eSimCountryName']}}: {{$esim['esimIccid']}}</h5>
+                                    <small class="text-dark">Date Assigned:{{$esim['eSimDateAssigned']}}</small>
                                 </div>
                                 </div>
                             </li>
@@ -139,7 +118,7 @@
         <div class="col-md-6 col-lg-6 col-xl-6 order-2 mb-4">
             <div class="card h-100">
             <div class="card-header d-flex align-items-center justify-content-between">
-                <h5 class="card-title m-0 me-2">ESim Transactions</h5>
+                <h5 class="card-title m-0 me-2">eSim Transactions</h5>
                 <div class="dropdown">
                 <a
                 href="{{route('esim.index',['userId'=> 1])}}"
@@ -163,8 +142,8 @@
                                     </div>
                                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                     <div class="me-2">
-                                        <h6 class="mb-0">{{$transaction->esim['eSimCountryName']}}: {{$transaction->esim['esimIccid']}}</h6>
-                                        <small class="text-tripcel">{{$transaction->eSimPlanName}} </small>
+                                        <h5 class="mb-0 text-dark">{{$transaction->esim['eSimCountryName']}}: {{$transaction->esim['esimIccid']}}</h5>
+                                        <small class="text-dark">{{$transaction->eSimPlanName}} </small>
                                     </div>
                                     <div class="user-progress">
                                         <small class="fw-medium">Expiry: {{$transaction->dataEndTime}}</small>

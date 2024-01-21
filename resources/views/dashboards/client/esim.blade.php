@@ -115,7 +115,7 @@
                                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                             <div class="me-2">
                                                 <h6 class="mb-0">{{$esim['eSimCountryName']}}: {{$esim['esimIccid']}}</h6>
-                                                <small class="text-dark"><b>Status: </b>{{$esim['eSimNetworkStatus']}}</small>
+                                                <small class="text-dark"><b>Status: </b>{{$esim['eSimNetworkStatus'] == "ENABLED" ? "ACTIVE" : "NOT ACTIVE" }}</small>
                                                 <small class="text-tripcel">{{$esim['created_at']}}</small>
                                             </div>
                                         </a>
@@ -142,7 +142,7 @@
                         <thead>
                             <tr>
                             <th>Data</th>
-                            <th>Expury Time</th>
+                            <th>Expiry Time</th>
                             
                             </tr>
                         </thead>
@@ -167,7 +167,7 @@
                                                 @endphp
                                                 {{sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . ' ' . $unit}}</span> - {{sprintf("%.{$decimals}f", $bytes / pow(1024, $factor1)) . ' ' . $unit1}}
                                         </td>
-                                        <td>{{$plan['end_time']}}</td>
+                                        <td>@formatDateWithoutTime($plan['end_time'])</td>
                                     </tr>
                                 @endforeach
                             @else
@@ -197,7 +197,10 @@
             success: function(response) {
                 if (response == 1) {
                     // Update the button text to "Added"
-                    $(buttonElement).text('Added');
+                    $(buttonElement).text('Added').css({
+                        'background-color': 'green',
+                        'color': 'white'
+                    });
                     // You can also disable the button or perform other actions as needed
                     $(buttonElement).prop('disabled', true);
                 } else {
