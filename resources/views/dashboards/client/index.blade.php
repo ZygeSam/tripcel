@@ -164,7 +164,9 @@
                                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                     <div class="me-2">
                                         <h5 class="mb-0 text-dark">{{$transaction->esim['eSimCountryName']}}: {{$transaction->esim['esimIccid']}}</h5>
-                                        <small class="text-dark">{{$transaction->eSimPlanName}} </small><br>
+                                        <small class="text-dark">{{$transaction->eSimPlanName}} </small>
+                                    </div>
+                                    <div class="user-progress">
                                         <small class="fw-medium">Expiry: {{$transaction->dataEndTime}}</small>
                                     </div>
                                     </div>
