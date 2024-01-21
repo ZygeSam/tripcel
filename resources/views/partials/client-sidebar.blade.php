@@ -15,26 +15,26 @@
 
     <ul class="menu-inner py-1">
       <!-- Homepage / Esim Nav -->
-      <li class="menu-item active open">
+      <li class="menu-item @if (request()->fullUrl() == route('client.index')) active open @endif">
         <a href="{{route('client.index')}}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Dashboards">Dashboard</div>
         </a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item @if (request()->fullUrl() == route('esim.index',['userId'=> auth()->user()->id])) active open @endif">
         <a href="{{route('esim.index',['userId'=> auth()->user()->id])}}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Dashboards">My eSim</div>
         </a>
       </li>
       <!-- Profile Nav -->
-      <li class="menu-item">
+      <li class="menu-item @if (request()->fullUrl() == route('client.profile')) active open @endif">
         <a href="#" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>
           <div data-i18n="Account Settings">Account Settings</div>
         </a>
         <ul class="menu-sub">
-          <li class="menu-item">
+          <li class="menu-item @if (request()->fullUrl() == route('client.profile')) active open @endif">
             <a href="{{route('client.profile')}}" class="menu-link">
               <div data-i18n="Account">My Profile</div>
             </a>
