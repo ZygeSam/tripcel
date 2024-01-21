@@ -118,7 +118,7 @@
                                             <div class="me-2">
                                                 <h6 class="mb-0">{{$esim['eSimCountryName']}}: {{$esim['esimIccid']}}</h6>
                                                 <small class="text-dark"><b>Status: </b>{{$esim['eSimNetworkStatus'] == "ENABLED" ? "ACTIVE" : "NOT ACTIVE" }}</small>
-                                                <small class="text-tripcel">{{$esim['created_at']}}</small>
+                                                <small class="text-tripcel">@formatDateWithoutTime($esim['created_at'])</small>
                                             </div>
                                         </a>
                                         <div class="user-progress">
