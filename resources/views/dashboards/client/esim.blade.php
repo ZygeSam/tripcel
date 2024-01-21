@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 @section('content')
-<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
         <div class="modal-header">
@@ -11,8 +11,10 @@
             data-bs-dismiss="modal"
             aria-label="Close"></button>
         </div>
-            <div class="modal-body">
-                    
+            <div class="modal-body" style="max-height: calc(100vh - 200px); overflow-y: auto;">
+                <div class="row justify-content-center text-center">
+                   <p class="text-center">{{session()->get('message')}}</p> 
+                </div>
             </div>
             <div class="modal-footer">
                 
@@ -31,7 +33,7 @@
                 <div class="card mb-2 h-100">
                     <div class="card-header d-flex justify-content-between align-items-center">
                                 <!-- Modal -->
-                                <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
+                                <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                     <div class="modal-header">
@@ -99,7 +101,7 @@
                                     </script>
                                     {{session()->forget('message')}}
                                 @endif
-                        <h5 class="mb-0">ESim List</h5>  <a type="button" data-bs-toggle="modal" data-bs-target="#modalCenter" class="text-tripcel">Add New Esim</a>
+                        <h5 class="mb-0">eSIM List</h5>  <a type="button" data-bs-toggle="modal" data-bs-target="#modalCenter" class="text-tripcel">Add New eSIM</a>
                     </div>
                     <div class="card-body overflow-auto ">
                         <ul class="p-0 m-0">
@@ -243,12 +245,12 @@ $(document).ready(function() {
                 });
 
                 // Add the checkout link to the modal content string
-                modalContent += '<div class="row justify-content-end"><a class="btn btn-primary" href="{{ route("esim.checkout") }}">Checkout</a></div>';
+                modalContent += '<div class="row justify-content-end fixed-bottom p-3" ><a class="btn btn-primary" href="{{ route("esim.checkout") }}">Checkout</a></div>';
 
                 // Set the modal body content with the concatenated string
                 $('#successModal .modal-body').html(modalContent);
 
-                $('#modalCenterTitle').text('Recharge Esim');
+                $('#modalCenterTitle').text('Recharge eSIM');
                 $('#successModal').modal('show');
 
                 // Event handler for the dynamically added "Add to Cart" buttons

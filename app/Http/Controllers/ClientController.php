@@ -144,7 +144,7 @@ class ClientController extends Controller
     public function topUp(Request $request)
     {
         $selectedEsim = Esim::with('transactions')->where('eSimCountryName', $request->query('country'))->first();
-        return $products = $this->getAllProducts($selectedEsim->eSimCountryIso3);
+        return $this->getAllProducts($selectedEsim->eSimCountryIso3);
     }
 
     public function showCart(){
