@@ -136,31 +136,29 @@ class EsimProductController extends Controller
             }
             
         })->map(function($product) use($price){
-            $product['price_usd'] = ceil(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
-            $product['data_quota_mb']=ceil($product['data_quota_mb']/1024);
+            $product['price_usd'] = round(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
+            $product['data_quota_mb']=round($product['data_quota_mb']/1024);
             return $product;
         })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
     }
     public function getProductDays($country, $days=5, $unlimited = false, $unlimitedPlan='Unlimited LITE'){
-        $price = $this->pricing->filter(function($productPrice) use ($country){
-            return $productPrice['ISO3'] === $country;
-        })->values()->all();
+        $price = $this->pricing->firstWhere('ISO3', $country);
         
         return $this->products->filter(function ($product) use ($country, $unlimited, $days, $unlimitedPlan) {
             if($product['validity_days'] === $days){
                 return in_array($country, $product['countries_enabled']);
             }
         })->map(function($product) use($price){
-            $product['price_usd'] = ceil(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
-            $product['data_quota_mb']=ceil($product['data_quota_mb']/1024);
+            $product['price_usd'] = round(($price['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price['CommPerDay']) + $price['FlatComm']);
+            $product['data_quota_mb']=round($product['data_quota_mb']/1024);
             return $product;
         })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
     }
 
     public function checkPrice($array, $price){
         return $array->map(function($product) use($price){
-            $product['price_usd'] = ceil(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
-            $product['data_quota_mb'] = ceil($product['data_quota_mb']/1024);
+            $product['price_usd'] = round(($price['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price['CommPerDay']) + $price['FlatComm']);
+            $product['data_quota_mb'] = round($product['data_quota_mb']/1024);
             return $product;
         })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
     }
