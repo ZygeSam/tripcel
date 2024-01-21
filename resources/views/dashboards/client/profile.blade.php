@@ -109,4 +109,6 @@
         </div>
         </div>
     </div>
+    @include('partials.addon')
+    
 @endsection
