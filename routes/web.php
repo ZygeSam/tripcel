@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EsimController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\CronController;
 use App\Http\Controllers\EsimProductController;
 use App\Http\Controllers\NetworkController;
 /*
@@ -34,6 +35,8 @@ Route::get('/products', [EsimProductController::class, 'index']);
 Route::get('/products/{esimProduct}', [EsimProductController::class, 'show']);
 Route::post('/networks', [NetworkController::class, 'getCountryNetwork'])->name('countryNetwork');
 Route::get('/networks/{country?}', [NetworkController::class, 'getNetworkByCountry'])->name('countryCoverage');
+
+Route::get('/getPlans', [CronController::class, 'getEsimPlans'])->name('esimPlans');
 
 Route::get('/faq', function () {
     return view('pages.faq');
