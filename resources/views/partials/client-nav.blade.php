@@ -17,7 +17,6 @@
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
                       <i class='bx bxs-user-circle fs-1'></i>
-                      {{-- <img src={{asset("assets/images/avatars/1.png")}} alt class="w-px-40 h-auto rounded-circle" /> --}}
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">

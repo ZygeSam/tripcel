@@ -11,7 +11,7 @@
                     <p class="mb-4">
                     You have to explore the world today. There's still more to be done with your Tripcel eSIM
                     </p>
-                    <a href="{{route('esim.index',['userId'=> auth()->user()->id])}}" class="btn btn-sm btn-outline-tripcel">View eSIM</a>
+                    <a href="{{route('esim.index',['userId'=> auth()->user()->id])}}" class="btn btn-sm btn-outline-tripcel">View eSIMs</a>
                     <a href="{{route('home')}}" target="_blank" class="btn btn-sm btn-outline-tripcel">Go to Homepage</a>
                 </div>
                 </div>
@@ -42,7 +42,7 @@
                                 </span>
                             </div>
                         </div>
-                </div>
+                    </div>
                 
             </div>
                 
@@ -57,7 +57,7 @@
                         <img src={{asset("assets/images/icons/unicons/paypal.png")}} alt="Credit Card" class="rounded" />
                     </div>
                     </div>
-                    <span class="d-block mb-1">Data balance</span>
+                    <span class="d-block mb-1">Check Data balance</span>
                     <h6 class="card-title text-nowrap mb-1"><a href="{{route('esim.index',['userId'=> auth()->user()->id])}}">Click here</a></h6>
                 </div>
                 </div>
@@ -121,7 +121,7 @@
                                 <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                 <div class="me-2">
                                     <h5 class="mb-0 text-dark">{{$esim['eSimCountryName']}}: {{$esim['esimIccid']}}</h5>
-                                    <small class="text-dark">Date Assigned:{{$esim['eSimDateAssigned']}}</small>
+                                    <small class="text-dark">Date Assigned: @formatDateWithoutTime($esim['eSimDateAssigned'])</small>
                                 </div>
                                 </div>
                             </li>
@@ -164,10 +164,8 @@
                                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                     <div class="me-2">
                                         <h5 class="mb-0 text-dark">{{$transaction->esim['eSimCountryName']}}: {{$transaction->esim['esimIccid']}}</h5>
-                                        <small class="text-dark">{{$transaction->eSimPlanName}} </small>
-                                    </div>
-                                    <div class="user-progress">
-                                        <small class="fw-medium">Expiry: {{$transaction->dataEndTime}}</small>
+                                        <small class="text-dark">{{$transaction->eSimPlanName}} </small> <br>
+                                        <small class="fw-medium text-dark">Expiry: {{$transaction->dataEndTime}}</small>
                                     </div>
                                     </div>
                                 </li>
