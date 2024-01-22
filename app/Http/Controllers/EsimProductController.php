@@ -291,13 +291,13 @@ class EsimProductController extends Controller
     }
 
     public function webhook(Request $request){
+        return $request;
         // Parse the event (which is a JSON string) as an object
         $event = json_decode($request->getContent());
-        return $event;
         // Do something with $event
         // For example: process the Paystack event, update database, etc.
 
-        return response()->json(['status' => 'success']);
+        return response()->json(['status' => 'success', 'event'=> $event], 200);
     }
 
     public function verifyEmail($email, $gateway){
