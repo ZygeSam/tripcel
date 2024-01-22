@@ -286,17 +286,43 @@ class EsimProductController extends Controller
         $data['currency'] = "USD";
         $data['transaction_id'] = "TRC".strtotime('now');
         $data['description'] = $this->productDescription(session()->get('cart'));
-        $data['redirect_url'] = route('confirmPayment', ['transactionId'=> $data['transaction_id'], 'gateway' => $data['payment_gateway'], 'email'=>$data['email']]);
+        // $data['redirect_url'] = route('paystackWebHook');
+        // $data['redirect_url'] = route('confirmPayment', ['transactionId'=> $data['transaction_id'], 'gateway' => $data['payment_gateway'], 'email'=>$data['email']]);
         return $response = $this->paymentProcessor->checkHandler($data['payment_gateway'])->initialize($data);
     }
 
     public function webhook(Request $request){
-        // Parse the event (which is a JSON string) as an object
-        $event = json_decode($request->getContent());
-        // Do something with $event
-        // For example: process the Paystack event, update database, etc.
+        if ($request->getMethod() !== 'POST' || !$request->hasHeader('X-Paystack-Signature')) {
+            abort(403, 'Invalid request');
+        }
 
-        return response()->json(['status' => 'success', 'event'=> $event], 200);
+
+        $input = @file_get_contents("php://input");
+        define('PAYSTACK_SECRET_KEY',config('payment.paystack.paystack_secret_key'));
+
+        if ($request->header('X-Paystack-Signature') !== hash_hmac('sha512', $input, PAYSTACK_SECRET_KEY)) {
+            abort(403, 'Invalid Paystack signature');
+        }
+        http_response_code(200);
+
+        $event = json_decode($input);
+        if($event && isset($event->event)){
+            $email = $event->data->customer->email;
+            if($event->event === "charge.success"){
+                $filename = "paystack_payment_success".time().'txt';
+                $details = "payment successful". PHP_EOL;
+
+                foreach($event as $key=>$value){
+                    if(is_object($value) ||  is_array($value)){
+                        $value = json_encode($value, JSON_PRETTY_PRINT);
+                    }
+                    $details .= "$key : $value".PHP_EOL; 
+                }
+                fille_put_contents($filename, $details);
+            }
+        }
+        
+        // return response()->json(['status' => 'success', 'event'=> $event], 200);
     }
 
     public function verifyEmail($email, $gateway){
