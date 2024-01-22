@@ -313,7 +313,7 @@ class EsimProductController extends Controller
         if($event && isset($event->event)){
             $email = $event->data->customer->email;
             if($event->event === "charge.success"){
-                $filename = "paystack_payment_success".time().'txt';
+                $filename = "paystack_payment_success".time().'.txt';
                 $details = "payment successful". PHP_EOL;
 
                 foreach($event as $key=>$value){
