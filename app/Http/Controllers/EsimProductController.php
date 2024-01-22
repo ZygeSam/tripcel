@@ -194,16 +194,13 @@ class EsimProductController extends Controller
      */
     public function show($esimProduct, $country)
     {
-        $price = $this->pricing->filter(function($productPrice) use ($country){
-            $country = $this->countries->where('country_name', $country)->first();
-            return $productPrice['ISO3'] === $country['country_iso3'];
-        })->values()->all();
+        $price = $this->pricing->firstWhere('Region', $country);
 
         $products = $this->products->filter(function($product) use ($esimProduct){
             return $product['uid'] === $esimProduct;
         })->values();
 
-        return $product = $this->checkPrice($products, $price);
+        return $this->checkPrice($products, $price);
     }
 
     public function showCart(){
@@ -291,6 +288,16 @@ class EsimProductController extends Controller
         $data['description'] = $this->productDescription(session()->get('cart'));
         $data['redirect_url'] = route('confirmPayment', ['transactionId'=> $data['transaction_id'], 'gateway' => $data['payment_gateway'], 'email'=>$data['email']]);
         return $response = $this->paymentProcessor->checkHandler($data['payment_gateway'])->initialize($data);
+    }
+
+    public function webhook(){
+        // Parse the event (which is a JSON string) as an object
+        $event = json_decode($request->getContent());
+        return $event;
+        // Do something with $event
+        // For example: process the Paystack event, update database, etc.
+
+        return response()->json(['status' => 'success']);
     }
 
     public function verifyEmail($email, $gateway){
