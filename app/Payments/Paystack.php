@@ -57,7 +57,7 @@ class Paystack
             "amount" => $body['amount'] * 100,
             "currency" => $body['currency'],
             "ref" => $body['transaction_id'],
-            // "callback_url" => $body['redirect_url'],
+            "callback_url" => $body['redirect_url'],
         ];
 
         if ($response = $this->curl($this->header, $url, json_encode($data))) {
