@@ -291,7 +291,6 @@ class EsimProductController extends Controller
     }
 
     public function webhook(Request $request){
-        return $request;
         // Parse the event (which is a JSON string) as an object
         $event = json_decode($request->getContent());
         // Do something with $event
