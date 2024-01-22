@@ -32,7 +32,7 @@
                                            <td class="product-name" data-title="Product">
                                            <p>Package : {{$product[0]['name']}}</p>
                                            <p>Starting Date: @php  echo date("Y-m-d", strtotime("now"));  @endphp </p> 
-                                           <p> Daily Data: {{$product[0]['data_gb']}}GB</p>
+                                           <p> Daily Data: {{$product[0]['data_quota_mb']}}GB</p>
                                            </td>
                                            <td class="product-price" data-title="Price">
                                            <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol"></span>${{$product[0]['price_usd']}}</bdi></span>						
