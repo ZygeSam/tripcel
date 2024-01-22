@@ -296,6 +296,7 @@ class EsimProductController extends Controller
             $event = json_decode($input);
             // Do something with $event
             http_response_code(200); // PHP 5.4 or greater
+            return $event;
     }
 
     public function verifyEmail($email, $gateway){
