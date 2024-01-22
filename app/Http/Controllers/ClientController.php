@@ -170,9 +170,12 @@ class ClientController extends Controller
         }
     }
 
-    public function checkPrice($array, $price){
-        return $array->map(function($product) use($price){
-            $product['price_usd'] = round(($price[0]['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price[0]['CommPerDay']) + $price[0]['FlatComm']);
+    public function checkPrice($array, $price, $country){
+        return $array->map(function($product) use($price, $country){
+            $product['country_name'] = $country['country_name'];
+            $product['country_iso3'] = $country['country_iso3'];
+            $product['country_iso2'] = $country['country_iso2'];
+            $product['price_usd'] = round(($price['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price['CommPerDay']) + $price['FlatComm']);
             $product['data_quota_mb'] = round($product['data_quota_mb']/1024);
             return $product;
         })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
@@ -180,21 +183,18 @@ class ClientController extends Controller
 
     public function show($esimProduct, $country)
     {
-        $price = $this->pricing->filter(function($productPrice) use ($country){
-            $country = $this->countries->where('country_name', $country)->first();
-            return $productPrice['ISO3'] === $country['country_iso3'];
-        })->values()->all();
-
+        $price = $this->pricing->firstWhere('Region', $country);
+        $country = $this->countries->firstWhere('country_name', $country);
         $products = $this->products->filter(function($product) use ($esimProduct){
             return $product['uid'] === $esimProduct;
         })->values();
 
-        return $product = $this->checkPrice($products, $price);
+        return $product = $this->checkPrice($products, $price, $country);
     }
 
     public function addToCartModal(Request $request){
         $cart = session()->get('cart');
-        $cart['products'][]= $this->show($request->query('esimProduct'), $request->query('country') );;
+        $cart['products'][]= $this->show($request->query('esimProduct'), $request->query('country'));
         session()->put('cart', $cart);
         $totalPrice = $this->cartTotal(($cart));
         return true;
@@ -267,12 +267,44 @@ class ClientController extends Controller
         });
     }
 
+    public function webhook(Request $request){
+        if ($request->getMethod() !== 'POST' || !$request->hasHeader('X-Paystack-Signature')) {
+            abort(403, 'Invalid request');
+        }
+
+
+        $input = file_get_contents("php://input");
+        
+        define('PAYSTACK_SECRET_KEY',config('payment.paystack.paystack_secret_key'));
+
+        if ($request->header('X-Paystack-Signature') !== hash_hmac('sha512', $input, PAYSTACK_SECRET_KEY)) {
+            abort(403, 'Invalid Paystack signature');
+        }
+        http_response_code(200);
+
+        $event = json_decode($input);
+        if($event && isset($event->event)){
+            $email = $event->data->customer->email;
+            if($event->event === "charge.success"){
+                $filename = "paystack_payment_success".time().'txt';
+                $details = "payment successful". PHP_EOL;
+
+                foreach($event as $key=>$value){
+                    if(is_object($value) ||  is_array($value)){
+                        $value = json_encode($value, JSON_PRETTY_PRINT);
+                    }
+                    $details .= "$key : $value".PHP_EOL; 
+                }
+                file_put_contents($filename, $details);
+            }
+        }
+    }
+
     public function confirmPay($gateway, $transactionId){
         $cartedProducts = session()->get('cart');
         $response = $this->paymentProcessor->checkHandler($gateway)->verify_transaction();
         if($response['status'] == true){
             $user = auth()->user();
-           
             // return $cartedProducts;
                 foreach($cartedProducts['products'] as $key=> $prod){
                         // return $prod;
@@ -281,7 +313,7 @@ class ClientController extends Controller
                         $numberOfDays = $prod[0]['validity_days'];
                         $newDate = date('Y-m-d', strtotime($currentDate . ' + ' . $numberOfDays . ' days'));
 
-                        $esim = Esim::where('esimCountryIso3', $prod[0]['countries_enabled'][0])->first();
+                        $esim = Esim::where('esimCountryIso3', $prod[0]['country_iso3'])->first();
                         $esimOrders[] = [
                             'esimIccid'=>$esim->esimIccid,
                             'transactionId'=>$transactionId,

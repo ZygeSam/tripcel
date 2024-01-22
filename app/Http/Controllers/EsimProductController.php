@@ -155,8 +155,11 @@ class EsimProductController extends Controller
         })->unique('data_quota_mb')->sortBy('data_quota_mb')->values()->all();
     }
 
-    public function checkPrice($array, $price){
-        return $array->map(function($product) use($price){
+    public function checkPrice($array, $price, $country){
+        return $array->map(function($product) use($price, $country){
+            $product['country_name'] = $country['country_name'];
+            $product['country_iso3'] = $country['country_iso3'];
+            $product['country_iso2'] = $country['country_iso2'];
             $product['price_usd'] = round(($price['PricePerMB']*$product['data_quota_mb']) + ($product['validity_days']*$price['CommPerDay']) + $price['FlatComm']);
             $product['data_quota_mb'] = round($product['data_quota_mb']/1024);
             return $product;
@@ -195,12 +198,13 @@ class EsimProductController extends Controller
     public function show($esimProduct, $country)
     {
         $price = $this->pricing->firstWhere('Region', $country);
+        $country = $this->countries->firstWhere('country_name', $country);
 
         $products = $this->products->filter(function($product) use ($esimProduct){
             return $product['uid'] === $esimProduct;
         })->values();
 
-        return $this->checkPrice($products, $price);
+        return $this->checkPrice($products, $price, $country);
     }
 
     public function showCart(){
@@ -286,9 +290,8 @@ class EsimProductController extends Controller
         $data['currency'] = "USD";
         $data['transaction_id'] = "TRC".strtotime('now');
         $data['description'] = $this->productDescription(session()->get('cart'));
-        // $data['redirect_url'] = route('paystackWebHook');
         $data['redirect_url'] = route('confirmPayment', ['transactionId'=> $data['transaction_id'], 'gateway' => $data['payment_gateway'], 'email'=>$data['email']]);
-        return $response = $this->paymentProcessor->checkHandler($data['payment_gateway'])->initialize($data);
+        return $this->paymentProcessor->checkHandler($data['payment_gateway'])->initialize($data);
     }
 
     public function webhook(Request $request){
@@ -297,7 +300,8 @@ class EsimProductController extends Controller
         }
 
 
-        $input = @file_get_contents("php://input");
+        $input = file_get_contents("php://input");
+        
         define('PAYSTACK_SECRET_KEY',config('payment.paystack.paystack_secret_key'));
 
         if ($request->header('X-Paystack-Signature') !== hash_hmac('sha512', $input, PAYSTACK_SECRET_KEY)) {
@@ -318,11 +322,9 @@ class EsimProductController extends Controller
                     }
                     $details .= "$key : $value".PHP_EOL; 
                 }
-                fille_put_contents($filename, $details);
+                file_put_contents($filename, $details);
             }
         }
-        
-        // return response()->json(['status' => 'success', 'event'=> $event], 200);
     }
 
     public function verifyEmail($email, $gateway){
@@ -388,15 +390,25 @@ class EsimProductController extends Controller
                 $eSimOrders = [];
                 $createdSimPlans = [];
                 foreach($cartedProducts['products'] as $key=> $prod){
-                    // return $prod;
 
                     $currentDate = date('Y-m-d');
                     $numberOfDays = $prod[0]['validity_days'];
                     $newDate = date('Y-m-d', strtotime($currentDate . ' + ' . $numberOfDays . ' days'));
-
-                    $esim = Esim::where('esimCountryIso3', $prod[0]['countries_enabled'][0])->first();
+                    $createdSim = $this->esimService->createEsim($prod[0]['country_iso2']);
+                    $esims[] = [
+                        'eSimCountryIso2' => $prod[0]['country_iso2'],
+                        'eSimCountryIso3' => $prod[0]['country_iso3'],
+                        'eSimCountryName' => $prod[0]['country_name'],
+                        'esimIccid' => $createdSim['esim']['iccid'],
+                        "eSimState"=>  $createdSim['esim']['state'],
+                        "eSimManualCode"=> $createdSim['esim']['manual_code'],
+                        "eSimDateAssigned"=> $createdSim['esim']['date_assigned'],
+                        "eSimNetworkStatus"=> $createdSim['esim']['network_status'],
+                        "eSimActivationCode"=> $createdSim['esim']['activation_code'],
+                        "user_id"=> $user['id']
+                       ];
                     $esimOrders[] = [
-                        'esimIccid'=>$esim->esimIccid,
+                        'esimIccid'=>$createdSim['esim']['iccid'],
                         'transactionId'=>$transactionId,
                         'eSimProductId'=>$prod[0]['uid'],
                         'eSimPlanName'=>$prod[0]['name'],
@@ -414,14 +426,23 @@ class EsimProductController extends Controller
                         'status'=> TransactionStatus::DELIVERED,
                         'user_id'=>$user->id
                     ];
-                    $prod[0]['country'] = $esim->eSimCountryName;
-                    $prod[0]['iccid'] = $esim->esimIccid;
+                    $prod[0]['country'] = $prod[0]['country_name'];
+                    $prod[0]['iccid'] = $createdSim['esim']['iccid'];
                     $prod[0]['start_time'] = $currentDate;
                     $prod[0]['end_time'] = $newDate;
                     $prod[0]['network_status'] = "not active";
+
                     $createdSimPlans[] = $prod[0];
+                    // generate qrCode file name
+                   $qrFIleName =  $user['firstName']. $user['lastName'].$key;
+
+                    // generate the qrCodes
+                   $createdProfile[] = $this->generateCodeMessage(
+                    $this->qrCode->generateCode(
+                        $createdSim['esim']['activation_code']), $qrFIleName);
             }
-            $esimOrders = EsimOrders::insert($esimOrders);
+            Esim::insert($esims);
+            EsimOrders::insert($esimOrders);
                     // mail tthe qr codes
                 if($this->mailService->sendPurchaseInfo( $user, 'Thank you for your Purchase, Activate Your ESim', $createdProfile)){
                     $sentMail = $this->mailService->sendDataPurchaseInfo( $user['email'], 'Thank you for your Purchase', $createdSimPlans);

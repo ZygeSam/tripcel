@@ -62,25 +62,25 @@
                      
                         <input type="text" class="input-text" name="address" id="billing_last_name" placeholder="" value="">
             
-                  </p>
+                     </p>
                      <p class="form-row form-row-first validate-required" id="billing_first_name_field">
                      <label>Email&nbsp;<abbr class="required" title="required">*</abbr></label>
                      
-                        <input type="email" class="input-text" name="email" id="billing_first_name" placeholder="" value="">
+                        <input type="email" class="input-text" name="email" id="billing_first_name" placeholder="" value="" required>
                   
-                  </p>
-                  <p class="form-row form-row-last validate-required" id="billing_last_name_field">
-                     <label>Password&nbsp;<abbr class="required" title="required">*</abbr></label>
-                     
-                        <input type="password" class="input-text" name="password" id="billing_last_name" placeholder="" value="">
-            
-                  </p>
-                  <p class="form-row form-row-last validate-required" id="billing_last_name_field">
-                     <label>Confirm Password&nbsp;<abbr class="required" title="required">*</abbr></label>
-                     
-                        <input type="password" class="input-text" name="confirmPassword" id="billing_last_name" placeholder="" value="">
-            
-                  </p>
+                     </p>
+                     <p class="form-row form-row-last validate-required" id="billing_last_name_field">
+                        <label>Password&nbsp;<abbr class="required" title="required">*</abbr></label>
+                        
+                           <input type="password" class="input-text" name="password" id="billing_last_name" placeholder="" value="">
+               
+                     </p>
+                     <p class="form-row form-row-last validate-required" id="billing_last_name_field">
+                        <label>Confirm Password&nbsp;<abbr class="required" title="required">*</abbr></label>
+                        
+                           <input type="password" class="input-text" name="confirmPassword" id="billing_last_name" placeholder="" value="">
+               
+                     </p>
                      <p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field">
                         <label>Phone&nbsp;<abbr class="required" title="required">*</abbr></label>
             
@@ -120,22 +120,6 @@
                         @endforelse
                    </tbody>
                    <tfoot>
-                      <tr class="cart-subtotal">
-                          <th>Service fee</th>
-                          <td>
-                             <span class="woocommerce-Price-amount amount">
-                                <bdi><span class="woocommerce-Price-currencySymbol">$</span>0.00</bdi>
-                             </span>
-                          </td>
-                       </tr>
-                       <tr class="cart-subtotal">
-                          <th>Tax</th>
-                          <td>
-                             <span class="woocommerce-Price-amount amount">
-                                <bdi><span class="woocommerce-Price-currencySymbol">$</span>0.00</bdi>
-                             </span>
-                          </td>
-                       </tr>
                       <tr class="order-total">
                          <th>Total</th>
                          <td>

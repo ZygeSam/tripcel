@@ -9,7 +9,6 @@
                         <tr>
                         <th>Product</th>
                         <th>Price</th>
-                        
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
