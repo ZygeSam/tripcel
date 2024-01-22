@@ -37,7 +37,7 @@ Route::post('/networks', [NetworkController::class, 'getCountryNetwork'])->name(
 Route::get('/networks/{country?}', [NetworkController::class, 'getNetworkByCountry'])->name('countryCoverage');
 
 Route::get('/getPlans', [CronController::class, 'getEsimPlans'])->name('esimPlans');
-Route::post('/paystack-webhook', EsimProductController::class, 'webhook')->middleware('paystack.signature');
+Route::post('/paystack-webhook', [EsimProductController::class, 'webhook'])->middleware('paystack.signature');
 
 Route::get('/faq', function () {
     return view('pages.faq');
