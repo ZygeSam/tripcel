@@ -287,7 +287,7 @@ class EsimProductController extends Controller
         $data['transaction_id'] = "TRC".strtotime('now');
         $data['description'] = $this->productDescription(session()->get('cart'));
         // $data['redirect_url'] = route('paystackWebHook');
-        // $data['redirect_url'] = route('confirmPayment', ['transactionId'=> $data['transaction_id'], 'gateway' => $data['payment_gateway'], 'email'=>$data['email']]);
+        $data['redirect_url'] = route('confirmPayment', ['transactionId'=> $data['transaction_id'], 'gateway' => $data['payment_gateway'], 'email'=>$data['email']]);
         return $response = $this->paymentProcessor->checkHandler($data['payment_gateway'])->initialize($data);
     }
 
