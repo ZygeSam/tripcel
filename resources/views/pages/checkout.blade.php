@@ -180,6 +180,7 @@
                     $('#preloader').show();
                     $('#sendOtp').on('click', function (event) {
                         $(this).hide();
+                        $('#otpMessage').text("Sending OTP ...");
                         event.preventDefault();
                         $.ajax({
                             url: '{{route("verifyEmail")}}', // Replace with your backend endpoint for email verification
@@ -187,7 +188,7 @@
                             data: { email: email },
                             success: function (response) {
                             $('#preloader').hide();
-                            $('#otpMessage').text("Check your mail for your otp");
+                            $('#otpMessage').text("Otp Sent! Check your mail");
                                 if (response.message == "success") {
                                     $('#sendOtp').text("Resend OTP");
                                     $('#sendOtp').show();

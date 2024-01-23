@@ -33,7 +33,7 @@ class StoreEsimBuyerRequest extends FormRequest
             'email' => 'required|email',
             'address'=> 'required',
             'phone'=> 'required',
-            'password' => 'required', "min:6", "confirmed",
+            'password' => ['required', 'string', 'min:8', 'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/'],
             'confirmPassword' => 'required|same:password',
             'payment_gateway'=>'required'
         ];
@@ -49,8 +49,11 @@ class StoreEsimBuyerRequest extends FormRequest
             'email' => 'The email field is required and it should be an email',
             'address'=> 'The address field is required',
             'phone'=> 'The phone field is required',
-            'password' => 'The password field is required',
-            'confirmPassword' => 'The confirm password field is required and should be the same as the password',
+            'password.required' => 'The password field is required.',
+            'password.min' => 'The password must be at least 8 characters long.',
+            'password.regex' => 'The password must contain at least one uppercase letter, one lowercase letter, and one number.',
+            'confirmPassword.required' => 'The confirm password field is required.',
+            'confirmPassword.same' => 'The password and confirm password must match.',
             'payment_gateway'=>'The payment gateway field is required'
         ];
     }
