@@ -327,11 +327,15 @@ class EsimProductController extends Controller
         }
     }
 
-    public function verifyEmail($email, $gateway){
-        $user = User::where('email', $email)->update(['email_verified_at'=> now()]);
-        $data =  User::where('email', $email)->first();
-        $data['payment_gateway'] = $gateway;
-        return redirect()->to($this->makeTransaction($data));
+    public function verifyEmail(Request $request){
+        // Generate otp
+        $otp = rand(100000, 999999);
+        $sentMail = $this->mailService->sendEmailVerification( $request->email, $otp);
+        if($sentMail == true){
+            return ['message' => 'success', 'otp' => $otp];
+        }else{
+            return false;
+        }
     }
 
     public function buyProduct(StoreEsimBuyerRequest $request){
@@ -345,26 +349,11 @@ class EsimProductController extends Controller
         $user_exists = User::where('email', $request['email'])->exists();
         if ($user_exists) {
             $data = User::where('email', $request['email'])->first();
-            if( User::whereNotNull('email_verified_at')->exists() == false){
-                $verifyEmailUrl = $this->emailVerificationLink($data->email, $request['payment_gateway']);
-                $sentMail = $this->mailService->sendEmailVerification($data->email, $verifyEmailUrl);
-                if($sentMail){
-                    $message = "Kindly Check your inbox to verify your email and proceed to continue purchase";
-                }
-                return back()->with('message', $message);
-            }else{
-                $data['payment_gateway'] = $request['payment_gateway'];
-                return redirect()->to($this->makeTransaction($data));
-            }
         }else{
             $data =  User::create($request->all());
-            $verifyEmailUrl = $this->emailVerificationLink($user->email, $request['payment_gateway']);
-            $sentMail = $this->mailService->sendEmailVerification($data->email, $verifyEmailUrl);
-            if($sentMail){
-                $message = "Kindly Check your inbox to verify your email and proceed to continue purchase";
-            }
-            return back()->with('message', $message);
         }
+        $data['payment_gateway'] = $request['payment_gateway'];
+        return redirect()->to($this->makeTransaction($data));
     }
 
     public function emailVerificationLink($email,  $gateway){

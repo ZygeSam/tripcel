@@ -64,14 +64,21 @@ class MailService
 
     public function sendEmailVerification($email, $message)
     {
-        $mailData = [
-            'message' => $message,
-        ];
-        $mail = Mail::to($email)->send(new VerifyEmail($mailData));
-        if($mail){
-            return true;
-        }else{
-            return false;
+        try {
+            $mailData = [
+                'message' => $message,
+            ];
+            $mail = Mail::to($email)->send(new VerifyEmail($mailData));
+    
+            if ($mail) {
+                return true; // Email sent successfully
+            } else {
+                return false; // Email sending failed
+            }
+        } catch (\Exception $e) {
+            // Log the error
+            \Log::error('Email sending failed: ' . $e->getMessage());
+            return false; // Return false to indicate that the email sending failed
         }
     }
 
