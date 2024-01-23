@@ -69,6 +69,7 @@
                         
                            <input type="email" class="input-text" name="email" id="email" placeholder="" value="" required>
                            <input type="text" name="otp" id="otp" data-session-otp="{{ session()->get('otp', '') }}" placeholder="Enter Otp Sent to your mail">
+                           <button name="sendOtp" id="sendOtp" class="theme-btn three mx-2"> <b>Send Otp</b></button> 
                            <button name="verifyOtp" id="verifyOtp" class="theme-btn three mx-2"> <b>Verify Otp</b></button>
                            <small id="otpMessage">Email required</small>
                            </div>
@@ -156,6 +157,7 @@
         // Initially hide the OTP field and the verify button
         $('#otp').hide();
         $('#verifyOtp').hide();
+        $('#sendOtp').hide();
         $('#otpMessage').hide();
         $('button[type="submit"]').prop('disabled', true);
 
@@ -171,33 +173,41 @@
                 if (isValidEmail(email)) {
                     // If email is valid, show OTP field and verify button
                     $('#otp').show();
-                    $('#verifyOtp').show();
+                    $('#sendOtp').show();
                     $('#otpMessage').show();
                     $('#preloader').hide();
                     // Make AJAX request to verify email
                     $('#preloader').show();
-                    $.ajax({
-                        url: '{{route("verifyEmail")}}', // Replace with your backend endpoint for email verification
-                        method: 'GET',
-                        data: { email: email },
-                        success: function (response) {
-                           $('#preloader').hide();
-                           $('#otpMessage').text("Check your mail for your otp");
-                            if (response.message == "success") {
-                                 verifyOtp(response.otp);
-                            } else {
-                                 $('#otpMessage').text("Invalid email address");
-                                // Handle verification failure, e.g., show error message
-                                console.error('Email verification failed');
+                    $('#sendOtp').on('click', function (event) {
+                        $(this).hide();
+                        event.preventDefault();
+                        $.ajax({
+                            url: '{{route("verifyEmail")}}', // Replace with your backend endpoint for email verification
+                            method: 'GET',
+                            data: { email: email },
+                            success: function (response) {
+                            $('#preloader').hide();
+                            $('#otpMessage').text("Check your mail for your otp");
+                                if (response.message == "success") {
+                                    $('#sendOtp').text("Resend OTP");
+                                    $('#sendOtp').show();
+                                    $('#verifyOtp').show();
+                                    verifyOtp(response.otp);
+                                } else {
+                                    $('#otpMessage').text("Check your email address");
+                                    // Handle verification failure, e.g., show error message
+                                    console.error('Email verification failed');
+                                }
+                            },
+                            error: function (error) {
+                                console.error('Error during email verification', error);
                             }
-                        },
-                        error: function (error) {
-                            console.error('Error during email verification', error);
-                        }
+                        });
                     });
                 } else {
                     // If email is not valid, hide OTP field and verify button
                     $('#otp').hide();
+                    $('#sendOtp').hide();
                     $('#verifyOtp').hide();
                     $('#otpMessage').text("Invalid email address");
                     // Enable form submit button when email is not valid
@@ -220,6 +230,7 @@
             if (enteredOtp == otp) {
                 $(this).hide();
                 $('#otp').hide();
+                $('#sendOtp').hide();
                 $('#otpMessage').text("Email Verified Successfully");
                 $('button[type="submit"]').prop('disabled', false);
             }
