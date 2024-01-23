@@ -174,6 +174,7 @@
                     // If email is valid, show OTP field and verify button
                     $('#otp').show();
                     $('#sendOtp').show();
+                    $('#otpMessage').text("Valid Email");
                     $('#otpMessage').show();
                     $('#preloader').hide();
                     // Make AJAX request to verify email
