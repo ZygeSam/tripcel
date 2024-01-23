@@ -77,14 +77,14 @@
                         <p class="form-row form-row-last validate-required" id="billing_last_name_field">
                            <label>Password&nbsp;<abbr class="required" title="required">*</abbr></label>
                            
-                              <input type="password" class="input-text" name="password" id="billing_last_name" placeholder="" value="">
-                  
+                              <input type="password" class="input-text" name="password" id="password" placeholder="" value="">
+                              <small id="passwordCriteria"></small>
                         </p>
                         <p class="form-row form-row-last validate-required" id="billing_last_name_field">
                            <label>Confirm Password&nbsp;<abbr class="required" title="required">*</abbr></label>
                            
-                              <input type="password" class="input-text" name="confirmPassword" id="billing_last_name" placeholder="" value="">
-                  
+                              <input type="password" class="input-text" name="confirmPassword" id="confirm_password" placeholder="" value="">
+                              <small id="passwordMatch"></small>
                         </p>
                       <p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field">
                           <label>Phone&nbsp;<abbr class="required" title="required">*</abbr></label>
@@ -238,6 +238,43 @@
             }
         });
     }
+
+    function checkPasswordCriteria(password) {
+            // Your password criteria logic here
+            // For example, requiring at least one uppercase letter, one lowercase letter, and one digit
+            var hasUpperCase = /[A-Z]/.test(password);
+            var hasLowerCase = /[a-z]/.test(password);
+            var hasDigit = /\d/.test(password);
+
+            return hasUpperCase && hasLowerCase && hasDigit;
+    }
+
+    $('#password').on('input', function () {
+            var password = $(this).val();
+            var passwordCriteria = $('#passwordCriteria');
+
+            if (checkPasswordCriteria(password)) {
+                passwordCriteria.text('Good Password');
+            } else {
+                passwordCriteria.text('Password should contain at least one uppercase letter, one lowercase letter, and one digit');
+            }
+    });
+
+    // Event listener for confirm password input
+    $('#confirm_password').on('input', function () {
+            var password = $('#password').val();
+            var confirmPassword = $(this).val();
+            var passwordMatch = $('#passwordMatch');
+
+            if (password === confirmPassword) {
+                passwordMatch.text('Password match');
+            } else {
+                passwordMatch.text('Passwords do not match');
+            }
+    });
+
+
+
         
     });
 </script>
