@@ -69,7 +69,7 @@ class Geolocation
     public function getlocation(): object|array|string
     {
         // return $ip = ["ip" => "129.205.124.247", "city" => "Lagos", "region" => "Lagos", "country" => "NG", "loc" => "6.4541,3.3947", "org" => "AS328309 Globacom Limited", "timezone" => "Africa\/Lagos"];
-        $this->url = config('geolocation.location.ip_info_url') . "/103.134.112.33?token=" . config('geolocation.location.ip_info_token');
+        $this->url = config('geolocation.location.ip_info_url') . "{$this->getIP()}" . config('geolocation.location.ip_info_token');
         return $this->curl($this->cn, $this->url);
     }
 }
