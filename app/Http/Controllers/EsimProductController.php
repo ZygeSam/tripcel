@@ -21,10 +21,13 @@ use App\Payments\PaymentProcessor;
 use App\Http\Requests\StoreEsimBuyerRequest;
 use App\Http\Controllers\QrCodeController;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use App\Geolocation\Geolocation;
+use App\Models\Rates;
 
 
 class EsimProductController extends Controller
 {
+    private $geolocation;
     private $esimProduct;
     private $delimiter;
     private $paymentProcessor;
@@ -38,9 +41,10 @@ class EsimProductController extends Controller
     private $countries;
     private $pricing;
 
-    public function __construct(EsimPlanTypeService $esimPlanType, EsimPlanService $esimPlan, ESimProductService $esimProduct, PaymentProcessor $paymentProcessor, MailService $mailService, EsimService $esimService, QrCodeController $qrcode) {
+    public function __construct(Geolocation $geolocation, EsimPlanTypeService $esimPlanType, EsimPlanService $esimPlan, ESimProductService $esimProduct, PaymentProcessor $paymentProcessor, MailService $mailService, EsimService $esimService, QrCodeController $qrcode) {
         $this->esimProduct = $esimProduct;
         $this->esimService = $esimService;
+        $this->geolocation = $geolocation;
         $this->delimiter ='-';
         $this->paymentProcessor = $paymentProcessor;
         $this->mailService = $mailService;
@@ -262,7 +266,12 @@ class EsimProductController extends Controller
     public function checkout(){
         $cart = session()->get('cart', ['products' => []]);
         $totalPrice = $this->cartTotal($cart);
-        return view('pages/checkout', compact('cart', 'totalPrice'));
+        if($this->geolocation->getlocation()['country'] == "NG"){
+            $showPayStackNigeria = true;
+        }else{
+            $showPayStackNigeria = false;
+        }
+        return view('pages/checkout', compact('cart', 'totalPrice', 'showPayStackNigeria'));
     }
 
     public function productDescription($cart){
@@ -286,8 +295,19 @@ class EsimProductController extends Controller
     }
 
     public function makeTransaction($data){
-        $data['amount'] = $this->cartTotal(session()->get('cart'));
-        $data['currency'] = "USD";
+        if($data['payment_gateway'] == "Paystack"){
+            if($this->geolocation->getlocation()['country'] == "NG"){
+                $rates = Rates::where('gateway', $data['payment_gateway'])->first()->rates;
+                $data['amount'] = $this->cartTotal(session()->get('cart')) * $rates;
+                $data['currency'] = "NGN"; //don't forget to change the secret key
+            }else{
+                $data['amount'] = $this->cartTotal(session()->get('cart'));
+                $data['currency'] = "USD";
+            }
+        }else{
+            $data['amount'] = $this->cartTotal(session()->get('cart'));
+            $data['currency'] = "USD";
+        }
         $data['transaction_id'] = "TRC".strtotime('now');
         $data['description'] = $this->productDescription(session()->get('cart'));
         $data['redirect_url'] = route('confirmPayment', ['transactionId'=> $data['transaction_id'], 'gateway' => $data['payment_gateway'], 'email'=>$data['email']]);
@@ -325,6 +345,10 @@ class EsimProductController extends Controller
                 file_put_contents($filename, $details);
             }
         }
+    }
+
+    public function transactionCloudWebook(Request $request){
+        return $this->paymentProcessor->checkHandler("TransactionCloud")->webhook($request);
     }
 
     public function verifyEmail(Request $request){

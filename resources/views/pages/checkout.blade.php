@@ -141,8 +141,14 @@
   
     <div class="row">
          <p>Choose a way to pay</p>
-      <p><input type="radio" name="payment_gateway" value="Paystack" id=""> <img src="./assets/images/payment.png" width="150" height="80" alt=""></p> 
-      <p><input type="radio" name="payment_gateway" value="TransactionCloud" id=""><img src="./assets/images/transactioncloud.png" width="250" height="300" alt=""></p> 
+         @if($showPayStackNigeria == true)
+         <p><input type="radio" name="payment_gateway" value="Paystack" id=""> <img src="./assets/images/payment.png" width="150" height="80" alt=""></p> 
+         @else
+         <p><input type="radio" name="payment_gateway" value="Paystack" id=""> <img src="./assets/images/payment.png" width="150" height="80" alt=""></p> 
+         <p><input type="radio" name="payment_gateway" value="TransactionCloud" id=""><img src="./assets/images/transactioncloud.png" width="250" height="300" alt=""></p> 
+         @endif
+     
+     
     </div>
     <div class="col-lg-6 col-md-12 col-sm-12 column mt-4">
       <div class="field-input message-btn">
@@ -154,6 +160,11 @@
 <script>
     $(document).ready(function () {
       
+        @auth('web')
+        // Enable the button
+        $('button[type="submit"]').prop('disabled', false);
+        @endauth
+        @guest
         // Initially hide the OTP field and the verify button
         $('#otp').hide();
         $('#verifyOtp').hide();
@@ -275,7 +286,7 @@
 
 
 
-        
+    @endguest
     });
 </script>
 

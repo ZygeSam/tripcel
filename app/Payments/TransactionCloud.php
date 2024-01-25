@@ -69,4 +69,66 @@ class TransactionCloud
 
     }
 
+    public function webhook($body){
+        if ($body->getMethod() !== 'POST' ) {
+            abort(403, 'Invalid request');
+        }
+        // Expected IP address
+        $expectedIp = '127.0.0.1';
+        
+        // Webhook Security Tag
+        $expectedSecurityTag = '3EH3DD2RIBGXS3BFKY';
+        
+        // Verify the IP address
+        $clientIp = $_SERVER['REMOTE_ADDR'];
+        if ($clientIp !== $expectedIp) {
+            http_response_code(401);
+            die('Unauthorized - Invalid IP');
+        }
+       
+        // Verify the Webhook Security Tag
+        // $securityTag = isset($_SERVER['HTTP_X_TC_SECURITY_TAG']) ? $_SERVER['HTTP_X_TC_SECURITY_TAG'] : null;
+        // if ($securityTag !== $expectedSecurityTag) {
+        //     http_response_code(401);
+        //     die('Unauthorized - Invalid Security Tag');
+        // }
+        
+        // Retrieve the webhook payload
+        $requestBody = file_get_contents('php://input');
+        $payload = json_decode($requestBody, true);
+        
+        // Check if the required fields are present in the payload
+        if (
+            !isset($payload['webhookId']) ||
+            !isset($payload['webhookType']) ||
+            !isset($payload['transactionId']) ||
+            !isset($payload['transactionType']) ||
+            !isset($payload['createDate']) ||
+            !isset($payload['productId']) ||
+            !isset($payload['productName']) ||
+            !isset($payload['firstName']) ||
+            !isset($payload['lastName']) ||
+            !isset($payload['email']) ||
+            !isset($payload['country']) ||
+            !isset($payload['eventId']) ||
+            !isset($payload['currency']) ||
+            !isset($payload['amountTotal']) ||
+            !isset($payload['taxAmount']) ||
+            !isset($payload['income']) ||
+            !isset($payload['taxRate']) ||
+            !isset($payload['affiliateCommission']) ||
+            !isset($payload['affiliateCommissionCurrency'])
+        ) {
+            http_response_code(400);
+            die('Invalid payload');
+        }
+        
+        // Now you can proceed to handle the webhook payload
+        // ...
+        
+        // Respond with a success message if needed
+        echo 'Webhook received successfully';
+        
+    }
+
 }

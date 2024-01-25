@@ -39,6 +39,8 @@ Route::get('/networks/{country?}', [NetworkController::class, 'getNetworkByCount
 Route::get('/getPlans', [CronController::class, 'getEsimPlans'])->name('esimPlans');
 Route::post('/paystack-webhook', [EsimProductController::class, 'webhook'])
     ->name('paystackWebHook');
+Route::post('/transactioncloud-webhook', [EsimProductController::class, 'transactionCloudWebook'])
+    ->name('transactioncloud');
 
 Route::get('/faq', function () {
     return view('pages.faq');
