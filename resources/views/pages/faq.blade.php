@@ -14,7 +14,7 @@
                <div class="col-12 mb-4 text-center">
                   <h2>Setting Up Tripcel eSIM
                   </h2>
-                  <p class=" mx-5 px-5">Welcome to the hassle-free world of eSIM connectivity! Setting up your Tripcel eSIM is a breeze, and we've prepared a simple guide to ensure a smooth process for you.</p>
+                  <p class=" text-start px-4">Welcome to the hassle-free world of eSIM connectivity! Setting up your Tripcel eSIM is a breeze, and we've prepared a simple guide to ensure a smooth process for you.</p>
                </div>
                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-5 mb-lg-0 mb-xl-0">
                   <section class="faq_section type_one">
@@ -216,8 +216,8 @@
                <div class="col-12 mb-4 text-center">
                   <h2>Need Help? We're here for you!
                   </h2>
-                  <p class=" mx-5 px-5">If you encounter any challenges, reach out to us via live chat on our website Our customer support team is ready to assist you promptly.</p>
-                  <p class=" mx-5 px-5">Start your connected trip with Tripcel eSIM!</p>
+                  <p class="text-start px-4">If you encounter any challenges, reach out to us via live chat on our website Our customer support team is ready to assist you promptly.</p>
+                  <p class="text-start px-4">Start your connected trip with Tripcel eSIM!</p>
                </div>
             </div>
             <!--===============spacing==============-->

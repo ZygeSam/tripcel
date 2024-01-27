@@ -76,6 +76,7 @@
                                   <li class="menu-item"><a href="#">Blog</a></li>
                                   <li class="menu-item"><a href="{{route('contact')}}">Contact</a></li>
                                   <li class="menu-item"><a href="{{route('countryCoverage')}}">Network Coverage</a></li>
+                                  <li class="menu-item"><a href="{{route('compatibility')}}">Phone Compatibility</a></li>
                                </ul>
                             </div>
                          </div>

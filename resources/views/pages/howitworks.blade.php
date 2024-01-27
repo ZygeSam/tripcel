@@ -67,7 +67,7 @@
 <div id="content" class="site-content py-5 my-5">
    <!---about--->
    <div class="container-fluid my-5">
-      <div class="row px-5">
+      <div class="row px-2">
          <div class="p-5 col-md-6">
             <div class="title_all_box style_one dark_color ">
                   <h1> How Tripcel Works: </h1>
@@ -83,8 +83,8 @@
          </div>
       </div>
       <div class="row">
-         <div class="col-12 p-4 my-5 ">
-            <h1 class="text-center text-muted" style="margin:0px 100px">Experience seamless communication in over
+         <div class="col-12 my-5 mx-auto"style="width:75%;">
+            <h1 class="text-center text-muted">Experience seamless communication in over
                200 countries with our Travel eSIM. Simple,
                secure, and made for the global explorer.
                </h1>
@@ -129,10 +129,10 @@
                                     </div>
                                  </div>
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="content_bx p-5">
+                                    <div class="content_bx p-4">
                                        <h6>Always</h6>
                                        <h2>Check compatibility and purchase</h2>
-                                       <p>Make sure your device works with eSIM before you buy a data plan. Activating our plans is instant on unlocked iPhones and Androids with built-in eSIM chips. For confirmation, look at the eSIM Device List.</p>
+                                       <p class="fs-4 lh-base">Make sure your device works with eSIM before you buy a data plan. Activating our plans is instant on unlocked iPhones and Androids with built-in eSIM chips. For confirmation, look at the eSIM Device List.</p>
                                     </div>
                                  </div>
                               </div>
@@ -149,8 +149,7 @@
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                     <div class="content_bx p-5">
                                        <h2>Choose a plan</h2>
-                                       <p>Choose either a monthly or a prepaid data plan that will work for you in the area you are going to. See our eSIM Plans & Pricing page for more options.
-
+                                       <p class="fs-4 lh-base">Choose either a monthly or a prepaid data plan that will work for you in the area you are going to. See our eSIM Plans & Pricing page for more options.
                                        </p>
                                     </div>
                                  </div>
@@ -168,7 +167,7 @@
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                     <div class="content_bx p-5">
                                        <h2>Scan QR Code</h2>
-                                       <p>Use your smartphone or another eSIM-compatible device to scan the QR code sent via email.
+                                       <p class="fs-4 lh-base">Use your smartphone or another eSIM-compatible device to scan the QR code sent via email.
                                        </p>
                                     </div>
                                  </div>
@@ -186,7 +185,7 @@
                                  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                     <div class="content_bx p-5">
                                        <h2>Connect to 4G or 5G/LTE</h2>
-                                       <p>Simply follow the on-screen instructions to add your new international data plan. It is really that easy! As soon as you land, go online because your phone will connect to the internet network automatically. Experience how easy and quick Tricep's eSIM connectivity is.
+                                       <p class="fs-4 lh-base">Simply follow the on-screen instructions to add your new international data plan. It is really that easy! As soon as you land, go online because your phone will connect to the internet network automatically. Experience how easy and quick Tricep's eSIM connectivity is.
                                        </p>
                                     </div>
                                  </div>
@@ -404,7 +403,7 @@
 </div>
 <div class="container-fluid">
    <div class="row p-5">
-      <div class="col-md-6 p-5 ">
+      <div class="col-md-6  ">
          <h1 class="lh-lg">Is your phone eSIM ready?</h1>
          <p class="fs-3 text-muted"> Here's a quick guide!</p>
          <ol>

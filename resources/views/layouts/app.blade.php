@@ -64,18 +64,18 @@
             <section class="container-fluid image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
                <div class="row">
 
-                  <div class="slide-item-content">
+                  <div class="slide-item-content pt-5">
                      <div class="slide-item content_left pt-5 mt-5">
-@section('banner')
+                  @section('banner')
                            <div class="container-fluid m-0">
                               <div class="row align-items-center m-0">
                                  <div class="col-md-6">
                                     <div class="slider_content ">
-                                       <p class="display-1 text-white display-2" style="font-style:bold; font-family:Arial, Helvetica, sans-serif">Connect Beyond Borders<br>
-                                          </p> 
-                                          <h4 class="text-light">Experience seamless communication in over 200 countries with our Travel eSim. Simple, secure, and made for the global explorer.</h4>
+                                       <p class="th-base text-white" style="font-style:bold; font-size:4em; font-family:Arial, Helvetica, sans-serif">Connect Beyond Borders<br>
+                                          </p> <br>
+                                          <p class="text-light fs-4">Experience seamless communication in over 200 countries with our Travel eSim. Simple, secure, and made for the global explorer.</p>
                                           <div class="animate_down theme_btn_all color_two my-4">
-                                             <a href="{{route('countries')}}" class="theme-btn three px-5 fs-5 text-white" style="background-color: rgb(219, 165, 66); font-size:20px">Get Your Travel eSim Plan</a>  
+                                             <a href="{{route('countries')}}" class="theme-btn three px-5 text-white" style="background-color: rgb(219, 165, 66); font-size:0.7em">Get Your Travel eSim Plan</a>  
                                           </div>
                                     </div>
                                  </div>
@@ -106,7 +106,7 @@
       </div>
    @show
    <div>
-      <div class="auto-container bg-light p-5" style="margin-top: 100px">
+      <div class="auto-container bg-light p-1" style="margin-top: 100px">
          <div class="row mt-5 pt-5">
             <div class="col-xl-6 col-lg-6 col-md-12">
                <div class="image_boxes style_two">
@@ -198,7 +198,7 @@
             <div class="col-lg-12">
                <div class="title_all_box style_one text-center light_color">
                   <div class="title_sections">
-                     <div class="title  text-center mx-auto px-5 w-75">Enjoy fast, cheap internet
+                     <div class="title  text-center mx-auto  w-75">Enjoy fast, cheap internet
                         while you are traveling.</div>
                   </div>
                   <!--===============spacing==============-->
@@ -265,7 +265,7 @@
                   </div>
          </div>
          <div class="theme_btn_all color_one text-center my-5 ">
-            <a href="{{route('countries')}}" class="theme-btn three px-5" style="background-color: rgb(219, 165, 66); font-size:20px; padding:0px 20px">See Plans & Pricing</a>
+            <a href="{{route('countries')}}" class="theme-btn three px-5" style="background-color: rgb(219, 165, 66); font-size:0.7em; padding:0px 20px">See Plans & Pricing</a>
          </div>
       </div>
    
@@ -284,13 +284,13 @@
          <div class="col-lg-12">
             <div class="title_all_box style_one text-center light_color">
                <div class="title_sections">
-                  <h3 class="title" style="font-size:50px; color:#078586">Select Your Destination</h3>
+                  <h3 class="title lh-base" style="font-size:45px; color:#078586">Select Your Destination</h3>
                   <p class="fs-4 text-dark">Your Travel eSim Includes:</p>
-                  <p class="fs-4 text-dark d-md-flex text-center align-items-center justify-content-center">
-                      Wi-Fi |Immediate Activation|4G/5G Data|Optional Auto-Renewal
-
+                  <p class="fs-4 lh-base text-dark d-md-flex text-center align-items-center justify-content-center">
+                      Wi-Fi | Immediate Activation | 4G/5G Data | Optional Auto-Renewal
+                      | Stay Connected to family and friends
                   </p>
-                  <p class="fs-4 text-dark">|Stay Connected to family and friends</p>
+                  <p class="fs-4 text-dark"></p>
                </div>
                <!--===============spacing==============-->
                <div class="pd_bottom_20"></div>
@@ -320,9 +320,9 @@
       </div>
 
    </div>
-   <section class="testimonial-section"  style="background: " >
-   <div style="background-image: url(../assets/images/CustomerReviews.jpg);background-repeat: no-repeat !important;
-   background-position: center !important;background-size: cover !important;">
+   <section class="testimonial-section"  style="background-image: url(../assets/images/CustomerReviews.jpg);background-repeat: no-repeat !important;
+   background-position: center !important;background-size: cover !important; ">
+   <div style="background-color:orange" >
       <!--===============spacing==============-->
       <div class="pd_top_90"></div>
       <!--===============spacing==============-->

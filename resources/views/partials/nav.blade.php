@@ -90,11 +90,6 @@
                          </ul>
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
-                        <a href="{{route('countryCoverage')}}" class="dropdown-toggle nav-link">
-                           <span class="text-secondary">Network Coverage</span>
-                        </a>
-                     </li>
-                      <li class="menu-item menu-item-has-children nav-item">
                          <a href="{{route('about')}}" class="dropdown-toggle nav-link">
                             <span class="text-secondary">About</span>
                          </a>

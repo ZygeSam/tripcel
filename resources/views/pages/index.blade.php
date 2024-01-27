@@ -67,8 +67,8 @@
      <div class="bg-dark mt-2 mb-0" style="height: 20px"></div>
 @endsection
 @section('unlimitedplans')
-<section class="price-section mx-5">
-   <div class="row px-5 mb-5">
+<section class="price-section mx-4">
+   <div class="row mb-5 justify-content-space-evenly">
       <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
          <div class="price_plan_box style_one  border border-dark">
             <div class="tag">Recommended</div>
@@ -211,7 +211,14 @@
          </div>
       </div>
    </div>
-   <h3 class="text-center my-5"><a href="{{route('countries')}}" class="theme-btn three mx-5 px-5" style="background: rgb(219, 165, 66); font-size:20px">See all 194 countries</a></h3 class="text-center my-5">
+   <center>
+      <a href="{{route('countries')}}" 
+         class="theme-btn three mx-5 px-5" 
+         style="background: rgb(219, 165, 66); font-size:0.7em">
+            See all 194 countries
+      </a>
+   </center>
+   
 </section>
 <div class="bg-dark mt-2 mb-0" style="height: 20px"></div>
 @endsection

@@ -11940,7 +11940,7 @@ header .flaticon-list {
   -o-transition: all 0.5s ease-in-out;
 }
 .service_post.style_three .image_box img {
-  height: 200px;
+  height: 400px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
