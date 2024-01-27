@@ -66,30 +66,29 @@
 
                   <div class="slide-item-content">
                      <div class="slide-item content_left pt-5 mt-5">
-                        <div class="image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
-                        </div>
-                        <div class="container-fluid">
-                           <div class="row align-items-center">
-                              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                 <div class="slider_content p-5 mt-5">
-                                    <p class="display-6 text-white">@yield('banner-heading', 'Connect Beyond ') <br>
-                                       <span class="fw-900" style="font-style:bold; font-family:Arial, Helvetica, sans-serif">@yield('banner-sub-heading', 'Borders ')</span><br>
-                                       </p> <br>
-                                       <h4 class="text-light">@section('banner-content','Experience seamless communication in over 200 countries with our Travel eSim. Simple, secure, and made for the global explorer.')</h4>
-                                       <div class="animate_down theme_btn_all color_two my-4">
-                                          <a href="{{route('countries')}}" class="theme-btn one">Get Your Travel eSim Plan</a>  
-                                       </div>
+@section('banner')
+                           <div class="container-fluid m-0">
+                              <div class="row align-items-center m-0">
+                                 <div class="col-md-6">
+                                    <div class="slider_content ">
+                                       <p class="display-1 text-white display-2" style="font-style:bold; font-family:Arial, Helvetica, sans-serif">Connect Beyond Borders<br>
+                                          </p> 
+                                          <h4 class="text-light">Experience seamless communication in over 200 countries with our Travel eSim. Simple, secure, and made for the global explorer.</h4>
+                                          <div class="animate_down theme_btn_all color_two my-4">
+                                             <a href="{{route('countries')}}" class="theme-btn three px-5 fs-5 text-white" style="background-color: rgb(219, 165, 66); font-size:20px">Get Your Travel eSim Plan</a>  
+                                          </div>
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-0 m-0">
-                                 <div class="animate_right p-0 m-0">
-                                    @section('image')
-                                          @include('partials.default-image')
-                                    @show
+                                 <div class="col-md-6  px-0">
+                                    <div class="animate_right p-0 m-0">
+                                       @section('image')
+                                             @include('partials.default-image')
+                                       @show
+                                    </div>
                                  </div>
                               </div>
                            </div>
-                        </div>
+                        @show                        
                      </div>
                   </div>
                </div>
@@ -97,89 +96,94 @@
             <!---slider-end--->
             @yield('content')
             <!--about-->
-<section class="about-section" style="background-color: rgb(222, 233, 237)">
+<section class="about-section py-5" style="background-color: rgb(222, 233, 237)">
    <!--===============spacing==============-->
    {{-- <div class="pd_top_90"></div> --}}
    <!--===============spacing==============-->
-   <div class="container-fluid bg-white">
-      @include('partials.countrySearch')
-   </div>
-   <div class="auto-container bg-light p-5" style="margin-top: 100px">
-    <div class="row mt-5 pt-5">
-       <div class="col-xl-6 col-lg-6 col-md-12">
-          <div class="image_boxes style_two">
-             <img src={{asset("assets/images/shape-1.png")}} class="background_image" alt="image">
-             <div class="image one">
-                <img src={{asset("assets/images/about/about-6.png")}} class="img-fluid" alt="image">
-             </div>
-             <div class="image two">
-                <img src={{asset("assets/images/esmdisplay.jpg")}} class="img-fluid" alt="image">
-             </div>
-             <div class="authour_quotes">
-                <i class="icon-quote"></i>
-                <h6>Redefining connectivity</h6>
-             </div>
-          </div>
-       </div>
-       <div class="col-xl-6 col-lg-6 col-md-12 pd_left_60 md_pd_left_15">
-          <div class="title_all_box style_one  dark_color">
-             <div class="title_sections left">
-                <h5 class="title font_20">Enable one of our Unlimited or Prepaid eSim plans
-                   using your phone’s built-in eSim chip, in addition to your current phone plan.</h5>
-             </div>
-          </div>
-          <div class="pd_bottom_10"></div>
-          <div class="description_box">
-            <p>Tripcel provides data connectivity service, fast and secure to all fun and business -minded individual. Through
-               a unique combination of on demand technologies.</p>
+   @section('searchCountry')
+      <div class="container-fluid bg-white">
+         @include('partials.countrySearch')
+      </div>
+   @show
+   <div>
+      <div class="auto-container bg-light p-5" style="margin-top: 100px">
+         <div class="row mt-5 pt-5">
+            <div class="col-xl-6 col-lg-6 col-md-12">
+               <div class="image_boxes style_two">
+                  <img src={{asset("assets/images/shape-1.png")}} class="background_image" alt="image">
+                  <div class="image one">
+                     <img src={{asset("assets/images/about/about-6.png")}} class="img-fluid" alt="image">
+                  </div>
+                  <div class="image two">
+                     <img src={{asset("assets/images/esmdisplay.jpg")}} class="img-fluid" alt="image">
+                  </div>
+                  <div class="authour_quotes">
+                     <i class="icon-quote"></i>
+                     <h6>Redefining connectivity</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 pd_left_60 md_pd_left_15">
+               <div class="title_all_box style_one  dark_color">
+                  <div class="title_sections left">
+                     <h5 class="title font_20">Enable one of our Unlimited or Prepaid eSim plans
+                        using your phone’s built-in eSim chip, in addition to your current phone plan.</h5>
+                  </div>
+               </div>
+               <div class="pd_bottom_10"></div>
+               <div class="description_box">
+                 <p>Tripcel provides data connectivity service, fast and secure to all fun and business -minded individual. Through
+                    a unique combination of on demand technologies.</p>
+              </div>
+               <!--===============spacing==============-->
+               <div class="list_item_box style_two style_list p-4 mt-3">
+                  <ul class="list-inline">
+                     <li class="list_items pd_bottom_10">
+                        <small class="d-flex align-items-center">
+                           <span class="icon_bx">
+                              <i class="bx bx-qr fs-1"></i>
+                           </span>
+                           <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                             Receive a QR code in your email </a>
+                        </small></li>
+                     <li class="list_items pd_bottom_10">
+                        <small class="d-flex align-items-center">
+                           <span class="icon_bx fs-1">
+                              <i class=" bx bx-run fs-1"></i>
+                           </span>
+                           <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                             Quick and effortless installation </a>
+                        </small></li>
+                     <li class="list_items pd_bottom_10">
+                        <small class="d-flex align-items-center">
+                           <span class="icon_bx">
+                              <i class=" bx bx-signal-5 fs-1"></i>
+                           </span>
+                           <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                             Automatically connect to mobile internet</a>
+                        </small></li>
+                     {{-- <li class="list_items pd_bottom_10">
+                        <small class="d-flex align-items-center">
+                           <span class="icon_bx">
+                              <i class="bx bx-sort-up fs-1"></i>
+                           </span>
+                           <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
+                              Enjoy your browsing with your data plan with 4G/5G networks </a>
+                        </small>
+                    </li> --}}
+                  </ul>
+               </div>
+               <!--===============spacing==============-->
+               <div class="pd_bottom_15"></div>
+               <!--===============spacing==============-->
+               <div class="theme_btn_all color_one">
+                  <a href="{{route('howitworks')}}" class="theme-btn three" style="background-color: rgb(219, 165, 66); font-size:20px">See How It Works</a>
+               </div>
+            </div>
          </div>
-          <!--===============spacing==============-->
-          <div class="list_item_box style_two style_list p-4 mt-3">
-             <ul class="list-inline">
-                <li class="list_items pd_bottom_10">
-                   <small class="d-flex align-items-center">
-                      <span class="icon_bx">
-                         <i class="bx bx-qr fs-1"></i>
-                      </span>
-                      <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                        Receive a QR code in your email </a>
-                   </small></li>
-                <li class="list_items pd_bottom_10">
-                   <small class="d-flex align-items-center">
-                      <span class="icon_bx fs-1">
-                         <i class=" bx bx-run fs-1"></i>
-                      </span>
-                      <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                        Quick and effortless installation </a>
-                   </small></li>
-                <li class="list_items pd_bottom_10">
-                   <small class="d-flex align-items-center">
-                      <span class="icon_bx">
-                         <i class=" bx bx-signal-5 fs-1"></i>
-                      </span>
-                      <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                        Automatically connect to mobile internet</a>
-                   </small></li>
-                {{-- <li class="list_items pd_bottom_10">
-                   <small class="d-flex align-items-center">
-                      <span class="icon_bx">
-                         <i class="bx bx-sort-up fs-1"></i>
-                      </span>
-                      <a class="nav_link" href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;">
-                         Enjoy your browsing with your data plan with 4G/5G networks </a>
-                   </small>
-               </li> --}}
-             </ul>
-          </div>
-          <!--===============spacing==============-->
-          <div class="pd_bottom_15"></div>
-          <!--===============spacing==============-->
-          <div class="theme_btn_all color_one">
-             <a href="{{route('howitworks')}}" class="theme-btn three" style="background-color: rgb(219, 165, 66); font-size:20px">See How It Works</a>
-          </div>
-       </div>
-    </div>
- </div>
+        </div>
+   </div>
+   
    <!--===============spacing==============-->
    <div class="pd_bottom_90"></div>
    <!--===============spacing==============-->

@@ -1,1 +1,1 @@
-<img src="{{ $image }}" alt="Banner Image">
+<img src="{{ $image }}" alt="Banner Image" style="width: 100%">

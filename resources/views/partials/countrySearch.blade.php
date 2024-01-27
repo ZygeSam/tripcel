@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row bg-white">
   <div class="col-lg-10 m-auto py-5 px-5">
      <div class="title_all_box style_one text-center dark_color mx-auto px-5">
       <p class="fs-4">International eSIM</p>

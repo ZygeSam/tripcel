@@ -87,10 +87,10 @@
          </div>
          <!----header----->
          <!----page-CONTENT----->
-         <div id="content" class="site-content ">
+         {{-- <div id="content" class="site-content ">
             <div class="auto-container">
                <div class="row default_row">
-                  <div class="full_width_box">
+                  <div class="full_width_box"> --}}
                       <!--===============spacing==============-->
                       <div class="pd_top_90"></div>
                       <!--===============spacing==============-->
@@ -99,11 +99,11 @@
                       <!--===============spacing==============-->
                       <div class="pd_bottom_90"></div>
                       <!--===============spacing==============-->
-                  </div>
+                  {{-- </div>
                </div>
-            </div>
+            </div> --}}
              <!---newsteller--->
-         <section class="newsteller style_one bg_dark_1">
+         {{-- <section class="newsteller style_one bg_dark_1">
             <!--===============spacing==============-->
             <div class="pd_top_40"></div>
             <!--===============spacing==============-->
@@ -132,7 +132,7 @@
             <!--===============spacing==============-->
             <div class="pd_bottom_40"></div>
             <!--===============spacing==============-->
-         </section>
+         </section> --}}
          <!---newsteller end--->
          </div>
 

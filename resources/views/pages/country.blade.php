@@ -1,11 +1,29 @@
 @extends('layouts.app')
-@section('banner-heading', 'Explore Seamless Connectivity')
-@section('banner-sub-heading', ' with Tripcel eSIM in '. $country['country_name'])
-@section('banner-content', 'With Tripcel eSIM, travel connectivity is easier than ever! Enjoy unlimited data in Turkey without SIM card hassles. Whether you\'re a tourist exploring the rich history, a business traveler attending meetings, or simply enjoying the vibrant culture, Tripcel eSIM ensures you stay connected effortlessly.')
-@section('image')
-    <!-- Your custom image or content goes here -->
-    <x-image :image="asset('assets/images/tripcelBanner.png')"></x-image>
-@endsection
+@section('banner')
+                           <div class="container-fluid m-0">
+                              <div class="row align-items-center m-0">
+                                 <div class="col-md-6">
+                                    <div class="slider_content ">
+                                       <p class="display-3 text-white " >Explore Seamless Connectivity</p> 
+                                       <p class="lh-sm text-white" style="font-size: 50px">with <b>Tripcel eSIM in {{ $country['country_name']}}</b></p><br>
+                                          <p class="lh-base text-light fs-4"><b>With Tripcel eSIM,</b> travel connectivity is easier than ever! Enjoy unlimited <br>data in <b>{{ $country['country_name']}}</b> without SIM card hassles.</p><br>
+                                          <p class="lh-base text-light fs-4"> Whether you\'re a tourist exploring the rich history, a business traveler attending meetings, or simply enjoying the vibrant culture, Tripcel eSIM ensures you stay connected effortlessly.</p>
+                                          <div class="animate_down theme_btn_all color_two my-4">
+                                             <a href="{{route('countries')}}" class="theme-btn three px-5 fs-5 text-white" style="background-color: rgb(219, 165, 66); font-size:20px">Get Your Travel eSim Plan</a>  
+                                          </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 px-0">
+                                    <div class="animate_right p-0 m-0">
+                                       @section('image')
+                                          <x-image :image="asset('assets/images/tripcelBanner.png')"></x-image>
+                                       @show
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        @endsection
+
 @section('content')
 <section class="price_plan_with_tab price_tb_style_one">
     <div class="row">
@@ -276,7 +294,8 @@
              </div>
          </div>
     </div>
-    
+    @section('searchCountry')
+    @endsection
  </section>
 
 @endsection
