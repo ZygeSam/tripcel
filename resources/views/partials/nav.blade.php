@@ -1,4 +1,4 @@
-<div class="medium-container">
+<div class="medium-container" style="font-family: 'Manrope', sans-serif !important;">
     <div class="row align-items-center" style="z-index: 1100;">
        <div class="col-lg-2 col-md-9 col-sm-9 col-xs-9 logo_column">
           <div class="header_logo_box d-flex">
