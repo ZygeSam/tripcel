@@ -61,7 +61,7 @@
          <div id="content" class="site-content ">
 
             <!--- slider-->
-            <section class="container-fluid image-layer" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
+            <section class="container-fluid image-layer p-0" style="background-image:url({{asset('assets/images/sliders/slider-12-1.jpg')}})">
                <div class="row">
 
                   <div class="slide-item-content pt-5">
@@ -71,15 +71,15 @@
                               <div class="row align-items-center m-0">
                                  <div class="col-md-6">
                                     <div class="slider_content ">
-                                       <p class="th-base text-white" style="font-style:bold; font-size:4em; font-family:Arial, Helvetica, sans-serif">Connect Beyond Borders<br>
+                                       <p class="display-2 text-white fs-1 fw-bold lh-base" style="font-style:bold; font-size:4em; font-family:Arial, Helvetica, sans-serif">Connect Beyond Borders<br>
                                           </p> <br>
-                                          <p class="text-light fs-4">Experience seamless communication in over 200 countries with our Travel eSim. Simple, secure, and made for the global explorer.</p>
+                                          <p class="text-light fs-4 lh-base">Experience seamless communication in over 200 countries with our Travel eSim. Simple, secure, and made for the global explorer.</p>
                                           <div class="animate_down theme_btn_all color_two my-4">
                                              <a href="{{route('countries')}}" class="theme-btn three px-5 text-white" style="background-color: rgb(219, 165, 66); font-size:0.7em">Get Your Travel eSim Plan</a>  
                                           </div>
                                     </div>
                                  </div>
-                                 <div class="col-md-6  px-0">
+                                 <div class="col-md-6 p-0">
                                     <div class="animate_right p-0 m-0">
                                        @section('image')
                                              @include('partials.default-image')

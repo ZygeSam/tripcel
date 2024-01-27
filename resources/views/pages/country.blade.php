@@ -4,12 +4,12 @@
                               <div class="row align-items-center m-0">
                                  <div class="col-md-6">
                                     <div class="slider_content ">
-                                       <p class="display-3 text-white " >Explore Seamless Connectivity</p> 
+                                       <p class="display-3 text-white fs-1 fw-bold lh-base" >Explore Seamless Connectivity</p> 
                                        <p class="lh-sm text-white" style="font-size: 50px">with <b>Tripcel eSIM in {{ $country['country_name']}}</b></p><br>
                                           <p class="lh-base text-light fs-4"><b>With Tripcel eSIM,</b> travel connectivity is easier than ever! Enjoy unlimited <br>data in <b>{{ $country['country_name']}}</b> without SIM card hassles.</p><br>
-                                          <p class="lh-base text-light fs-4"> Whether you\'re a tourist exploring the rich history, a business traveler attending meetings, or simply enjoying the vibrant culture, Tripcel eSIM ensures you stay connected effortlessly.</p>
+                                          <p class="lh-base text-light fs-4"> Whether you are a tourist exploring the rich history, a business traveler attending meetings, or simply enjoying the vibrant culture, Tripcel eSIM ensures you stay connected effortlessly.</p>
                                           <div class="animate_down theme_btn_all color_two my-4">
-                                             <a href="{{route('countries')}}" class="theme-btn three px-5 fs-5 text-white" style="background-color: rgb(219, 165, 66); font-size:20px">Get Your Travel eSim Plan</a>  
+                                             <a href="{{route('countries')}}" class="theme-btn three px-5 text-white" style="background-color: rgb(219, 165, 66); font-size:0.7em">Get Your Travel eSim Plan</a>  
                                           </div>
                                     </div>
                                  </div>
@@ -22,7 +22,7 @@
                                  </div>
                               </div>
                            </div>
-                        @endsection
+@endsection
 
 @section('content')
 <section class="price_plan_with_tab price_tb_style_one">
