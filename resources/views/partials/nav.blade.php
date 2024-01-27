@@ -1,4 +1,4 @@
-<div class="medium-container" style="font-family: 'Manrope', sans-serif !important;">
+<div class="medium-container">
     <div class="row align-items-center" style="z-index: 1100;">
        <div class="col-lg-2 col-md-9 col-sm-9 col-xs-9 logo_column">
           <div class="header_logo_box d-flex">
@@ -20,7 +20,7 @@
                       <li
                          class="menu-item  menu-item-has-children dropdown active dropdown_full position-static mega_menu nav-item">
                          <a href="" class="dropdown-toggle nav-link">
-                            <span class="text-info">Travel eSIM</span>
+                            <span class="text-info" style="font-family: 'Manrope', sans-serif;">Travel eSIM</span>
                          </a>
                          <ul class="dropdown-menu width_65_percentage">
                             <li>
@@ -29,12 +29,12 @@
                                      
                                      <div class="list_item_box style_one">
                                         <h4>Regional eSIM Plans</h4>
-                                        <ul>
+                                        <ul style="font-family: 'Manrope', sans-serif;">
                                            <li>
                                               <small class="d-flex align-items-center">
                                                  <i class="fi fi-us p-2 mx-1"></i>
-                                                 <a class="nav_link" href="{{route('country', ['country'=>'USA'])}}">USA+</a>
-                                                 <span>5G</span>
+                                                 <a style="font-family: 'Manrope', sans-serif;" class="nav_link" href="{{route('country', ['country'=>'USA'])}}">USA+</a>
+                                                 <span style="font-family: 'Manrope', sans-serif;">5G</span>
                                               </small>
                                            </li>
                                            <li>
