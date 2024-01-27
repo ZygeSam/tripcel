@@ -1,6 +1,7 @@
 @extends('layouts.purchase')
 @section('content')
-<li class="py-2" style="list-style-type: none;"><a href="#">My Cart</a></li>
+<div class="px-5 mx-5 align-items-center">
+   <li class="py-2" style="list-style-type: none;"><a href="#">My Cart</a></li>
 <form class="woocommerce-cart-form" action="" method="post">
     <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
        <thead>
@@ -62,4 +63,6 @@
        </div>
     </div>
  </div>
+
+</div>
 @endsection

@@ -1,1 +1,1 @@
-<x-image :image="asset('assets/images/cellular.jpg')"></x-image>
+<x-image :image="asset('assets/images/Tripcel-Hero-1.jpg')"></x-image>

@@ -4,7 +4,7 @@
 @section('banner-content', 'With Tripcel eSIM, travel connectivity is easier than ever! Enjoy unlimited data in Turkey without SIM card hassles. Whether you\'re a tourist exploring the rich history, a business traveler attending meetings, or simply enjoying the vibrant culture, Tripcel eSIM ensures you stay connected effortlessly.')
 @section('image')
     <!-- Your custom image or content goes here -->
-    <x-image :image="asset('assets/images/banner.jpg')"></x-image>
+    <x-image :image="asset('assets/images/tripcelBanner.png')"></x-image>
 @endsection
 @section('content')
 <section class="price_plan_with_tab price_tb_style_one">
@@ -38,12 +38,12 @@
        </div>
     </div>
     
-    <div class="container">
-        <div class="tab-content price_tab_content" id="myTabContent">
+    <div class="container-fluid px-4 mx-auto">
+        <div class="tab-content price_tab_content mx-lg-5 px-lg-5" id="myTabContent">
             <div class="tab-pane fade show active" id="five" role="tabpanel" aria-labelledby="five-tab">
                <div class="row justify-content-center">
                   @forelse ($fiveDaysProduct as $product)
-                     <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <div class="my-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="price_plan_box style_one  border border-dark">
                            <div class="tag">@convertToGig($product['data_quota_mb']) GB</div>
                            <div class="inner_box">
@@ -89,7 +89,7 @@
             <div class="tab-pane fade" id="ten" role="tabpanel" aria-labelledby="ten-tab">
                 <div class="row justify-content-center">
                   @forelse ($tenDaysProduct as $product)
-                     <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <div class="my-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="price_plan_box style_one  border border-dark">
                            <div class="tag">{{$product['data_quota_mb']}} GB</div>
                            <div class="inner_box">
@@ -136,7 +136,7 @@
             <div class="tab-pane fade" id="fifteen" role="tabpanel" aria-labelledby="fifteen-tab">
                 <div class="row justify-content-center">
                   @forelse ($fifteenDaysProduct as $product)
-                     <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                     <div class="my-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="price_plan_box style_one  border border-dark">
                            <div class="tag">{{$product['data_quota_mb']}} GB</div>
                            <div class="inner_box">
@@ -183,7 +183,7 @@
              <div class="tab-pane fade" id="thirty" role="tabpanel" aria-labelledby="thirty-tab">
                <div class="row justify-content-center">
                  @forelse ($thirtyDaysProduct as $product)
-                    <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="my-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                        <div class="price_plan_box style_one  border border-dark">
                           <div class="tag">{{$product['data_quota_mb']}} GB</div>
                           <div class="inner_box">

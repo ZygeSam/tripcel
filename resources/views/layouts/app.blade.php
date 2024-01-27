@@ -72,10 +72,10 @@
                            <div class="row align-items-center">
                               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                  <div class="slider_content p-5 mt-5">
-                                    <h1 class="animate_up">@yield('banner-heading', 'Connect Beyond ') <br>
-                                       @yield('banner-sub-heading', 'Borders ')<br>
-                                       </h1> <br>
-                                       <h4 class="text-light">@yield('banner-content','Experience seamless communication in over 200 countries with our Travel eSim. Simple, secure, and made for the global explorer.')</h4>
+                                    <p class="display-6 text-white">@yield('banner-heading', 'Connect Beyond ') <br>
+                                       <span class="fw-900" style="font-style:bold; font-family:Arial, Helvetica, sans-serif">@yield('banner-sub-heading', 'Borders ')</span><br>
+                                       </p> <br>
+                                       <h4 class="text-light">@section('banner-content','Experience seamless communication in over 200 countries with our Travel eSim. Simple, secure, and made for the global explorer.')</h4>
                                        <div class="animate_down theme_btn_all color_two my-4">
                                           <a href="{{route('countries')}}" class="theme-btn one">Get Your Travel eSim Plan</a>  
                                        </div>
@@ -97,39 +97,15 @@
             <!---slider-end--->
             @yield('content')
             <!--about-->
-<section class="about-section">
+<section class="about-section" style="background-color: rgb(222, 233, 237)">
    <!--===============spacing==============-->
-   <div class="pd_top_90"></div>
+   {{-- <div class="pd_top_90"></div> --}}
    <!--===============spacing==============-->
-   <div class="auto-container">
-    <div class="row">
-       <div class="col-lg-10 m-auto">
-          <div class="title_all_box style_one text-center dark_color">
-             <div class="title_sections">
-                <div class="before_title">Select a Country
-                  <form action="{{route('showCountries')}}" class="my-3" method="post">
-                     @csrf
-                     <select name="country" id="" class="p-3">
-                        @if(count($countries) > 0)
-                           @foreach($countries as $country)
-                              <option class="p-4"value="{{route('country', ['country'=>$country['country_name']])}}">{{$country['country_name']}}</option>
-                           @endforeach
-                        @else
-                           <p>No country available</p>
-                        @endif
-                     </select>
-                     <button type="submit">Give it a try</button>
-                  </form>
-                </div>
-                <div class="title">Get Your Travel e-Sim in 5 Minutes</div>
-             </div>
-             <!--===============spacing==============-->
-             <div class="pd_bottom_40"></div>
-             <!--===============spacing==============-->
-          </div>
-       </div>
-    </div>
-    <div class="row">
+   <div class="container-fluid bg-white">
+      @include('partials.countrySearch')
+   </div>
+   <div class="auto-container bg-light p-5" style="margin-top: 100px">
+    <div class="row mt-5 pt-5">
        <div class="col-xl-6 col-lg-6 col-md-12">
           <div class="image_boxes style_two">
              <img src={{asset("assets/images/shape-1.png")}} class="background_image" alt="image">
@@ -199,7 +175,7 @@
           <div class="pd_bottom_15"></div>
           <!--===============spacing==============-->
           <div class="theme_btn_all color_one">
-             <a href="{{route('howitworks')}}" class="theme-btn one">See How It Works</a>
+             <a href="{{route('howitworks')}}" class="theme-btn three" style="background-color: rgb(219, 165, 66); font-size:20px">See How It Works</a>
           </div>
        </div>
     </div>
@@ -209,7 +185,7 @@
    <!--===============spacing==============-->
 </section>
 <!--about end-->
-<section class="service-section bg_op_3" style="background: url({{asset('assets/images/home-12-service-bg.jpg')}});">
+<section class="service-section bg_op_3" style="background: url({{asset('assets/images/home-12-service-bg2.jpg')}});">
    <!--===============spacing==============-->
    <div class="pd_top_85"></div>
    <!--===============spacing==============-->
@@ -218,7 +194,8 @@
             <div class="col-lg-12">
                <div class="title_all_box style_one text-center light_color">
                   <div class="title_sections">
-                     <div class="title">Discover the Benefits</div>
+                     <div class="title  text-center mx-auto px-5 w-75">Enjoy fast, cheap internet
+                        while you are traveling.</div>
                   </div>
                   <!--===============spacing==============-->
                   <div class="pd_bottom_20"></div>
@@ -233,13 +210,13 @@
                   <div class="col-md-6 col-lg-4 " >
                      <div class="service_post style_three">
                         <div class="image_box">
-                           <img loading="lazy" width="500" height="500" src={{asset("assets/images/service/service-image-6.jpg")}} alt="img">
+                           <img loading="lazy" width="500" height="500" src={{asset("assets/images/Traveler-esim.jpg")}} alt="img">
                         </div>
                         <div class="text_box">
                            <div class="text_box_inner">
                               <span class="icon icon-thumbs-up icon"></span>
-                              <h2 class="title_service"><a href="index.html/service/talent-management/index.html" rel="bookmark">Unlimited Data Access</a></h2>
-                              <p class="short_desc">OEnjoy the freedom of unlimited data, which allows you to navigate, share, and stay connected without worrying about data limitations. Stream, browse, and explore Turkey at your own pace.
+                              <h5 class="title_service">Unlimited Data Access</h5>
+                              <p class="short_desc">Enjoy the freedom of unlimited data, which allows you to navigate, share, and stay connected without worrying about data limitations. Stream, browse, and explore Turkey at your own pace.
                               </p>
                               <div class="bg_icon">
                                  <span class="icon icon-thumbs-up icon"></span>
@@ -251,12 +228,12 @@
                   <div class="col-md-6 col-lg-4 " >
                      <div class="service_post style_three">
                         <div class="image_box">
-                           <img width="500" height="500" src={{asset("assets/images/fastint.jpeg")}} alt="img" loading="lazy">
+                           <img width="500" height="500" src={{asset("assets/images/Tripcel.jpg")}} alt="img" loading="lazy">
                         </div>
                         <div class="text_box">
                            <div class="text_box_inner">
                               <span class="icon icon-thumbs-up icon"></span>
-                              <h2 class="title_service"><a href="index.html/service/health-care-benefits/index.html" rel="bookmark">Fast and Reliable Connection</a></h2>
+                              <h5 class="title_service">Fast and Reliable Connection</h5>
                               <p class="short_desc">Tripcel eSim provides a fast and reliable internet connection, ensuring you have a seamless online experience wherever your journey takes you in Turkey.</p>
                               <div class="bg_icon">
                                  <span class="icon icon-thumbs-up icon"></span>
@@ -268,12 +245,12 @@
                   <div class="col-md-6 col-lg-4 " >
                      <div class="service_post style_three">
                         <div class="image_box">
-                           <img width="500" height="500" src={{asset("assets/images/activation.jpeg")}} alt="img" loading="lazy">
+                           <img width="500" height="500" src={{asset("assets/images/esim-activation.jpg")}} alt="img" loading="lazy">
                         </div>
                         <div class="text_box">
                            <div class="text_box_inner">
                               <span class="icon icon-thumbs-up icon"></span>
-                              <h2 class="title_service"><a href="index.html/service/risk-management/index.html" rel="bookmark">Easy Activation</a></h2>
+                              <h5 class="title_service">Easy Activation</h5>
                               <p class="short_desc">No need to visit a local store or wait in long queues. Activate your eSim with just a few clicks, allowing you to start using data right away</p>
                               <div class="bg_icon">
                                  <span class="icon icon-thumbs-up icon"></span>
@@ -282,40 +259,9 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-md-6 col-lg-4  border border-2 rounded-3">
-                     <div class="service_post style_three">
-                        <div class="image_box">
-                           <img width="500" height="500" src={{asset("assets/images/compatible.jpeg")}} alt="img" loading="lazy">
-                        </div>
-                        <div class="text_box">
-                           <div class="text_box_inner">
-                              <span class="icon icon-thumbs-up icon"></span>
-                              <h2 class="title_service">Compatibility with Your Device</a></h2>
-                              <p class="short_desc">Tripcel eSim is compatible with unlocked iPhones and Android devices, offering flexibility for a wide range of smartphones.</p>
-                              <div class="bg_icon">
-                                 <span class="icon icon-thumbs-up icon"></span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4  border border-2 rounded-3">
-                     <div class="service_post style_three">
-                        <div class="image_box">
-                           <img width="500" height="500" src={{asset("assets/images/privacy.jpg")}} alt="img" loading="lazy">
-                        </div>
-                        <div class="text_box">
-                           <div class="text_box_inner">
-                              <span class="icon icon-thumbs-up icon"></span>
-                              <h2 class="title_service">Privacy and Security</a></h2>
-                              <p class="short_desc">We take your privacy seriously. Tripcel eSim plans come with end-to-end encryption, providing a secure connection for all your mobile device traffic..</p>
-                              <div class="bg_icon">
-                                 <span class="icon icon-thumbs-up icon"></span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+         </div>
+         <div class="theme_btn_all color_one text-center my-5 ">
+            <a href="{{route('countries')}}" class="theme-btn three px-5" style="background-color: rgb(219, 165, 66); font-size:20px; padding:0px 20px">See Plans & Pricing</a>
          </div>
       </div>
    
@@ -324,7 +270,8 @@
    <!--===============spacing==============-->
 </section>
 <!--service-->
-<section class="service-section bg_op_3" style="background: url({{asset("assets/images/home-12-service-bg.jpg")}});">
+@section('regionPlans')
+<section class="service-section bg_op_3" style="background: url({{asset("assets/images/home-12-service-bg3.jpg")}});">
    <!--===============spacing==============-->
    <div class="pd_top_85"></div>
    <!--===============spacing==============-->
@@ -333,15 +280,13 @@
          <div class="col-lg-12">
             <div class="title_all_box style_one text-center light_color">
                <div class="title_sections">
-                  <div class="title">Select Your Destination</div>
-                  <p>Your Travel eSim Includes:</p>
-                  <ul class=" d-md-flex  text-white list-unstyled text-center align-items-center justify-content-center">
-                     <li class="mx-2"> <i class="fs-3 mx-2 bx bx-wifi"></i>Wi-Fi Hotspot</li>
-                     <li class="mx-2"><i class="fs-3 mx-2 bx bx-timer"></i>Immediate Activation</li>
-                     <li class="mx-2"> <i class="fs-3 mx-2 bx bx-transfer"></i>4G/5G Data</li>
-                     <li class="mx-2"><i class="fs-3 mx-2 bx bx-check"></i>Optional Auto-Renewal</li>
-                  </ul>
-                  <p>Stay Connected to family and friends</p>
+                  <h3 class="title" style="font-size:50px; color:#078586">Select Your Destination</h3>
+                  <p class="fs-4 text-dark">Your Travel eSim Includes:</p>
+                  <p class="fs-4 text-dark d-md-flex text-center align-items-center justify-content-center">
+                      Wi-Fi |Immediate Activation|4G/5G Data|Optional Auto-Renewal
+
+                  </p>
+                  <p class="fs-4 text-dark">|Stay Connected to family and friends</p>
                </div>
                <!--===============spacing==============-->
                <div class="pd_bottom_20"></div>
@@ -356,6 +301,7 @@
    <div class="pd_bottom_65"></div>
    <!--===============spacing==============-->
 </section>
+@show
 <!--service end-->
 
 {{-- Testimonial start --}}
@@ -370,11 +316,13 @@
       </div>
 
    </div>
-   <section class="testimonial-section bg_op_1" style="background-image: url(../assets/images/testi-home-9.jpg);">
+   <section class="testimonial-section"  style="background: " >
+   <div style="background-image: url(../assets/images/CustomerReviews.jpg);background-repeat: no-repeat !important;
+   background-position: center !important;background-size: cover !important;">
       <!--===============spacing==============-->
       <div class="pd_top_90"></div>
       <!--===============spacing==============-->
-         <div class="container">
+         <div class="container p-5">
             <div class="row">
                <div class="col-lg-12">
                   <div class="title_all_box style_one text-center light_color">
@@ -493,12 +441,13 @@
       <!--===============spacing==============-->
       <div class="pd_bottom_80"></div>
       <!--===============spacing==============-->
+   </div>
       </section>
 </div>
 {{-- TeSimonial end --}}
 
 <!--content-->
-<section class="content-section">
+{{-- <section class="content-section">
    <div class="container">
       <div class="row align-items-center">
          <div class="col-xl-6 col-lg-12 col-md-12 mb-sm-5 mb-md-5 mb-lg-5 mb-xl-0">
@@ -602,9 +551,9 @@
    <!--===============spacing==============-->
    <div class="pd_bottom_85"></div>
    <!--===============spacing==============-->
-</section>
+</section> --}}
 <!--content end-->
-<section class="video-section">
+{{-- <section class="video-section">
    <div class="row">
       <div class="col-xl-5 col-lg-5 col-md-12 pd_zero bg_op_1"  style="background: url({{asset("assets/images/banner-four-bg.jpg")}});">
            <!--===============spacing==============-->
@@ -739,9 +688,9 @@
          <!--===============spacing==============-->
       </div>
    </div>
-</section>
+</section> --}}
 
-<section class="blog-section bg_light_1">
+{{-- <section class="blog-section bg_light_1">
    <!--===============spacing==============-->
    <div class="pd_top_70"></div>
    <!--===============spacing==============-->
@@ -800,7 +749,7 @@
    <!--===============spacing==============-->
    <div class="pd_bottom_70"></div>
    <!--===============spacing==============-->
-</section> 
+</section>  --}}
          </div>
          <!--===============PAGE CONTENT==============-->
          <!--===============PAGE CONTENT==============-->
@@ -847,7 +796,7 @@
                <div class="form_content">
             
                       
-                     <form class="contact-form" method="post" action="https://themepanthers.com/html/creote-html/sendemail.php">
+                     <form class="contact-form" method="post" action="">
                         <p>
                            <label> Your name<br />
                              <input type="text" name="name" value="" size="40"   aria-required="true" aria-invalid="false" placeholder="Enter Your Name" /> 

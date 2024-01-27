@@ -20,13 +20,12 @@
                        </div>
                        <p class="color_white">Experience Speed Beyond Borders. Enjoy lightning-fast 4G/LTE and 5G
                          mobile data on top-tier networks, accessible in each corner of the globe</p>
-                         <p><a href="#" class="btn btn-outline-info">View Plans & Pricing</a></p>
                     </div>
                  </div>
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pd_zero  bg_light_1">
                  <div
-                    class="process_box style_two dark_color pd_top_50 pd_left_50 pd_right_50 pd_bottom_50 bg_op_1"
+                    class="process_box style_two dark_color pd_top_50 pd_left_50 pd_right_50 pd_bottom_50 "
                     style="background-image: url(assets/images/banner-bgs-10-1.html);">
                     <div class="process_box_outer_two">
                        <div class="content_box clearfix">
@@ -41,12 +40,11 @@
                        <p class="text-dark">Maintain your existing SIM for incoming calls, while leveraging our eSIM
                          data plans for internet and app usage. Keep your number, enhance your connectivity.
                      </p>
-                     <p><a href="#" class="btn btn-outline-dark">View Plans & Pricing</a></p>
                     </div>
                  </div>
               </div>
               <div
-                 class="col-lg-4 col-md-6 col-sm-12 col-xs-12 rounded_bottom_right_30 pd_top_50 pd_left_50 pd_right_50 pd_bottom_50 bg_dark_2">
+                 class="col-lg-4 col-md-6 col-sm-12 col-xs-12 rounded_bottom_right_30 pd_top_50 pd_left_50 pd_right_50 pd_bottom_50 bg_op_1">
                  <div class="process_box style_two">
                     <div class="process_box_outer_two">
                        <div class="content_box clearfix">
@@ -60,18 +58,17 @@
                        </div>
                        <p class="color_white">Activate on any eSIM compatible device in less than 5 minutes, 
                         no physical SIM card required. Instant connectivity at your fingertips.</p>
-                        <p><a href="#" class="btn btn-outline-light">View Plans & Pricing</a></p>
                     </div>
                  </div>
               </div>
            </div>
         </div>
      </section>
-     
+     <div class="bg-dark mt-2 mb-0" style="height: 20px"></div>
 @endsection
 @section('unlimitedplans')
-<section class="price-section">
-   <div class="row">
+<section class="price-section mx-5">
+   <div class="row px-5 mb-5">
       <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
          <div class="price_plan_box style_one  border border-dark">
             <div class="tag">Recommended</div>
@@ -214,6 +211,7 @@
          </div>
       </div>
    </div>
-   <h3 class="text-center my-5"><a href="{{route('countries')}}">See all 194 countries</a></h3 class="text-center my-5">
+   <h3 class="text-center my-5"><a href="{{route('countries')}}" class="theme-btn three mx-5 px-5" style="background: rgb(219, 165, 66); font-size:20px">See all 194 countries</a></h3 class="text-center my-5">
 </section>
+<div class="bg-dark mt-2 mb-0" style="height: 20px"></div>
 @endsection
