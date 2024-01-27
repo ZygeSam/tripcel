@@ -20,7 +20,7 @@
                       <li
                          class="menu-item  menu-item-has-children dropdown active dropdown_full position-static mega_menu nav-item">
                          <a href="" class="dropdown-toggle nav-link">
-                            <span class="text-info">Travel Esim</span>
+                            <span class="text-info">Travel eSIM</span>
                          </a>
                          <ul class="dropdown-menu width_65_percentage">
                             <li>
@@ -28,7 +28,7 @@
                                   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                      
                                      <div class="list_item_box style_one">
-                                        <h4>Regional ESim Plans</h4>
+                                        <h4>Regional eSIM Plans</h4>
                                         <ul>
                                            <li>
                                               <small class="d-flex align-items-center">

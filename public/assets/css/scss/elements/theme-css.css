@@ -3,7 +3,9 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800&family=Manrope:wght@200;300;400;500;600;800&display=swap');
-
+*{
+  font-family: 'Manrope', sans-serif !important;
+}
 .title_all_box.style_one .title_sections .title, .title_all_box.style_one .title_sections h1, .title_all_box.style_one .title_sections h2, .title_all_box.style_one .title_sections h3, .title_all_box.style_one .title_sections h4, .title_all_box.style_one .title_sections h5, .title_all_box.style_one .title_sections h6, .title_all_box.style_two .title_sections .title, .title_all_box.style_two .title_sections h1, .title_all_box.style_two .title_sections h2, .title_all_box.style_two .title_sections h3, .title_all_box.style_two .title_sections h4, .title_all_box.style_two .title_sections h5, .title_all_box.style_two .title_sections h6
 {
    

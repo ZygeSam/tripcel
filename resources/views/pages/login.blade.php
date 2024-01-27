@@ -71,7 +71,7 @@
          
                 <div class="whole_login_content">
                    <div class="register_login">
-                      <div class="simpleParallax"><img decoding="async" src="assets/images/esmdisplay.jpg" class="cover-parallax" alt="image" style="transform: translate3d(0px, 37px, 0px) scale(1.3); will-change: transform; transition: transform 0.6s cubic-bezier(0, 0, 0, 1) 0s;"></div>
+                      <div class="simpleParallax"><img decoding="async" src="{{asset('assets/images/HowItWorks1.png')}}" class="cover-parallax" alt="image" style="transform: translate3d(0px, 150px, 0px) scale(1.3); will-change: transform; transition: transform 0.6s cubic-bezier(0, 0, 0, 1) 0s;"></div>
                       <div class="login_left_side">
                          <div class="login_content_box">
                             <a href="{{route('home')}}" class="login_logo"><img decoding="async" src="assets/images/FII.png" height="100" class="login_logo" alt="image"></a>
