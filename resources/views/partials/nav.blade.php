@@ -40,29 +40,29 @@
                                            <li>
                                               <small class="d-flex align-items-center">
                                                  <i class="fi fi-eu p-2 mx-1"></i>
-                                                 <a class="nav_link" href="{{route('regions', ['region'=>'Europe'])}}">Europe</a>
-                                                 <span>5G</span>
+                                                 <a  style="font-family: 'Manrope', sans-serif;" class="nav_link" href="{{route('regions', ['region'=>'Europe'])}}">Europe</a>
+                                                 <span style="font-family: 'Manrope', sans-serif;">5G</span>
                                               </small>
                                            </li>
                                            <li>
                                               <small class="d-flex align-items-center">
                                                  <i class="fi fi-as p-2 mx-1"></i>
-                                                 <a class="nav_link" href="{{route('regions', ['region'=>'Asia'])}}">Asia+</a>
-                                                 <span>5G</span>
+                                                 <a style="font-family: 'Manrope', sans-serif;" class="nav_link" href="{{route('regions', ['region'=>'Asia'])}}">Asia+</a>
+                                                 <span style="font-family: 'Manrope', sans-serif;">5G</span>
                                               </small>
                                            </li>
                                            <li>
                                               <small class="d-flex align-items-center">
                                                  <i class="fi fi-sa p-2 mx-1"></i>
-                                                 <a class="nav_link" href="{{route('regions', ['region'=>'South America'])}}">South America+</a>
-                                                 <span>5G</span>
+                                                 <a style="font-family: 'Manrope', sans-serif;" class="nav_link" href="{{route('regions', ['region'=>'South America'])}}">South America+</a>
+                                                 <span style="font-family: 'Manrope', sans-serif;">5G</span>
                                               </small>
                                            </li>
                                            <li>
                                               <small class="d-flex align-items-center">
                                                  <i class="fi fi-cr p-2 mx-1"></i>
-                                                 <a class="nav_link" href="{{route('regions', ['region'=>'Caribbean'])}}">Carribean</a>
-                                                 <span>5G</span>
+                                                 <a style="font-family: 'Manrope', sans-serif;" class="nav_link" href="{{route('regions', ['region'=>'Caribbean'])}}">Carribean</a>
+                                                 <span style="font-family: 'Manrope', sans-serif;">5G</span>
                                               </small>
                                            </li>
 
@@ -71,17 +71,17 @@
                                   </div>
                                   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                     <div class="list_item_box style_one">
-                                        <ul id="countries-list1"></ul>
+                                        <ul style="font-family: 'Manrope', sans-serif;" id="countries-list1"></ul>
                                     </div>
                                  </div>
                                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                        <div class="list_item_box style_one">
-                                          <ul id="countries-list2"></ul>
+                                          <ul style="font-family: 'Manrope', sans-serif;" id="countries-list2"></ul>
                                        </div>
                                  </div>
                                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                     <div class="list_item_box style_one">
-                                       <ul id="countries-list3"></ul>
+                                       <ul  style="font-family: 'Manrope', sans-serif;" id="countries-list3"></ul>
                                     </div>
                                  </div>
                                </div>
@@ -91,39 +91,39 @@
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
                          <a href="{{route('about')}}" class="dropdown-toggle nav-link">
-                            <span class="text-secondary">About</span>
+                            <span style="font-family: 'Manrope', sans-serif;" class="text-secondary">About</span>
                          </a>
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
                         <a href="{{route('faq')}}"
-                           class="dropdown-toggle nav-link"><span class="text-secondary">FAQ</span></a>
+                           class="dropdown-toggle nav-link"><span style="font-family: 'Manrope', sans-serif;" class="text-secondary">FAQ</span></a>
                      </li>
                       <li class="menu-item menu-item-has-children nav-item">
                          <a href="{{route('howitworks')}}"
-                            class="dropdown-toggle nav-link"><span class="text-secondary">How it Works</span></a>
+                            class="dropdown-toggle nav-link"><span style="font-family: 'Manrope', sans-serif;" class="text-secondary">How it Works</span></a>
                       </li>
                       <li class="menu-item menu-item-has-children nav-item">
                          <a href="{{route('contact')}}"
-                            class="dropdown-toggle nav-link"><span class="text-secondary">Contact Us</span></a>
+                            class="dropdown-toggle nav-link"><span style="font-family: 'Manrope', sans-serif;" class="text-secondary">Contact Us</span></a>
                       </li>
                       <li class="menu-item  menu-item-has-children nav-item">
                         <a href="{{route('showCart')}}" class="nav-link">
-                            <span class="text-secondary">Cart</span> <i class="bx bx-cart-alt" style="color: #fff; font-size: 22px;"></i>
+                            <span style="font-family: 'Manrope', sans-serif;" class="text-secondary">Cart</span> <i class="bx bx-cart-alt" style="color: #fff; font-size: 22px;"></i>
                          </a>
                       </li>
                       @guest
                         <li class="d-xs-block d-sm-block d-md-block d-lg-block d-xl-none">
-                           <a href="{{route('login')}}" target="_blank" rel="" class=""> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
+                           <a style="font-family: 'Manrope', sans-serif;" href="{{route('login')}}" target="_blank" rel="" class=""> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
                         </li>
                       @endguest
                       @auth('web')
                         <li class="menu-item  menu-item-has-children nav-item">
                            <a href="{{route('client.index')}}" class="nav-link">
-                              <span class="text-secondary">Dashboard</span> <i class="bx bx-home-heart" style="color: #078586; font-size: 22px;"></i>
+                              <span style="font-family: 'Manrope', sans-serif;" class="text-secondary">Dashboard</span> <i class="bx bx-home-heart" style="color: #078586; font-size: 22px;"></i>
                            </a>
                         </li>
                         <li class="d-xs-block d-sm-block d-md-block d-lg-block d-xl-none">
-                           <a type="button" onclick="document.getElementById('logout-form').submit()">Logout<i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-out-circle"></i></a>
+                           <a  style="font-family: 'Manrope', sans-serif;" type="button" onclick="document.getElementById('logout-form').submit()">Logout<i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-out-circle"></i></a>
                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
                               @csrf
                            </form>
@@ -136,7 +136,7 @@
                 <ul>
                   @guest
                       <li class="header-button">
-                        <a href="{{route('login')}}" target="_blank" rel="" class="theme-btn one color_white_1"> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
+                        <a  style="font-family: 'Manrope', sans-serif;" href="{{route('login')}}" target="_blank" rel="" class="theme-btn one color_white_1"> Login <i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-in"></i></a>
                      </li>
                   @endguest
                   @auth('web')
@@ -145,7 +145,7 @@
                      @csrf
                   </form>
                      <li class="header-button">
-                        <a type="button" onclick="document.getElementById('logout-form').submit()" class="theme-btn one color_white_1">Logout<i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-out-circle"></i></a>
+                        <a  style="font-family: 'Manrope', sans-serif;" type="button" onclick="document.getElementById('logout-form').submit()" class="theme-btn one color_white_1">Logout<i style="color: #078586; font-size: 22px;" class=" mr-2 bx p-1 bx bx-log-out-circle"></i></a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST">
                            @csrf
                         </form>
