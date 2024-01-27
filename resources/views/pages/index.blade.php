@@ -44,7 +44,7 @@
                  </div>
               </div>
               <div
-                 class="col-lg-4 col-md-6 col-sm-12 col-xs-12 rounded_bottom_right_30 pd_top_50 pd_left_50 pd_right_50 pd_bottom_50 bg_op_1">
+                 class="col-lg-4 col-md-6 col-sm-12 col-xs-12 rounded_bottom_right_30 pd_top_50 pd_left_50 pd_right_50 pd_bottom_50 bg_op_1" style="background: #FF8F47">
                  <div class="process_box style_two">
                     <div class="process_box_outer_two">
                        <div class="content_box clearfix">
