@@ -73,9 +73,9 @@
                                     <div class="slider_content ">
                                        <p class="display-2 text-white fs-1 fw-bold lh-base" style="font-style:bold; font-size:4em; font-family:Arial, Helvetica, sans-serif">Connect Beyond Borders<br>
                                           </p> <br>
-                                          <p class="text-light fs-4 lh-base">Experience seamless communication in over 200 countries with our Travel eSim. Simple, secure, and made for the global explorer.</p>
+                                          <p class="text-light fs-4 lh-base">Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.</p>
                                           <div class="animate_down theme_btn_all color_two my-4">
-                                             <a href="{{route('countries')}}" class="theme-btn three px-5 text-white" style="background-color: rgb(219, 165, 66); font-size:0.7em">Get Your Travel eSim Plan</a>  
+                                             <a href="{{route('countries')}}" class="theme-btn three px-5 text-white" style="background-color: rgb(219, 165, 66); font-size:0.7em">Get Your Travel eSIM Plan</a>  
                                           </div>
                                     </div>
                                  </div>
@@ -126,8 +126,8 @@
             <div class="col-xl-6 col-lg-6 col-md-12 pd_left_60 md_pd_left_15">
                <div class="title_all_box style_one  dark_color">
                   <div class="title_sections left">
-                     <h5 class="title font_20">Enable one of our Unlimited or Prepaid eSim plans
-                        using your phone’s built-in eSim chip, in addition to your current phone plan.</h5>
+                     <h5 class="title font_20">Enable one of our Unlimited or Prepaid eSIM plans
+                        using your phone’s built-in eSIM chip, in addition to your current phone plan.</h5>
                   </div>
                </div>
                <div class="pd_bottom_10"></div>
@@ -238,7 +238,7 @@
                            <div class="text_box_inner">
                               <span class="icon icon-thumbs-up icon"></span>
                               <h5 class="title_service">Fast and Reliable Connection</h5>
-                              <p class="short_desc">Tripcel eSim provides a fast and reliable internet connection, ensuring you have a seamless online experience wherever your journey takes you in Turkey.</p>
+                              <p class="short_desc">Tripcel eSIM provides a fast and reliable internet connection, ensuring you have a seamless online experience wherever your journey takes you in Turkey.</p>
                               <div class="bg_icon">
                                  <span class="icon icon-thumbs-up icon"></span>
                               </div>
@@ -255,7 +255,7 @@
                            <div class="text_box_inner">
                               <span class="icon icon-thumbs-up icon"></span>
                               <h5 class="title_service">Easy Activation</h5>
-                              <p class="short_desc">No need to visit a local store or wait in long queues. Activate your eSim with just a few clicks, allowing you to start using data right away</p>
+                              <p class="short_desc">No need to visit a local store or wait in long queues. Activate your eSIM with just a few clicks, allowing you to start using data right away</p>
                               <div class="bg_icon">
                                  <span class="icon icon-thumbs-up icon"></span>
                               </div>
@@ -285,7 +285,7 @@
             <div class="title_all_box style_one text-center light_color">
                <div class="title_sections">
                   <h3 class="title lh-base" style="font-size:45px; color:#078586">Select Your Destination</h3>
-                  <p class="fs-4 text-dark">Your Travel eSim Includes:</p>
+                  <p class="fs-4 text-dark">Your Travel eSIM Includes:</p>
                   <p class="fs-4 lh-base text-dark d-md-flex text-center align-items-center justify-content-center">
                       Wi-Fi | Immediate Activation | 4G/5G Data | Optional Auto-Renewal
                       | Stay Connected to family and friends
@@ -389,7 +389,7 @@
                               <div class="testimonial_box clearfix">
                                  <div class="authour_details">
                                     <div class="comment">
-                                       The eSim is an absolute must for those looking for a reliable internet companion on their global adventures.
+                                       The eSIM is an absolute must for those looking for a reliable internet companion on their global adventures.
                                     </div>
                                     <div class="details clearfix">
                                        <div class="c_content">
@@ -404,7 +404,7 @@
                               <div class="testimonial_box clearfix">
                                  <div class="authour_details">
                                     <div class="comment">
-                                       The Travel eSim was an absolute lifesaver during my trip to France. Its activation was quick and effortless, providing fast, reliable data right from the get-go. Despite traveling across different cities, the connection remained consistent and strong, allowing me to share my journey in real-time. A must-have for travelers seeking seamless global connectivity.
+                                       The Travel eSIM was an absolute lifesaver during my trip to France. Its activation was quick and effortless, providing fast, reliable data right from the get-go. Despite traveling across different cities, the connection remained consistent and strong, allowing me to share my journey in real-time. A must-have for travelers seeking seamless global connectivity.
                                     </div>
                                     <div class="details clearfix">
                                        <div class="c_content">
@@ -419,7 +419,7 @@
                               <div class="testimonial_box clearfix">
                                  <div class="authour_details">
                                     <div class="comment">
-                                       The Travel eSim was my perfect companion during my coast-to-coast adventure in the USA. Its instant activation and fast data speeds were exceptional, making road navigation and spontaneous video calls a breeze.
+                                       The Travel eSIM was my perfect companion during my coast-to-coast adventure in the USA. Its instant activation and fast data speeds were exceptional, making road navigation and spontaneous video calls a breeze.
                                     </div>
                                     <div class="details clearfix">
                                        <div class="c_content">
@@ -448,7 +448,7 @@
    </div>
       </section>
 </div>
-{{-- TeSimonial end --}}
+{{-- TeSIMonial end --}}
 
 <!--content-->
 {{-- <section class="content-section">
@@ -488,7 +488,7 @@
                   <h2>100%</h2>
                   <h3>Guaranteed </h3>
                   <p>We make it easy for you to access the world</p>
-                  <p>Install an eSim now and get online in 5 minutes, or reserve your data plan for any future date. We'll activate it automatically.</p>
+                  <p>Install an eSIM now and get online in 5 minutes, or reserve your data plan for any future date. We'll activate it automatically.</p>
                </div>
             </div>
             <!--===============spacing==============-->
@@ -510,7 +510,7 @@
                               <div class="content_bx">
                                  <p>Tripcel makes it easy to stay in charge of your Life Style with access to data and SMS.
 
-                                    Activate any of our Unlimited or Prepaid eSim plans with your phone's onboard eSim chip, alongside your existing phone plan with the steps below.
+                                    Activate any of our Unlimited or Prepaid eSIM plans with your phone's onboard eSIM chip, alongside your existing phone plan with the steps below.
                                  </p>
                               </div>
                            </div>
@@ -996,7 +996,7 @@
             var u = $("<u>").append(link);
             countriesList2.after(u);
 
-            countriesList3.after('<h6>Popular eSim Destinations</h6>');
+            countriesList3.after('<h6>Popular eSIM Destinations</h6>');
     }
    });
    });

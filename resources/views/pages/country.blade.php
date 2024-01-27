@@ -9,7 +9,7 @@
                                           <p class="lh-base text-light fs-4"><b>With Tripcel eSIM,</b> travel connectivity is easier than ever! Enjoy unlimited <br>data in <b>{{ $country['country_name']}}</b> without SIM card hassles.</p><br>
                                           <p class="lh-base text-light fs-4"> Whether you are a tourist exploring the rich history, a business traveler attending meetings, or simply enjoying the vibrant culture, Tripcel eSIM ensures you stay connected effortlessly.</p>
                                           <div class="animate_down theme_btn_all color_two my-4">
-                                             <a href="{{route('countries')}}" class="theme-btn three px-5 text-white" style="background-color: rgb(219, 165, 66); font-size:0.7em">Get Your Travel eSim Plan</a>  
+                                             <a href="{{route('countries')}}" class="theme-btn three px-5 text-white" style="background-color: rgb(219, 165, 66); font-size:0.7em">Get Your Travel eSIM Plan</a>  
                                           </div>
                                     </div>
                                  </div>
@@ -66,7 +66,7 @@
                            <div class="tag">@convertToGig($product['data_quota_mb']) GB</div>
                            <div class="inner_box">
                               <div class="top">
-                                 <h2>{{$country['country_name']}} eSim</h2>
+                                 <h2>{{$country['country_name']}} eSIM</h2>
                               </div>
                               <div class="mid">
                                  <h4>${{$product['price_usd']}}</h4>
@@ -112,7 +112,7 @@
                            <div class="tag">{{$product['data_quota_mb']}} GB</div>
                            <div class="inner_box">
                               <div class="top">
-                                 <h2>{{$country['country_name']}} eSim</h2>
+                                 <h2>{{$country['country_name']}} eSIM</h2>
                                  
                               </div>
                               <div class="mid">
@@ -159,7 +159,7 @@
                            <div class="tag">{{$product['data_quota_mb']}} GB</div>
                            <div class="inner_box">
                               <div class="top">
-                                 <h2>{{$country['country_name']}} eSim</h2>
+                                 <h2>{{$country['country_name']}} eSIM</h2>
                                  
                               </div>
                               <div class="mid">
@@ -206,7 +206,7 @@
                           <div class="tag">{{$product['data_quota_mb']}} GB</div>
                           <div class="inner_box">
                              <div class="top">
-                                <h2>{{$country['country_name']}} eSim</h2>
+                                <h2>{{$country['country_name']}} eSIM</h2>
                                 
                              </div>
                              <div class="mid">
@@ -253,7 +253,7 @@
                               <div class="tag">{{$product['data_quota_mb']}} GB</div>
                               <div class="inner_box">
                                  <div class="top">
-                                    <h2>{{$country['country_name']}} eSim</h2>
+                                    <h2>{{$country['country_name']}} eSIM</h2>
                                     
                                  </div>
                                  <div class="mid">
@@ -337,7 +337,7 @@
                            <span> 100% Money Back Guarantee</span>
                            <i class="fa fa-check" style="color: #078586;""></i>
                         </li>
-                        <a href="#">View eSim Tech Specks</a>
+                        <a href="#">View eSIM Tech Specks</a>
                         </ul>
                         <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedLiteDaysProduct[0]['uid']])}}" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
@@ -380,7 +380,7 @@
                            <span> 100% Money Back Guarantee</span>
                            <i class="fa fa-check" style="color: #078586;""></i>
                         </li>
-                        <a href="#">View eSim Tech Specks</a>
+                        <a href="#">View eSIM Tech Specks</a>
                         </ul>
                         <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedStandardDaysProduct[0]['uid']])}}" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 
@@ -423,7 +423,7 @@
                            <span> 100% Money Back Guarantee</span>
                            <i class="fa fa-check" style="color: #078586;""></i>
                         </li>
-                        <a href="#">View eSim Tech Specks</a>
+                        <a href="#">View eSIM Tech Specks</a>
                         </ul>
                         <a href="{{route('cart',['country' => $country['country_name'], 'esimProduct' => $unlimitedMaxDaysProduct[0]['uid']])}}" rel="&quot;nofollow&quot;" class="theme-btn two">
                         Activate 

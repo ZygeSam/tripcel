@@ -211,8 +211,8 @@
                         <img decoding="async" src="../assets/images/cal-to-action.jpg" alt="img">  
                      </div>
                      <div class="content_bx">
-                        <h4>Why Tricel?</h4>
-                        <p class="fs-5">Tripcel provides global coverage for popular and off-the-beaten-path destinations. Throughout your adventures, we want to keep you connected.
+                        <h4 class="lh-base">Why Tricel?</h4>
+                        <p class="fs-4 lh-base">Tripcel provides global coverage for popular and off-the-beaten-path destinations. Throughout your adventures, we want to keep you connected.
                         </p>
                      </div>
                   </div>
@@ -223,8 +223,8 @@
                         <img decoding="async" src="../assets/images/cal-to-action-2.jpg" alt="img">  
                      </div>
                      <div class="content_bx">
-                        <h4>Why Tripcel ?</h6>
-                        <p class="fs-5">Tripcel thrives on innovation. Our tech-driven approach gives you the latest travel connectivity advances. Our innovative solutions keep you ahead.
+                        <h4 class="lh-base">Why Tripcel ?</h6>
+                        <p class="fs-4 lh-base">Tripcel thrives on innovation. Our tech-driven approach gives you the latest travel connectivity advances. Our innovative solutions keep you ahead.
                         </p>
                      </div>
                   </div>
@@ -235,8 +235,8 @@
                         <img decoding="async" src="../assets/images/expertise-bg-1.jpg" alt="img">  
                      </div>
                      <div class="content_bx">
-                        <h4>Why Tripcel?</h4>
-                        <p class="fs-5">Tripcel conducts business with integrity and transparency. We value honesty with customers, partners, and colleagues. Tripcel provides trustworthy travel connectivity.
+                        <h4 class=" lh-base">Why Tripcel?</h4>
+                        <p class="fs-5 lh-base">Tripcel conducts business with integrity and transparency. We value honesty with customers, partners, and colleagues. Tripcel provides trustworthy travel connectivity.
                         </p>
                      </div>
                   </div>
@@ -247,8 +247,8 @@
                         <img decoding="async" src="../assets/images/expertise-bg-1.jpg" alt="img">  
                      </div>
                      <div class="content_bx">
-                        <h4>Why Tripcel?</h4>
-                        <p class="fs-5">Go on your next adventure knowing Tripcel will provide uninterrupted connectivity. Stay in touch with loved ones, share your travel memories, and navigate easily. Tripcel ensures connectivity-free travel. 
+                        <h4 class=" lh-base">Why Tripcel?</h4>
+                        <p class="fs-5 lh-base">Go on your next adventure knowing Tripcel will provide uninterrupted connectivity. Stay in touch with loved ones, share your travel memories, and navigate easily. Tripcel ensures connectivity-free travel. 
                         </p>
                      </div>
                   </div>
@@ -295,7 +295,7 @@
                                  <div class="content_image">
                                     <h6>Why Tripcel</h6>
 
-                                    <p>In over 200 countries, Tripcel provides unmatched connectivity, allowing you to stay connected anywhere. Travel without searching for local SIM cards or dealing with connectivity issues.</p>
+                                    <p class="fs-4 lh-base">In over 200 countries, Tripcel provides unmatched connectivity, allowing you to stay connected anywhere. Travel without searching for local SIM cards or dealing with connectivity issues.</p>
 
                                  </div>
                               </div>
@@ -305,7 +305,7 @@
                                  <div class="content_image">
                                     <h6>Why Tripcel</h6>
 
-                                    <p>Tripcel's eSIM technology advances travel connectivity. Our innovative solution lets you connect in under 2 minutes with your eSIM-compatible smartphone, tablet, or PC without SIM cards.</p>
+                                    <p class="fs-4 lh-base">Tripcel's eSIM technology advances travel connectivity. Our innovative solution lets you connect in under 2 minutes with your eSIM-compatible smartphone, tablet, or PC without SIM cards.</p>
                                  </div>
                               </div>
                            </div>
@@ -314,7 +314,7 @@
                                  <div class="content_image">
                                     <h6>Why Tripcel</h6>
 
-                                    <p>We know how important budgeting is when traveling. Instead of expensive roaming charges, Tripcel offers affordable travel data plans. You can enjoy seamless connectivity without breaking the bank.</p>
+                                    <p class="fs-4 lh-base">We know how important budgeting is when traveling. Instead of expensive roaming charges, Tripcel offers affordable travel data plans. You can enjoy seamless connectivity without breaking the bank.</p>
 
                                  </div>
                               </div>
@@ -324,7 +324,7 @@
                                  <div class="content_image">
                                     <h6>Why Tripcel</h6>
 
-                                    <p>Travel should be about freedom and exploration, not about limitations. With Tripcel, bypass connectivity issues and fully experience new cultures. Helping you travel freely is our goal.</p>
+                                    <p class="fs-4 lh-base">Travel should be about freedom and exploration, not about limitations. With Tripcel, bypass connectivity issues and fully experience new cultures. Helping you travel freely is our goal.</p>
 
                                  </div>
                               </div>
@@ -334,7 +334,7 @@
                                  <div class="content_image">
                                     <h6>Why Tripcel</h6>
 
-                                    <p>Tripcel values personalized travel. We personalize your boutique experience. Join our Tripcel family and experience our meticulousness.
+                                    <p class="fs-4 lh-base">Tripcel values personalized travel. We personalize your boutique experience. Join our Tripcel family and experience our meticulousness.
                                     </p>
 
                                  </div>
@@ -345,7 +345,7 @@
                                  <div class="content_image">
                                     <h6>Why Tripcel</h6>
 
-                                    <p>Trust is key to connectivity. Tripcel provides reliable, consistent services. Our service lets you share your travel memories and stay in touch with loved ones.
+                                    <p class="fs-4 lh-base">Trust is key to connectivity. Tripcel provides reliable, consistent services. Our service lets you share your travel memories and stay in touch with loved ones.
                                     </p>
 
                                  </div>
