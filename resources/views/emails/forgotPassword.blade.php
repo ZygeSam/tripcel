@@ -44,15 +44,15 @@
 
     <img src="{{ $message->embed((public_path("assets/images/FI.png")) )}}">
     
-<p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody">Thank you for choosing <b style="font-family:UICTFontTextStyleBody">Tripcel</b>! Please follow the instructions below carefully:</span></p>
+<p dir="auto" style="font-family: 'Manrope', sans-serif"><span style="font-family: 'Manrope', sans-serif">Thank you for choosing <b style="font-family: 'Manrope', sans-serif">Tripcel</b>! Please follow the instructions below carefully:</span></p>
     <p>Your request for a password reset is successful,</p>
     <p>Click on the link below to reset your password</p>
     <p>{{$mailData['message']}}</p>
     <p>This link will expire in 10 minutes</p>
-<p style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody"></span><br></p>
+<p style="font-family: 'Manrope', sans-serif"><span style="font-family: 'Manrope', sans-serif"></span><br></p>
 
-<p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><b style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody"><b style="font-family:UICTFontTextStyleBody">Thank you for choosing TRIPCEL</b>.&nbsp;</span><span style="font-family:UICTFontTextStyleBody"></span></b></p><p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><b style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody"><br></span></b></p>
-<p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody">Warm regards,</span></p><p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody"><b style="font-family:UICTFontTextStyleBody">TRIPCEL Support Team</b></span></p><div class="yj6qo"></div><div class="adL">
+<p dir="auto" style="font-family: 'Manrope', sans-serif"><b style="font-family: 'Manrope', sans-serif"><span style="font-family: 'Manrope', sans-serif"><b style="font-family: 'Manrope', sans-serif">Thank you for choosing TRIPCEL</b>.&nbsp;</span><span style="font-family: 'Manrope', sans-serif"></span></b></p><p dir="auto" style="font-family: 'Manrope', sans-serif"><b style="font-family: 'Manrope', sans-serif"><span style="font-family: 'Manrope', sans-serif"><br></span></b></p>
+<p dir="auto" style="font-family: 'Manrope', sans-serif"><span style="font-family: 'Manrope', sans-serif">Warm regards,</span></p><p dir="auto" style="font-family: 'Manrope', sans-serif"><span style="font-family: 'Manrope', sans-serif"><b style="font-family: 'Manrope', sans-serif">TRIPCEL Support Team</b></span></p><div class="yj6qo"></div><div class="adL">
 
 </body>
 </html>
