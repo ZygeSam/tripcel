@@ -45,7 +45,7 @@
                   @forelse ($fiveDaysProduct as $product)
                      <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="price_plan_box style_one  border border-dark">
-                           <div class="tag">{{$product['data_quota_mb']}} GB</div>
+                           <div class="tag">@convertToGig($product['data_quota_mb']) GB</div>
                            <div class="inner_box">
                               <div class="top">
                                  <h2>{{$region}} eSim</h2>
@@ -91,7 +91,7 @@
                   @forelse ($tenDaysProduct as $product)
                      <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="price_plan_box style_one  border border-dark">
-                           <div class="tag">{{$product['data_quota_mb']}} GB</div>
+                           <div class="tag">@convertToGig({{$product['data_quota_mb']}}) GB</div>
                            <div class="inner_box">
                               <div class="top">
                                  <h2>{{$region}} eSim</h2>
@@ -138,7 +138,7 @@
                   @forelse ($fifteenDaysProduct as $product)
                      <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="price_plan_box style_one  border border-dark">
-                           <div class="tag">{{$product['data_quota_mb']}} GB</div>
+                           <div class="tag">@convertToGig($product['data_quota_mb']) GB</div>
                            <div class="inner_box">
                               <div class="top">
                                  <h2>{{$region}} eSim</h2>
@@ -185,7 +185,7 @@
                      @forelse ($thirtyDaysProduct as $product)
                         <div class="my-3 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                            <div class="price_plan_box style_one  border border-dark">
-                              <div class="tag">{{$product['data_quota_mb']}} GB</div>
+                              <div class="tag">@convertToGig($product['data_quota_mb']) GB</div>
                               <div class="inner_box">
                                  <div class="top">
                                     <h2>{{$region}} eSim</h2>

@@ -9,7 +9,7 @@
     <title>Your Data Purchase Confirmation</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            "font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
@@ -44,18 +44,18 @@
 
     <img src="{{ $message->embed((public_path("assets/images/FI.png")) )}}">
     
-<p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody">Thank you for choosing <b style="font-family:UICTFontTextStyleBody">Tripcel</b>! Your new data plan is ready to activate. Please follow the instructions below carefully:</span></p>
+<p dir="auto" style="font-family:  'Manrope ', sans-serif "><span style="font-family:UICTFontTextStyleBody">Thank you for choosing <b style="font-family:UICTFontTextStyleBody">Tripcel</b>! Your new data plan is ready to activate. Please follow the instructions below carefully:</span></p>
     @foreach($mailData['message'] as $item)
             You have purchased data plan for yor {{$item['country']}} phone number:  {{$item['iccid']}}
-            <p> Data bytes bought: {{$item['data_quota_bytes']}}</p>
+            <p> Data gigs bought: {{round(($item['data_quota_bytes']/1024)/1024)}}</p>
             <p> Data starts by: {{$item['start_time']}}</p>
             <p> Data ends by: {{$item['end_time']}}</p>
             <p> Network Status: {{$item['network_status']}}</p>
             <p>Countries enabled: {{implode(',',$item['countries_enabled'])}}</p>
             <hr>
     @endforeach
-<p style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody"></span><br></p>
-<p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><b style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody"><b style="font-family:UICTFontTextStyleBody">Thank you for choosing TRIPCEL</b>.&nbsp;</span><span style="font-family:UICTFontTextStyleBody">Enjoy your data plan!</span></b></p><p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><b style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody"><br></span></b></p><p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody">Warm regards,</span></p><p dir="auto" style="font-family:&quot;.AppleSystemUIFont&quot;"><span style="font-family:UICTFontTextStyleBody"><b style="font-family:UICTFontTextStyleBody">TRIPCEL Support Team</b></span></p><div class="yj6qo"></div><div class="adL">
+<p style="font-family: 'Manrope', sans-serif"><span style="font-family:UICTFontTextStyleBody"></span><br></p>
+<p dir="auto" style="font-family: 'Manrope', sans-serif"><b style="font-family: 'Manrope', sans-serif"><span style="font-family:UICTFontTextStyleBody"><b style="font-family:UICTFontTextStyleBody">Thank you for choosing TRIPCEL</b>.&nbsp;</span><span style="font-family:UICTFontTextStyleBody">Enjoy your data plan!</span></b></p><p dir="auto" style="font-family: 'Manrope', sans-serif"><b style="font-family: 'Manrope', sans-serif"><span style="font-family:UICTFontTextStyleBody"><br></span></b></p><p dir="auto" style="font-family: 'Manrope', sans-serif"><span style="font-family:UICTFontTextStyleBody">Warm regards,</span></p><p dir="auto" style="font-family: 'Manrope', sans-serif"><span style="font-family:UICTFontTextStyleBody"><b style="font-family:UICTFontTextStyleBody">TRIPCEL Support Team</b></span></p><div class="yj6qo"></div><div class="adL">
 
 </body>
 </html>
