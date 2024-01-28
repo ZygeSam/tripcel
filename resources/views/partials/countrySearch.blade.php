@@ -1,16 +1,16 @@
-<div class="row bg-white">
-  <div class="col-lg-10 m-auto py-5 px-2">
-     <div class="title_all_box style_one text-center dark_color mx-auto px-5">
+<div class="row bg-white px-5">
+  <div class="col-lg-10 m-auto py-5">
+     <div class="title_all_box style_one text-center dark_color mx-auto">
       <p class="fs-4">International eSIM</p>
         <div class="title_sections">
           <h2>Stay Connected, No Matter
             Where Your Journey Takes You.</h2>
-            <p class="fs-4" style="text-align:start">Experience seamless internet connectivity on all your adventures with
-              Tripcel eSIM, and say goodbye to costly roaming bills when you return.
-              </p>
+            <p class="fs-4" style="text-align:center">Experience seamless internet connectivity on all your adventures </p>
+            <p class="fs-4 "> with Tripcel eSIM, and say goodbye to costly roaming bills when you return.
+            </p>
               <p class="fw-bold fs-4">Where do you need to connect to the internet?</p>
            <div class="before_title">
-              <form action="{{route('showCountries')}}" class="my-3" method="post">
+              <form action="{{route('showCountries')}}" class="my-3 mx-5" method="post">
                  @csrf
                  <select name="country" id="" class="p-3">
                     @if(count($countries) > 0)
@@ -32,4 +32,3 @@
      </div>
   </div>
 </div>
-<div class="bg-dark mt-2 mb-0" style="height: 20px"></div>

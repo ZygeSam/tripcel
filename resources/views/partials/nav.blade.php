@@ -20,7 +20,7 @@
                       <li
                          class="menu-item  menu-item-has-children dropdown active dropdown_full position-static mega_menu nav-item">
                          <a href="" class="dropdown-toggle nav-link">
-                            <span class="text-info" style="font-family: 'Manrope', sans-serif;">Travel eSIM</span>
+                            <span class="" style="color:#ff8f47; font-family: 'Manrope', sans-serif;">Travel eSIM</span>
                          </a>
                          <ul class="dropdown-menu width_65_percentage">
                             <li>

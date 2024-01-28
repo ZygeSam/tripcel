@@ -70,12 +70,12 @@
                            <div class="container-fluid m-0">
                               <div class="row align-items-center m-0">
                                  <div class="col-md-6">
-                                    <div class="slider_content ">
+                                    <div class="slider_content mx-5">
                                        <p class="display-2 text-white fs-1 fw-bold lh-base" style="font-style:bold; font-size:4em; font-family:Arial, Helvetica, sans-serif">Connect Beyond Borders<br>
                                           </p> <br>
                                           <p class="text-light fs-4 lh-base">Experience seamless communication in over 200 countries with our Travel eSIM. Simple, secure, and made for the global explorer.</p>
                                           <div class="animate_down theme_btn_all color_two my-4">
-                                             <a href="{{route('countries')}}" class="theme-btn three px-5 text-white" style="background-color: rgb(219, 165, 66); font-size:0.7em">Get Your Travel eSIM Plan</a>  
+                                             <a href="{{route('countries')}}" class="theme-btn three px-5 text-white" style="background-color: #ff8f47; font-size:0.7em">Get Your Travel eSIM Plan</a>  
                                           </div>
                                     </div>
                                  </div>
@@ -106,7 +106,7 @@
       </div>
    @show
    <div>
-      <div class="auto-container bg-light p-1" style="margin-top: 100px">
+      <div class="auto-container p-1" style="margin-top: 100px; background-color:#E7F1F1">
          <div class="row mt-5 pt-5">
             <div class="col-xl-6 col-lg-6 col-md-12">
                <div class="image_boxes style_two">
@@ -177,7 +177,7 @@
                <div class="pd_bottom_15"></div>
                <!--===============spacing==============-->
                <div class="theme_btn_all color_one">
-                  <a href="{{route('howitworks')}}" class="theme-btn three" style="background-color: rgb(219, 165, 66); font-size:20px">See How It Works</a>
+                  <a href="{{route('howitworks')}}" class="theme-btn three" style="background-color: #ff8f47; font-size:20px">See How It Works</a>
                </div>
             </div>
          </div>
@@ -220,7 +220,7 @@
                            <div class="text_box_inner">
                               <span class="icon icon-thumbs-up icon"></span>
                               <h5 class="title_service">Unlimited Data Access</h5>
-                              <p class="short_desc">Enjoy the freedom of unlimited data, which allows you to navigate, share, and stay connected without worrying about data limitations. Stream, browse, and explore Turkey at your own pace.
+                              <p class="short_desc">Enjoy the freedom of unlimited data, navigate, share,stay connected without worrying about data limitations. Stream, browse, and explore Turkey at your own pace.
                               </p>
                               <div class="bg_icon">
                                  <span class="icon icon-thumbs-up icon"></span>
@@ -265,7 +265,7 @@
                   </div>
          </div>
          <div class="theme_btn_all color_one text-center my-5 ">
-            <a href="{{route('countries')}}" class="theme-btn three px-5" style="background-color: rgb(219, 165, 66); font-size:0.7em; padding:0px 20px">See Plans & Pricing</a>
+            <a href="{{route('countries')}}" class="theme-btn three px-5" style="background-color: #ff8f47; font-size:0.7em; padding:0px 20px">See Plans & Pricing</a>
          </div>
       </div>
    
@@ -287,7 +287,7 @@
                   <h3 class="title lh-base" style="font-size:45px; color:#078586">Select Your Destination</h3>
                   <p class="fs-4 text-dark">Your Travel eSIM Includes:</p>
                   <p class="fs-4 lh-base text-dark d-md-flex text-center align-items-center justify-content-center">
-                      Wi-Fi | Immediate Activation | 4G/5G Data | Optional Auto-Renewal
+                      Wi-Fi | Immediate Activation | 4G/5G Data | Optional Auto-Renewal <br>
                       | Stay Connected to family and friends
                   </p>
                   <p class="fs-4 text-dark"></p>
@@ -331,7 +331,7 @@
                <div class="col-lg-12">
                   <div class="title_all_box style_one text-center light_color">
                      <div class="title_sections">
-                        <div class="before_title color_white">Customer Reviews</div>
+                        <div class=" color_white fs-4 fw-bold">Customer Reviews</div>
                         <h6 class="title color_white">See What Our Clients Speak</h6>
                      </div>
                      <!--===============spacing==============-->
@@ -694,7 +694,7 @@
    </div>
 </section> --}}
 
-{{-- <section class="blog-section bg_light_1">
+<section class="blog-section ">
    <!--===============spacing==============-->
    <div class="pd_top_70"></div>
    <!--===============spacing==============-->
@@ -703,8 +703,8 @@
          <div class="col-lg-12">
             <div class="title_all_box style_one text-center dark_color">
                <div class="title_sections">
-                  <div class="before_title">Find Out Our</div>
-                  <div class="title">News, Adverts & Announcements</div>
+                  <div class="text-muted fs-4 text-center">Insights and Tips with Tripcel eSIM</div>
+                  <div class="title mx-2 lh-base" style="font-size:50px; color:#058687">Exploring the World <br>Staying Connected</div>
                   <p>Visit our blog and get the latest news and information on how to make you travel, call and data experience sweet and safer</p>
                </div>
                <!--===============spacing==============-->
@@ -713,7 +713,7 @@
             </div>
          </div>
 
-         <div class="col-lg-12">
+         <div class="col-lg-12 bg_light_1 pt-4">
             <div class="blog_post_section three_column style_ten">
                <div class="grid_show_case grid_layout clearfix">
 
@@ -753,7 +753,7 @@
    <!--===============spacing==============-->
    <div class="pd_bottom_70"></div>
    <!--===============spacing==============-->
-</section>  --}}
+</section> 
          </div>
          <!--===============PAGE CONTENT==============-->
          <!--===============PAGE CONTENT==============-->

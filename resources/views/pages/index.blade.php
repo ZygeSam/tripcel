@@ -64,7 +64,6 @@
            </div>
         </div>
      </section>
-     <div class="bg-dark mt-2 mb-0" style="height: 20px"></div>
 @endsection
 @section('unlimitedplans')
 <section class="price-section mx-4">
@@ -220,5 +219,4 @@
    </center>
    
 </section>
-<div class="bg-dark mt-2 mb-0" style="height: 20px"></div>
 @endsection
